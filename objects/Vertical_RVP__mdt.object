@@ -114,6 +114,7 @@
             </valueSetDefinition>
         </valueSet>
     </fields>
+    <label>Vertical RVP</label>
     <listViews>
         <fullName>All_Fields</fullName>
         <columns>MasterLabel</columns>
@@ -127,4 +128,6 @@
         <label>All Fields</label>
         <language>en_US</language>
     </listViews>
+    <pluralLabel>Vertical RVPs</pluralLabel>
+    <visibility>Public</visibility>
 </CustomObject>
