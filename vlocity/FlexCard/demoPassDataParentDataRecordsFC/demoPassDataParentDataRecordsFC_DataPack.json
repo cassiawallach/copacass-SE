@@ -1,0 +1,33 @@
+{
+    "AuthorName": "vlocityDev",
+    "ClonedFromOmniUiCardKey": "osParentAttributeRecords/vlocityDev/1/1603484779185",
+    "DataSourceConfig": {
+        "contextVariables": [
+        ],
+        "orderBy": {
+            "isReverse": false,
+            "name": ""
+        },
+        "type": "Query",
+        "value": {
+            "jsonMap": "{}",
+            "query": "Select Id,Name, Phone, BillingCity,BillingCountry FROM Account Limit 5",
+            "resultVar": ""
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "demoPassDataParentDataRecordsFC",
+    "Namespace": "",
+    "OmniUiCardKey": "demoPassDataParentDataRecordsFC/vlocityDev/1/1605649016536",
+    "OmniUiCardType": "Parent",
+    "OverrideKey": "",
+    "PropertySetConfig": "demoPassDataParentDataRecordsFC.json",
+    "SampleDataSourceResponse": "[{\"attributes\":{\"type\":\"Account\",\"url\":\"/services/data/v50.0/sobjects/Account/0015w00002DUoxkAAD\"},\"Id\":\"0015w00002DUoxkAAD\",\"Name\":\"SMC Brokerage\",\"Phone\":\"1-415-555-1212\",\"BillingCity\":\"San Francisco\",\"BillingCountry\":\"United States\"},{\"attributes\":{\"type\":\"Account\",\"url\":\"/services/data/v50.0/sobjects/Account/0015w00002DUoxlAAD\"},\"Id\":\"0015w00002DUoxlAAD\",\"Name\":\"Sophia Fournier\",\"Phone\":\"312-867-5309\",\"BillingCity\":\"Chicago\",\"BillingCountry\":\"United States\"},{\"attributes\":{\"type\":\"Account\",\"url\":\"/services/data/v50.0/sobjects/Account/0015w00002DUoxoAAD\"},\"Id\":\"0015w00002DUoxoAAD\",\"Name\":\"Mary Sanchez\",\"Phone\":\"(916) 620-2985\",\"BillingCity\":\"San Francisco\"},{\"attributes\":{\"type\":\"Account\",\"url\":\"/services/data/v50.0/sobjects/Account/0015w00002DUoxmAAD\"},\"Id\":\"0015w00002DUoxmAAD\",\"Name\":\"Mary Sanchez\",\"Phone\":\"51-123-4456\",\"BillingCity\":\"Oakland\",\"BillingCountry\":\"United States\"},{\"attributes\":{\"type\":\"Account\",\"url\":\"/services/data/v50.0/sobjects/Account/0015w00002DUoxpAAD\"},\"Id\":\"0015w00002DUoxpAAD\",\"Name\":\"Global Media\",\"Phone\":\"8881235555\",\"BillingCity\":\"Toronto\",\"BillingCountry\":\"Canada\"}]",
+    "StylingConfiguration": "",
+    "UniqueName": "demoPassDataParentDataRecordsFC_vlocityDev_1",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/demoPassDataParentDataRecordsFC"
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Batch Completed Date --></label>
+        <name>noduplicates__Batch_Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Batch Extended Status --></label>
+        <name>noduplicates__Batch_Extended_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Batch Id --></label>
+        <name>noduplicates__Batch_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Batch Status --></label>
+        <name>noduplicates__Batch_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cross Filter Condition --></label>
+        <name>noduplicates__Cross_Filter_Condition__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cross Object Label --></label>
+        <name>noduplicates__Cross_Object_Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cross Object --></label>
+        <name>noduplicates__Cross_Object__c</name>
+    </fields>
+    <fields>
+        <label><!-- Display Fields --></label>
+        <name>noduplicates__Display_Fields__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filter Condition --></label>
+        <name>noduplicates__Filter_Condition__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>noduplicates__Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Label --></label>
+        <name>noduplicates__Object_Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object --></label>
+        <name>noduplicates__Object__c</name>
+    </fields>
+    <fields>
+        <label><!-- Records Per Object --></label>
+        <name>noduplicates__Records_Per_Object__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Fields --></label>
+        <name>noduplicates__Report_Fields__c</name>
+    </fields>
+    <fields>
+        <label><!-- Search across main object --></label>
+        <name>noduplicates__Search_across_main_object__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subset Filter Condition --></label>
+        <name>noduplicates__Subset_Filter_Condition__c</name>
+    </fields>
+</CustomObjectTranslation>

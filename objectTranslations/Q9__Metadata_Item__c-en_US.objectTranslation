@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- The URI-encoded fullName. Needed for the readMetadata() call. --></help>
+        <label><!-- Encoded FullName --></label>
+        <name>Q9__Encoded_FullName__c</name>
+    </fields>
+    <fields>
+        <help><!-- Hashed value of the xml or json representation of a metadata item. Used for change detection when LastModifiedDate is not reliable. --></help>
+        <label><!-- Hash --></label>
+        <name>Q9__Hash__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Deleted --></label>
+        <name>Q9__Is_Deleted__c</name>
+    </fields>
+    <fields>
+        <help><!-- If true, the readMetadata() callout for this Profile exceeded the 120s (2min) max. --></help>
+        <label><!-- Is Too Large To Process --></label>
+        <name>Q9__Is_Too_Large_To_Process__c</name>
+    </fields>
+    <fields>
+        <help><!-- Datetime that the Profile was last modified. --></help>
+        <label><!-- Last Modified Datetime --></label>
+        <name>Q9__Last_Modified_Datetime__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date/Time that the Profile metadata was retrieved and saved. --></help>
+        <label><!-- Last Saved Datetime --></label>
+        <name>Q9__Last_Saved_Datetime__c</name>
+    </fields>
+    <fields>
+        <help><!-- The metadata item&apos;s metadata type. --></help>
+        <label><!-- Metadata Type --></label>
+        <name>Q9__Metadata_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- The item&apos;s Salesforce Id. --></help>
+        <label><!-- Salesforce Id --></label>
+        <name>Q9__Salesforce_Id__c</name>
+    </fields>
+</CustomObjectTranslation>

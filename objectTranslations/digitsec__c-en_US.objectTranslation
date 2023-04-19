@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>digitsec</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>digitsec</value>
+    </caseValues>
+    <fields>
+        <label><!-- Save as DigitSec Findings --></label>
+        <name>DigitSec_Findings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scan Commit --></label>
+        <name>ScanCommit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scan the entire user story --></label>
+        <name>Scan_all_commits__c</name>
+    </fields>
+    <fields>
+        <label><!-- orgId --></label>
+        <name>orgId__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

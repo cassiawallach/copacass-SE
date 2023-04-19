@@ -1,0 +1,105 @@
+{
+  "appPageId" : "52cafe09-7123-40c3-88c3-ab67ce6aefcc",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "175e1834-ed19-4d3d-9f45-50d2c913ce75",
+  "label" : "My Account",
+  "regions" : [ {
+    "id" : "ae5e8c8e-5834-4cd4-a5a6-6edfa29a8d01",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "tabsetConfig" : {
+          "UUID" : "7c66c490-0953-43ed-8ad8-3312dabaf313",
+          "activeTab" : "tab1",
+          "tabs" : [ {
+            "UUID" : "db3d8c0e-8a06-48f6-bcb2-08cdef9f7390",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ {
+              "attributes" : {
+                "recordId" : "{!CurrentUser.effectiveAccountId}"
+              },
+              "fqn" : "forceCommunity:recordDetail"
+            } ],
+            "tabKey" : "tab1",
+            "tabName" : "Account Details"
+          }, {
+            "UUID" : "05c88617-a833-4d3b-b976-4f06cc5bb548",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ {
+              "attributes" : {
+                "customTitle" : "Addresses",
+                "parentRecordId" : "{!CurrentUser.effectiveAccountId}",
+                "relatedListName" : "ContactPointAddresses",
+                "showBreadCrumbs" : "false",
+                "showCustomTitle" : "true",
+                "showManualRefreshButton" : "false",
+                "showRowNumbers" : "false"
+              },
+              "fqn" : "forceCommunity:relatedList"
+            } ],
+            "tabKey" : "tab2",
+            "tabName" : "Addresses"
+          } ],
+          "useOverflowMenu" : false
+        }
+      },
+      "componentName" : "forceCommunity:tabset",
+      "id" : "7c66c490-0953-43ed-8ad8-3312dabaf313",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "recordId" : "{!CurrentUser.effectiveAccountId}"
+          },
+          "componentName" : "forceCommunity:recordDetail",
+          "id" : "2c6f8702-c9ca-4a06-b296-99ad6c525d8e",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "db3d8c0e-8a06-48f6-bcb2-08cdef9f7390",
+        "regionLabel" : "Account Details",
+        "regionName" : "tab1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "customTitle" : "Addresses",
+            "parentRecordId" : "{!CurrentUser.effectiveAccountId}",
+            "relatedListName" : "ContactPointAddresses",
+            "showBreadCrumbs" : false,
+            "showCustomTitle" : true,
+            "showManualRefreshButton" : false,
+            "showRowNumbers" : false
+          },
+          "componentName" : "forceCommunity:relatedList",
+          "id" : "9464877e-257c-45e4-a349-1d40b3afe280",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "05c88617-a833-4d3b-b976-4f06cc5bb548",
+        "regionLabel" : "Addresses",
+        "regionName" : "tab2",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9fc3a14c-31b7-47da-a578-513ed1483748",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "d32ae5fb-36b1-4b45-a3e6-7ff311f6bd5e",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "my-account"
+}

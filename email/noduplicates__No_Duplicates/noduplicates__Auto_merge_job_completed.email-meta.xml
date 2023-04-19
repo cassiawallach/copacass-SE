@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>No Duplicates: Auto-merge job completed</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Auto-merge job completed</name>
+    <style>none</style>
+    <subject>{!$Label.noduplicates__Auto_merge_job_completed_Subject}</subject>
+    <textOnly>{!$Label.noduplicates__Auto_merge_job_completed_Body_Plain}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

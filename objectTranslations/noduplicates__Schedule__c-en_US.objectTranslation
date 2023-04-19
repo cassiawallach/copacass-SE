@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Business Emails --></label>
+        <name>noduplicates__Business_Emails__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cron Expression --></label>
+        <name>noduplicates__Cron_Expression__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cron Job Id --></label>
+        <name>noduplicates__Cron_Job_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Day --></label>
+        <name>noduplicates__Day2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Day of month --></label>
+        <name>noduplicates__Day_of_month__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11</masterLabel>
+            <translation><!-- 11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12</masterLabel>
+            <translation><!-- 12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13</masterLabel>
+            <translation><!-- 13 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14</masterLabel>
+            <translation><!-- 14 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15</masterLabel>
+            <translation><!-- 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16</masterLabel>
+            <translation><!-- 16 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>17</masterLabel>
+            <translation><!-- 17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>18</masterLabel>
+            <translation><!-- 18 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>19</masterLabel>
+            <translation><!-- 19 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20</masterLabel>
+            <translation><!-- 20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>21</masterLabel>
+            <translation><!-- 21 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>22</masterLabel>
+            <translation><!-- 22 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>23</masterLabel>
+            <translation><!-- 23 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24</masterLabel>
+            <translation><!-- 24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25</masterLabel>
+            <translation><!-- 25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>26</masterLabel>
+            <translation><!-- 26 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>27</masterLabel>
+            <translation><!-- 27 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>28</masterLabel>
+            <translation><!-- 28 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>29</masterLabel>
+            <translation><!-- 29 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30</masterLabel>
+            <translation><!-- 30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>31</masterLabel>
+            <translation><!-- 31 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Email When Duplicates Found --></label>
+        <name>noduplicates__Email_When_Job_Completes__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>noduplicates__End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Frequency --></label>
+        <name>noduplicates__Frequency__c</name>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation><!-- Custom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Friday --></label>
+        <name>noduplicates__Friday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Lightning UI --></label>
+        <name>noduplicates__Is_Lightning_UI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Matching Rule --></label>
+        <name>noduplicates__Matching_Rule__c</name>
+        <relationshipLabel><!-- Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Monday --></label>
+        <name>noduplicates__Monday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Org Wide Address --></label>
+        <name>noduplicates__Org_Wide_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perform Auto-Merge --></label>
+        <name>noduplicates__Perform_Auto_merge__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Start Time --></label>
+        <name>noduplicates__Preferred_Start_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Saturday --></label>
+        <name>noduplicates__Saturday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Specific Day --></label>
+        <name>noduplicates__Specific_Day__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>noduplicates__Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sunday --></label>
+        <name>noduplicates__Sunday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Thursday --></label>
+        <name>noduplicates__Thursday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tuesday --></label>
+        <name>noduplicates__Tuesday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wednesday --></label>
+        <name>noduplicates__Wednesday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weekday --></label>
+        <name>noduplicates__Weekday2__c</name>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,2 @@
+<apex:page controller="Q9.ElementsGenericExtensionController" action="{!setElementsLoginTokenToCookie}">
+</apex:page>

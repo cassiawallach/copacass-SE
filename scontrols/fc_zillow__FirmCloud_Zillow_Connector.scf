@@ -1,0 +1,3 @@
+<html><br/><br/><br/>
+<table><tr><td width="25%"></td><td width="50%"><div align="center" style="font-size:17px;font-family:Arial;"><b>The Zillow S-Control is now deprecated</b>, please use instead the new Zillow Visualforce Page or Lightning Component included in this package. Have your Salesforce Admin replace this S-Control in your page layout with the associated Visualforce Page.</div></td><td width="25%"></td></tr></table>
+</html>

@@ -1,0 +1,23 @@
+<apex:page sidebar="false" tabStyle="noduplicates__Matching_Rules_Classic__tab">
+    <apex:includeLightning />
+    <apex:slds />
+    <div id="LightningAppDivId"/>
+
+    <div class="slds-scope">
+        <c:spinner id="spinner"/>
+    </div>
+     <script>
+         $Lightning.use(
+             "noduplicates:noDuplicates",
+             function(cmp) {
+                 $Lightning.createComponent("noduplicates:matchingRuleWizard1", {}, "LightningAppDivId",
+                    function (cmp) {
+                        let loadingDivElement = document.querySelector("[id$='spinner']");
+                        loadingDivElement.style.display = 'none'
+                    }
+                );                 
+             }
+         );
+     </script>
+     
+</apex:page>

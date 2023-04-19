@@ -1,0 +1,30 @@
+{
+  "forgotPasswordRouteId" : "7ca9f2c2-d628-4471-afa1-e64396ab7a1e",
+  "isAvailableToGuests" : false,
+  "isFilteredComponentsView" : true,
+  "isProgressiveRenderingEnabled" : false,
+  "loginAppPageId" : "da7dbb2d-3693-4e48-8aa8-947ae2fa7de1",
+  "mainAppPageId" : "ea3e02a5-0feb-420e-a4cd-fe5161b6942b",
+  "preferredDomain" : "none",
+  "selfRegistrationRouteId" : "337abd2a-99e4-46cf-b68d-d974157753a6",
+  "trustedSitesForScript" : [ {
+    "id" : "dc62dd63-6044-4179-82f1-e8810946a2cb",
+    "isActive" : true,
+    "trustedSiteName" : "d.la1-c1-ia7.salesforceliveagent.com",
+    "trustedSiteUrl" : "https://d.la1-c1-ia7.salesforceliveagent.com/chat/rest/EmbeddedService/EmbeddedServiceConfig.jsonp",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "50ba38b4-89e4-4dde-ade3-62d621e1f37e",
+    "isActive" : true,
+    "trustedSiteName" : "d.la1-c1-ia7.salesforceliveagent.com1",
+    "trustedSiteUrl" : "https://d.la1-c1-ia7.salesforceliveagent.com/chat/rest/Visitor/Settings.jsonp",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "6735c81c-7e3e-46b7-805e-819b6a207ba4",
+    "isActive" : true,
+    "trustedSiteName" : "d.la1-c1-ia7.salesforceliveagent.com2",
+    "trustedSiteUrl" : "https://d.la1-c1-ia7.salesforceliveagent.com/chat/rest/Visitor/Availability.jsonp",
+    "type" : "trustedSitesForScripts"
+  } ],
+  "type" : "site"
+}

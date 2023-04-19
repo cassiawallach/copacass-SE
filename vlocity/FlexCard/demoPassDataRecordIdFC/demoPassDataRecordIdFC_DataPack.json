@@ -1,0 +1,41 @@
+{
+    "AuthorName": "vlocityDev",
+    "ClonedFromOmniUiCardKey": "osParentAttribute/vlocityDev/1/1601298789880",
+    "DataSourceConfig": {
+        "dataSource": {
+            "contextVariables": [
+                {
+                    "id": 0,
+                    "name": "recordId",
+                    "val": "001Dn0000066Fc5IAE"
+                }
+            ],
+            "orderBy": {
+                "isReverse": false,
+                "name": ""
+            },
+            "type": "Query",
+            "value": {
+                "dsDelay": "",
+                "jsonMap": "{\"recordId\":\"{recordId}\"}",
+                "query": "Select Id,name from Account where Id = '{recordId}'",
+                "resultVar": ""
+            }
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "demoPassDataRecordIdFC",
+    "Namespace": "",
+    "OmniUiCardKey": "demoPassDataRecordIdFC/vlocityDev/1/1605648478239",
+    "OmniUiCardType": "Parent",
+    "OverrideKey": "",
+    "PropertySetConfig": "demoPassDataRecordIdFC.json",
+    "SampleDataSourceResponse": "[{\"attributes\":{\"type\":\"Account\",\"url\":\"/services/data/v56.0/sobjects/Account/001Dn0000066Fc5IAE\"},\"Id\":\"001Dn0000066Fc5IAE\",\"Name\":\"Acme\"}]",
+    "StylingConfiguration": "",
+    "UniqueName": "demoPassDataRecordIdFC_vlocityDev_1",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/demoPassDataRecordIdFC"
+}

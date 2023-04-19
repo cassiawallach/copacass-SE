@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Checkbox --></label>
+        <name>noduplicates__Checkbox__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company --></label>
+        <name>noduplicates__Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>noduplicates__Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Encrypted --></label>
+        <name>noduplicates__Encrypted__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>noduplicates__First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Geolocation --></label>
+        <name>noduplicates__Geolocation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>noduplicates__Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number --></label>
+        <name>noduplicates__Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>noduplicates__Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>noduplicates__Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- TextAreaRich --></label>
+        <name>noduplicates__TextAreaRich__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time --></label>
+        <name>noduplicates__Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- URL --></label>
+        <name>noduplicates__URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip --></label>
+        <name>noduplicates__Zip__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- First --></label>
+        <name>noduplicates__First</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Second --></label>
+        <name>noduplicates__Second</name>
+    </recordTypes>
+</CustomObjectTranslation>

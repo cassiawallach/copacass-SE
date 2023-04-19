@@ -1,0 +1,98 @@
+<apex:page extensions="fc_zillow.ZillowController" standardcontroller="Lead" showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+<head>
+<apex:stylesheet value="{!URLFOR($Resource.fc_zillow__Zillow_Connector_Files,'/styles/salesforce-lightning-design-system.css')}"/>
+</head>
+
+<apex:outputPanel id="mainPanel" style="width:100%;">
+<script>
+    function showData() {
+
+// Create our number formatter.
+var formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+
+  
+  minimumFractionDigits: 0, 
+  maximumFractionDigits: 0, 
+});
+
+ /* $2,500.00 */        
+        
+        var zillowPayload =     JSON.parse('{!JSENCODE(vfZillowPayload)}');
+        
+
+        if(zillowPayload.error){
+            document.getElementsByClassName("errorPanel")[0].style.display= "block";
+            document.getElementsByClassName("errorMsg")[0].innerText = 'There was an error in your request: ' + zillowPayload.error;
+        }
+        else if(zillowPayload.total==0){
+            document.getElementsByClassName("errorPanel")[0].style.display= "block";
+            document.getElementsByClassName("errorMsg")[0].innerText = 'No results were found for your request. Please check for a valid address.';
+        }        
+        
+        else{
+            document.getElementsByClassName("successPanel")[0].style.display= "block";
+ 
+            
+            document.getElementsByClassName("zillowLink")[0].href= zillowPayload.bundle[0].zillowUrl;
+            document.getElementsByClassName("zillowaddress")[0].innerText = zillowPayload.bundle[0].address;
+            
+            
+            document.getElementsByClassName("zestimate")[0].innerText = formatter.format(zillowPayload.bundle[0].zestimate);
+            document.getElementsByClassName("zestimatelow")[0].innerText = formatter.format((100-zillowPayload.bundle[0].lowPercent)/100*zillowPayload.bundle[0].zestimate );
+            document.getElementsByClassName("zestimatehigh")[0].innerText = formatter.format((100+zillowPayload.bundle[0].highPercent)/100*zillowPayload.bundle[0].zestimate);
+
+            document.getElementsByClassName("rentalzestimate")[0].innerText = formatter.format(zillowPayload.bundle[0].rentalZestimate);
+            document.getElementsByClassName("rentallow")[0].innerText = formatter.format(zillowPayload.bundle[0].rentalZestimate*(100-zillowPayload.bundle[0].rentalLowPercent)/100);
+            document.getElementsByClassName("rentalhigh")[0].innerText =formatter.format( zillowPayload.bundle[0].rentalZestimate*(100+zillowPayload.bundle[0].rentalHighPercent)/100);
+
+
+        
+        }
+
+        document.getElementsByClassName("valbutton")[0].style.display= "none";
+        
+    }
+    </script>
+
+        <div align="center" style="background:white;valign:top;">
+
+<div class="valbutton" style="padding-top:50px;"> 
+            <div class="slds-scope">
+                <apex:form >
+
+                          <apex:commandButton styleClass="slds-button slds-button--brand" value="Get Zillow® Valuation" action="{!getZillowVFPage}"   reRender="mainPanel" rendered="true" oncomplete="showData();"/> 
+
+                </apex:form>
+            </div>
+
+     <br/><br/>
+     <a href="https://www.firmcloud.com/cloudavmlnk/" target="_blank"><img src="https://www.firmcloud.com/ws/Zillow/images/cavmadVF.png" alt=""  border="0"  /></a>
+     <br/><br/>
+     </div>
+
+            
+            <apex:outputPanel id="errorDiv"  style="display:none;padding-top:50px;padding-bottom:250px;" styleclass="errorPanel">
+                <span class="errorMsg"/>
+            </apex:outputPanel>
+                
+          </div>
+
+            <apex:outputPanel id="successDiv" styleclass="successPanel" style="display:none;valign:top;background:white;">
+                <div align="center">
+    <a class="zillowLink" id="homedetailslink_ret" href="" target="_blank"><span class="zillowaddress" style="font-weight:bold;"/></a><br/>   
+<b>ZESTIMATE&reg;</b>: <span class="zestimate"/><br/>
+<b>Value Range</b>: <span class="zestimatelow"/> - <span class="zestimatehigh"/><br/>
+<b>Rental</b>: <span class="rentalzestimate"/> (<span class="rentallow"/> - <span class="rentalhigh"/>)<br/>
+
+
+                        <apex:image url="{!URLFOR($Resource.fc_zillow__Zillow_Connector_Files,'ZillowLogo.png')}"/><br/>
+                        &copy; Zillow, Inc., 2022. Use is subject to <a class="see" href="http://www.zillow.com/corp/Terms.htm" target="_blank">Terms of Use</a> | <a class="see" href="http://www.zillow.com/howto/Zestimate.htm" target="_blank">What's a Zestimate®?</a>                      
+</div>
+
+            </apex:outputPanel>
+</apex:outputPanel>
+</html>
+</apex:page>

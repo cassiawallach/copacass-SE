@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Cross Field --></label>
+        <name>noduplicates__Cross_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field --></label>
+        <name>noduplicates__Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Matching Rule --></label>
+        <name>noduplicates__Matching_Rule__c</name>
+        <relationshipLabel><!-- Matching Rule Fields --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Number --></label>
+        <name>noduplicates__Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Optional --></label>
+        <name>noduplicates__Optional__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>noduplicates__Type__c</name>
+    </fields>
+</CustomObjectTranslation>

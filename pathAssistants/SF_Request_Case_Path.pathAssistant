@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>SF Request Case Path</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Please test out this update&lt;/p&gt;&lt;ol&gt;&lt;li&gt;If test passes update status to User Accepted&lt;/li&gt;&lt;li&gt;If test fails mark as rejected&lt;/li&gt;&lt;/ol&gt;</info>
+        <picklistValueName>Released</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>SF_Request</recordTypeName>
+</PathAssistant>

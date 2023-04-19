@@ -1,0 +1,31 @@
+{
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": false,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": true,
+    "Language": "English",
+    "Name": "Team Edit Account",
+    "OmniProcessElement": [
+        "team_editAccount_English_Element_IPGetAccountDetails.json",
+        "team_editAccount_English_Element_StepAccount.json",
+        "team_editAccount_English_Element_Name.json",
+        "team_editAccount_English_Element_LineBreak1.json",
+        "team_editAccount_English_Element_Phone.json",
+        "team_editAccount_English_Element_LineBreak2.json",
+        "team_editAccount_English_Element_Website.json",
+        "team_editAccount_English_Element_LineBreak4.json",
+        "team_editAccount_English_Element_Currency.json",
+        "team_editAccount_English_Element_IPSaveAccountDetails.json"
+    ],
+    "OmniProcessType": "OmniScript",
+    "PropertySetConfig": "team_editAccount_English_PropertySetConfig.json",
+    "SubType": "editAccount",
+    "Type": "team",
+    "UniqueName": "team_editAccount_English_2",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/team/editAccount/English",
+    "WebComponentKey": "cb07cd0c-41f1-5f54-0cd3-47485c1cfb00"
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>No Duplicates: Duplicate Search job completed</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Duplicate Search Job Completed</name>
+    <style>none</style>
+    <subject>{!$Label.noduplicates__Duplicate_Search_Job_Completed_Subject}</subject>
+    <textOnly>{!$Label.noduplicates__Duplicate_Search_Job_Completed_Body_Plain}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

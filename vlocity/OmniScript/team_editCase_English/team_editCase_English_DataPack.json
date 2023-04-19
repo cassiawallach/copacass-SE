@@ -1,0 +1,19 @@
+{
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": false,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": true,
+    "Language": "English",
+    "Name": "Team Starter Edit Case",
+    "OmniProcessType": "OmniScript",
+    "PropertySetConfig": "team_editCase_English_PropertySetConfig.json",
+    "SubType": "editCase",
+    "Type": "team",
+    "UniqueName": "team_editCase_English_2",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/team/editCase/English",
+    "WebComponentKey": "f1a3a646-6796-5506-9189-5b0768b50317"
+}
