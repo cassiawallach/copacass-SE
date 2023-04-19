@@ -151,6 +151,18 @@
     <enableHistory>true</enableHistory>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>ACV__c</fullName>
+        <externalId>false</externalId>
+        <label>ACV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>true</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>AccountId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
@@ -188,6 +200,17 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Entity__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Account.Entity__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Entity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>ExpectedRevenue</fullName>
@@ -496,6 +519,30 @@
         </filters>
         <label>Won</label>
     </listViews>
+    <recordTypes>
+        <fullName>kuga_sub__Expansion</fullName>
+        <active>true</active>
+        <businessProcess>kuga_sub__Expansion Sales Process</businessProcess>
+        <compactLayoutAssignment>Expansion</compactLayoutAssignment>
+        <description>An Expansion Opportunity adds to a Contract.</description>
+        <label>Expansion</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>kuga_sub__New</fullName>
+        <active>true</active>
+        <businessProcess>kuga_sub__New Sales Process</businessProcess>
+        <compactLayoutAssignment>ABM</compactLayoutAssignment>
+        <description>A New Opportunity leads to the creation of a Contract.</description>
+        <label>New</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>kuga_sub__Renewal</fullName>
+        <active>true</active>
+        <businessProcess>kuga_sub__Renewal Sales Process</businessProcess>
+        <compactLayoutAssignment>Renewal_Oppty_Compact_Layout</compactLayoutAssignment>
+        <description>A Renewal Opportunity extends or replaces a Contract.</description>
+        <label>Renewal</label>
+    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
