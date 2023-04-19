@@ -414,6 +414,19 @@
         <label>All Opportunities</label>
     </listViews>
     <listViews>
+        <fullName>All_Open_Opportunities1</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>ACV__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>OPPORTUNITY.FORECAST_CATEGORY</columns>
+        <columns>Description_pulled_over_from_lead__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>OPPORTUNITY.RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Opportunities</label>
+    </listViews>
+    <listViews>
         <fullName>ClosingNextMonth</fullName>
         <filterScope>Everything</filterScope>
         <filters>
