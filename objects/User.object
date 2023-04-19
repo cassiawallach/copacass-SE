@@ -546,6 +546,16 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>License_Info__c</fullName>
+        <externalId>false</externalId>
+        <formula>Profile.UserLicense.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>License Info</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>LocaleSidKey</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -745,6 +755,17 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>Team__c</fullName>
+        <description>team id of the current user</description>
+        <externalId>false</externalId>
+        <label>Team</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>TimeZoneSidKey</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -763,6 +784,16 @@
     <fields>
         <fullName>Username</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Vertical__c</fullName>
+        <externalId>false</externalId>
+        <label>Vertical</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>WorkspaceId</fullName>
