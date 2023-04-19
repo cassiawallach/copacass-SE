@@ -41,7 +41,7 @@ SB.ckeditorConfig = {
   imageUploadAllowedExtensions: '.(jpg|gif|jpeg|png|jfif|jpe|pjpeg)$',
   imageUploadDeniedExtensions: '',
   removePlugins: 'flash,forms,image',
-  removeButtons: 'About,Save,NewPage,Preview,Print,Templates,CreateDiv,Language,Anchor,Smiley,PageBreak,Iframe',
+  removeButtons: 'About,Save,NewPage,Preview,Print,Templates,CreateDiv,HorizontalRule,Language,Anchor,Smiley,PageBreak,Iframe',
   sfdcLabels: {},
   contentsCss: 'https://fonts.googleapis.com/css?family=Dosis|Droid+Sans|Droid+Serif|Merriweather|Montserrat|Open+Sans|Play|PT+Sans|PT+Serif|Roboto:300,400|Titillium+Web|Ubuntu'
 }

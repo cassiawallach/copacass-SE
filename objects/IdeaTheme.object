@@ -129,6 +129,33 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Categories</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CommunityId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>EndDate</fullName>
+    </fields>
+    <fields>
+        <fullName>IdeaCount</fullName>
+    </fields>
+    <fields>
+        <fullName>StartDate</fullName>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Title</fullName>
+    </fields>
     <searchLayouts>
         <customTabListAdditionalFields>IDEATHEME.TITLE</customTabListAdditionalFields>
         <customTabListAdditionalFields>IDEATHEME.DESC</customTabListAdditionalFields>

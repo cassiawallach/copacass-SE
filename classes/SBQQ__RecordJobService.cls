@@ -14,6 +14,13 @@ global class RecordJobService {
     global static void createRecordJob(String jobId, String jobType) {
 
     }
+    global static void createRecordJobWithResult(String jobId, String jobType, String result) {
+
+    }
+    @HttpPatch
+    global static void createRecordJobWithResult(String jobId, String jobType, Boolean isFailed, String result) {
+
+    }
     @HttpPut
     global static void uploadResult(String jobId, String jobType, String result) {
 

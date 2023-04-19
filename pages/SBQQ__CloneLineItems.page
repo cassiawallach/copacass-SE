@@ -5,7 +5,10 @@
         <div class="sbForm"><apex:form >
             <c:pageHeader title="{!$Label.SBQQ__lbl_related_items_preview}" subtitle="{!SBQQ__Quote__c.Name}" iconName="sf-icon-copy resize">
                 <div class="sbBtns">
-                    <apex:commandButton styleClass="sbBtn" action="{!onClone}" value="{!onCloneLabel}" />
+					<!-- Clone Button -->
+					<apex:commandButton styleClass="sbBtn" value="{!onCloneLabel}" id="Submit" onClick="cloneOnClick(this); return false;" />
+					<apex:actionFunction name="doClone" action="{!onClone}" />
+					<!-- Cancel Button -->
                     <apex:commandButton styleClass="sbBtn" action="{!onCancel}" value="{!onCancelLabel}" />
                 </div>
             </c:pageHeader>
@@ -101,6 +104,15 @@
         </apex:form></div>
     </div>
     <script>
+		/**
+		 * W-5219492 Disable commandButtons Clone after the first click to ensure that it is not clicked multiple times.
+		 * @param {Object} objCloneBtn - The Clone button
+		 */
+		function cloneOnClick (objCloneBtn) {
+			objCloneBtn.disabled = true;
+			objCloneBtn.value = '{!JSINHTMLENCODE($Label.lbl_clone_in_progress)}';
+			doClone();
+		}
 
         var buttons = document.getElementsByClassName('toggleButton');
         var tables = document.getElementsByClassName('tableContainer');

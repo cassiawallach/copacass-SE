@@ -6,7 +6,10 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Copado Permissioner</label>
-    <logo>copado__Copado/copado__Copado_Logo.png</logo>
     <tabs>copado__Persona__c</tabs>
     <tabs>copado__Permission_Set_Explorer</tabs>
+    <tabs>Competitor__c</tabs>
+    <tabs>Custom_Account_Trends__c</tabs>
+    <tabs>redwing__ILT_Instructor__c</tabs>
+    <tabs>redwing__ILT_Roster__c</tabs>
 </CustomApplication>

@@ -5,8 +5,12 @@
         <value>カスタムアクション</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>このカスタムアクションが実行するアクション。</help>
-        <label></label>
+        <label><!-- Action --></label>
         <name>SBQQ__Action__c</name>
         <picklistValues>
             <masterLabel>Add Favorites</masterLabel>
@@ -165,10 +169,6 @@
             <translation>保存</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Save and Navigate</masterLabel>
-            <translation>保存して移動</translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Ungroup</masterLabel>
             <translation>グループ化解除</translation>
         </picklistValues>
@@ -187,22 +187,22 @@
     </fields>
     <fields>
         <help>このアクションを使用できるようにするにはチェックボックスをオンにします。</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>このカスタムアクションがブランドボタンであることを示します。ネストされていないアクションのスタイルのみに影響します。</help>
-        <label></label>
+        <label><!-- Brand Button --></label>
         <name>SBQQ__BrandButton__c</name>
     </fields>
     <fields>
         <help>HTML での識別を容易にするためのカスタムアクションの CSS クラス。</help>
-        <label></label>
+        <label><!-- Class --></label>
         <name>SBQQ__Class__c</name>
     </fields>
     <fields>
         <help>条件の動作を選択します。「すべて」は AND、「いずれか」は OR になります。</help>
-        <label></label>
+        <label><!-- Conditions Met --></label>
         <name>SBQQ__ConditionsMet__c</name>
         <picklistValues>
             <masterLabel>All</masterLabel>
@@ -215,32 +215,32 @@
     </fields>
     <fields>
         <help>アクションをデフォルトの上書きアクションとして設定するにはチェックボックスをオンにします。</help>
-        <label></label>
+        <label><!-- Default --></label>
         <name>SBQQ__Default__c</name>
     </fields>
     <fields>
         <help>ユーザが [カスタムアクション] ボタンにマウスポインタを置くと表示される値を入力します。</help>
-        <label></label>
+        <label><!-- Description --></label>
         <name>SBQQ__Description__c</name>
     </fields>
     <fields>
         <help>UI でこのアクションが表示される順序。</help>
-        <label></label>
+        <label><!-- Display Order --></label>
         <name>SBQQ__DisplayOrder__c</name>
     </fields>
     <fields>
         <help>このカスタムアクションのクリックハンドラのメソッド名。</help>
-        <label></label>
+        <label><!-- Event Handler Name --></label>
         <name>SBQQ__EventHandlerName__c</name>
     </fields>
     <fields>
         <help>このカスタムアクションのアイコンの CSS クラス名。</help>
-        <label></label>
+        <label><!-- Icon Class --></label>
         <name>SBQQ__IconClass__c</name>
     </fields>
     <fields>
         <help>このカスタムアクションのアイコン</help>
-        <label></label>
+        <label><!-- Icon --></label>
         <name>SBQQ__Icon__c</name>
         <picklistValues>
             <masterLabel>3dots</masterLabel>
@@ -925,7 +925,7 @@
     </fields>
     <fields>
         <help>UI でこのアクションに表示される表示ラベル。</help>
-        <label></label>
+        <label><!-- Label --></label>
         <name>SBQQ__Label__c</name>
         <picklistValues>
             <masterLabel>Add Favorites</masterLabel>
@@ -1098,7 +1098,7 @@
     </fields>
     <fields>
         <help>このアクションのページ上の位置。</help>
-        <label></label>
+        <label><!-- Location --></label>
         <name>SBQQ__Location__c</name>
         <picklistValues>
             <masterLabel>Account Panel</masterLabel>
@@ -1147,12 +1147,12 @@
     </fields>
     <fields>
         <help>このカスタムアクションのページ名。</help>
-        <label></label>
+        <label><!-- Page Handler Name --></label>
         <name>SBQQ__PageHandlerName__c</name>
     </fields>
     <fields>
         <help>このカスタムアクションを追加するページ。</help>
-        <label></label>
+        <label><!-- Page --></label>
         <name>SBQQ__Page__c</name>
         <picklistValues>
             <masterLabel>Account Detail</masterLabel>
@@ -1189,18 +1189,18 @@
     </fields>
     <fields>
         <help>このアクションがその下にグループ化される親カスタムアクションへの参照。</help>
-        <label></label>
+        <label><!-- Parent Custom Action --></label>
         <name>SBQQ__ParentCustomAction__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Custom Actions --></relationshipLabel>
     </fields>
     <fields>
         <help>正常実行後の戻り URL。一部のアクションには適用されません。</help>
-        <label></label>
+        <label><!-- Return URL --></label>
         <name>SBQQ__ReturnURL__c</name>
     </fields>
     <fields>
         <help>このアクションの対象となるオブジェクト。</help>
-        <label></label>
+        <label><!-- Target Object --></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Asset</masterLabel>
@@ -1221,7 +1221,7 @@
     </fields>
     <fields>
         <help>このアクションが表示される UI 要素。</help>
-        <label></label>
+        <label><!-- Type --></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Button</masterLabel>
@@ -1238,7 +1238,7 @@
     </fields>
     <fields>
         <help>URL への移動方法。</help>
-        <label></label>
+        <label><!-- URL Target --></label>
         <name>SBQQ__URLTarget__c</name>
         <picklistValues>
             <masterLabel>Popup</masterLabel>
@@ -1251,16 +1251,27 @@
     </fields>
     <fields>
         <help>移動先の URL を指定します。選択した場所に応じて、[品目]、[グループ]、および [見積] のレコード項目にアクセスできます。例: http://www.salesforce.com, http://www.yoursite.com/{!Id}, or /{!SBQQ__Quote__c.Name}/{!SBQQ__YourCustomVar__c}</help>
-        <label></label>
+        <label><!-- URL --></label>
         <name>SBQQ__URL__c</name>
     </fields>
+    <layouts>
+        <layout>Custom Action Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>レイアウト</label>
+            <section>Layout</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>名前</nameFieldLabel>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- URL can&apos;t be empty for Custom Action &quot;Save and Navigate&quot; --></errorMessage>
         <name>SBQQ__Non_empty_URL_for_Save_and_Navigate</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- URL target needs to be Replace Page for Custom Action &quot;Save and Navigate&quot; --></errorMessage>
         <name>SBQQ__URLTarget_for_Save_and_Navigate</name>
     </validationRules>
 </CustomObjectTranslation>

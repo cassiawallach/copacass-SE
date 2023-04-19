@@ -9,44 +9,51 @@
         <value>Produits favoris</value>
     </caseValues>
     <fields>
-        <label></label>
+        <label><!-- Configuration Attributes --></label>
         <name>SBQQ__ConfigurationAttributes__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Discount Schedule --></label>
         <name>SBQQ__DiscountSchedule__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
     </fields>
     <fields>
         <help>Identifier la fonctionnalité et l&apos;option dynamique de cette ligne.</help>
-        <label></label>
+        <label><!-- Dynamic Option ID --></label>
         <name>SBQQ__DynamicOptionId__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Favorite --></label>
         <name>SBQQ__Favorite__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Product Option --></label>
         <name>SBQQ__ProductOption__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Product --></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Quantity --></label>
         <name>SBQQ__Quantity__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Required By --></label>
         <name>SBQQ__RequiredBy__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
     </fields>
     <gender>Masculine</gender>
+    <layouts>
+        <layout>Favorite Product Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nom du produit favori</nameFieldLabel>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

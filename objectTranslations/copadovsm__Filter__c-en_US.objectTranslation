@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label></label>
+        <label><!-- Object Type --></label>
         <name>copadovsm__Object_Type__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Owner --></label>
         <name>copadovsm__Owner__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Filters --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Parameters --></label>
         <name>copadovsm__Parameters__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Share With --></label>
         <name>copadovsm__Share_With__c</name>
         <picklistValues>
             <masterLabel>All users</masterLabel>
-            <translation></translation>
+            <translation><!-- All users --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Only me</masterLabel>
-            <translation></translation>
+            <translation><!-- Only me --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Value Stream Map --></label>
         <name>copadovsm__Value_Stream_Map__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Filters --></relationshipLabel>
     </fields>
 </CustomObjectTranslation>

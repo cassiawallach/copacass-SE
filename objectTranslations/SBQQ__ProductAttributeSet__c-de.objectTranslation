@@ -6,14 +6,19 @@
         <value>Produktattributsatz</value>
     </caseValues>
     <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Produktattributsätze</value>
+    </caseValues>
+    <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
         <value>Produktattributsatz</value>
     </caseValues>
     <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Produktattributsatz</value>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Produktattributsätze</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
@@ -21,19 +26,14 @@
         <value>Produktattributsatzes</value>
     </caseValues>
     <caseValues>
-        <caseType>Nominative</caseType>
-        <plural>true</plural>
-        <value>Produktattributsätze</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>true</plural>
-        <value>Produktattributsätze</value>
-    </caseValues>
-    <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
         <value>Produktattributsätze</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Produktattributsatz</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
@@ -41,31 +41,38 @@
         <value>Produktattributsätzen</value>
     </caseValues>
     <fields>
-        <label></label>
+        <label><!-- Attribute Sets --></label>
         <name>SBQQ__AttributeSet__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Product Attribute Sets --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Configured SKU --></label>
         <name>SBQQ__ConfiguredSKU__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Parent Product Name --></label>
         <name>SBQQ__ProductName__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Product Option Name --></label>
         <name>SBQQ__ProductOptionName__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Product Option --></label>
         <name>SBQQ__ProductOption__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Product Attribute Sets --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Sequence --></label>
         <name>SBQQ__Sequence__c</name>
     </fields>
     <gender>Masculine</gender>
+    <layouts>
+        <layout>Product Attribute Set Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Produktattributsatz</nameFieldLabel>
 </CustomObjectTranslation>

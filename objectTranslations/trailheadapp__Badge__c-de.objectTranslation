@@ -6,22 +6,17 @@
         <value>Badge</value>
     </caseValues>
     <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value>Badge</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Badge</value>
-    </caseValues>
-    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Badges</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Badge</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
         <plural>true</plural>
         <value>Badges</value>
     </caseValues>
@@ -37,45 +32,50 @@
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Badge</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
         <plural>true</plural>
         <value>Badges</value>
     </caseValues>
     <fields>
-        <label></label>
+        <label><!-- API Name --></label>
         <name>trailheadapp__API_Name__c</name>
     </fields>
     <fields>
         <help>Dieser Badge wurde archiviert und ist nicht mehr verfügbar.</help>
-        <label></label>
+        <label><!-- Archived --></label>
         <name>trailheadapp__Archived__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Badge Icon --></label>
         <name>trailheadapp__Badge_Icon__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Built Date --></label>
         <name>trailheadapp__Built_Date__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Created At --></label>
         <name>trailheadapp__Created_At__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Description --></label>
         <name>trailheadapp__Description__c</name>
     </fields>
     <fields>
         <help>Dieses Feld ist veraltet und wird nicht mehr verwendet.</help>
-        <label></label>
+        <label><!-- External Id --></label>
         <name>trailheadapp__External_Id__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Icon --></label>
         <name>trailheadapp__Icon__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Level --></label>
         <name>trailheadapp__Level__c</name>
         <picklistValues>
             <masterLabel>Advanced</masterLabel>
@@ -91,31 +91,31 @@
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Namespace --></label>
         <name>trailheadapp__Namespace__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Products --></label>
         <name>trailheadapp__Products__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Roles --></label>
         <name>trailheadapp__Roles__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Tags --></label>
         <name>trailheadapp__Tags__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Total Badges Awarded --></label>
         <name>trailheadapp__Total_Badges_Awarded__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Total Badges In Progress --></label>
         <name>trailheadapp__Total_Badges_In_Progress__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Type --></label>
         <name>trailheadapp__Type__c</name>
         <picklistValues>
             <masterLabel>Module</masterLabel>
@@ -131,9 +131,16 @@
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- URL --></label>
         <name>trailheadapp__URL__c</name>
     </fields>
     <gender>Masculine</gender>
+    <layouts>
+        <layout>Trailhead Badge Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Badge-Name</nameFieldLabel>
 </CustomObjectTranslation>

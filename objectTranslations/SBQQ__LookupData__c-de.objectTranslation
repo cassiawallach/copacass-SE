@@ -41,27 +41,27 @@
         <value>Nachschlagedaten</value>
     </caseValues>
     <fields>
-        <label></label>
+        <label><!-- Category --></label>
         <name>SBQQ__Category__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Message --></label>
         <name>SBQQ__Message__c</name>
     </fields>
     <fields>
         <help>Für die Verwendung von Produktauswahlregeln; gibt das Produkt an, für das die Produktaktion erfolgt.</help>
-        <label></label>
+        <label><!-- Product --></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Lookup Data --></relationshipLabel>
     </fields>
     <fields>
         <help>Für Produktauswahlregeln; gibt an, dass die Aktion erforderlich ist.</help>
-        <label></label>
+        <label><!-- Required --></label>
         <name>SBQQ__Required__c</name>
     </fields>
     <fields>
         <help>Für die Verwendung von Produktauswahlregeln; gibt die Art der Aktion an, die für das Produkt ausgeführt wird.</help>
-        <label></label>
+        <label><!-- Type --></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Add</masterLabel>
@@ -113,9 +113,16 @@
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Value --></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Lookup Data Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nachschlagedaten</nameFieldLabel>
 </CustomObjectTranslation>

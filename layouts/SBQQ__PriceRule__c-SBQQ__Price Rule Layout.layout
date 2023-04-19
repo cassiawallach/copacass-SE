@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customButtons>SBQQ__CloneWithRelatedClassic</customButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -19,6 +20,18 @@
                 <behavior>Required</behavior>
                 <field>SBQQ__ConditionsMet__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__EvaluationEvent__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__AdvancedCondition__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>External_Id__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -32,6 +45,18 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>SBQQ__LookupObject__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__ConfiguratorEvaluationEvent__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__Product__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CurrencyIsoCode</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -67,6 +92,7 @@
     </layoutSections>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>SBQQ__Index__c</fields>
         <fields>SBQQ__Object__c</fields>
         <fields>SBQQ__Field__c</fields>
         <fields>SBQQ__TestedVariable__c</fields>
@@ -88,10 +114,13 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>SBQQ__Order__c</fields>
         <fields>SBQQ__Field__c</fields>
         <fields>SBQQ__Value__c</fields>
         <fields>SBQQ__ValueField__c</fields>
         <fields>SBQQ__SourceVariable__c</fields>
+        <fields>SBQQ__RuleLookupObject__c</fields>
+        <fields>SBQQ__SourceLookupField__c</fields>
         <relatedList>SBQQ__PriceAction__c.SBQQ__Rule__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
@@ -100,7 +129,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hA000000YQ1Rt</masterLabel>
+        <masterLabel>00hb000000WZdc4</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

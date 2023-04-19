@@ -223,11 +223,33 @@
         <type>DateTime</type>
     </fields>
     <fields>
+        <fullName>rh2__Notification_Email__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Notification Email</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>rh2__ParentFilter__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Filter</label>
         <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>rh2__Parent_Condition_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Parent Condition Name</label>
+        <length>13</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>

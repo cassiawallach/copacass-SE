@@ -6,14 +6,19 @@
         <value>Attributsatz</value>
     </caseValues>
     <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Attributsätze</value>
+    </caseValues>
+    <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
         <value>Attributsatz</value>
     </caseValues>
     <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Attributsatz</value>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Attributsätze</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
@@ -21,19 +26,14 @@
         <value>Attributsatzes</value>
     </caseValues>
     <caseValues>
-        <caseType>Nominative</caseType>
-        <plural>true</plural>
-        <value>Attributsätze</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>true</plural>
-        <value>Attributsätze</value>
-    </caseValues>
-    <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
         <value>Attributsätze</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Attributsatz</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
@@ -41,5 +41,12 @@
         <value>Attributsätzen</value>
     </caseValues>
     <gender>Masculine</gender>
+    <layouts>
+        <layout>Attribute Set Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Name des Attributsatzes</nameFieldLabel>
 </CustomObjectTranslation>

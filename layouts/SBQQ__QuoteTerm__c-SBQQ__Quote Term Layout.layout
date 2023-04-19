@@ -111,6 +111,14 @@
         <relatedList>SBQQ__TermCondition__c.SBQQ__QuoteTerm__c</relatedList>
     </relatedLists>
     <relatedLists>
+        <fields>Name</fields>
+        <fields>CreatedBy</fields>
+        <fields>CreatedDate</fields>
+        <fields>ViewCount</fields>
+        <fields>LastViewDate</fields>
+        <relatedList>RelatedContentDistributionList</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>NAME</fields>
         <fields>SBQQ__PrintOrder__c</fields>
         <fields>SBQQ__Status__c</fields>
@@ -128,6 +136,12 @@
         <fields>TASK.PRIORITY</fields>
         <fields>CORE.USERS.FULL_NAME</fields>
         <relatedList>RelatedActivityList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>VERSION.TITLE</fields>
+        <fields>VERSION.CREATED_DATE</fields>
+        <fields>VERSION.LAST_UPDATE</fields>
+        <relatedList>ContentDocumentRelatedList</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>TASK.SUBJECT</fields>
@@ -151,7 +165,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hA000000YAZx0</masterLabel>
+        <masterLabel>00h9E000000FZyb</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

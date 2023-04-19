@@ -1,54 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldSets>
-        <label></label>
+        <label><!-- Related List Fields --></label>
         <name>copado__relatedListFields</name>
     </fieldSets>
     <fields>
-        <label></label>
+        <label><!-- Continue on failure --></label>
         <name>copado__Continue_on_failure__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Environment --></label>
         <name>copado__Environment__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- External CI Jobs --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- External CI Setting --></label>
         <name>copado__External_CI_Setting__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- External CI Jobs --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Invoke on --></label>
         <name>copado__Invoke_on__c</name>
         <picklistValues>
             <masterLabel>After deployment</masterLabel>
-            <translation></translation>
+            <translation><!-- After deployment --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Before deployment</masterLabel>
-            <translation></translation>
+            <translation><!-- Before deployment --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Job Api Name --></label>
         <name>copado__Job_Api_Name__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Order --></label>
         <name>copado__Order__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Timeout in minutes --></label>
         <name>copado__Timeout_in_minutes__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- User Story --></label>
         <name>copado__User_Story__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- External CI Jobs --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- dataJSON --></label>
         <name>copado__dataJSON__c</name>
     </fields>
+    <layouts>
+        <layout>External CI Job Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
 </CustomObjectTranslation>

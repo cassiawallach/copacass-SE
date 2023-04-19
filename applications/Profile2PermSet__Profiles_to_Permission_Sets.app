@@ -2,7 +2,6 @@
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <brand>
         <headerColor>#2A739E</headerColor>
-        <logo>Profile2PermSet__PHicon</logo>
         <logoVersion>1</logoVersion>
         <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
@@ -11,7 +10,7 @@
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
-    <label>User Access &amp; Permissions Assistant</label>
+    <label>Permission Helper</label>
     <navType>Standard</navType>
     <tabs>Profile2PermSet__Permissions_Analyzer</tabs>
     <tabs>Profile2PermSet__Converter</tabs>

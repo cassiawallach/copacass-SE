@@ -6,24 +6,24 @@
         <value>Vorlageninhalt</value>
     </caseValues>
     <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value>Vorlageninhalt</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Vorlageninhalt</value>
-    </caseValues>
-    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Vorlageninhalte</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Vorlageninhalt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
         <plural>true</plural>
         <value>Vorlageninhalte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Vorlageninhalts</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
@@ -32,22 +32,26 @@
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Vorlageninhalt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
         <plural>true</plural>
         <value>Vorlageninhalten</value>
     </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value>Vorlageninhalts</value>
-    </caseValues>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
     <fields>
         <help>URL zu einer VisualForce-Seite, die Inhalt generiert, wenn der Typ auf &quot;Benutzerdefiniert&quot; eingestellt ist.</help>
-        <label></label>
+        <label><!-- Custom Source --></label>
         <name>SBQQ__CustomSource__c</name>
     </fields>
     <fields>
         <help>Schriftartfamilie, die bei der Darstellung dieses Inhalts im erstellten PDF-Angebotsdokument verwendet werden soll.</help>
-        <label></label>
+        <label><!-- Font Family --></label>
         <name>SBQQ__FontFamily__c</name>
         <picklistValues>
             <masterLabel>Courier</masterLabel>
@@ -106,10 +110,6 @@
             <translation>PT Serif</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Play</masterLabel>
-            <translation>Play</translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Roboto</masterLabel>
             <translation>Roboto</translation>
         </picklistValues>
@@ -125,29 +125,25 @@
             <masterLabel>Titillium Web</masterLabel>
             <translation>Titillium Web</translation>
         </picklistValues>
-        <picklistValues>
-            <masterLabel>Ubuntu</masterLabel>
-            <translation>Ubuntu</translation>
-        </picklistValues>
     </fields>
     <fields>
         <help>Schriftgröße, die bei der Darstellung dieses Inhalts im erstellten PDF-Angebotsdokument verwendet werden soll.</help>
-        <label></label>
+        <label><!-- Font Size --></label>
         <name>SBQQ__FontSize__c</name>
     </fields>
     <fields>
         <help>Enthält das Markup, falls es sich um Inhalt vom Typ &quot;Markup&quot; handelt.</help>
-        <label></label>
+        <label><!-- Markup --></label>
         <name>SBQQ__Markup__c</name>
     </fields>
     <fields>
         <help>Ursprüngliche HTML-Version des Inhalts im Markup-Feld.</help>
-        <label></label>
+        <label><!-- Raw Markup --></label>
         <name>SBQQ__RawMarkup__c</name>
     </fields>
     <fields>
         <help>Tabellenformat, das für Belegposten verwendet wird. Im Standardformat &quot;Standard&quot; werden benutzerdefinierte Felder als Spalten mit vertikal aufgelisteten Belegposten angezeigt.</help>
-        <label></label>
+        <label><!-- Table Style --></label>
         <name>SBQQ__TableStyle__c</name>
         <picklistValues>
             <masterLabel>Price Dimensions as Columns</masterLabel>
@@ -164,12 +160,12 @@
     </fields>
     <fields>
         <help>Standardfarbe (in HEX), die auf den von diesem Inhalt dargestellten Text angewandt wird.</help>
-        <label></label>
+        <label><!-- Text Color --></label>
         <name>SBQQ__TextColor__c</name>
     </fields>
     <fields>
         <help>Typ dieses Inhalts.</help>
-        <label></label>
+        <label><!-- Type --></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Custom</masterLabel>
@@ -189,9 +185,20 @@
         </picklistValues>
     </fields>
     <gender>Masculine</gender>
+    <layouts>
+        <layout>Template Content Layout</layout>
+        <sections>
+            <label>Text</label>
+            <section>Body</section>
+        </sections>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Inhaltsname</nameFieldLabel>
     <webLinks>
-        <label></label>
+        <label><!-- Translate --></label>
         <name>SBQQ__Translate</name>
     </webLinks>
 </CustomObjectTranslation>

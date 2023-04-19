@@ -51,7 +51,7 @@
      	<div class="slds-card slds-m-vertical_medium grayBackground">
      		<header class="slds-card__header slds-grid">
      			<div class="slds-media__body">
-                	<h3 class="slds-text-heading_small slds-truncate">{!$Label.RollupHelperUCLibrary}</h3>
+                	<h3 class="slds-text-heading_medium slds-truncate">{!$Label.RollupHelperUCLibrary}</h3>
 					<hr style="margin: 1rem 0;"></hr>
 					<h5 class="slds-text-title slds-truncate">{!$Label.Click} <b>'{!$Label.rh2__Deploy}'</b> {!$Label.OnAnyUseCase}</h5>
               	</div>

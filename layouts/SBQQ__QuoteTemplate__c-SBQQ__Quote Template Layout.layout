@@ -34,6 +34,10 @@
                 <behavior>Edit</behavior>
                 <field>SBQQ__WatermarkId__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>External_Id__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
@@ -197,8 +201,16 @@
                 <field>SBQQ__ShadingColor__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>SBQQ__TermBodyIndent__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__ExcludeHeaderFooter__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__ExcludedPages__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -213,6 +225,18 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>SBQQ__TextColor__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__PageNumberText__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__PageNumberPosition__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__PageNumberAlignment__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -236,7 +260,7 @@
                 <field>SBQQ__GroupFontStyle__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>SBQQ__GroupGap__c</field>
             </layoutItems>
         </layoutColumns>
@@ -407,6 +431,7 @@
     <relatedLists>
         <fields>NAME</fields>
         <fields>SBQQ__DisplayOrder__c</fields>
+        <fields>SBQQ__Section__c</fields>
         <fields>SBQQ__Width__c</fields>
         <fields>SBQQ__FieldName__c</fields>
         <fields>SBQQ__Alignment__c</fields>
@@ -437,7 +462,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hA000000YQ1S3</masterLabel>
+        <masterLabel>00hb000000WZdcJ</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

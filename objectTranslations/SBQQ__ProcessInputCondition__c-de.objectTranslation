@@ -6,34 +6,34 @@
         <value>Prozesseingabebedingung</value>
     </caseValues>
     <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value>Prozesseingabebedingung</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value>Prozesseingabebedingung</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Prozesseingabebedingung</value>
-    </caseValues>
-    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Prozesseingabebedingungen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Prozesseingabebedingung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
         <plural>true</plural>
         <value>Prozesseingabebedingungen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Prozesseingabebedingung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
         <plural>true</plural>
         <value>Prozesseingabebedingungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Prozesseingabebedingung</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
@@ -42,18 +42,18 @@
     </caseValues>
     <fields>
         <help>Kennzeichnung, die angibt, ob diese Regel aktiv oder inaktiv ist.</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Werte dieser Prozesseingabe bestimmten die Sichtbarkeit der aktuellen Eingabe.</help>
-        <label></label>
+        <label><!-- Master Process Input --></label>
         <name>SBQQ__MasterProcessInput__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Process Inputs Regulated --></relationshipLabel>
     </fields>
     <fields>
         <help>Wählen Sie den Operator aus, der beim Vergleichen von Prozesseingabewerten verwendet werden soll.</help>
-        <label></label>
+        <label><!-- Operator --></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -94,15 +94,26 @@
     </fields>
     <fields>
         <help>Prozesseingabe, die Inhaber der Bedingung ist.</help>
-        <label></label>
+        <label><!-- Process Input --></label>
         <name>SBQQ__ProcessInput__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Process Input Conditions --></relationshipLabel>
     </fields>
     <fields>
         <help>Der Wert, der beim Vergleich mit der steuernden Prozesseingabe verwendet wird.</help>
-        <label></label>
+        <label><!-- Value --></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Process Input Condition Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Filterinformationen</label>
+            <section>Filter Information</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Name von Prozesseingabebedingungen</nameFieldLabel>
 </CustomObjectTranslation>

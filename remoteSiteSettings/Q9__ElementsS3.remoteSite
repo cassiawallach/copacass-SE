@@ -2,5 +2,5 @@
 <RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
     <disableProtocolSecurity>false</disableProtocolSecurity>
     <isActive>false</isActive>
-    <url>https://deprecated.com</url>
+    <url>https://reference-models.s3.eu-west-1.amazonaws.com</url>
 </RemoteSiteSetting>

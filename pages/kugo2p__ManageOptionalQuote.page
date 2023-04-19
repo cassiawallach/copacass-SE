@@ -1,0 +1,23 @@
+<apex:page standardController="kugo2p__SalesQuote__c"
+    title="Manage Lines | Kugamon"
+    applyBodyTag="false"
+    sidebar="false"
+    docType="html-5.0" language="en-US">
+ 
+	<script>
+        // get the id of the quote record    
+        var quoteId = "{!JSENCODE(kugo2p__SalesQuote__c.Id)}";
+
+        const appName = 'ManageLinesContainerApp';
+        const cmpName = 'ManageLinesContainer';
+        const cmpParams = {
+		                    isModal: true,
+		                    objectName: 'Quote',
+		                    objectIconName: 'custom:custom84', // custom "quote" icon
+		                    recordId: quoteId,
+		                    selectedView: "optionalLines",                        
+                    	};
+    </script>
+
+    <c:BaseLightningOut />
+</apex:page>

@@ -9,31 +9,35 @@
         <value>Knowledge</value>
     </caseValues>
     <fields>
-        <help></help>
-        <label></label>
-        <name>Content__c</name>
+        <label><!-- Body --></label>
+        <name>Body__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
-        <name>DigitalEngagementResponse__c</name>
+        <label><!-- HelpDocs Id --></label>
+        <name>HelpDocs_Id__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
-        <name>InternalNotes__c</name>
-    </fields>
-    <fields>
-        <help></help>
-        <label></label>
-        <name>Question__c</name>
+        <label><!-- Known Issue --></label>
+        <name>Known_Issue__c</name>
+        <relationshipLabel><!-- Knowledge --></relationshipLabel>
     </fields>
     <layouts>
-        <layout>Knowledge Layout</layout>
+        <layout>Knowledge External Layout</layout>
         <sections>
-            <label></label>
+            <label><!-- Custom Links --></label>
             <section>Custom Links</section>
         </sections>
     </layouts>
+    <layouts>
+        <layout>Knowledge Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Support --></label>
+        <name>Support</name>
+    </recordTypes>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

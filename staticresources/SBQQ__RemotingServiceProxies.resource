@@ -442,7 +442,10 @@ SoapMetaDataService.prototype.processLayoutMetaData = function(/*String*/ object
 }
 
 SoapMetaDataService.prototype.handleError = function(error) {
-	alert('Error retrieving metadata: ' + result.statusText);
+	console.log(error);
+	if (console.error) {
+		console.error(error);
+	}
 }
 
 function RemotingQuoteTermEditorProxy(/*String*/ namespace) {

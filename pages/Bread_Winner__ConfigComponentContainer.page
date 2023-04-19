@@ -1,0 +1,22 @@
+<apex:page controller="Bread_Winner.BreadwinnerController" id="configComponent">
+    <apex:outputPanel rendered="{!cmpName != 'Setup'}"> 
+        <c:ConfigMissionControl id="ConfigMissionControl" rendered="{!cmpName == 'MissionControl'}" />
+        <c:ConfigPermissions id="ConfigPermissions" rendered="{!cmpName == 'Permissions'}" />
+        <c:ConfigInvoices id="ConfigInvoices" rendered="{!cmpName == 'Invoices'}" />
+        <c:ConfigBills id="ConfigBills" rendered="{!cmpName == 'Bills'}" />
+        <c:ConfigPOs id="ConfigPOs" rendered="{!cmpName == 'POs'}" />
+        <c:ConfigXeroContacts id="ConfigXeroContacts" rendered="{!cmpName == 'XeroContacts'}" />
+        <c:ConfigEmails id="ConfigEmails" rendered="{!cmpName == 'Emails'}" />
+        <c:ConfigMultiTenant id="ConfigMultiTenant" rendered="{!cmpName == 'MultiTenant'}" />
+        <c:ConfigInvoiceCollection id="ConfigInvoiceCollection" rendered="{!cmpName == 'InvoiceCollection'}" />
+        <c:ConfigAddressSync id="ConfigAddressSync" rendered="{!cmpName == 'AddressSync'}" />
+        <c:ConfigBatchInvoicing id="ConfigBatchInvoicing" rendered="{!cmpName == 'BatchInvoicing'}" />
+        <c:ConfigApexGenerator id="ConfigApexGenerator" rendered="{!cmpName == 'ApexGenerator'}" />
+        <c:ConfigKnowledgeBase id="ConfigKnowledgeBase" rendered="{!cmpName == 'KnowledgeBase'}" />
+        <c:ConfigContactSupport id="ConfigContactSupport" rendered="{!cmpName == 'ContactSupport'}" />
+        <c:ConfigGeneral id="ConfigGeneral" rendered="{!cmpName == 'General'}" />
+        <c:ConfigBilling id="ConfigBilling" rendered="{!cmpName == 'Billing'}" />
+        <c:ConfigConnection id="ConfigConnection" rendered="{!cmpName == 'Connection'}" />
+        <c:ConfigStatusLogs id="ConfigStatusLogs" rendered="{!cmpName == 'StatusLogs'}" />
+    </apex:outputPanel>
+</apex:page>

@@ -1,18 +1,46 @@
-<apex:page action="{!checkLicense}" standardController="Contract" extensions="SBQQ.AmendContractController,SBQQ.QueueableJobCheckerExt,SBQQ.LicenseCheckerExt" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" standardStylesheets="false" title="{!$Label.SBQQ__lbl_amend_contract}">
+<apex:page standardController="Contract" extensions="SBQQ.AmendContractController,SBQQ.QueueableJobCheckerExt" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" standardStylesheets="false" title="{!$Label.SBQQ__lbl_amend_contract}">
 	<apex:stylesheet value="{!$Resource['sb']}"/>
 	<apex:includeScript value="{!$Resource.SBQQ__QueueableJobChecker}"/>
+	<apex:slds />
 
 	<c:theme />
 	<apex:pageMessages />
 	<div id="sbAmendContract" class="sb">
 	    <apex:form >
-	    	<c:pageHeader title="{!$Label.SBQQ__lbl_amend_contract}" subtitle="{!contractNumber}" subtitleMessage="{!displayedSubscriptionsMsg}" formFactor="desktop" iconName="sf-icon-contract-1">
+	    	<c:pageHeader title="{!$Label.SBQQ__lbl_amend_contract}" subtitle="{!contractNumber}" subtitleMessage="{!displayedSubscriptionsMsg}" formFactor="{!formFactor}" iconName="sf-icon-contract-1">
 		    	<div class="sbButtons">
 	                <apex:commandButton styleClass="sbBtn" value="{!$Label.SBQQ__lbl_amend}" action="{!onAmend}" onclick="toggleLoadingMask(true)"/>
 	                <apex:commandButton styleClass="sbBtn" action="{!returnToContract}" value="{!$Label.SBQQ__lbl_cancel}" />
 	            </div>
 			</c:pageHeader>
 		</apex:form>
+		<div class="slds-scope">
+		<div id="failureToast" class="slds-notify_container slds-is-relative slds-hide" style="position:absolute;">
+			<div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+				<span class="slds-assistive-text">error</span>
+				<span
+					class="slds-icon_container slds-icon-utility-error slds-m-right_small slds-no-flex slds-align-top"
+					title="Description of icon when needed">
+						<svg class="slds-icon slds-icon_small" aria-hidden="true">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink"
+							 xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#error"/>
+						</svg>
+					</span>
+				<div class="slds-notify__content">
+					<h2 class="slds-text-heading_small " id="failureToastHeader" style="color:white;"></h2>
+					<p id="failureToastDetails"></p>
+				</div>
+				<button class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse"
+						title="Close" onclick="toggleToast(false)">
+					<svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink"
+							 xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#close"/>
+					</svg>
+					<span class="slds-assistive-text">Close</span>
+				</button>
+			</div>
+		</div>
+		</div>
 		<div class="sbBody">
 			<div class="sbPageBlockSection">
 				<table class="sbTable" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -49,6 +77,23 @@
 		function toggleLoadingMask(show) {
 			document.getElementsByClassName('sbLoadingMask')[0].style.visibility = (show ? "visible" : "hidden");
 		}
+
+		function toggleToast(show) {
+			var failureToast = document.getElementById("failureToast");
+			var classes = failureToast.className.split(' ');
+
+			var newClasses = classes.map(function(val) {
+				switch (val) {
+					case 'slds-hide':
+						return show ? 'slds-show' : val;
+					case 'slds-show':
+						return show ? val : 'slds-hide';
+					default:
+						return val;
+				}
+			});
+			failureToast.className = newClasses.join(' ');
+		}
 	</script>
 	<apex:outputPanel layout="none" rendered="{!jobId != null}">
 		<script type="application/javascript">
@@ -69,13 +114,28 @@
 			function finish(success, results) {
 				toggleLoadingMask(false);
 				if (!success) {
-					window.alert(results.job.ExtendedStatus);
+					let status = results.job.ExtendedStatus;
+					// Split the status into a header and details. The first colon (:) is our split point. Everything
+					// before it is header, everything after is details. If there isn't a colon, or the colon is at the
+					// beginning or end of the status, the entire thing is header.
+					let breakpointIndex = status.indexOf(':');
+					let statusArray;
+					if (breakpointIndex > 0 && breakpointIndex !== status.length - 1) {
+						statusArray = [status.slice(0, breakpointIndex), status.slice(breakpointIndex + 1)];
+					} else {
+						statusArray = [status];
+					}
+					document.getElementById('failureToastHeader').textContent = statusArray[0].trim();
+					if (statusArray.length > 1) {
+						document.getElementById('failureToastDetails').textContent = statusArray[1].trim();
+					}
+					toggleToast(true);
 				} else {
 					if (results.redirectUrl) {
 						if (typeof sforce != 'undefined' && sforce && sforce.one) {
-							sforce.one.navigateToURL(results.redirectUrl);
+							sforce.one.navigateToURL('{!$Site.Prefix}' + results.redirectUrl, true);
 						} else {
-							document.location.href = results.redirectUrl;
+							document.location.href = '{!$Site.Prefix}' + results.redirectUrl;
 						}
 					}
 				}

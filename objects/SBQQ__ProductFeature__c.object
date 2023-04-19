@@ -168,6 +168,16 @@
         <label>Configurator</label>
     </fieldSets>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>External Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>SBQQ__Category__c</fullName>
         <deprecated>false</deprecated>
         <description>Category of options in this feature. Allows for another level of grouping.</description>
@@ -384,6 +394,13 @@
         <searchFilterFields>UPDATEDBY_USER</searchFilterFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>SBQQ__Dynamic_OptionSelectionMethod_Validation</fullName>
+        <active>true</active>
+        <description>Option selection method for evergreen or renewable/evergreen configurable SKU cannot be Dynamic</description>
+        <errorConditionFormula>AND(OR(ISPICKVAL(SBQQ__ConfiguredSKU__r.SBQQ__SubscriptionType__c, &apos;Evergreen&apos;),  ISPICKVAL(SBQQ__ConfiguredSKU__r.SBQQ__SubscriptionType__c,&apos;Renewable/Evergreen&apos;)), ISPICKVAL(SBQQ__OptionSelectionMethod__c, &apos;Dynamic&apos;))</errorConditionFormula>
+        <errorMessage>Can’t create dynamic bundles for evergreen or renewable/evergreen products</errorMessage>
+    </validationRules>
     <validationRules>
         <fullName>SBQQ__MinOptionValidation</fullName>
         <active>true</active>

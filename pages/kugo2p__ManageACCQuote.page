@@ -1,0 +1,28 @@
+<apex:page standardController="kugo2p__SalesQuote__c"
+    title="Manage Lines | Kugamon" 
+    applyBodyTag="false"
+    sidebar="false" 
+    docType="html-5.0" language="en-US">
+   
+    <script>        
+        // get the id of the quote record    
+        var quoteId = "{!JSENCODE(kugo2p__SalesQuote__c.Id)}";
+
+        // determine the current view that is to be displayed on page launch. Add Lines or Edit Lines
+        let selectedView = "{!JSENCODE($CurrentPage.parameters.view)}";
+        selectedView = (selectedView == undefined || selectedView == '') ? 'additionalChargesAndCredits' : selectedView;
+		//console.log('selectedView: ' + selectedView);
+
+        const appName = 'ManageLinesContainerApp';
+        const cmpName = 'ManageLinesContainer';
+        const cmpParams = {
+		                    isLightningMode: {!$User.UIThemeDisplayed == 'Theme4d'},
+		                    isModal: true,
+		                    objectName: 'Quote',
+		                    recordId: quoteId,
+		                    selectedView: selectedView                        
+                    	};
+    </script>
+
+    <c:BaseLightningOut />
+</apex:page>

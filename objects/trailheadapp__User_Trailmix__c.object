@@ -179,7 +179,6 @@
         <fullName>trailheadapp__Due_At__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>This due date may display differently for users not in the assigner&apos;s same timezone.</inlineHelpText>
         <label>Due</label>
         <required>false</required>
         <trackHistory>true</trackHistory>

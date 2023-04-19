@@ -5,44 +5,58 @@
         <value>用户 Trailmix</value>
     </caseValues>
     <fields>
-        <label></label>
+        <label><!-- Assigned --></label>
         <name>trailheadapp__Assigned_At__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Completed --></label>
         <name>trailheadapp__Completed_At__c</name>
     </fields>
     <fields>
-        <help>对于不在分配者的同一时区的用户，此到期日期可能会有所不同。</help>
-        <label></label>
+        <label><!-- Due --></label>
         <name>trailheadapp__Due_At__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- External Id --></label>
         <name>trailheadapp__External_Id__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- First Attempted --></label>
         <name>trailheadapp__First_Attempted_At__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Last Attempted --></label>
         <name>trailheadapp__Last_Attempted_At__c</name>
     </fields>
     <fields>
         <help>“进行中”或“完成”两种类型的状态可用于表示用户 的 Trailmix 状态。</help>
-        <label></label>
+        <label><!-- Status --></label>
         <name>trailheadapp__Status__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Trailmix --></label>
         <name>trailheadapp__Trailmix__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Trailmixes --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- User --></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Trailmixes --></relationshipLabel>
     </fields>
+    <layouts>
+        <layout>User Trailmix Layout</layout>
+        <sections>
+            <label>自定义链接</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>用户 Trailmix ID</nameFieldLabel>
+    <quickActions>
+        <label><!-- Assign Trailmix --></label>
+        <name>trailheadapp__AssignTrailmix</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Unassign Trailmix --></label>
+        <name>trailheadapp__Unassign_Trailmix</name>
+    </quickActions>
 </CustomObjectTranslation>

@@ -9,6 +9,9 @@ global class SettingsVOAPI {
     global SettingsVOAPI() {
 
     }
+    global static Boolean isPricingGuidanceEnabled() {
+        return null;
+    }
     global static Boolean isTriggersDisabled() {
         return null;
     }

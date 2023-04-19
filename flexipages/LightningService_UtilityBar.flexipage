@@ -16,16 +16,24 @@
         </itemInstances>
         <itemInstances>
             <componentInstance>
-                <componentName>runtime_service_omnichannel:omniWidget</componentName>
-                <identifier>runtime_service_omnichannel_omniWidget</identifier>
+                <componentName>macros:macroUtilityItem</componentName>
+                <identifier>macros_macroUtilityItem</identifier>
             </componentInstance>
         </itemInstances>
         <name>utilityItems</name>
         <type>Region</type>
     </flexiPageRegions>
+    <flexiPageRegions>
+        <name>backgroundComponents</name>
+        <type>Background</type>
+    </flexiPageRegions>
     <masterLabel>Service Console App Utility Bar</masterLabel>
     <template>
         <name>one:utilityBarTemplateDesktop</name>
+        <properties>
+            <name>isLeftAligned</name>
+            <value>true</value>
+        </properties>
     </template>
     <type>UtilityBar</type>
 </FlexiPage>

@@ -9,8 +9,12 @@
         <value>Dimensions de prix</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>Contrôle si le coût de ce produit peut être modifié dans des devis individuels.</help>
-        <label></label>
+        <label><!-- Cost Editable --></label>
         <name>SBQQ__CostEditable__c</name>
         <picklistValues>
             <masterLabel>Inherit</masterLabel>
@@ -27,18 +31,18 @@
     </fields>
     <fields>
         <help>Spécifiez la quantité de départ du produit lorsqu&apos;il a été ajouté.</help>
-        <label></label>
+        <label><!-- Default Quantity --></label>
         <name>SBQQ__DefaultQuantity__c</name>
     </fields>
     <fields>
         <help>Barème de remise à utiliser avec cette dimension</help>
-        <label></label>
+        <label><!-- Discount Schedule --></label>
         <name>SBQQ__DiscountSchedule__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Price Dimensions --></relationshipLabel>
     </fields>
     <fields>
         <help>Marque cette dimension comme sans remise possible.</help>
-        <label></label>
+        <label><!-- Non Discountable --></label>
         <name>SBQQ__NonDiscountable__c</name>
         <picklistValues>
             <masterLabel>Inherit</masterLabel>
@@ -55,7 +59,7 @@
     </fields>
     <fields>
         <help>Marque cette dimension comme sans remise possible pour les partenaires.</help>
-        <label></label>
+        <label><!-- Non Partner Discountable --></label>
         <name>SBQQ__NonPartnerDiscountable__c</name>
         <picklistValues>
             <masterLabel>Inherit</masterLabel>
@@ -72,13 +76,13 @@
     </fields>
     <fields>
         <help>Associe cette dimension à un catalogue de prix particulier</help>
-        <label></label>
+        <label><!-- Price Book --></label>
         <name>SBQQ__PriceBook__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Price Dimensions --></relationshipLabel>
     </fields>
     <fields>
         <help>Indique que cette dimension autorise la libre modification du prix lors de l&apos;élaboration d&apos;un devis.</help>
-        <label></label>
+        <label><!-- Price Editable --></label>
         <name>SBQQ__PriceEditable__c</name>
         <picklistValues>
             <masterLabel>Inherit</masterLabel>
@@ -95,13 +99,13 @@
     </fields>
     <fields>
         <help>Sélectionnez un produit auquel associer cette dimension de prix.</help>
-        <label></label>
+        <label><!-- Product --></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Price Dimensions --></relationshipLabel>
     </fields>
     <fields>
         <help>Autorisez ou empêchez le changement de la quantité de cette dimension.</help>
-        <label></label>
+        <label><!-- Quantity Editable --></label>
         <name>SBQQ__QuantityEditable__c</name>
         <picklistValues>
             <masterLabel>Inherit</masterLabel>
@@ -118,12 +122,12 @@
     </fields>
     <fields>
         <help>Spécifie le nombre de décimales utilisées dans le champ Quantité.</help>
-        <label></label>
+        <label><!-- Quantity Scale --></label>
         <name>SBQQ__QuantityScale__c</name>
     </fields>
     <fields>
         <help>Indique si ce produit peut être assujetti à une taxe.</help>
-        <label></label>
+        <label><!-- Taxable --></label>
         <name>SBQQ__Taxable__c</name>
         <picklistValues>
             <masterLabel>Inherit</masterLabel>
@@ -140,13 +144,13 @@
     </fields>
     <fields>
         <help>Correspond à un barème de remises basées sur la durée d&apos;abonnement. Les valeurs saisies dans ces champs remplacent celles saisies au niveau du produit.</help>
-        <label></label>
+        <label><!-- Term Discount Schedule --></label>
         <name>SBQQ__TermDiscountSchedule__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Price Dimensions (Term Discount Schedule) --></relationshipLabel>
     </fields>
     <fields>
         <help>Sélectionnez le type de la dimension de prix : Unique ou Annuel. Les dimensions annuelles sont toujours traitées comme des abonnements.</help>
-        <label></label>
+        <label><!-- Type --></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Custom</masterLabel>
@@ -171,14 +175,29 @@
     </fields>
     <fields>
         <help>Prix unitaire de cette dimension. Il remplace la valeur du catalogue de prix.</help>
-        <label></label>
+        <label><!-- Unit Price --></label>
         <name>SBQQ__UnitPrice__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Price Dimension Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Tarification</label>
+            <section>Pricing</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nom de la dimension</nameFieldLabel>
     <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Can’t create MDQ price dimensions for evergreen or renewable/evergreen products. --></errorMessage>
+        <name>SBQQ__Cannot_Create_PriceDimension_Evergreen</name>
+    </validationRules>
     <webLinks>
-        <label></label>
+        <label><!-- Translate --></label>
         <name>SBQQ__Translate</name>
     </webLinks>
 </CustomObjectTranslation>

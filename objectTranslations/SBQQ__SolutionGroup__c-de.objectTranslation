@@ -6,34 +6,34 @@
         <value>Lösungsgruppe</value>
     </caseValues>
     <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value>Lösungsgruppe</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value>Lösungsgruppe</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Lösungsgruppe</value>
-    </caseValues>
-    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Lösungsgruppen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Lösungsgruppe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
         <plural>true</plural>
         <value>Lösungsgruppen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Lösungsgruppe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
         <plural>true</plural>
         <value>Lösungsgruppen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Lösungsgruppe</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
@@ -42,9 +42,16 @@
     </caseValues>
     <fields>
         <help>Geben Sie eine Beschreibung für diese Lösungsgruppe ein.</help>
-        <label></label>
+        <label><!-- Description --></label>
         <name>SBQQ__Description__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>SolutionGroup Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Gruppenname</nameFieldLabel>
 </CustomObjectTranslation>

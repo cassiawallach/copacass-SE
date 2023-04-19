@@ -181,7 +181,23 @@
     <tabs>standard-Opportunity</tabs>
     <tabs>standard-Lead</tabs>
     <tabs>standard-Knowledge</tabs>
+    <tabs>Competitor__c</tabs>
+    <tabs>Custom_Account_Trends__c</tabs>
+    <tabs>redwing__ILT_Instructor__c</tabs>
+    <tabs>redwing__ILT_Roster__c</tabs>
     <workspaceConfig>
+        <mappings>
+            <tab>Competitor__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Custom_Account_Trends__c</tab>
+        </mappings>
+        <mappings>
+            <tab>redwing__ILT_Instructor__c</tab>
+        </mappings>
+        <mappings>
+            <tab>redwing__ILT_Roster__c</tab>
+        </mappings>
         <mappings>
             <tab>standard-Account</tab>
         </mappings>

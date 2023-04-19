@@ -359,21 +359,6 @@
             <field>copado__Progress_Status__c</field>
             <table>copado__User_Story__c</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Regression_Ready__c</field>
-            <table>copado__User_Story__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Requester__c</field>
-            <table>copado__User_Story__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>SF_Request__c</field>
-            <table>copado__User_Story__c</table>
-        </columns>
         <masterLabel>User Stories</masterLabel>
     </sections>
     <sections>

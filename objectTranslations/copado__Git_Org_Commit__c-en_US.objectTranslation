@@ -1,87 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldSets>
-        <label></label>
+        <label><!-- CBM Fields --></label>
         <name>copado__CBM_Fields</name>
     </fieldSets>
     <fields>
-        <label></label>
+        <label><!-- Changes --></label>
         <name>copado__Changes__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Commit Date --></label>
         <name>copado__Commit_Date__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Commit Id --></label>
         <name>copado__Commit_Id__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Commit Message --></label>
         <name>copado__Commit_Message__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Git Snapshot --></label>
         <name>copado__Git_Backup__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Snapshot Commits --></relationshipLabel>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- The Git operation executed by the Copado. --></help>
+        <label><!-- Git Operation --></label>
         <name>copado__Git_Operation__c</name>
         <picklistValues>
             <masterLabel>Commit Files</masterLabel>
-            <translation></translation>
+            <translation><!-- Commit Files --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Destructive Changes</masterLabel>
-            <translation></translation>
+            <translation><!-- Destructive Changes --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Credential --></label>
         <name>copado__Org__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Snapshot Commits --></relationshipLabel>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Status --></label>
         <name>copado__Status__c</name>
         <picklistValues>
-            <masterLabel>Commit not in branch</masterLabel>
-            <translation></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Commit undone</masterLabel>
-            <translation></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Complete</masterLabel>
-            <translation></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Failed</masterLabel>
-            <translation></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>In progress</masterLabel>
-            <translation></translation>
+            <translation><!-- Complete --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>No changes</masterLabel>
-            <translation></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Pending</masterLabel>
-            <translation></translation>
+            <translation><!-- No changes --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- View in Git --></label>
         <name>copado__View_in_Git__c</name>
     </fields>
+    <layouts>
+        <layout>Git Org Commit Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Snapshot Commit Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- The commit status cannot be &apos;Pending&apos; or &apos;No changes&apos; whenever there is a commit Id. --></errorMessage>
         <name>copado__Commit_Id_Status_Complete</name>
     </validationRules>
 </CustomObjectTranslation>

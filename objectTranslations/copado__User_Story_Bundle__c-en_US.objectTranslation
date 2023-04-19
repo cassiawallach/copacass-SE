@@ -1,37 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label></label>
+        <label><!-- Org Credential --></label>
         <name>copado__Org_Credential__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- DEPRECATED --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Status Notes --></label>
         <name>copado__Status_Notes__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Status --></label>
         <name>copado__Status__c</name>
         <picklistValues>
             <masterLabel>Cancelled</masterLabel>
-            <translation></translation>
+            <translation><!-- Cancelled --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Locked</masterLabel>
-            <translation></translation>
+            <translation><!-- Locked --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Open</masterLabel>
-            <translation></translation>
+            <translation><!-- Open --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Title --></label>
         <name>copado__Title__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- User Story --></label>
         <name>copado__User_Story__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- DEPRECATED --></relationshipLabel>
     </fields>
+    <layouts>
+        <layout>User Story Bundle Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
 </CustomObjectTranslation>

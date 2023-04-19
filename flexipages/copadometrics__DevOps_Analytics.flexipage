@@ -16,7 +16,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>copadometrics:tableauViz</componentName>
-                <identifier>c_tableauViz</identifier>
+                <identifier>tableauViz</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>

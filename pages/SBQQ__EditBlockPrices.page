@@ -1,5 +1,7 @@
 <apex:page standardController="SBQQ__BlockPrice__c" extensions="SBQQ.BlockPriceEditorController" recordSetVar="prices" title="{!$Label.SBQQ__lbl_edit_block_prices}">
     <apex:stylesheet value="{!$Resource['sb']}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.SBQQ__dialog,'dialog.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.SBQQ__dialog,'dialog.js')}"/>
     <apex:sectionHeader title="{!$Label.SBQQ__lbl_edit_block_prices}" subtitle="{!product.Name}"/>
 
     <apex:pageMessages />
@@ -101,25 +103,46 @@
 					}
 
 					function confirmChange(isDirty, pbId, element) {
-						var isDirty = isDirty === 'true' ? true : false;
-                        var pbId = (pbId != null && pbId != '') ? pbId.valueOf() : '';
-						if (isDirty) {
-                            if (confirm("Your changes will be lost if you do not save.") == false) {
-                                element.value = pbId;
-                                return;
-                            }
-						}
-						onPriceBookChange();
-					}
+                            var isDirty = isDirty === 'true' ? true : false;
+                            var pbId = (pbId != null && pbId != '') ? pbId.valueOf() : '';
+                            if (isDirty) {
+                                sb.dialog.confirm(
+                                    ("Your changes will be lost if you do not save."),
+                                    {
+                                        ok: 'Ok',
+                                        cancel: 'Cancel'
+                                    },
+                                    (confirmed) => {
+                                        if (!confirmed) {
+                                            element.value = pbId;
+                                            return;
+                                        }
+                                    }
 
-					function confirmClone(isDirty) {
-					    if (isDirty) {
-                            if (confirm("Your changes will be lost if you do not save.") == false) {
-                                return;
+                                );
                             }
-					    }
-                        onClonePriceBook();
-					}
+                            onPriceBookChange();
+                        }
+
+                        function confirmClone(isDirty) {
+                            if (isDirty) {
+                                sb.dialog.confirm(
+                                    ("Your changes will be lost if you do not save."),
+                                    {
+                                        ok: 'Ok',
+                                        cancel: 'Cancel'
+                                    },
+                                    (confirmed) => {
+                                        if (!confirmed) {
+                                            element.value = pbId;
+                                            return;
+                                        }
+                                    }
+
+                                );
+                            }
+                            onClonePriceBook();
+                        }
 				</script>
             </apex:outputPanel>
 

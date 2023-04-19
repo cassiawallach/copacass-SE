@@ -8,8 +8,63 @@
         <apex:stylesheet value="{! URLFOR($Resource.PT_Resources_v1, '/font-awesome/css/font-awesome.min.css') }" />  
         <apex:stylesheet value="{! URLFOR($Resource.PT_Resources_v1, '/css/grayBackground.css') }" />
     </head> 
+    <script>
+        var rh = rh || {};
+        rh.j$ = jQuery.noConflict();
+        rh.j$(function () {
+            rh.j$(window).scroll(fixHeader);
+        });
+
+        function fixHeader() {
+            var scroll = rh.j$(window).scrollTop();
+            var anchor_top = rh.j$("#allRollups").offset().top;
+            var anchor_bottom = rh.j$("#bottom_anchor").offset().top;
+            var left_offset = rh.j$("#allRollups").offset().left;
+            var full_width = rh.j$("#allRollups").width();
+
+            if (scroll > anchor_top && scroll < anchor_bottom) {
+                var clone_table = rh.j$("#clone");
+                if (clone_table.length === 0) {
+                    clone_table = rh.j$("#allRollups").clone();
+                    clone_table.attr('id', 'clone');
+                    clone_table.css({
+                        position: 'fixed',
+                        top: -1,
+                        left: left_offset,
+                        width: full_width,
+                        zIndex: 1                    
+                    });
+                    rh.j$("#table-container").append(clone_table);
+                    rh.j$("#clone").css({ visibility: 'hidden' });
+                    rh.j$("#clone thead").css({
+                        visibility: 'visible',
+                        top: -1,
+                        left: left_offset,
+                        width: full_width,
+                        zIndex: 1                    
+                    });
+                    rh.j$("#clone div").css({ visibility: 'hidden' });
+                }
+            } else {
+                rh.j$("#clone").remove();
+            }
+        }
+
+        function toggleModalAndFixHeader(shouldShow, label) {
+            showModal(shouldShow, label);
+            fixHeader();
+        }
+
+        function highlightRunModeIcon() {
+            document.getElementById('runModeIcon').style.color = 'rgba(1, 118, 211, 1)';
+        }
+
+        function unHighlightRunModeIcon() {
+            document.getElementById('runModeIcon').style.color = 'black';
+        }
+    </script>
     <apex:form id="theForm">
-        <apex:actionStatus id="loading" onstart="loading(true)" onstop="loading(false)" />
+        <apex:actionStatus id="loading" onstart="loading(true)" onstop="loading(false);fixHeader();" />
         <apex:slds />
             <div class="slds-scope"  id="sldsWrapper" role="main"> 
                 <apex:outputPanel rendered="{! rollupSettings.size == 0 }">
@@ -41,9 +96,13 @@
                         </div>
                     </header>
                     <section class="slds-card__body">
+                        <apex:outputPanel id="rollupCountInfo" style="float:right;margin-right:16px;margin-bottom:6px;">
+                            <apex:outputText value="{!Count} {!$Label.rh2__ActiveOutOf} {!total} {!$Label.rh2__TotalRollups}"/>
+                        </apex:outputPanel>
                         <br/>
                         <apex:outputPanel id="settingsTable">
                             <apex:outputPanel >
+                                <div id="table-container">
                             <table class="slds-table slds-table_bordered slds-max-medium-table_stacked hideFullColumn" id="allRollups">
                                 <thead>
                                     <tr style="width:100%;">
@@ -55,7 +114,11 @@
                                                 </apex:commandLink> 
                                             </span>
                                         </th>
-                                        <th class="slds-text-heading_label" style="width:5%;" scope="col">{!$Label.RunMode}</th>
+                                        <th class="slds-text-heading_label hidecol" style="width:7%;" scope="col">
+                                            <apex:commandLink onclick="showModal(true, 'runModeInfoModal');" rerender="runModeInfoModal">
+                                                <i id="runModeIcon" class="fa fa-info-circle" style="color:black;" onmouseover="highlightRunModeIcon();" onmouseleave="unHighlightRunModeIcon();"></i>
+                                            </apex:commandLink> {!$Label.rh2__RunMode}
+                                        </th>
                                         <th class="slds-text-heading_label hidecol" scope="col" style="word-break:break-all;">
                                             <span style="width:15%;word-break:break-all;"><apex:commandLink value="{!$Label.rh2__RelationshipField}" action="{! doSettingSort }" rerender="settingsTable" status="loading"> 
                                                 <apex:param name="sortField" value="relationshipField__c" assignTo="{!sortVars.sortField}"/> 
@@ -63,20 +126,20 @@
                                             </apex:commandLink> </span>
                                         </th>
                                         <th class="slds-text-heading_label" scope="col">
-                                            <span style="width:15%; ">
+                                            <span style="width:10%; ">
                                             <apex:commandLink value="{!$Label.rh2__SourceField}" action="{! doSettingSort }" rerender="settingsTable" status="loading"> 
                                                 <apex:param name="sortField" value="sourceField__c" assignTo="{!sortVars.sortField}"/> 
                                                 <apex:outputText value="{!IF(sortVars.sortField=='sourceField__c', IF(sortVars.sortDirection=='asc', ' ▲', ' ▼'),'')}"/> 
                                             </apex:commandLink> </span>
                                         </th>
-                                        <th class="slds-text-heading_label hidecol2" style="width:5%;" scope="col">
+                                        <th class="slds-text-heading_label hidecol2" style="width:3%;" scope="col">
                                             <apex:commandLink value="{!$Label.rh2__Logic}" action="{! doSettingSort }" rerender="settingsTable" status="loading"> 
                                                 <apex:param name="sortField" value="Logic__c" assignTo="{!sortVars.sortField}"/> 
                                                 <apex:outputText value="{!IF(sortVars.sortField=='Logic__c', IF(sortVars.sortDirection=='asc', ' ▲', ' ▼'),'')}"/> 
                                             </apex:commandLink> 
                                         </th>
                                         <th class="slds-text-heading_label hidecol2" scope="col">
-                                            <span style="width:15%;">
+                                            <span style="width:10%;">
                                                 <apex:commandLink value="{!$Label.rh2__Condition}" action="{! doSettingSort }" rerender="settingsTable" status="loading"> 
                                                     <apex:param name="sortField" value="relationshipName__c" assignTo="{!sortVars.sortField}"/> 
                                                     <apex:outputText value="{!IF(sortVars.sortField=='relationshipName__c', IF(sortVars.sortDirection=='asc', ' ▲', ' ▼'),'')}"/> 
@@ -84,10 +147,18 @@
                                             </span>
                                         </th>
                                         <th class="slds-text-heading_label" scope="col">
-                                            <span style="width:15%;">
+                                            <span style="width:10%;">
                                                 <apex:commandLink value="{!$Label.rh2__TargetField}" action="{! doSettingSort }" rerender="settingsTable" status="loading"> 
                                                     <apex:param name="sortField" value="targetField__c" assignTo="{!sortVars.sortField}"/> 
                                                     <apex:outputText value="{!IF(sortVars.sortField=='targetField__c', IF(sortVars.sortDirection=='asc', ' ▲', ' ▼'),'')}"/> 
+                                                </apex:commandLink>
+                                            </span>
+                                        </th>
+                                        <th class="slds-text-heading_label hidecol2" scope="col">
+                                            <span style="width:10%;">
+                                                <apex:commandLink value="{!$Label.rh2__ParentCondition}" action="{! doSettingSort }" rerender="settingsTable" status="loading"> 
+                                                    <apex:param name="sortField" value="targetRangeFieldName__c" assignTo="{!sortVars.sortField}"/> 
+                                                    <apex:outputText value="{!IF(sortVars.sortField=='targetRangeFieldName__c', IF(sortVars.sortDirection=='asc', ' ▲', ' ▼'),'')}"/> 
                                                 </apex:commandLink>
                                             </span>
                                         </th>
@@ -140,42 +211,80 @@
                                             <td class="hidecol2" data-label="{!$Label.rh2__Condition}">
                                                 <apex:outputPanel rendered="{!item.ds.rh2__condition__c != null}">
                                                     <span style="word-wrap: break-word;">
-                                                        <apex:commandLink action="{!populateFilterInfoModal}" reRender="filterInfoModal" status="loading">
+                                                        <apex:commandLink action="{!populateFilterInfoModal}" oncomplete="toggleModalAndFixHeader(true, 'filterInfoModal');" reRender="filterInfoModal, filterInfoContainer" status="loading">
                                                             {! item.ds.relationshipName__c }
-                                                            <apex:param name="f" value="{!item.ds.rh2__condition__c}"/>
-                                                            <apex:param name="srcObj" value="{!item.ds.rh2__sourceObjectName__c}"/>
+                                                            <apex:param name="filterName" value="{!item.ds.rh2__condition__c}"/>
+                                                            <apex:param name="filterObj" value="{!item.ds.rh2__sourceObjectName__c}"/>
+                                                            <apex:param name="parentFilter" value="no"/>
                                                         </apex:commandLink>
                                                     </span>
                                                 </apex:outputPanel>
                                             </td>
                                             <td class="slds-cell-wrap" style="word-break:break-all;" data-label="{!$Label.rh2__TargetField}"> {! item.ds.targetField__c }</td>
+                                            <td class="hidecol2" data-label="{!$Label.rh2__ParentCondition}">
+                                                <apex:outputLink rendered="{!item.ds.rh2__parentCondition__c != null}">
+                                                    <span style="word-wrap: break-word;">
+                                                        <apex:commandLink action="{!populateFilterInfoModal}" oncomplete="toggleModalAndFixHeader(true, 'filterInfoModal');" reRender="filterInfoModal, filterInfoContainer" status="loading">
+                                                            {!item.ds.rh2__targetRangeFieldName__c}
+                                                            <apex:param name="filterName" value="{!item.ds.rh2__parentCondition__c}"/>
+                                                            <apex:param name="filterObj" value="{!item.ds.rh2__targetObjectName__c}"/>
+                                                            <apex:param name="parentFilter" value="yes"/>
+                                                        </apex:commandLink>
+                                                    </span>
+                                                </apex:outputLink>
+                                            </td>
                                             <td class="hidecol slds-cell-wrap" style="word-break:break-all; padding-right:0px !important;" data-label="{!$Label.rh2__Description}">{! item.ds.description__c }</td>
                                         </tr>
                                     </apex:repeat>
                                 </tbody>
                             </table>
+                            <div id="bottom_anchor"></div>
+                            </div>
                         </apex:outputPanel>
                         </apex:outputPanel>
                         <apex:outputPanel id="rollupPagination">
                             <c:Paginate pageController="{!rollupController}" renderedComponent="settingsTable, rollupPagination" statusDisplay="loading"/>
                         </apex:outputPanel>
                     </section>
-                    <footer class="slds-card__footer"> 
-                        <apex:outputPanel id="rollupFooterInfo">
-                            <apex:outputText value="{!Count} {!$Label.rh2__ActiveOutOf} {!total} {!$Label.rh2__TotalRollups}" style="float:right;" /><br/>
-                        </apex:outputPanel>
-                    </footer>
                 </div>
             </apex:outputPanel>
-            <apex:outputPanel id="filterInfoModal">
-                <apex:outputPanel rendered="{!showFilterModal}" >
+            <div id="runModeInfoModal" style="display: none;">
+                <div aria-hidden="false" role="dialog" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <div class="slds-modal__header slds-modal__header_empty">
+                            <button type="button" onclick='toggleModalAndFixHeader(false, "runModeInfoModal");' class="slds-button slds-button_icon-inverse slds-modal__close">
+                                <svg aria-hidden="true" class="slds-button__icon slds-button__icon_large">
+                                    <use href="{!URLFOR($Asset.SLDS, '/assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+                                </svg>
+                            </button>
+                            <h2 class="slds-text-heading--medium">{!$Label.RunMode}</h2>
+                        </div>
+                        <div class="slds-modal__content slds-p-around_large">
+                            Run mode icons display the manner in which your rollups will process. Please note that all icons besides "Inactive" will only display if the rollup is active.<br/><br/>
+                            <ul>
+                                <li><i class="fa fa-bolt"></i>&nbsp; Real Time - In addition to the rollup being active, this icon will only display if an active trigger is deployed for the rollup's source object. This icon will not display if "Disable Realtime" or "Disable Trigger" are enabled for the trigger.</li>
+                                <li><i class="fa fa-bolt"></i><i class="fa fa-exclamation"></i>&nbsp; Partial Real Time Enabled For This Rollup - This icon will only display for rollups with foreign key source fields. Realtime runs will only happen when changes are made to source records. If updates are needed when changes are made to foreign key records, please view our <a href="https://docs.google.com/document/d/1wJFq4FP6d3wz55J41j4YF8-wXNpIlX5Geh1cCwE92b4/edit#heading=h.lb46fxrratnw">Developer Guide</a> for instructions on creating a foreign key trigger or <a href="mailto:support@passagetech.com">contact us</a> for assistance.</li>
+                                <li><i class="fa fa-times"></i>&nbsp; Real Time Disabled On Source Object or Trigger</li>
+                                <li><i class="fa fa-times-circle"></i>&nbsp; Real Time Disabled For This Rollup</li>
+                                <li><i class="fa fa-calendar"></i>&nbsp; Scheduled</li>
+                                <li><i class="fa fa-info-circle"></i>&nbsp; Manual Run Only</li>
+                                <li><i class="fa fa-exclamation-triangle"></i>&nbsp; Inactive</li>
+                                <li><i class="fa fa-lock"></i>&nbsp; Does Not Overwrite Existing Field Values</li>
+                                <li><i class="fa fa-unlock-alt"></i>&nbsp; Does Not Overwrite Populated Fields With Blank Values</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+            <div id="filterInfoModal" style="display:none;">
+                <apex:outputPanel id="filterInfoContainer">
                     <div aria-hidden="false" role="dialog" class="slds-modal slds-fade-in-open">
                         <div class="slds-modal__container" style="width:760px !important;">
                             <div class="slds-modal__header">
                                 <span>
-                                    <h2 class="slds-text-heading_medium">{!sourceObj} {!$Label.Filters}</h2>
-                                    <apex:actionFunction action="{!closeFilterModal}" name="closeFilterModal" reRender="filterInfoModal" status="loading"/>
-                                    <button type="button" onClick="closeFilterModal()" class="slds-button slds-button_icon-inverse slds-modal__close">
+                                    <h2 class="slds-text-heading_medium">{!filterObj} {!$Label.Filters}</h2>
+                                    <button type="button" onClick="toggleModalAndFixHeader(false, 'filterInfoModal');" class="slds-button slds-button_icon-inverse slds-modal__close">
                                         <svg aria-hidden="true" class="slds-button__icon slds-button__icon_large">
                                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{! URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
                                         </svg>
@@ -246,14 +355,14 @@
                             </div>
                             <div class="slds-modal__footer">
                                 <div class="slds-x-small-buttons_horizontal">
-                                    <apex:commandButton action="{!closeFilterModal}"  rerender="filterInfoModal" value="{!$Label.rh2__Cancel}" status="loading" styleClass="slds-button slds-button_neutral"/>
+                                    <apex:commandButton onclick="toggleModalAndFixHeader(false, 'filterInfoModal');" rerender="filterInfoModal" value="{!$Label.rh2__Cancel}" styleClass="slds-button slds-button_neutral"/>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="slds-backdrop slds-backdrop_open"></div>
                 </apex:outputPanel>
-            </apex:outputPanel>
+            </div>
             <c:Loading_Spinner opacity="1"/>
         </div>
     </apex:form>

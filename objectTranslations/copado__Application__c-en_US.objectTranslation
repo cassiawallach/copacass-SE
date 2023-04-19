@@ -1,61 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label></label>
+        <label><!-- Product Line --></label>
+        <name>Product_Line__c</name>
+        <picklistValues>
+            <masterLabel>Multi-Cloud</masterLabel>
+            <translation><!-- Multi-Cloud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salesforce</masterLabel>
+            <translation><!-- Salesforce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Testing &amp; Analytics</masterLabel>
+            <translation><!-- Testing &amp; Analytics --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Team --></label>
+        <name>Team__c</name>
+        <relationshipLabel><!-- Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Time Spent (hours) --></label>
+        <name>Time_Spent_hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
         <name>copado__Description__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Parent Application --></label>
         <name>copado__Parent_Application__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Sub-Applications --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Product Manager --></label>
         <name>copado__Product_Manager__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Applications --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Release Status --></label>
         <name>copado__Release_Status__c</name>
         <picklistValues>
             <masterLabel>Beta</masterLabel>
-            <translation></translation>
+            <translation><!-- Beta --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Definition</masterLabel>
-            <translation></translation>
+            <translation><!-- Definition --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Development</masterLabel>
-            <translation></translation>
+            <translation><!-- Development --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>GA</masterLabel>
-            <translation></translation>
+            <translation><!-- GA --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Pilot</masterLabel>
-            <translation></translation>
+            <translation><!-- Pilot --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Stability Status --></label>
         <name>copado__Stability_Icon__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Stability --></label>
         <name>copado__Stability__c</name>
         <picklistValues>
             <masterLabel>Stable</masterLabel>
-            <translation></translation>
+            <translation><!-- Stable --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Uncertain</masterLabel>
-            <translation></translation>
+            <translation><!-- Uncertain --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Unstable</masterLabel>
-            <translation></translation>
+            <translation><!-- Unstable --></translation>
         </picklistValues>
     </fields>
+    <layouts>
+        <layout>Application Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Owners --></label>
+            <section>Owners</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Send to Slack --></label>
+        <name>Send_to_Slack</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Slack Alerts --></label>
+        <name>Slack_Alerts</name>
+    </quickActions>
 </CustomObjectTranslation>

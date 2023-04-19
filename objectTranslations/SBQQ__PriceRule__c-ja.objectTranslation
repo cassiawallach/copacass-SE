@@ -5,18 +5,22 @@
         <value>価格ルール</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>このルールが有効かどうかを示します。</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>[一致した条件] が [カスタム] の場合にのみ入力できます。価格条件インデックス番号、AND、OR、およびかっこの組み合わせを入力します (例: 「(123 AND 124) AND 125」)。</help>
-        <label></label>
+        <label><!-- Advanced Condition --></label>
         <name>SBQQ__AdvancedCondition__c</name>
     </fields>
     <fields>
         <help>条件の動作を選択します。[すべて] は AND、[いずれか] は OR、[カスタム] は AND と OR の組み合わせです。</help>
-        <label></label>
+        <label><!-- Conditions Met --></label>
         <name>SBQQ__ConditionsMet__c</name>
         <picklistValues>
             <masterLabel>All</masterLabel>
@@ -33,7 +37,7 @@
     </fields>
     <fields>
         <help>[なし] または [保存] が選択された場合、範囲が設定されたコンフィグレータの価格ルールが保存時に起動されます。[編集] が選択された場合、範囲が設定されたコンフィグレータの価格ルールが編集時および保存時に起動されます。</help>
-        <label></label>
+        <label><!-- Configurator Evaluation Event --></label>
         <name>SBQQ__ConfiguratorEvaluationEvent__c</name>
         <picklistValues>
             <masterLabel>Edit</masterLabel>
@@ -46,7 +50,7 @@
     </fields>
     <fields>
         <help>いつこのルールを評価する必要があるかを指定します。見積品目を対象とする場合のみ使用します。従来の計算機能ではサポートされていません。</help>
-        <label></label>
+        <label><!-- Calculator Evaluation Event --></label>
         <name>SBQQ__EvaluationEvent__c</name>
         <picklistValues>
             <masterLabel>After Calculate</masterLabel>
@@ -67,12 +71,12 @@
     </fields>
     <fields>
         <help>この価格ルールの評価の順序を指定します。高い順序のルールは最後に評価され、矛盾があった場合に優先されます。</help>
-        <label></label>
+        <label><!-- Evaluation Order --></label>
         <name>SBQQ__EvaluationOrder__c</name>
     </fields>
     <fields>
         <help>ルックアップデータを保存するカスタムオブジェクトの API 参照名。</help>
-        <label></label>
+        <label><!-- Lookup Object --></label>
         <name>SBQQ__LookupObject__c</name>
         <picklistValues>
             <masterLabel>SBQQ__LookupData__c</masterLabel>
@@ -81,13 +85,13 @@
     </fields>
     <fields>
         <help>このルールに関連付ける商品を選択します。</help>
-        <label></label>
+        <label><!-- Product --></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Price Rules --></relationshipLabel>
     </fields>
     <fields>
         <help>このルールが評価されるイベント。</help>
-        <label></label>
+        <label><!-- Evaluation Scope --></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Calculator</masterLabel>
@@ -98,13 +102,20 @@
             <translation>コンフィグレータ</translation>
         </picklistValues>
     </fields>
+    <layouts>
+        <layout>Price Rule Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>価格ルール名</nameFieldLabel>
     <webLinks>
-        <label></label>
+        <label><!-- CloneWithRelated --></label>
         <name>SBQQ__CloneWithRelated</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- CloneWithRelatedClassic --></label>
         <name>SBQQ__CloneWithRelatedClassic</name>
     </webLinks>
 </CustomObjectTranslation>

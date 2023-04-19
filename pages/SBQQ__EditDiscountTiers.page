@@ -1,13 +1,13 @@
-<apex:page standardController="SBQQ__DiscountSchedule__c" extensions="SBQQ.DiscountTierEditorController" tabStyle="SBQQ__DiscountSchedule__c" title="{!$Label.sbqq__lbl_edit_discount_tiers}">
-	<apex:sectionHeader title="{!$Label.sbqq__lbl_edit_tiers}" subtitle="{!scheduleModel.schedule.Name}"/>
+<apex:page standardController="SBQQ__DiscountSchedule__c" extensions="SBQQ.DiscountTierEditorController" tabStyle="SBQQ__DiscountSchedule__c" title="{!$Label.SBQQ__lbl_edit_discount_tiers}">
+	<apex:sectionHeader title="{!$Label.SBQQ__lbl_edit_tiers}" subtitle="{!scheduleModel.schedule.Name}"/>
 	
 	<apex:pageMessages />
 	
 	<apex:form >
-		<apex:pageBlock title="{!$Label.sbqq__lbl_edit_tiers}" rendered="{!initialized}">
+		<apex:pageBlock title="{!$Label.SBQQ__lbl_edit_tiers}" rendered="{!initialized}">
 			<apex:pageBlockButtons >
-				<apex:commandButton value="{!$Label.sbqq__lbl_save}" action="{!onSave}"/>
-				<apex:commandButton value="{!$Label.sbqq__lbl_cancel}" action="{!onCancel}" immediate="true"/>
+				<apex:commandButton value="{!$Label.SBQQ__lbl_save}" action="{!onSave}"/>
+				<apex:commandButton value="{!$Label.SBQQ__lbl_cancel}" action="{!onCancel}" immediate="true"/>
 			</apex:pageBlockButtons>
 			
 			<apex:outputPanel id="tiers">

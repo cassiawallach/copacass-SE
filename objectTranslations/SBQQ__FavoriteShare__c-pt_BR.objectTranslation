@@ -9,15 +9,22 @@
         <value>Compartilhamentos favoritos</value>
     </caseValues>
     <fields>
-        <label></label>
+        <label><!-- Favorite --></label>
         <name>SBQQ__Favorite__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Shares --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- User --></label>
         <name>SBQQ__User__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Shares --></relationshipLabel>
     </fields>
     <gender>Masculine</gender>
+    <layouts>
+        <layout>Favorite Share Layout</layout>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nome do compartilhamento favorito</nameFieldLabel>
 </CustomObjectTranslation>

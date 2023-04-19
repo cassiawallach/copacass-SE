@@ -1,79 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label></label>
+        <label><!-- Active --></label>
         <name>rh2__Active__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Class --></label>
         <name>rh2__ApexClassName__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Batch Size --></label>
         <name>rh2__BatchSize__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- zDeprecated --></label>
         <name>rh2__Filter__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Increment --></label>
         <name>rh2__Increment__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Next Run --></label>
         <name>rh2__NextFireTime__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Notification Email --></label>
+        <name>rh2__Notification_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filter --></label>
         <name>rh2__ParentFilter__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Parent Condition Name --></label>
+        <name>rh2__Parent_Condition_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Run --></label>
         <name>rh2__PreviousFireTime__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Rollup Name --></label>
         <name>rh2__Rollup_Name__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Rollup Status --></label>
         <name>rh2__Rollup_Status__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- RunForAllRecords --></label>
         <name>rh2__RunForAllRecords__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Schedule Name --></label>
         <name>rh2__Schedule_Name__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Unit --></label>
         <name>rh2__Unit__c</name>
         <picklistValues>
             <masterLabel>Days</masterLabel>
-            <translation></translation>
+            <translation><!-- Days --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Hours</masterLabel>
-            <translation></translation>
+            <translation><!-- Hours --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Months</masterLabel>
-            <translation></translation>
+            <translation><!-- Months --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Weeks</masterLabel>
-            <translation></translation>
+            <translation><!-- Weeks --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Years</masterLabel>
-            <translation></translation>
+            <translation><!-- Years --></translation>
         </picklistValues>
     </fields>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- Must enter a value that is greater than or equal to 1. --></errorMessage>
         <name>rh2__Positive_Increment</name>
     </validationRules>
 </CustomObjectTranslation>

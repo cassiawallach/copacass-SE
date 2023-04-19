@@ -337,7 +337,7 @@
         "suiteType": "default",
         "isRpa": false,
         "data": null,
-        "runType": "normal",
+        "runType": "development",
         "configuration": {
             "executionParameters": [
                 {

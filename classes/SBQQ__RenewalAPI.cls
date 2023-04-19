@@ -12,6 +12,9 @@ global class RenewalAPI {
     global static void forecastContracts(List<SObject> contracts, Id masterContractId) {
 
     }
+    global static Boolean hasPassedEvergreenValidationChecks(SObject oldContract, SObject newContract) {
+        return null;
+    }
     global static void processContracts(List<SObject> forecastContracts, List<SObject> renewedContracts, List<SObject> masterContracts) {
 
     }

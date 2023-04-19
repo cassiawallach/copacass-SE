@@ -6,34 +6,34 @@
         <value>Trailmix-Zuweisung</value>
     </caseValues>
     <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value>Trailmix-Zuweisung</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value>Trailmix-Zuweisung</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Trailmix-Zuweisung</value>
-    </caseValues>
-    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Trailmix-Zuweisungen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Trailmix-Zuweisung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
         <plural>true</plural>
         <value>Trailmix-Zuweisungen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Trailmix-Zuweisung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
         <plural>true</plural>
         <value>Trailmix-Zuweisungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Trailmix-Zuweisung</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
@@ -42,28 +42,35 @@
     </caseValues>
     <fields>
         <help>Das Datum, an dem der Trailmix abgeschlossen sein muss.</help>
-        <label></label>
+        <label><!-- Due Date --></label>
         <name>trailheadapp__Due_At__c</name>
     </fields>
     <fields>
         <help>Datum und Uhrzeit, zu der der Trailmix abgeschlossen sein muss.</help>
-        <label></label>
+        <label><!-- Due Datetime --></label>
         <name>trailheadapp__Due_Datetime__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Status --></label>
         <name>trailheadapp__Status__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Trailmix --></label>
         <name>trailheadapp__Trailmix__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Trailmix Assignments --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- User --></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Trailmix Assignments --></relationshipLabel>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Trailmix Assignment Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Trailmix-Zuweisungs-ID</nameFieldLabel>
 </CustomObjectTranslation>

@@ -85,16 +85,16 @@
     <apex:actionFunction name="searchAllFKSortFields" action="{!dfh.doFKSortFieldSearch}" rerender="availFKSortFields" status="loading">
         <apex:param name="fkSortFieldSearch" value=""/>
     </apex:actionFunction>
-    <apex:actionFunction name="searchAllFields" action="{!doFieldSearch}" rerender="filterFields1, filterPolyObjField, filterFields2" status="loading">
+    <apex:actionFunction name="searchAllFields" action="{!doFieldSearch}" rerender="filterFields1, field1Paginate, filterPolyObjField, filterFields2" status="loading">
         <apex:param name="fieldSearch" value=""/>
     </apex:actionFunction>
-    <apex:actionFunction name="searchAllFKFields" action="{!doFKFieldSearch}" rerender="filterFields2" status="loading">
+    <apex:actionFunction name="searchAllFKFields" action="{!doFKFieldSearch}" rerender="filterFields2, field2Paginate" status="loading">
         <apex:param name="fkFieldSearch" value=""/>
     </apex:actionFunction>
     <apex:actionFunction name="manualUpdateAdvancedPicklist" action="{!manuallyUpdateUseAdvancedPicklist}" rerender="filterPicklist4, col5, addButton">
         <apex:param name="useAdvancedPicklistCheckboxVal" value="" />
     </apex:actionFunction>
-    <apex:actionFunction name="searchAllPolyObjs" action="{!doPolyObjSearch}" rerender="filterPolyObjField, filterFields2">
+    <apex:actionFunction name="searchAllPolyObjs" action="{!doPolyObjSearch}" rerender="filterPolyObjField, polyObjPaginate, filterFields2">
         <apex:param name="polyObjSearch" value=""/>
     </apex:actionFunction>
     <apex:actionFunction name="manualUpdateAdvancedMulti" action="{!dfh.manuallyUpdateUseAdvancedMultipicklist}" rerender="filterPicklist4, col6, addButton">	
@@ -116,33 +116,38 @@
     <apex:slds />
     <div class="slds-scope" role="main">
     
-    <apex:outputPanel id="ClonePopup">
-    <apex:outputPanel rendered="{!dfh.showClonepopup}" >
-        <div aria-hidden="false" role="dialog" class="slds-modal slds-fade-in-open grayBackground">
-            <div class="slds-modal__container">
-                <div class="slds-modal__header">
-                    <h2 class="slds-text-heading_medium">{!$Label.CloneFromExistingFilters}</h2>
-                </div>
-                <div class="slds-modal__content slds-p-around_small">   
-                <center>                            
-                    <apex:Selectlist value="{!selectedFilter}" styleclass="slds-select" style="width: 80%;" multiselect="false" size="1">
-                        <apex:selectOptions value="{!dfh.FilterNames}"/>
-                    </apex:Selectlist>              
-                </center>
-                </div>              
-                <div class="slds-modal__footer">
-                    <apex:commandButton styleClass="slds-button slds-button_neutral" action="{!dfh.closeClonePopup}" rerender="ClonePopup" value="{!$Label.rh2__Cancel}" status="loading"/>                                                       
-                    <apex:commandButton styleClass="slds-button slds-button_brand" action="{!cloneFilter}" rerender="ClonePopup, FilterForm, limitinput, offsetinput, boolLogic, existingSortList, existingFilters, filtercon, preview" value="{!$Label.rh2__Clone}" status="loading"/>
+    <div id="clonePopupModal" style="display:none;">
+        <apex:outputPanel id="ClonePopup">
+            <div aria-hidden="false" role="dialog" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__header">
+                        <h2 class="slds-text-heading_medium">{!$Label.CloneFromExistingFilters}</h2>
+                        <button type="button" onclick="showModal(false, 'clonePopupModal');" class="slds-button slds-button_icon-inverse slds-modal__close">
+                            <svg aria-hidden="true" class="slds-button__icon slds-button__icon_large">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{! URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="slds-modal__content slds-p-around_small">   
+                    <center>                            
+                        <apex:Selectlist value="{!selectedFilter}" styleclass="slds-select" style="width: 80%;" multiselect="false" size="1">
+                            <apex:selectOptions value="{!dfh.FilterNames}"/>
+                        </apex:Selectlist>              
+                    </center>
+                    </div>              
+                    <div class="slds-modal__footer">
+                        <apex:commandButton styleClass="slds-button slds-button_brand" action="{!cloneFilter}" onclick="showModal(false, 'clonePopupModal');" rerender="ClonePopup, FilterForm, limitinput, offsetinput, boolLogic, existingSortList, existingFilters, filtercon, preview" value="{!$Label.rh2__Clone}" status="loading"/>
+                        <apex:commandButton styleClass="slds-button slds-button_neutral" onclick="showModal(false, 'clonePopupModal');" rerender="none" value="{!$Label.rh2__Cancel}"/>                                                       
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="slds-backdrop slds-backdrop_open"></div>
-    </apex:outputPanel> 
-    </apex:outputPanel>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </apex:outputPanel>
+    </div>
     
     <apex:outputPanel id="filterForm">
         <div class="slds-card grayBackground">
-            <header class="slds-card__header slds-text-heading_small">
+            <header class="slds-card__header slds-text-heading_medium">
                 {!$Label.RollupFilterEditor}
             </header>
             <header class="slds-card__header slds-grid">
@@ -166,7 +171,7 @@
                 </nav>
             </header>
             <div class="slds-modal__content slds-p-left_small slds-p-bottom_small grayBackground">
-                <apex:commandButton styleClass="slds-button slds-button_neutral" rendered="{!ISBLANK(filterName)}" action="{!dfh.openClonePopup}" rerender="ClonePopup" value="{!$Label.rh2__CloneFromExisting}" status="loading"/>                                                                                                    
+                <apex:commandButton styleClass="slds-button slds-button_neutral" rendered="{!ISBLANK(filterName)}" onclick="showModal(true, 'clonePopupModal');" rerender="none" value="{!$Label.rh2__CloneFromExisting}"/>                                                                                                    
             </div>
             <footer><apex:outputPanel id="errorblock" rendered="{!NOT(dfh.showSubFilterPopup)}"><apex:pagemessages /></apex:outputPanel></footer>
         </div>
@@ -176,7 +181,7 @@
             <div class="slds-card grayBackground">
             
                 <header class="slds-card__header slds-theme_alt-inverse">
-                    <h4 class="slds-text-heading_small slds-truncate">{!$Label.rh2__Step1EnterFilterName}</h4>
+                    <h4 class="slds-text-heading_medium slds-truncate">{!$Label.rh2__Step1EnterFilterName}</h4>
                 </header>
                 
                 <section class="slds-card__body slds-shrink slds-m-right_medium slds-m-left_medium">
@@ -213,7 +218,7 @@
                  
             <div class="slds-card grayBackground">
                 <header class="slds-card__header slds-theme_alt-inverse">
-                    <h4 class="slds-text-heading_small slds-truncate">{!$Label.Step2SpecifySortOrder}</h4>
+                    <h4 class="slds-text-heading_medium slds-truncate">{!$Label.Step2SpecifySortOrder}</h4>
                 </header>       
                 
                 <section class="slds-card__body slds-m-left_medium slds-m-right_medium">
@@ -352,7 +357,7 @@
             </div>
             <div class="slds-card grayBackground">
                 <header class="slds-card__header slds-theme_alt-inverse">
-                    <h4 class="slds-text-heading_small slds-truncate">{!$Label.Step3SpecifyFilterCriteria}</h4>
+                    <h4 class="slds-text-heading_medium slds-truncate">{!$Label.Step3SpecifyFilterCriteria}</h4>
                 </header> 
                 
                 <section class="slds-card__body slds-m-left_medium slds-m-right_medium">
@@ -381,7 +386,9 @@
                                     <script>
                                         searchFromInput("fieldSearch", searchAllFields);
                                     </script>
-                                    <c:Paginate pageController="{! filterFields1PC }" renderedComponent="field1" />
+                                    <apex:outputPanel id="field1Paginate">
+                                        <c:Paginate pageController="{! filterFields1PC }" renderedComponent="field1" />
+                                    </apex:outputPanel>
                                 </apex:outputPanel>
                             </apex:outputPanel> 
 
@@ -415,7 +422,9 @@
                                     <script>
                                         searchFromInput("polyObjSearch", searchAllPolyObjs);
                                     </script>
-                                    <c:Paginate pageController="{!filterPolyObjsPC}" renderedComponent="polyObjField"/>
+                                    <apex:outputPanel id="polyObjPaginate">
+                                        <c:Paginate pageController="{!filterPolyObjsPC}" renderedComponent="polyObjField"/>
+                                    </apex:outputPanel>
                                 </apex:outputPanel>
                             </apex:outputPanel>
                                 
@@ -435,7 +444,9 @@
                                     <script>
                                         searchFromInput("fkFieldSearch", searchAllFKFields);
                                     </script>
-                                    <c:Paginate pageController="{! filterFields2PC }" renderedComponent="field2" />
+                                    <apex:outputPanel id="field2Paginate">
+                                        <c:Paginate pageController="{! filterFields2PC }" renderedComponent="field2" />
+                                    </apex:outputPanel>
                                 </apex:outputPanel>
                                 
                                 <apex:outputPanel id="operator2" layout="block" rendered="{! AND(NOT(ISBLANK(dfh.filterField)), AND(NOT(ISBLANK(filterField1API)), NOT(filterFields1FK)), NOT(filterFields1Poly))}">
@@ -820,7 +831,7 @@
             <div class="slds-card grayBackground">
             
             <header class="slds-card__header slds-theme_alt-inverse">
-                    <h4 class="slds-text-heading_small slds-truncate">{!$Label.rh2__Step4Save}</h4>
+                    <h4 class="slds-text-heading_medium slds-truncate">{!$Label.rh2__Step4Save}</h4>
             </header> 
             
             <section class="slds-card__body">

@@ -6,14 +6,19 @@
         <value>Suchindex</value>
     </caseValues>
     <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Suchindizes</value>
+    </caseValues>
+    <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
         <value>Suchindex</value>
     </caseValues>
     <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Suchindex</value>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Suchindizes</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
@@ -21,19 +26,14 @@
         <value>Suchindexes</value>
     </caseValues>
     <caseValues>
-        <caseType>Nominative</caseType>
-        <plural>true</plural>
-        <value>Suchindizes</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>true</plural>
-        <value>Suchindizes</value>
-    </caseValues>
-    <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
         <value>Suchindizes</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Suchindex</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
@@ -41,12 +41,16 @@
         <value>Suchindizes</value>
     </caseValues>
     <fields>
-        <label></label>
-        <name>SBQQ__Localization__c</name>
-        <relationshipLabel></relationshipLabel>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Localization --></label>
+        <name>SBQQ__Localization__c</name>
+        <relationshipLabel><!-- Search Index --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <gender>Masculine</gender>

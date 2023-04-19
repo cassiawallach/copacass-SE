@@ -6,29 +6,24 @@
         <value>Favoritenfreigabe</value>
     </caseValues>
     <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value>Favoritenfreigabe</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value>Favoritenfreigabe</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Favoritenfreigabe</value>
-    </caseValues>
-    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Favoritenfreigaben</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Favoritenfreigabe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
         <plural>true</plural>
         <value>Favoritenfreigaben</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Favoritenfreigabe</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
@@ -37,19 +32,31 @@
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Favoritenfreigabe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
         <plural>true</plural>
         <value>Favoritenfreigaben</value>
     </caseValues>
     <fields>
-        <label></label>
+        <label><!-- Favorite --></label>
         <name>SBQQ__Favorite__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Shares --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- User --></label>
         <name>SBQQ__User__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Shares --></relationshipLabel>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Favorite Share Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Name der Favoritenfreigabe</nameFieldLabel>
 </CustomObjectTranslation>

@@ -1,33 +1,12 @@
-<apex:page standardController="SBQQ__TemplateContent__c" extensions="SBQQ.TemplateContentExtController" title="{!$Label.sbqq__lbl_edit_template_content}">
+<apex:page standardController="SBQQ__TemplateContent__c" extensions="SBQQ.TemplateContentExtController" title="{!$Label.SBQQ__lbl_edit_template_content}">
     <apex:includeScript value="{!URLFOR($Resource.SBQQ__CKEditor, '/ckeditor/ckeditor.js')}"/>
     <apex:includeScript value="{!$Resource.SBQQ__WebUI}"/>
     <apex:includeScript value="{!$Resource.SBQQ__jQuery}"/>
 
-    <apex:sectionHeader title="{!$Label.sbqq__lbl_edit_template_content}" subtitle="{!IF(ISBLANK(SBQQ__TemplateContent__c.Id),$Label.sbqq__lbl_new_template_content,SBQQ__TemplateContent__c.Name)}"/>
+    <apex:sectionHeader title="{!$Label.SBQQ__lbl_edit_template_content}" subtitle="{!IF(ISBLANK(SBQQ__TemplateContent__c.Id),$Label.SBQQ__lbl_new_template_content,SBQQ__TemplateContent__c.Name)}"/>
 
     <apex:form style="height: 100%">
-        <div class="sb">
-            <div id="sbqq_error" class="message errorM4" role="alert" style="display:none;border-style:none;margin:4px -4px -2px 6px;padding:0px">
-                <table border="0" cellpadding="0" cellspacing="0" class="messageTable" style="padding:0px;margin:0px;">
-                    <tbody>
-                    <tr valign="top">
-                        <td>
-                            <img alt="error" class="msgIcon" src="/s.gif" title="error"/>
-                        </td>
-                        <td class="messageCell">
-                            <div id="" class="messageText">
-                                <div id="sbqq_error_message"></div><br/>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        <apex:pageMessages />
         <apex:pageBlock mode="edit">
             <apex:pageBlockSection title="{!$ObjectType.SBQQ__TemplateContent__c.label}" columns="2">
                 <apex:pageBlockSectionItem >
@@ -66,8 +45,8 @@
                 </apex:pageBlockSectionItem>
             </apex:pageBlockSection>
             <apex:pageBlockButtons >
-                <apex:commandButton value="{!$Label.sbqq__lbl_save}" action="{!save}"/>
-                <apex:commandButton value="{!$Label.sbqq__lbl_cancel}" action="{!cancel}"/>
+                <apex:commandButton value="{!$Label.SBQQ__lbl_save}" action="{!save}"/>
+                <apex:commandButton value="{!$Label.SBQQ__lbl_cancel}" action="{!cancel}"/>
             </apex:pageBlockButtons>
         </apex:pageBlock>
     </apex:form>
@@ -75,16 +54,10 @@
     <script language="javascript" type="text/javascript">
         var ta = document.querySelector( 'textarea' );
         if( ta ) {
-            var maxLength = 32000;
             var ckConfig = SB.ckeditorConfig;
             ckConfig.language = '{!JSENCODE(userLanguage)}';
-            var ckInstances = CKEDITOR.replace(document.querySelector('textarea'), $.extend({height: 600}, ckConfig));
-            if (ckInstances.getData().length > maxLength) {
-
-                document.getElementById('sbqq_error').style.display = 'block';
-                document.getElementById('sbqq_error_message').innerText = "{!$Label.msg_oversize_html_content}".replace('{0}', ckInstances.getData().length.toString()).replace('{1}', maxLength.toString());
-            }
-        }
+            CKEDITOR.replace( document.querySelector( 'textarea' ), $.extend( {height: 600}, ckConfig ) );
+        }        
 	</script>
 
 </apex:page>

@@ -157,6 +157,17 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>SBQQ__Action__c</fullName>
         <deprecated>false</deprecated>
         <description>Action that this custom action performs.</description>
@@ -385,11 +396,6 @@
                     <default>false</default>
                     <label>Email</label>
                 </value>
-                <value>
-                    <fullName>Save and Navigate</fullName>
-                    <default>false</default>
-                    <label>Save and Navigate</label>
-                </value>
             </valueSetDefinition>
             <valueSettings>
                 <controllingFieldValue>Quote Document Panel</controllingFieldValue>
@@ -445,10 +451,6 @@
                 <controllingFieldValue>Quote</controllingFieldValue>
                 <controllingFieldValue>Group</controllingFieldValue>
                 <valueName>Optional: None</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Quote</controllingFieldValue>
-                <valueName>Save and Navigate</valueName>
             </valueSettings>
             <valueSettings>
                 <controllingFieldValue>Quote/Group</controllingFieldValue>
@@ -709,7 +711,7 @@
         <type>Picklist</type>
         <valueSet>
             <valueSetDefinition>
-                <sorted>false</sorted>
+                <sorted>true</sorted>
                 <value>
                     <fullName>3dots</fullName>
                     <default>false</default>
@@ -2125,6 +2127,7 @@
         <columns>SBQQ__Label__c</columns>
         <columns>SBQQ__ParentCustomAction__c</columns>
         <columns>SBQQ__Location__c</columns>
+        <columns>LAST_UPDATE</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
         <language>en_US</language>

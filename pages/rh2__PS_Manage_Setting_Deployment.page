@@ -137,13 +137,13 @@
 					&nbsp;
 					<apex:outputLink styleClass="slds-button slds-button_neutral" value="{!URLFOR($Page.rh2__PS_Use_Case_Deployment)}">{!$Label.rh2__Back}</apex:outputLink>
 				</apex:outputPanel>
-				<apex:outputPanel rendered="{!OR(AND(useCaseFieldDeployed, !isRollupLimitReached), AND(useCaseFieldDeployed, !notPaid))}" id="CreateAndRunRollup" styleclass="slds-col slds-m-top_medium" style="margin-left:auto; margin-right:auto;">					
+				<apex:outputPanel rendered="{!OR(AND(useCaseFieldDeployed, !isRollupLimitReached), AND(useCaseFieldDeployed, unlimitedRollups))}" id="CreateAndRunRollup" styleclass="slds-col slds-m-top_medium" style="margin-left:auto; margin-right:auto;">					
 					<apex:commandButton styleClass="slds-button slds-button_brand" rendered="{!!useCaseDeployed}" id="deployRemoveSetting2" rerender="createFieldAndRollup" onclick="CreateAndRunRollup();" status="loading" reRender="messages" value="{!$Label.rh2__DeployandRun} {!ucData.useCaseName} {!$Label.rh2__Setting}"/>
 					&nbsp;
 					<apex:outputLink styleClass="slds-button slds-button_neutral" value="{!URLFOR($Page.rh2__PS_Use_Case_Deployment)}">{!$Label.rh2__Back}</apex:outputLink>
 				</apex:outputPanel>    
-				<apex:outputPanel rendered="{!AND(notPaid, useCaseFieldDeployed, isRollupLimitReached) }" id="createRollup" styleclass="slds-col slds-m-top_medium" style="margin-left:auto; margin-right:auto;">					
-					<apex:commandButton styleClass="slds-button slds-button_brand" rendered="{!!useCaseDeployed}" id="deployRemoveSetting" rerender="createFieldAndRollup" action="{!createExportRollupObject}" status="loading" reRender="messages" value="{!$Label.rh2__Deploy} {!ucData.useCaseName} {!$Label.rh2__Setting}"/>
+				<apex:outputPanel rendered="{!AND(!unlimitedRollups, useCaseFieldDeployed, isRollupLimitReached) }" id="createRollup" styleclass="slds-col slds-m-top_medium" style="margin-left:auto; margin-right:auto;">					
+					<apex:commandButton styleClass="slds-button slds-button_brand" rendered="{!!useCaseDeployed}" id="deployRemoveSetting" rerender="createFieldAndRollup" onclick="CreateRollup();" status="loading" reRender="messages" value="{!$Label.rh2__Deploy} {!ucData.useCaseName} {!$Label.rh2__Setting}"/>
                     &nbsp;	
                     <apex:outputLink styleClass="slds-button slds-button_neutral" value="{!URLFOR($Page.rh2__PS_Use_Case_Deployment)}">{!$Label.rh2__Back}</apex:outputLink>
                 </apex:outputPanel>              

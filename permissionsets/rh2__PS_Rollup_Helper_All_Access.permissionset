@@ -101,6 +101,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>rh2__PS_Batch_Update</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>rh2__PS_Batchable_Class</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -373,6 +377,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>rh2__PS_Running_Jobs_Controller</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>rh2__PS_Running_Jobs_Controller_Behavior</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>rh2__PS_SOQL_AggregateFunction_Behavior</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -438,6 +450,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>rh2__PS_SettingManagementHelper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>rh2__PS_Starter_Tier_Behavior</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -863,6 +879,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>rh2__PS_Rollup_Audit__c.rh2__appendTrailingWhitespace__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>rh2__PS_Rollup_Audit__c.rh2__append__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -919,6 +940,26 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>rh2__PS_Rollup_Audit__c.rh2__exceptionMessage__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>rh2__PS_Rollup_Audit__c.rh2__intermediaryObjectName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>rh2__PS_Rollup_Audit__c.rh2__intermediaryRelationshipFieldName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>rh2__PS_Rollup_Audit__c.rh2__intermediaryRelationshipField__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>rh2__PS_Rollup_Audit__c.rh2__isGrandchildRollup__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1029,6 +1070,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>rh2__RH_Job__c.rh2__NextFireTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>rh2__RH_Job__c.rh2__Notification_Email__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1259,6 +1305,10 @@
     </tabSettings>
     <tabSettings>
         <tab>rh2__PS_Getting_Started</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>rh2__PS_Health_Check</tab>
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>

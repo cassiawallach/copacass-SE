@@ -20,7 +20,11 @@
     <script type="text/javascript">
     	$(document).ready(function() {
     		var quoteName = '{!$ObjectType.WebQuote__c.Name}';
-    		var namespace = (quoteName.toLowerCase().substring(0,4) == 'sbqq') ? 'SBQQ' : '';
+			if(quoteName === 'Quote__c'){
+				namespace = '';
+			}else{
+				namespace = quoteName.slice(0, quoteName.indexOf('__'));
+			}
     		qqBootstrapWeb({namespace:namespace,sessionId:'{!JSENCODE($API.Session_ID)}',sitePrefix:'{!$Site.Prefix}'});
     		document.getElementById('qq').style.display = 'block';
     	});

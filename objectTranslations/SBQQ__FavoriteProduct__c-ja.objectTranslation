@@ -5,42 +5,49 @@
         <value>お気に入りの商品</value>
     </caseValues>
     <fields>
-        <label></label>
+        <label><!-- Configuration Attributes --></label>
         <name>SBQQ__ConfigurationAttributes__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Discount Schedule --></label>
         <name>SBQQ__DiscountSchedule__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
     </fields>
     <fields>
         <help>この品目の機能と動的オプションを識別します。</help>
-        <label></label>
+        <label><!-- Dynamic Option ID --></label>
         <name>SBQQ__DynamicOptionId__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Favorite --></label>
         <name>SBQQ__Favorite__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Product Option --></label>
         <name>SBQQ__ProductOption__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Product --></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Quantity --></label>
         <name>SBQQ__Quantity__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Required By --></label>
         <name>SBQQ__RequiredBy__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
     </fields>
+    <layouts>
+        <layout>Favorite Product Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>お気に入りの商品名</nameFieldLabel>
 </CustomObjectTranslation>

@@ -156,6 +156,29 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__AccountFields__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Fields on the Account object referenced by this plugin</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the API names of any Account fields referenced by this plugin, one per line.</inlineHelpText>
+        <label>Account Fields</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>SBQQ__Code__c</fullName>
         <deprecated>false</deprecated>
         <description>Script code</description>
@@ -168,12 +191,60 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
+        <fullName>SBQQ__ConsumptionRateFields__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Fields on the ConsumptionRate object referenced by this plugin</description>
+        <externalId>false</externalId>
+        <inlineHelpText>API names of consumption rate fields referenced by this plugin. Enter as many as 10 fields, one field on each line..</inlineHelpText>
+        <label>Consumption Rate Fields</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ConsumptionScheduleFields__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Fields on the ConsumptionSchedule object referenced by this plugin</description>
+        <externalId>false</externalId>
+        <inlineHelpText>API names of consumption schedule fields referenced by this plugin. Enter as many as 10 fields, one field on each line.</inlineHelpText>
+        <label>Consumption Schedule Fields</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>SBQQ__GroupFields__c</fullName>
         <deprecated>false</deprecated>
         <description>Fields on the QuoteLineGroup__c object referenced by this plugin</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the API names of any Quote Line Group fields referenced by this plugin, one per line.</inlineHelpText>
         <label>Quote Line Group Fields</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SBQQ__OpportunityFields__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Fields on the Opportunity object referenced by this plugin</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the API names of any Opportunity fields referenced by this plugin, one per line.</inlineHelpText>
+        <label>Opportunity Fields</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ProductFields__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Fields on the Product object referenced by this plugin</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the API names of any Product fields referenced by this plugin, one per line.</inlineHelpText>
+        <label>Product Fields</label>
         <length>131072</length>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>

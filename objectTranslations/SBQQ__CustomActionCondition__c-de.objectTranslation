@@ -6,14 +6,14 @@
         <value>Benutzerdefinierte Aktionsbedingung</value>
     </caseValues>
     <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value>Benutzerdefinierte Aktionsbedingung</value>
-    </caseValues>
-    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Benutzerdefinierte Aktionsbedingungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Benutzerdefinierte Aktionsbedingung</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
@@ -26,9 +26,9 @@
         <value>Benutzerdefinierten Aktionsbedingung</value>
     </caseValues>
     <caseValues>
-        <caseType>Dative</caseType>
+        <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value>Benutzerdefinierten Aktionsbedingungen</value>
+        <value>Benutzerdefinierter Aktionsbedingungen</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
@@ -36,19 +36,19 @@
         <value>Benutzerdefinierter Aktionsbedingung</value>
     </caseValues>
     <caseValues>
-        <caseType>Genitive</caseType>
+        <caseType>Dative</caseType>
         <plural>true</plural>
-        <value>Benutzerdefinierter Aktionsbedingungen</value>
+        <value>Benutzerdefinierten Aktionsbedingungen</value>
     </caseValues>
     <fields>
         <help>Benutzerdefinierte Aktion, die diese Bedingung ausführt.</help>
-        <label></label>
+        <label><!-- Custom Action --></label>
         <name>SBQQ__CustomAction__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Custom Action Conditions --></relationshipLabel>
     </fields>
     <fields>
         <help>Wählen Sie das Feld, das den Wert enthalten soll, den Sie im Feld &quot;Wert&quot; eingeben.</help>
-        <label></label>
+        <label><!-- Field --></label>
         <name>SBQQ__Field__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -57,12 +57,12 @@
     </fields>
     <fields>
         <help>Geben Sie den Wert ein, mit dem das ausgewählte Feld unter Verwendung des festgelegten Operators verglichen werden soll.</help>
-        <label></label>
+        <label><!-- Filter Value --></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>Wählen Sie den Operator aus, der beim Vergleich von &quot;Feld&quot; mit &quot;Wert&quot; verwendet werden soll.</help>
-        <label></label>
+        <label><!-- Operator --></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -102,12 +102,12 @@
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- ParentConditionIsActive --></label>
         <name>SBQQ__ParentActionIsActive__c</name>
     </fields>
     <fields>
         <help>Objekt, für das die Bedingung ausgewertet wird.</help>
-        <label></label>
+        <label><!-- Target Object --></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Product</masterLabel>

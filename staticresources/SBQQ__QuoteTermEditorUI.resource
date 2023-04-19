@@ -34,6 +34,8 @@ function QuoteTermEditorCtrl(scope, controllerManager, quoteTermEditorService, l
 	this.scope.onBlur = this.onBlur;
 	this.scope.onFocus = this.onFocus;
 	this.scope.setDirtyOnAllTerms = this.setDirtyOnAllTerms;
+	this.scope.clearAndLoadQuoteTerms = this.clearAndLoadQuoteTerms;
+	this.scope.exitEditor = this.exitEditor;
 }
 QuoteTermEditorCtrl.$inject = ['$scope', 'controllerManager', 'quoteTermEditorProxy', 'labelFactory'];
 
@@ -47,14 +49,21 @@ QuoteTermEditorCtrl.prototype.onLoad = function (quoteId) {
 
 QuoteTermEditorCtrl.prototype.onTemplateChanged = function () {
 	if (document.getElementsByClassName('cke-dirty').length > 0) {
-		if (!confirm(this.labels.dirty_message + ' ' + this.labels.confirm_message))
-			return;
+		sb.dialog.confirm(
+			this.labels.dirty_message + ' ' + this.labels.confirm_message,
+			{
+				ok: this.labels.ok,
+				cancel: this.labels.cancel
+			},
+			(confirmed) => {
+				if (confirmed) {
+					this.clearAndLoadQuoteTerms();
+				}
+			}
+		);
+	} else {
+		this.clearAndLoadQuoteTerms();
 	}
-	this.self.blockingOperationInProgress = true;
-	setTimeout(function () {
-		this.setDirtyOnAllTerms(false);
-		this.loadQuoteTerms();
-	}.bind(this.self), 100);
 };
 
 QuoteTermEditorCtrl.prototype.loadTemplates = function () {
@@ -62,9 +71,14 @@ QuoteTermEditorCtrl.prototype.loadTemplates = function () {
 		this.documentModel.templateSelectorShown = !!(templates.length);
 		if (!this.documentModel.templateSelectorShown) {
 			this.blockingOperationInProgress = false;
-			window.alert(this.labels.missing_templates_message);
-			this.$apply();
-			return;
+
+			sb.dialog.alert(
+				this.labels.missing_templates_message,
+				{ ok: this.labels.ok },
+				() => {
+					this.$apply();
+				}
+			);
 		}
 
 		this.documentModel.templates = templates;
@@ -107,63 +121,100 @@ QuoteTermEditorCtrl.prototype.onSave = function () {
 		this.self.blockingOperationInProgress = false;
 		this.$apply();
 		this.rebuildTermEditor(this.term.id);
+		// The CK-Editor getData method gets whatever the current content back from the page.
+		// After a user changes the content, the getData method gets this new content.
+		// After onSave the section refreshing, CK-Editor displays its original content
+		// since CK-Editor does not run a query to load the updated data.
+		// The CK-Editor setData method sets the CK-Editor content with the new content
+		// that helps to display the updated content on the screen.
+		CKEDITOR.instances[this.term.section + '_' + this.term.id].setData(newValue);
 	}.bind(this), this.controller.createErrorHandler());
 };
 
 QuoteTermEditorCtrl.prototype.onClose = function () {
 	if (document.getElementsByClassName('cke-dirty').length > 0) {
-		if (!confirm(this.labels.dirty_message + ' ' + this.labels.confirm_message))
-			return;
-	}
-	var qid = this.quoteId;
-	if (sforce && sforce.one)
-		sforce.one.navigateToSObject(qid, 'detail');
-	else
-		document.location.assign(this.controller.getCommunityPrefix() + '/' + qid);
-};
+		sb.dialog.confirm(
+			this.labels.dirty_message + ' ' + this.labels.confirm_message,
+			{
+				ok: this.labels.ok,
+				cancel: this.labels.cancel
+			},
+			(confirmed) => {
+				if (confirmed) {	
+					this.exitEditor(this.quoteId);
+				}
+			}	
+		);
 
-QuoteTermEditorCtrl.prototype.onRevert = function () {
-	if (!confirm(this.labels.revert_message + ' ' + this.labels.confirm_message)) {
-		this.term.focus = false;
-		this.rebuildTermEditor(this.term.id);
 		return;
 	}
 
-	this.self.blockingOperationInProgress = true;
-	this.quoteTermEditorService.disableTerm(this.documentModel.templateId, {
-		'termId': this.term.termOverride || this.term.id,
-		'standardTermId': this.term.standardTermId,
-		'body': this.term.value,
-		'quote': this.quoteId,
-		'active': 'false'
-	}).then(function (response) {
-		this.term.focus = false;
-		this.term.dirty = false;
-		this.term.standardTermId = response.standardTermId;
-		this.term.termOverride = response.id;
-		this.termCache[this.term.id].standardTermId = response.standardTermId;
-		this.termCache[this.term.id].value = response.value;
-		this.termCache[this.term.id].locked = response.locked;
-		this.self.blockingOperationInProgress = false;
-		this.$apply();
-		this.rebuildTermEditor(this.term.id);
-	}.bind(this), this.controller.createErrorHandler());
+	this.exitEditor(this.quoteId);
+};
+
+QuoteTermEditorCtrl.prototype.onRevert = function () {
+	sb.dialog.confirm(
+		this.labels.revert_message + ' ' + this.labels.confirm_message,
+		{
+			ok: this.labels.ok,
+			cancel: this.labels.cancel
+		},
+		(confirmed) => {
+			if (!confirmed) {
+				this.term.focus = false;
+				this.rebuildTermEditor(this.term.id);	
+
+				return;
+			}
+
+			this.self.blockingOperationInProgress = true;
+			this.quoteTermEditorService.disableTerm(this.documentModel.templateId, {
+				'termId': this.term.termOverride || this.term.id,
+				'standardTermId': this.term.standardTermId,
+				'body': this.term.value,
+				'quote': this.quoteId,
+				'active': 'false'
+			}).then((response) => {
+				this.term.focus = false;
+				this.term.dirty = false;
+				this.term.standardTermId = response.standardTermId;
+				this.term.termOverride = response.id;
+				this.termCache[this.term.id].standardTermId = response.standardTermId;
+				this.termCache[this.term.id].value = response.value;
+				this.termCache[this.term.id].locked = response.locked;
+				this.self.blockingOperationInProgress = false;
+				this.$apply();
+				this.rebuildTermEditor(this.term.id);
+			}, this.controller.createErrorHandler());
+		}
+	);
 };
 
 QuoteTermEditorCtrl.prototype.onUndo = function () {
 	var term = this.term.section + '_' + this.term.id;
-	if (!confirm(this.labels.undo_message + ' ' + this.labels.confirm_message)) {
-		//TODO: CKEDITOR is not removing the tool bar here on blur
-		this.term.focus = false;
-		CKEDITOR.instances[term].fire('blur');
-		document.getElementById('cke_' + term).style.display = 'none';
-		return;
-	}
 
-	this.term.dirty = false;
-	this.term.focus = false;
-	this.destroyTextEditor(term);
-	this.buildTextEditor(term);
+	sb.dialog.confirm(
+		this.labels.undo_message + ' ' + this.labels.confirm_message,
+		{
+			ok: this.labels.ok,
+			cancel: this.labels.cancel
+		},
+		(confirmed) => {
+			if (!confirmed) {
+				//TODO: CKEDITOR is not removing the tool bar here on blur
+				this.term.focus = false;
+				CKEDITOR.instances[term].fire('blur');
+				document.getElementById('cke_' + term).style.display = 'none';
+
+				return;
+			}
+
+			this.term.dirty = false;
+			this.term.focus = false;
+			this.destroyTextEditor(term);
+			this.buildTextEditor(term);
+		}
+	);
 };
 
 QuoteTermEditorCtrl.prototype.buildTextEditors = function () {
@@ -247,3 +298,19 @@ QuoteTermEditorCtrl.prototype.setDirtyOnAllTerms = function (dirty) {
 		this.terms[i].dirty = dirty;
 	}
 };
+
+QuoteTermEditorCtrl.prototype.clearAndLoadQuoteTerms = function() {
+	this.self.blockingOperationInProgress = true;
+	setTimeout(function () {
+		this.setDirtyOnAllTerms(false);
+		this.loadQuoteTerms();
+	}.bind(this.self), 100);
+};
+
+QuoteTermEditorCtrl.prototype.exitEditor = function (quoteId) {
+	if (sforce && sforce.one) {
+		sforce.one.navigateToSObject(quoteId, 'detail');
+	} else {
+		document.location.assign(this.controller.getCommunityPrefix() + '/' + quoteId);
+	}
+}

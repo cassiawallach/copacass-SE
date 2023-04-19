@@ -15,7 +15,6 @@ function QuoteDocumentGeneratorCtrl(scope, sce, controllerManager, metaDataServi
 	this.scope.onCancel = this.onCancel;
 	this.scope.onPreview = this.onPreview;
 	this.scope.waitForGenerator = this.waitForGenerator;
-	this.scope.checkQuoteValid = this.checkQuoteValid;
 	this.scope.onSave = this.onSave;
 	this.scope.onSaveAndEmail = this.onSaveAndEmail;
 	this.scope.onSaveAndSendESignature = this.onSaveAndSendESignature;
@@ -27,6 +26,11 @@ function QuoteDocumentGeneratorCtrl(scope, sce, controllerManager, metaDataServi
 
 	this.mobilePreviewScale = 1;
 	this.previewDlg = null;
+	this.scope.namespacePrefix = this.scope.metaDataService.namespace;
+	if (this.scope.namespacePrefix !== '') {
+		this.scope.namespacePrefix += '.';
+	}
+
 }
 QuoteDocumentGeneratorCtrl.$inject = ['$scope', '$sce', 'controllerManager', 'metaDataService', 'quoteDocumentServiceProxy'];
 QuoteDocumentGeneratorCtrl.prototype = new Controller();
@@ -53,7 +57,7 @@ QuoteDocumentGeneratorCtrl.prototype.onPreview = function() {
 
 	var successHandler = function(/*String*/ jobId) {
 
-		function loadPreview(/*String[]*/ parts) {
+		function loadPreview(/*String*/ parts) {
 			scope.blockingOperationInProgress = false;
 			var iframe;
 
@@ -112,11 +116,57 @@ QuoteDocumentGeneratorCtrl.prototype.waitForGenerator = function(/*String*/ jobI
 		}
 	}
 
-	var namespacePrefix = scope.metaDataService.namespace;
-	if (namespacePrefix !== '') {
-		namespacePrefix += '.';
+	QueuableJobChecker(scope.namespacePrefix + 'QueueableJobCheckerExt.getJobStatus', qid, 'QuoteDocumentService', jobId, startChecking, finishChecking, statusChanged, null);
+}
+
+/**
+ * Helper function to alert the user when generating a document for an uncalculated Quote
+ */
+
+confirmOnUncalculatedQuote = (scope, language, qid, tid, dn, of, os, docIds, successHandler, errorHandler, operation) => {
+
+	Visualforce.remoting.Manager.invokeAction(
+		`${scope.namespacePrefix}QueueableJobCheckerExt.getUncalculatedWithSetting`, qid,
+		(result) => {
+			if (result) {
+				sb.dialog.confirm(
+					(scope.documentModel.resources['msg_uncalculated_quote_on_doc_gen']),
+					{
+						ok: scope.documentModel.resources['ok'],
+						cancel: scope.documentModel.resources['cancel']
+					},
+					(confirmed) => {
+						if (confirmed) {
+							processProposal(scope, language, qid, tid, dn, of, os, docIds, successHandler, errorHandler, operation);
+							return;
+						}
+						else {
+							scope.blockingOperationInProgress = false;
+							scope.$apply();
+							return;
+						}
+					}
+				);
+			}
+			else {
+				processProposal(scope, language, qid, tid, dn, of, os, docIds, successHandler, errorHandler, operation);
+			}
+			
+		}
+	);
+};
+
+/**
+ * Helper function to either save/save and email the document
+ */
+processProposal = (scope, language, qid, tid, dn, of, os, docIds, successHandler, errorHandler, operation) => {
+
+	if (operation === 'save') {
+		scope.quoteDocumentService.saveProposal(language, qid, tid, dn, of, os, docIds, successHandler, errorHandler);
 	}
-	QueuableJobChecker(namespacePrefix + 'QueueableJobCheckerExt.getJobStatus', qid, 'QuoteDocumentService', jobId, startChecking, finishChecking, statusChanged, null);
+	else if (operation === 'saveAndEmail') {
+		scope.quoteDocumentService.saveAndEmailProposal(language, qid, tid, dn, of, os, docIds, successHandler, errorHandler);
+	}
 }
 
 QuoteDocumentGeneratorCtrl.prototype.onSave = function() {
@@ -131,12 +181,35 @@ QuoteDocumentGeneratorCtrl.prototype.onSave = function() {
 	var os = scope.documentModel.paperSize;
 	var language = scope.documentModel.language;
 	var docIds = scope.relatedContentSelectionModel.getSelectedValues();
+	const operation = 'save';
 
 	var successHandler = function(/*Id*/ jobId) {
-
 		function loadDocDetails(/*QuoteDocument__c*/ quoteDocument) {
-			if (sforce && sforce.one) {
-				sforce.one.navigateToSObject(qid, 'chatter');
+			if (sforce && sforce.console && sforce.console.isInConsole()) {
+				// If we're in a console app, the specific behavior depends on whether we're in lighting or classic.
+				if (sforce.one) {
+					// In Lightning, we want to close this tab and then open a new tab pointing to the quote document.
+					sforce.console.getEnclosingTabId((result) => {
+						sforce.console.closeTab(result.id);
+					});
+					sforce.one.navigateToSObject(quoteDocument.Id, 'chatter');
+				} else {
+					// In Classic, we want to redirect the current tab back to the Quote detail page, and open a new tab
+					// containing the Quote Document detail page.
+					sforce.console.getEnclosingTabId((subTabResult) => {
+						let subTabId = subTabResult.id;
+						sforce.console.getEnclosingPrimaryTabId((primaryTabResult) => {
+							let primaryTabId = primaryTabResult.id;
+							sforce.console.getPageInfo(subTabId, (pageInfoResponse) => {
+								sforce.console.openSubtab(primaryTabId, quoteDocument.Id, true, quoteDocument.Name, null, () => {
+									sforce.console.openSubtab(primaryTabId, qid, false, pageInfoResponse.pageInfo.objectName, subTabId, null);
+								});
+							});
+						});
+					});
+				}
+			} else if (sforce && sforce.one) {
+				sforce.one.navigateToSObject(quoteDocument.Id, 'chatter');
 			} else {
 				document.location.assign(scope.controller.getCommunityPrefix() + '/' + quoteDocument.Id);
 			}
@@ -145,8 +218,11 @@ QuoteDocumentGeneratorCtrl.prototype.onSave = function() {
 		scope.waitForGenerator(jobId, loadDocDetails);
 	};
 
-	scope.quoteDocumentService.saveProposal(language, qid, tid, dn, of, os, docIds, successHandler, this.controller.createErrorHandler());
+	confirmOnUncalculatedQuote(scope, language, qid, tid, dn, of, os, docIds, successHandler, this.controller.createErrorHandler(),operation);
 }
+
+
+
 
 QuoteDocumentGeneratorCtrl.prototype.onSaveAndEmail = function() {
 	var scope = this;
@@ -160,6 +236,7 @@ QuoteDocumentGeneratorCtrl.prototype.onSaveAndEmail = function() {
 	var os = scope.documentModel.paperSize;
 	var language = scope.documentModel.language;
 	var docIds = scope.relatedContentSelectionModel.getSelectedValues();
+	const operation = 'saveAndEmail';
 
 	var successHandler = function(/*Id*/ jobId) {
 		function loadEmailLink(resp) {
@@ -168,7 +245,7 @@ QuoteDocumentGeneratorCtrl.prototype.onSaveAndEmail = function() {
 				var w = 800, h = 600;
 				var y = window.outerHeight / 2 + window.screenY - ( h / 2)
 				var x = window.outerWidth / 2 + window.screenX - ( w / 2)
-				window.open(url, 'Email Author', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+y+', left='+x);
+				window.open(url, 'Email Author', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+y+', left='+x);
 				sforce.one.navigateToSObject(resp.recordId);
 			} else {
 				document.location.assign(resp.emailLink);
@@ -178,8 +255,9 @@ QuoteDocumentGeneratorCtrl.prototype.onSaveAndEmail = function() {
 		scope.waitForGenerator(jobId, loadEmailLink);
 	};
 
-	scope.quoteDocumentService.saveAndEmailProposal(language, qid, tid, dn, of, os, docIds, successHandler, this.controller.createErrorHandler());
+	confirmOnUncalculatedQuote(scope, language, qid, tid, dn, of, os, docIds, successHandler, this.controller.createErrorHandler(), operation);
 }
+
 
 QuoteDocumentGeneratorCtrl.prototype.onSaveAndSendESignature = function() {
 	var scope = this;
@@ -199,13 +277,26 @@ QuoteDocumentGeneratorCtrl.prototype.onSaveAndSendESignature = function() {
 		function loadForESignature(/*String*/ resp) {
 			if (resp.redirectURL) {
 				if (sforce && sforce.one) {
-					sforce.one.navigateToURL(resp.redirectURL);
+					var redirectUrl = resp.redirectURL;
+					// if the scope is not inside a community page, redirectUrl keeps same
+					if (scope && scope.controller && scope.controller.getCommunityPrefix() &&
+					    redirectUrl.startsWith('/') && !redirectUrl.startsWith('//')) {
+						redirectUrl = scope.controller.getCommunityPrefix() + redirectUrl;
+					}
+					sforce.one.navigateToURL(redirectUrl);
 				} else {
 					document.location.assign(resp.redirectURL);
 				}
 			} else {
-				if (sforce && sforce.one) {
-					sforce.one.navigateToSObject(qid, 'chatter');
+				if (sforce && sforce.console && sforce.console.isInConsole()) {
+					var closeTheTab = function closeTheTab(result) {
+						sforce.console.closeTab(result.id);
+					};
+
+					sforce.console.getEnclosingTabId(closeTheTab);
+					sforce.one.navigateToSObject(resp.quoteDocument.Id, 'chatter');
+				} else if (sforce && sforce.one) {
+					sforce.one.navigateToSObject(resp.quoteDocument.Id, 'chatter');
 				} else {
 					document.location.assign(scope.controller.getCommunityPrefix() + '/' + resp.quoteDocument.Id);
 				}
@@ -262,7 +353,8 @@ QuoteDocumentGeneratorCtrl.prototype.onLoad = function(/*String*/ quoteId, /*Str
 	scope.currentAction = actionName;
 	scope.blockingOperationInProgress = true;
 
-	var validationSuccessHandler = function() {
+	var successHandler = function(/*String*/ result) {
+		scope.documentModel = angular.fromJson(result);
 		scope.relatedContentSelectionModel = scope.controller.createRelatedContentSelectionModel();
 		scope.controllerManager.activateController(controller);
 
@@ -280,45 +372,8 @@ QuoteDocumentGeneratorCtrl.prototype.onLoad = function(/*String*/ quoteId, /*Str
 		}
 	};
 
-	var loadSuccessHandler = function(/*String*/ result) {
-		scope.documentModel = angular.fromJson(result);
-		scope.checkQuoteValid(scope.documentModel.quoteId, validationSuccessHandler);
-	};
-	scope.quoteDocumentService.loadModel(quoteId, actionName, loadSuccessHandler, controller.createErrorHandler());
+	scope.quoteDocumentService.loadModel(quoteId, actionName, successHandler, controller.createErrorHandler());
 }
-
-QuoteDocumentGeneratorCtrl.prototype.checkQuoteValid = function(qid, successHandler) {
-	var scope = this;
-
-	var s1 = Date.now();
-	// Background job.  So spin
-	function startChecking() {
-		scope.blockingOperationInProgress = true;
-	}
-
-	function statusChanged(results) {
-		console.log('Calc - ' + results.job.Status + ' - ' + ((Date.now() - s1)/1000) + ' seconds');
-	}
-
-	function finishChecking(success, results) {
-		if (success) {
-			scope.quoteIsValid = true;
-			successHandler();
-		} else {
-			scope.messages = [{severity:'error',summary:scope.sce.trustAsHtml(scope.documentModel.resources['msg_invalid_quote_prevents_docgen'])}];
-			scope.blockingOperationInProgress = false;
-			scope.quoteIsValid = false;
-			scope.$apply();
-			scope.controller.refocus();
-		}
-	}
-
-	var namespacePrefix = scope.metaDataService.namespace;
-	if (namespacePrefix !== '') {
-		namespacePrefix += '.';
-	}
-	QueuableJobChecker(namespacePrefix + 'QueueableJobCheckerExt.getJobStatus', qid, 'QuoteCalculator', null, startChecking, finishChecking, statusChanged, null);
-};
 
 QuoteDocumentGeneratorCtrl.prototype.checkOptionalRelatedContent = function() {
 	this.hasOptionalRelatedContent = false;
@@ -361,88 +416,19 @@ QuoteDocumentGeneratorCtrl.prototype.createRelatedContentSelectionModel = functi
 }
 
 QuoteDocumentGeneratorCtrl.prototype.loadPreview = function(/*Element*/ parent, /*String[]*/ documentParts) {
-	var form;
-	if (parent.nodeName.toUpperCase() == 'IFRAME') {
-		var iframeDoc;
-		if (parent.contentDocument && parent.contentDocument.body) {
-			iframeDoc = parent.contentDocument;
-		} else {
-			iframeDoc = parent.contentWindow.document;
-		}
-		form = this.createPreviewForm(iframeDoc, documentParts);
-		iframeDoc.body.appendChild(form);
-	} else {
-		form = this.createPreviewForm(document, documentParts);
-		parent.appendChild(form);
-	}
-	form.submit();
+	var blob = 'data:application/pdf;base64,' + documentParts;
+	// Convert Base64 to binary
+	var pdfAsArray = convertDataURIToBinary(blob);
+	// Create temporary file
+	var file = new Blob([pdfAsArray], {type: "application/pdf"});
+	// Create URL to temporary file
+	var url = URL.createObjectURL(file);
+
+	// Now, make the iframe src use the temporary file URL
+	var att =  document.createAttribute("src");
+	att.value = url;
+	parent.setAttributeNode(att);
 }
-
-QuoteDocumentGeneratorCtrl.prototype.createPreviewForm = function(/*Document*/ doc, /*String[]*/ documentParts) {
-	documentParts = JSON.parse(documentParts);
-	var form = doc.createElement("form");
-    form.setAttribute("method", "POST");
-    form.setAttribute("action", this.scope.documentModel.documentServiceEndpoint);
-
-	var hiddenField;
-	var hasAttachments = false;
-
-	for (var i=0; i<documentParts.length; i++) {
-	    hiddenField = doc.createElement("input");
-	    hiddenField.setAttribute("type", "hidden");
-	    hiddenField.setAttribute("name", "docType" + i);
-	    hiddenField.setAttribute("value", documentParts[i].fSegmentType);
-	    form.appendChild(hiddenField);
-	    hiddenField = doc.createElement("input");
-	    hiddenField.setAttribute("type", "hidden");
-	    hiddenField.setAttribute("name", "document" + i);
-	    hiddenField.setAttribute("value", documentParts[i].fContent);
-	    form.appendChild(hiddenField);
-	    if (!hasAttachments && documentParts[i].fSegmentType == "attachment") {
-			hasAttachments = true;
-	    }
-    }
-
-	hiddenField = doc.createElement("input");
-    hiddenField.setAttribute("type", "hidden");
-    hiddenField.setAttribute("name", "documentCount");
-    hiddenField.setAttribute("value", documentParts.length);
-    form.appendChild(hiddenField);
-
-    hiddenField = doc.createElement("input");
-    hiddenField.setAttribute("type", "hidden");
-    hiddenField.setAttribute("name", "outputFormat");
-    hiddenField.setAttribute("value", "binary");
-    form.appendChild(hiddenField);
-
-    hiddenField = doc.createElement("input");
-    hiddenField.setAttribute("type", "hidden");
-    hiddenField.setAttribute("name", "orgId");
-    hiddenField.setAttribute("value", this.scope.documentModel.orgId);
-    form.appendChild(hiddenField);
-
-    hiddenField = doc.createElement("input");
-    hiddenField.setAttribute("type", "hidden");
-    hiddenField.setAttribute("name", "quoteId");
-    hiddenField.setAttribute("value", this.scope.documentModel.quoteId);
-    form.appendChild(hiddenField);
-
-    hiddenField = doc.createElement("input");
-    hiddenField.setAttribute("type", "hidden");
-    hiddenField.setAttribute("name", "templateId");
-    hiddenField.setAttribute("value", this.scope.documentModel.templateId);
-    form.appendChild(hiddenField);
-
-    hiddenField = doc.createElement("input");
-    hiddenField.setAttribute("type", "hidden");
-    hiddenField.setAttribute("name", "hasAttachments");
-    hiddenField.setAttribute("value", hasAttachments);
-    form.appendChild(hiddenField);
-
-    return form;
-}
-
-
 
 function QuoteDocumentPreviewDialog(title, fullScreen) {
     this.id = 'QuoteDocumentPreviewDialog';
@@ -481,21 +467,7 @@ function adjustCanvasDimension(scale) {
 
 function loadMobilePreview(parts) {
 	var blob = 'data:application/pdf;base64,' + parts;
-	var BASE64_MARKER = ';base64,';
 	var pdfAsArray = convertDataURIToBinary(blob);
-
-	function convertDataURIToBinary(dataURI) {
-	  var base64Index = dataURI.indexOf(BASE64_MARKER) + BASE64_MARKER.length;
-	  var base64 = dataURI.substring(base64Index);
-	  var raw = atob(base64);
-	  var rawLength = raw.length;
-	  var array = new Uint8Array(new ArrayBuffer(rawLength));
-
-	  for(var i = 0; i < rawLength; i++) {
-	    array[i] = raw.charCodeAt(i);
-	  }
-	  return array;
-	}
 
 	var currPage = 1; //Pages are 1-based not 0-based
 	var numPages = 0;
@@ -544,6 +516,20 @@ function loadMobilePreview(parts) {
 	        thePDF.getPage( currPage ).then( handlePages );
 	    }
 	}
+}
+
+function convertDataURIToBinary(dataURI) {
+	var BASE64_MARKER = ';base64,';
+	var base64Index = dataURI.indexOf(BASE64_MARKER) + BASE64_MARKER.length;
+	var base64 = dataURI.substring(base64Index);
+	var raw = atob(base64);
+	var rawLength = raw.length;
+	var array = new Uint8Array(new ArrayBuffer(rawLength));
+
+	for(var i = 0; i < rawLength; i++) {
+		array[i] = raw.charCodeAt(i);
+	}
+	return array;
 }
 
 if (!Controller.isMobileDevice()) {

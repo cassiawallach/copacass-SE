@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label></label>
+        <label><!-- Channel Id --></label>
         <name>slackv2__Channel_Id__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Channel Name --></label>
         <name>slackv2__Channel_Name__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Field --></label>
         <name>slackv2__Field__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Object Type --></label>
         <name>slackv2__Object_Type__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Record Id --></label>
         <name>slackv2__Record_Id__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Subscription Id --></label>
         <name>slackv2__Subscription_Id__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Subscription Type Lookup --></label>
         <name>slackv2__Subscription_Type_Lookup__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Subscriptions --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Subscription Type --></label>
         <name>slackv2__Subscription_Type__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- User --></label>
         <name>slackv2__User__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Subscriptions --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Value --></label>
         <name>slackv2__Value__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Workspace Id --></label>
         <name>slackv2__Workspace_Id__c</name>
     </fields>
 </CustomObjectTranslation>

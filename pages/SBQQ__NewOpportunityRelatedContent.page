@@ -41,7 +41,7 @@
                   </tr>
 
                   <tr>
-                    <apex:outputLabel >
+                    <apex:outputLabel rendered="{!RenderDisplayOrder}">
                       <td>
                         <label> {!$Label.SBQQ__lbl_display_order} </label>
                         <apex:outputPanel rendered="{!formFactor == 'desktop'}">
@@ -49,7 +49,7 @@
                         </apex:outputPanel>
                       </td>
                     </apex:outputLabel>
-                    <td><apex:inputText value="{!displayOrder}"  id="displayOrder"/></td>
+                    <td><apex:inputText value="{!displayOrder}"  rendered="{!RenderDisplayOrder}" id="displayOrder"/></td>
                   </tr>
                 </tbody>
               </table>

@@ -265,8 +265,6 @@
     <label>Trailmix</label>
     <listViews>
         <fullName>trailheadapp__All</fullName>
-        <columns>NAME</columns>
-        <columns>trailheadapp__External_Id__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

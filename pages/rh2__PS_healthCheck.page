@@ -26,12 +26,19 @@
         }
     </style>
     <script>
-        $(document).ready(function(){
+      var rh = rh || {}
+      rh.j$ = jQuery.noConflict();
+        rh.j$(document).ready(function(){
             var rootPage = sessionStorage.getItem('rootPage') || 'home';
             
             selectBreadcrumb_HS();
             passExceptionLink();
         });
+        
+
+        function toggleModalAndFixHeader(shouldShow, label) {
+            showModal(shouldShow, label);
+        }
     </script>
     <apex:form >
       <apex:actionFunction action="{!cancelExceptionLifespanChange}" name="callCancelExceptionLifespan" rerender="exceptionLifespanModal,exceptionLifespanInput" status="loading"/>
@@ -86,6 +93,7 @@
                                 </apex:outputPanel>
                             </div>
                             <apex:commandButton styleClass="slds-button slds-button_neutral" style="margin-right:15px;float:right;" onclick="showModal(true, 'exceptionLifespanModal');" rerender="exceptionLifespanModal" value="{!$Label.rh2__AdjustExceptionLifespan}"/>
+                            <apex:commandButton styleClass="slds-button slds-button_neutral" style="margin-right:15px;float:right;" onclick="showModal(true, 'runningJobs')" rerender="runningJobs" value="{!$Label.rh2__ConfigureRollupJobs}"/>
                           </apex:outputPanel>
                           <br/><br/>
                         <apex:outputPanel rendered="{!IF(totalIssueCount > 0, true, false)}">
@@ -113,7 +121,7 @@
                                                 <td id="queue" style="white-space:normal;word-wrap:break-word;">
                                                     
                                                     <p class="slds-text-heading_label">
-                                                    <a onmouseover="$('#help-queue').toggle();" onmouseout="$('#help-queue').toggle();" >
+                                                    <a onmouseover="rh.j$('#help-queue').toggle();" onmouseout="rh.j$('#help-queue').toggle();" >
                                                     <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                     </a>{!$Label.QueueBuildup} </p>
 
@@ -135,7 +143,7 @@
                                                     <td id="exctab" style="white-space:normal;word-wrap:break-word;">
                                                         
                                                         <p class="slds-text-heading_label"> 
-                                                        <a onmouseover="$('#help-exctab').toggle();" onmouseout="$('#help-exctab').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-exctab').toggle();" onmouseout="rh.j$('#help-exctab').toggle();" >
                                                         <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!$Label.ExceptionsFound}</p>
                                                         
@@ -157,7 +165,7 @@
                                                     <td id="inacUser" style="white-space:normal;word-wrap:break-word;">
                                                         
                                                         <p class="slds-text-heading_label"> 
-                                                        <a onmouseover="$('#help-inacUser').toggle();" onmouseout="$('#help-inacUser').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-inacUser').toggle();" onmouseout="rh.j$('#help-inacUser').toggle();" >
                                                         <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!$Label.RunningUserInactive}</p>
                                                         
@@ -178,7 +186,7 @@
                                                     <td id="inacObject-{!i.uniqueId}" style="white-space:normal;word-wrap:break-word;">
                                                         
                                                         <p class="slds-text-heading_label"> 
-                                                        <a onmouseover="$('#help-inacObject-{!i.uniqueId}').toggle();" onmouseout="$('#help-inacObject-{!i.uniqueId}').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-inacObject-{!i.uniqueId}').toggle();" onmouseout="rh.j$('#help-inacObject-{!i.uniqueId}').toggle();" >
                                                         <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!i.rollupObject} {!$Label.ObjectIsInaccessible}</p>
                                                         
@@ -198,7 +206,7 @@
                                                     <td id="fieldformat" style="white-space:normal;word-wrap:break-word;">
                                                         
                                                         <p class="slds-text-heading_label"> 
-                                                        <a onmouseover="$('#help-fieldformat').toggle();" onmouseout="$('#help-fieldformat').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-fieldformat').toggle();" onmouseout="rh.j$('#help-fieldformat').toggle();" >
                                                         <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!$Label.FieldFormatExceptionFound}</p>
                                                         
@@ -220,7 +228,7 @@
                                                     <td id="rowlock" style="white-space:normal;word-wrap:break-word;">
                                                         
                                                         <p class="slds-text-heading_label"> 
-                                                        <a onmouseover="$('#help-rowlock').toggle();" onmouseout="$('#help-rowlock').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-rowlock').toggle();" onmouseout="rh.j$('#help-rowlock').toggle();" >
                                                         <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!$Label.RowLockExceptionsFound}</p>
                                                         
@@ -244,7 +252,7 @@
                                                     <td id="infloop" style="white-space:normal;word-wrap:break-word;">
                                                         
                                                         <p class="slds-text-heading_label"> 
-                                                        <a onmouseover="$('#help-infloop').toggle();" onmouseout="$('#help-infloop').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-infloop').toggle();" onmouseout="rh.j$('#help-infloop').toggle();" >
                                                         <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!$Label.TriggerLoopExceptionsFound}</p>
                                                         
@@ -271,7 +279,7 @@
                                                     <td id="reqfield" style="white-space:normal;word-wrap:break-word;">
                                                         
                                                         <p class="slds-text-heading_label"> 
-                                                        <a onmouseover="$('#help-reqfield').toggle();" onmouseout="$('#help-reqfield').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-reqfield').toggle();" onmouseout="rh.j$('#help-reqfield').toggle();" >
                                                         <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!$Label.RequiredFieldExceptionsFound}</p>
                                                         
@@ -295,7 +303,7 @@
                                                     <td id="pbflow" style="white-space:normal;word-wrap:break-word;">
                                                         
                                                         <p class="slds-text-heading_label"> 
-                                                        <a onmouseover="$('#help-pbflow').toggle();" onmouseout="$('#help-pbflow').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-pbflow').toggle();" onmouseout="rh.j$('#help-pbflow').toggle();" >
                                                         <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!$Label.ProcessBuilderFlowExceptionsFound}</p>
                                                         
@@ -319,7 +327,7 @@
                                                     <td id="importerr" style="white-space:normal;word-wrap:break-word;">
                                                         
                                                         <p class="slds-text-heading_label"> 
-                                                        <a onmouseover="$('#help-importerr').toggle();" onmouseout="$('#help-importerr').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-importerr').toggle();" onmouseout="rh.j$('#help-importerr').toggle();" >
                                                         <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!$Label.RollupCouldNotBeImported}</p>
                                                         
@@ -340,7 +348,7 @@
                                                     <td id="luskew-{!i.uniqueId}" style="white-space:normal;word-wrap:break-word;">
                                                         
                                                         <p class="slds-text-heading_label"> 
-                                                        <a onmouseover="$('#help-luskew-{!i.uniqueId}').toggle();" onmouseout="$('#help-luskew-{!i.uniqueId}').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-luskew-{!i.uniqueId}').toggle();" onmouseout="rh.j$('#help-luskew-{!i.uniqueId}').toggle();" >
                                                         <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!$Label.LookupSkewExists}</p>
                                                         
@@ -360,7 +368,7 @@
                                                     <td id="luskewcalc-{!i.uniqueId}" style="white-space:normal;word-wrap:break-word;">
                                                         
                                                         <p class="slds-text-heading_label"> 
-                                                        <a onmouseover="$('#help-luskewcalc-{!i.uniqueId}').toggle();" onmouseout="$('#help-luskewcalc-{!i.uniqueId}').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-luskewcalc-{!i.uniqueId}').toggle();" onmouseout="rh.j$('#help-luskewcalc-{!i.uniqueId}').toggle();" >
                                                         <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!$Label.LookupSkewCalculationFailed}</p>
                                                         
@@ -383,7 +391,7 @@
                                             <apex:outputPanel rendered="{!IF(contains(i.issueName, 'Exception Monitor'), true, false)}">
                                                 <td id="excMonitor" style="white-space:normal;word-wrap:break-word;">                                                    
                                                     <p class="slds-text-heading_label">           
-                                                    <a onmouseover="$('#help-excMonitor').toggle();" onmouseout="$('#help-excMonitor').toggle();" >
+                                                    <a onmouseover="rh.j$('#help-excMonitor').toggle();" onmouseout="rh.j$('#help-excMonitor').toggle();" >
                                                     <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                     </a>{!$Label.ExceptionMonitorJob}</p> 
             
@@ -400,7 +408,7 @@
                                             <apex:outputPanel rendered="{!IF(contains(i.issueName, 'Scope Monitor'), true, false)}">
                                                 <td id="excMonitor" style="white-space:normal;word-wrap:break-word;">                                                    
                                                     <p class="slds-text-heading_label">           
-                                                    <a onmouseover="$('#help-scopeMonitor').toggle();" onmouseout="$('#help-scopeMonitor').toggle();" >
+                                                    <a onmouseover="rh.j$('#help-scopeMonitor').toggle();" onmouseout="rh.j$('#help-scopeMonitor').toggle();" >
                                                     <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                     </a>{!$Label.RecordScopeScheduleJob}</p> 
             
@@ -417,7 +425,7 @@
                                             <apex:outputPanel rendered="{!IF(contains(i.issueName, 'Schedule Monitor'), true, false)}">
                                                 <td id="schedMonitor" style="white-space:normal;word-wrap:break-word;">                                                    
                                                     <p class="slds-text-heading_label"> 
-                                                    <a onmouseover="$('#help-schedMonitor').toggle();" onmouseout="$('#help-schedMonitor').toggle();" >
+                                                    <a onmouseover="rh.j$('#help-schedMonitor').toggle();" onmouseout="rh.j$('#help-schedMonitor').toggle();" >
                                                     <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                     </a>{!$Label.ScheduleMonitorJob}</p>       
 
@@ -435,7 +443,7 @@
                                                     <td id="excroll-{!i.uniqueId}" style="white-space:normal;word-wrap:break-word;">
 
                                                         <p class="slds-text-heading_label">   
-                                                        <a onmouseover="$('#help-excroll-{!i.uniqueId}').toggle();" onmouseout="$('#help-excroll-{!i.uniqueId}').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-excroll-{!i.uniqueId}').toggle();" onmouseout="rh.j$('#help-excroll-{!i.uniqueId}').toggle();" >
                                                         <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                            
                                                         </a>{!$Label.RollupDeactivated}</p> 
@@ -464,7 +472,7 @@
                                                     <td id="jobs" style="white-space:normal;word-wrap:break-word;">
                                                        
                                                         <p class="slds-text-heading_label">
-                                                        <a onmouseover="$('#help-jobs').toggle();" onmouseout="$('#help-jobs').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-jobs').toggle();" onmouseout="rh.j$('#help-jobs').toggle();" >
                                                         <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!$Label.NotEnoughAsyncJobs}</p>
 
@@ -489,7 +497,7 @@
                                                     <td id="manual-{!i.uniqueId}" style="white-space:normal;word-wrap:break-word;">
                                                        
                                                       <p class="slds-text-heading_label"> 
-                                                      <a onmouseover="$('#help-manual-{!i.uniqueId}').toggle();" onmouseout="$('#help-manual-{!i.uniqueId}').toggle();" >
+                                                      <a onmouseover="rh.j$('#help-manual-{!i.uniqueId}').toggle();" onmouseout="rh.j$('#help-manual-{!i.uniqueId}').toggle();" >
                                                       <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                       </a>{!$Label.ManualRunOnlyRollupFound}</p>
 
@@ -515,7 +523,7 @@
                                                     <td id="manual-{!i.uniqueId}" style="white-space:normal;word-wrap:break-word;">
                                                        
                                                     <p class="slds-text-heading_label"> 
-                                                    <a onmouseover="$('#help-manual-no-trigger-{!i.uniqueId}').toggle();" onmouseout="$('#help-manual-no-trigger-{!i.uniqueId}').toggle();" >
+                                                    <a onmouseover="rh.j$('#help-manual-no-trigger-{!i.uniqueId}').toggle();" onmouseout="rh.j$('#help-manual-no-trigger-{!i.uniqueId}').toggle();" >
                                                     <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                     </a>{!$Label.UnableToEnableRealtime}</p>
                                                     
@@ -536,7 +544,7 @@
                                                     <td id="init-{!i.uniqueId}" style="white-space:normal;word-wrap:break-word;">
 
                                                         <p class="slds-text-heading_label">
-                                                        <a onmouseover="$('#help-init-{!i.uniqueId}').toggle();" onmouseout="$('#help-init-{!i.uniqueId}').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-init-{!i.uniqueId}').toggle();" onmouseout="rh.j$('#help-init-{!i.uniqueId}').toggle();" >
                                                             <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!$Label.RollupNotRun}</p>
 
@@ -558,7 +566,7 @@
                                                     <td id="rpar-too-low-{!i.uniqueId}" style="white-space:normal;word-wrap:break-word;">
 
                                                         <p class="slds-text-heading_label">
-                                                        <a onmouseover="$('#help-rpar-too-low-{!i.uniqueId}').toggle();" onmouseout="$('#help-rpar-too-low-{!i.uniqueId}').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-rpar-too-low-{!i.uniqueId}').toggle();" onmouseout="rh.j$('#help-rpar-too-low-{!i.uniqueId}').toggle();" >
                                                             <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!$Label.RollupsPerAsyncRequest}</p>
 
@@ -579,7 +587,7 @@
                                                     <td id="user-settings-{!i.uniqueId}" style="white-space:normal;word-wrap:break-word;">
 
                                                         <p class="slds-text-heading_label">
-                                                        <a onmouseover="$('#help-user-settings-{!i.uniqueId}').toggle();" onmouseout="$('#help-user-settings-{!i.uniqueId}').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-user-settings-{!i.uniqueId}').toggle();" onmouseout="rh.j$('#help-user-settings-{!i.uniqueId}').toggle();" >
                                                             <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!$Label.UnusedRollupHelper}</p>
 
@@ -606,7 +614,7 @@
                                                     <td id="filter-field-validation" style="white-space:normal;word-wrap:break-word;">
 
                                                         <p class="slds-text-heading_label">
-                                                        <a onmouseover="$('#help-filter-field-validation').toggle();" onmouseout="$('#help-filter-field-validation').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-filter-field-validation').toggle();" onmouseout="rh.j$('#help-filter-field-validation').toggle();" >
                                                             <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>Problem Encountered During Filter Validation</p>
 
@@ -628,7 +636,7 @@
                                                 <td id="editedCrit-{!i.uniqueId}" style="white-space:normal;word-wrap:break-word;">
                                                     
                                                     <p class="slds-text-heading_label"> 
-                                                      <a onmouseover="$('#help-editedCrit-{!i.uniqueId}').toggle();" onmouseout="$('#help-editedCrit-{!i.uniqueId}').toggle();" >
+                                                      <a onmouseover="rh.j$('#help-editedCrit-{!i.uniqueId}').toggle();" onmouseout="rh.j$('#help-editedCrit-{!i.uniqueId}').toggle();" >
                                                       <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                       </a>{!$Label.RollupNotRunSinceCriteria}</p>
 
@@ -648,7 +656,7 @@
                                             <apex:outputPanel rendered="{!IF(contains(i.issueName, 'We were unable'), true, false)}">
                                                     <td id="cdl-luskewcalc" style="white-space:normal;word-wrap:break-word;">
                                                         <p class="slds-text-heading_label"> 
-                                                        <a onmouseover="$('#help-cdl-luskewcalc').toggle();" onmouseout="$('#help-cdl-luskewcalc').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-cdl-luskewcalc').toggle();" onmouseout="rh.j$('#help-cdl-luskewcalc').toggle();" >
                                                         <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>{!$Label.CDLLookupSkewCalculation}</p>
                                                         
@@ -673,7 +681,7 @@
                                                     <td id="targetFldAccess-{!i.uniqueId}" style="white-space:normal;word-wrap:break-word;">
                                                         
                                                         <p class="slds-text-heading_label"> 
-                                                        <a onmouseover="$('#help-targetFldAccess-{!i.uniqueId}').toggle();" onmouseout="$('#help-targetFldAccess-{!i.uniqueId}').toggle();" >
+                                                        <a onmouseover="rh.j$('#help-targetFldAccess-{!i.uniqueId}').toggle();" onmouseout="rh.j$('#help-targetFldAccess-{!i.uniqueId}').toggle();" >
                                                         <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                         </a>Target field is not accessible</p>
                                                         
@@ -691,7 +699,7 @@
                                             <apex:outputPanel rendered="{!IF(contains(i.issueName, 'one filter record was identified to have data incorrectly formatted'), true, false)}">
                                                 <td id="filterCleanup" style="white-space:normal;word-wrap:break-word;">                                                    
                                                   <p class="slds-text-heading_label">           
-                                                  <a onmouseover="$('#help-filterCleanup').toggle();" onmouseout="$('#help-filterCleanup').toggle();" >
+                                                  <a onmouseover="rh.j$('#help-filterCleanup').toggle();" onmouseout="rh.j$('#help-filterCleanup').toggle();" >
                                                   <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                   </a>{!$Label.FilterRecordsNeedCleaning}</p> 
           
@@ -706,7 +714,7 @@
                                             <apex:outputPanel rendered="{!IF(contains(i.issueName, 'one rollup was identified to have data incorrectly formatted'), true, false)}">
                                                 <td id="rollupCleanup" style="white-space:normal;word-wrap:break-word;">                                                    
                                                   <p class="slds-text-heading_label">           
-                                                  <a onmouseover="$('#help-rollupCleanup').toggle();" onmouseout="$('#help-rollupCleanup').toggle();" >
+                                                  <a onmouseover="rh.j$('#help-rollupCleanup').toggle();" onmouseout="rh.j$('#help-rollupCleanup').toggle();" >
                                                   <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                   </a>{!$Label.RollupsNeedCleaning}</p> 
           
@@ -721,7 +729,7 @@
                                             <apex:outputPanel rendered="{!IF(AND(contains(i.issueName, 'references a child filter that no longer exists'), NOT(contains(i.issueName, 'encountered the exception'))), true, false)}">
                                                 <td id="filterReference" style="white-space:normal;word-wrap:break-word;">                                                    
                                                   <p class="slds-text-heading_label">           
-                                                  <a onmouseover="$('#help-filterReference').toggle();" onmouseout="$('#help-filterReference').toggle();" >
+                                                  <a onmouseover="rh.j$('#help-filterReference').toggle();" onmouseout="rh.j$('#help-filterReference').toggle();" >
                                                   <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                   </a>{!$Label.RollupReferencesInvalidFilter}</p> 
           
@@ -736,7 +744,7 @@
                                             <apex:outputPanel rendered="{!IF(contains(i.issueName, 'due to archived records'), true, false)}">
                                               <td id="archivedReference-{!i.uniqueId}" style="white-space:normal;word-wrap:break-word;">                                                    
                                                 <p class="slds-text-heading_label">           
-                                                <a onmouseover="$('#help-archivedReference-{!i.uniqueId}').toggle();" onmouseout="$('#help-archivedReference-{!i.uniqueId}').toggle();" >
+                                                <a onmouseover="rh.j$('#help-archivedReference-{!i.uniqueId}').toggle();" onmouseout="rh.j$('#help-archivedReference-{!i.uniqueId}').toggle();" >
                                                 <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                 </a>{!$Label.CannotRetrieveArchivedRecords}</p> 
         
@@ -751,7 +759,7 @@
                                             <apex:outputPanel rendered="{!IF(contains(i.issueName, 'active DLRS'), true, false)}">
                                               <td id="convertDLRS">
                                                 <p class="slds-text-heading_label">
-                                                  <a onmouseover="$('#help-convertDLRS').toggle();" onmouseout="$('#help-convertDLRS').toggle();" >
+                                                  <a onmouseover="rh.j$('#help-convertDLRS').toggle();" onmouseout="rh.j$('#help-convertDLRS').toggle();" >
                                                     <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                   </a>{!$Label.ActiveDLRS}</p>
 
@@ -771,7 +779,7 @@
                                             <apex:outputPanel rendered="{!IF(contains(i.issueName, 'deprecated filters'), true, false)}">
                                               <td id="convert-filters" style="white-space:normal;word-wrap:break-word;">
                                                   <p class="slds-text-heading_label"> 
-                                                  <a onmouseover="$('#help-convert-filters').toggle();" onmouseout="$('#help-convert-filters').toggle();" >
+                                                  <a onmouseover="rh.j$('#help-convert-filters').toggle();" onmouseout="rh.j$('#help-convert-filters').toggle();" >
                                                   <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
                                                   </a>{!$Label.DeprecatedFiltersIdentified}</p>
                                                   
@@ -927,12 +935,10 @@
                     <apex:outputText > {!$Label.rh2__Days}</apex:outputText>
                   </div>
                   <div class="slds-modal__footer">
-                    <center>
-                      <apex:outputPanel id="exceptionLifespanFooter">
-                        <apex:commandButton styleClass="slds-button slds-button_neutral slds-button_small slds-m-button_x-small" value="{!$Label.rh2__Cancel}" action="{!cancelExceptionLifespanChange}" onclick="showModal(false, 'exceptionLifespanModal');" rerender="exceptionLifespanModal,exceptionLifespanInput" status="loading"/>
-                        <apex:commandButton styleClass="slds-button slds-button_brand slds-button_small slds-m-button_x-small" value="{!$Label.rh2__Update}" action="{!updateExceptionLifespan}" oncomplete="showModal(false, 'exceptionLifespanModal');" rerender="exceptionLifespanModal,exceptionLifespanInput" status="loading"/>
-                      </apex:outputPanel>
-                    </center>
+                    <apex:outputPanel id="exceptionLifespanFooter">
+                      <apex:commandButton styleClass="slds-button slds-button_brand slds-button_small slds-m-button_x-small" value="{!$Label.rh2__Update}" action="{!updateExceptionLifespan}" oncomplete="showModal(false, 'exceptionLifespanModal');" rerender="exceptionLifespanModal,exceptionLifespanInput" status="loading"/>
+                      <apex:commandButton styleClass="slds-button slds-button_neutral slds-button_small slds-m-button_x-small" value="{!$Label.rh2__Cancel}" action="{!cancelExceptionLifespanChange}" onclick="showModal(false, 'exceptionLifespanModal');" rerender="exceptionLifespanModal,exceptionLifespanInput" status="loading"/>
+                    </apex:outputPanel>
                   </div>
                 </div>
               </div>
@@ -961,16 +967,15 @@
                     </div>
                   </apex:outputPanel>
                   <div class="slds-modal__footer">
-                    <center>
-                      <apex:commandLink action="{!convertDeprecatedFilters}" onclick="showModal(false, 'convertDeprecatedFiltersModal')" rendered="{! $User.UIThemeDisplayed == 'Theme3' }" target="_blank" value="Convert" styleClass="slds-button slds-button_neutral"/>
-                      <apex:commandLink action="{!convertDeprecatedFilters}" onclick="showModal(false, 'convertDeprecatedFiltersModal')" rendered="{! $User.UIThemeDisplayed != 'Theme3' }" target="_blank" value="Convert" styleClass="slds-button slds-button_neutral"/>
+                      <apex:commandLink action="{!convertDeprecatedFilters}" onclick="showModal(false, 'convertDeprecatedFiltersModal')" rendered="{! $User.UIThemeDisplayed == 'Theme3' }" target="_blank" value="Convert" styleClass="slds-button slds-button_brand"/>
+                      <apex:commandLink action="{!convertDeprecatedFilters}" onclick="showModal(false, 'convertDeprecatedFiltersModal')" rendered="{! $User.UIThemeDisplayed != 'Theme3' }" target="_blank" value="Convert" styleClass="slds-button slds-button_brand"/>
                       <apex:commandButton value="{!$Label.rh2__Close}" onclick="showModal(false, 'convertDeprecatedFiltersModal')" styleClass="slds-button slds-button_neutral"/>      
-                    </center>
                   </div>
                 </div>
               </div>
               <div class="slds-backdrop slds-backdrop_open"/>
             </div>
+            <c:PS_Running_Jobs />
 
             <div id='runUserModal' style="display:none">
               <div aria-hidden="false" role="dialog" class="slds-modal slds-fade-in-open">
@@ -1025,8 +1030,8 @@
                 </div>
                 <div class="slds-modal__footer">
                   <apex:outputPanel id="importModalFooter">
-                    <apex:outputLink target="_blank" rendered="{!AND(hasRollupImportErrors, $User.UIThemeDisplayed != 'Theme3')}" styleClass="slds-button slds-button_neutral slds-button_small slds-m-button_x-small" value="{!LightningExceptionLink}">{!$Label.rh2__ViewExceptions}</apex:outputLink>
-                    <apex:outputLink target="_blank" rendered="{!AND(hasRollupImportErrors, $User.UIThemeDisplayed == 'Theme3')}" styleClass="slds-button slds-button_neutral slds-button_small slds-m-button_x-small" value="{!ClassicExceptionLink}">{!$Label.rh2__ViewExceptions}</apex:outputLink>
+                    <apex:outputLink target="_blank" rendered="{!AND(hasRollupImportErrors, $User.UIThemeDisplayed != 'Theme3')}" styleClass="slds-button slds-button_brand slds-button_small slds-m-button_x-small" value="{!LightningExceptionLink}">{!$Label.rh2__ViewExceptions}</apex:outputLink>
+                    <apex:outputLink target="_blank" rendered="{!AND(hasRollupImportErrors, $User.UIThemeDisplayed == 'Theme3')}" styleClass="slds-button slds-button_brand slds-button_small slds-m-button_x-small" value="{!ClassicExceptionLink}">{!$Label.rh2__ViewExceptions}</apex:outputLink>
                     <apex:commandButton styleClass="slds-button slds-button_neutral slds-button_small slds-m-button_x-small" value="{!$Label.rh2__Close}" onclick="showModal(false, 'retryImportModal');" rerender=""/>
                   </apex:outputPanel>
                 </div>
@@ -1036,7 +1041,6 @@
           </div>
           <c:Loading_Spinner opacity="1"/>
         </div>
-
         <br/>
         <c:PS_additionalInformation ></c:PS_additionalInformation>
           

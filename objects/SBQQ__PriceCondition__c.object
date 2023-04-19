@@ -158,6 +158,18 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id to be used in data migration and integration with other systems</description>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>SBQQ__Field__c</fullName>
         <deprecated>false</deprecated>
         <description>Field on Quote Line or Product Option object that is evaluated by this condition.</description>
@@ -169,11 +181,116 @@
         <type>Picklist</type>
         <valueSet>
             <valueSetDefinition>
-                <sorted>false</sorted>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Account_Industry__c</fullName>
+                    <default>false</default>
+                    <label>Account_Industry__c</label>
+                </value>
+                <value>
+                    <fullName>ACV_ARR_Product__c</fullName>
+                    <default>false</default>
+                    <label>ACV_ARR_Product__c</label>
+                </value>
+                <value>
+                    <fullName>Contract_CRT_Value__c</fullName>
+                    <default>false</default>
+                    <label>Contract_CRT_Value__c</label>
+                </value>
+                <value>
+                    <fullName>GroupNumber__c</fullName>
+                    <default>false</default>
+                    <label>GroupNumber__c</label>
+                </value>
+                <value>
+                    <fullName>Initial_Default_Quantity_Set__c</fullName>
+                    <default>false</default>
+                    <label>Initial_Default_Quantity_Set__c</label>
+                </value>
+                <value>
+                    <fullName>MDQ__c</fullName>
+                    <default>false</default>
+                    <label>MDQ__c</label>
+                </value>
+                <value>
+                    <fullName>Non_Standard_Product__c</fullName>
+                    <default>false</default>
+                    <label>Non_Standard_Product__c</label>
+                </value>
+                <value>
+                    <fullName>Opportunity_Record_Type__c</fullName>
+                    <default>false</default>
+                    <label>Opportunity_Record_Type__c</label>
+                </value>
                 <value>
                     <fullName>Product Code</fullName>
                     <default>false</default>
                     <label>Product Code</label>
+                </value>
+                <value>
+                    <fullName>PS_Uplift__c</fullName>
+                    <default>false</default>
+                    <label>PS_Uplift__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__AdditionalDiscount__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__AdditionalDiscount__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__AdditionalDiscountAmount__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__AdditionalDiscountAmount__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__Discount__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__Discount__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__Product__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__Product__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__ProductFamily__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__ProductFamily__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__SegmentIndex__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__SegmentIndex__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__SegmentLabel__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__SegmentLabel__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__SubscriptionPricing__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__SubscriptionPricing__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__TotalDiscountAmount__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__TotalDiscountAmount__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__Type__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__Type__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__Uplift__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__Uplift__c</label>
+                </value>
+                <value>
+                    <fullName>Uplift__c</fullName>
+                    <default>false</default>
+                    <label>Uplift__c</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -432,6 +549,20 @@
     <pluralLabel>Price Conditions</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>SBQQ__Config_attr_config_scoped_price_rules</fullName>
+        <active>true</active>
+        <description>Configuration Attribute as a tested object is only allowed in Configurator-scoped Price Rules.</description>
+        <errorConditionFormula>AND(ISPICKVAL(SBQQ__Object__c, &quot;Configuration Attribute&quot;), NOT(ISPICKVAL(SBQQ__Rule__r.SBQQ__TargetObject__c, &quot;Configurator&quot;)))</errorConditionFormula>
+        <errorMessage>Configuration Attribute as a tested object is only allowed in Configurator-scoped Price Rules.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SBQQ__Config_attr_tested_object_with_formula</fullName>
+        <active>true</active>
+        <description>Configuration Attribute as a tested object can’t be evaluated against a formula.</description>
+        <errorConditionFormula>AND(ISPICKVAL(SBQQ__Object__c, &quot;Configuration Attribute&quot;), (ISPICKVAL(SBQQ__FilterType__c, &quot;Formula&quot;)))</errorConditionFormula>
+        <errorMessage>Configuration Attribute as a tested object can’t be evaluated against a formula.</errorMessage>
+    </validationRules>
     <validationRules>
         <fullName>SBQQ__Filter_formula_field_null</fullName>
         <active>true</active>

@@ -179,6 +179,32 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>rh2__Contact2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contact2</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Describes (Contact2)</relationshipLabel>
+        <relationshipName>Describes1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>rh2__Contact3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contact3</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Describes (Contact3)</relationshipLabel>
+        <relationshipName>Describes2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>rh2__Contact__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
@@ -243,6 +269,19 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>rh2__Hierarchy_Test_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Hierarchy Test 2</label>
+        <referenceTo>rh2__PS_Describe__c</referenceTo>
+        <relationshipLabel>Describes (Heirachy Test 2)</relationshipLabel>
+        <relationshipName>Describes1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>rh2__Hierarchy_Test__c</fullName>
@@ -1191,11 +1230,6 @@
                     <fullName>Test 2</fullName>
                     <default>false</default>
                     <label>Test 2</label>
-                </value>
-                <value>
-                    <fullName>Test 3</fullName>
-                    <default>false</default>
-                    <label>Test 3</label>
                 </value>
             </valueSetDefinition>
         </valueSet>

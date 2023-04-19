@@ -128,14 +128,11 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Test_Run_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <formFactor>Large</formFactor>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -150,7 +147,7 @@
     <description>The execution of the test script.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableFeeds>false</enableFeeds>
+    <enableFeeds>true</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>true</enableReports>
@@ -429,6 +426,30 @@
         <label>OutputFields</label>
     </fieldSets>
     <fields>
+        <fullName>Release__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Release</label>
+        <referenceTo>copado__Release__c</referenceTo>
+        <relationshipLabel>Test Runs</relationshipLabel>
+        <relationshipName>Test_Runs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Test_Script_Title__c</fullName>
+        <externalId>false</externalId>
+        <formula>copado__Test_Script__r.copado__Test_Title__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Test Script Title</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Environment__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
@@ -438,6 +459,7 @@
         <relationshipLabel>Test Runs</relationshipLabel>
         <relationshipName>Test_Runs</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -447,6 +469,7 @@
         <externalId>false</externalId>
         <label>Overall Test Comments</label>
         <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
@@ -473,6 +496,7 @@
         <referenceTo>copado__Project__c</referenceTo>
         <relationshipName>Test_Executions</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -485,6 +509,7 @@
         <referenceTo>copado__Sprint__c</referenceTo>
         <relationshipName>Test_Executions</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -494,6 +519,7 @@
         <externalId>false</externalId>
         <label>Status</label>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -523,6 +549,16 @@
                     <fullName>Failed</fullName>
                     <default>false</default>
                     <label>Failed</label>
+                </value>
+                <value>
+                    <fullName>Blocked</fullName>
+                    <default>false</default>
+                    <label>Blocked</label>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                    <label>Cancelled</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -576,6 +612,7 @@
         <externalId>false</externalId>
         <label>Test Phase</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -583,13 +620,18 @@
                 <sorted>false</sorted>
                 <value>
                     <fullName>Developer</fullName>
-                    <default>false</default>
+                    <default>true</default>
                     <label>Developer</label>
                 </value>
                 <value>
                     <fullName>Peer Review</fullName>
                     <default>false</default>
                     <label>Peer Review</label>
+                </value>
+                <value>
+                    <fullName>QA</fullName>
+                    <default>false</default>
+                    <label>QA</label>
                 </value>
                 <value>
                     <fullName>User Acceptance</fullName>
@@ -613,22 +655,10 @@
         <relationshipName>Test_Executions</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
-    </fields>
-    <fields>
-        <fullName>copado__Test__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Test</label>
-        <referenceTo>copado__Test__c</referenceTo>
-        <relationshipLabel>Test Runs</relationshipLabel>
-        <relationshipName>Test_Runs</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>copado__Tester__c</fullName>
@@ -639,6 +669,7 @@
         <referenceTo>User</referenceTo>
         <relationshipName>Test_Executions</relationshipName>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -658,6 +689,7 @@
         <externalId>false</externalId>
         <label>Type</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -670,7 +702,7 @@
                 </value>
                 <value>
                     <fullName>User Acceptance Testing</fullName>
-                    <default>false</default>
+                    <default>true</default>
                     <label>User Acceptance Testing</label>
                 </value>
                 <value>
@@ -693,6 +725,11 @@
                     <default>false</default>
                     <label>User Interface</label>
                 </value>
+                <value>
+                    <fullName>QA</fullName>
+                    <default>false</default>
+                    <label>QA</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -705,27 +742,67 @@
         <referenceTo>copado__User_Story__c</referenceTo>
         <relationshipName>Test_Executions</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <label>Test Run</label>
     <listViews>
+        <fullName>My_Test_Runs8</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Tester__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>copado__User_Story__c</columns>
+        <columns>copado__Sprint__c</columns>
+        <columns>copado__Environment__c</columns>
+        <columns>copado__Steps_Passed__c</columns>
+        <columns>copado__Test_Completion__c</columns>
+        <columns>copado__Status__c</columns>
+        <columns>copado__Overall_Test_Comments__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>copado__Tester__c</field>
+            <operation>equals</operation>
+            <value>KJ Walker</value>
+        </filters>
+        <label>My Test Runs</label>
+    </listViews>
+    <listViews>
+        <fullName>Pending_Test_Runs1</fullName>
+        <columns>copado__User_Story__c</columns>
+        <columns>NAME</columns>
+        <columns>copado__Status__c</columns>
+        <columns>copado__Tester__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>copado__Status__c</field>
+            <operation>notEqual</operation>
+            <value>Passed,Passed with comments,Failed,Cancelled</value>
+        </filters>
+        <label>Pending Test Runs</label>
+    </listViews>
+    <listViews>
         <fullName>copado__All</fullName>
         <columns>NAME</columns>
         <columns>copado__Tester__c</columns>
+        <columns>CREATED_DATE</columns>
         <columns>copado__Type__c</columns>
         <columns>copado__User_Story__c</columns>
+        <columns>copado__Project__c</columns>
+        <columns>copado__Sprint__c</columns>
+        <columns>copado__Environment__c</columns>
         <columns>copado__Steps_Passed__c</columns>
         <columns>copado__Test_Completion__c</columns>
         <columns>copado__Status__c</columns>
         <columns>copado__Overall_Test_Comments__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
-        <language>en_US</language>
     </listViews>
     <nameField>
         <displayFormat>TE-{000000}</displayFormat>
         <label>Test Run Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Test Runs</pluralLabel>
@@ -740,19 +817,12 @@
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <validationRules>
-        <fullName>Cannot_deploy_from_dev_until_pass</fullName>
-        <active>false</active>
-        <errorConditionFormula>AND (
-OR(
-NOT (ISPICKVAL(copado__Status__c,&quot;passed&quot;)),
-NOT (ISPICKVAL(copado__Status__c,&quot;passed with comments&quot;))
-),
- copado__Environment__c=copado__User_Story__r.copado__Environment__c,
-OR(
- copado__User_Story__r.copado__Promote_and_Deploy__c =TRUE,
-copado__User_Story__r.copado__Promote_Change__c=TRUE)
-)</errorConditionFormula>
-        <errorMessage>Test Run must be passed before deploying.</errorMessage>
+        <fullName>Test_Script_Without_Steps</fullName>
+        <active>true</active>
+        <description>Avoid to create test run if the script doesn&apos;t have steps</description>
+        <errorConditionFormula>IF(copado__Test_Script__r.Total_Steps__c &lt;= 0, true, false)</errorConditionFormula>
+        <errorDisplayField>CurrencyIsoCode</errorDisplayField>
+        <errorMessage>Test script should have steps</errorMessage>
     </validationRules>
     <visibility>Public</visibility>
     <webLinks>

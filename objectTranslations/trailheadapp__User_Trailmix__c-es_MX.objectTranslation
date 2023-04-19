@@ -9,45 +9,59 @@
         <value>Trailmixes de usuario</value>
     </caseValues>
     <fields>
-        <label></label>
+        <label><!-- Assigned --></label>
         <name>trailheadapp__Assigned_At__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Completed --></label>
         <name>trailheadapp__Completed_At__c</name>
     </fields>
     <fields>
-        <help>Esta fecha de vencimiento puede mostrarse de manera diferente para usuarios que no estén en la misma zona horaria del asignador.</help>
-        <label></label>
+        <label><!-- Due --></label>
         <name>trailheadapp__Due_At__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- External Id --></label>
         <name>trailheadapp__External_Id__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- First Attempted --></label>
         <name>trailheadapp__First_Attempted_At__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Last Attempted --></label>
         <name>trailheadapp__Last_Attempted_At__c</name>
     </fields>
     <fields>
         <help>Dos tipos de estado, &quot;En curso&quot; o &quot;Completado&quot; están disponibles para representar el estado del trailmix de un usuario.</help>
-        <label></label>
+        <label><!-- Status --></label>
         <name>trailheadapp__Status__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Trailmix --></label>
         <name>trailheadapp__Trailmix__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Trailmixes --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- User --></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Trailmixes --></relationshipLabel>
     </fields>
     <gender>Masculine</gender>
+    <layouts>
+        <layout>User Trailmix Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Id. de Trailmix de usuario</nameFieldLabel>
+    <quickActions>
+        <label><!-- Assign Trailmix --></label>
+        <name>trailheadapp__AssignTrailmix</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Unassign Trailmix --></label>
+        <name>trailheadapp__Unassign_Trailmix</name>
+    </quickActions>
 </CustomObjectTranslation>

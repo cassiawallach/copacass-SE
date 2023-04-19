@@ -50,6 +50,10 @@
     </groupingsDown>
     <name>Open Opportunities - All Time</name>
     <params>
+        <name>terr</name>
+        <value>all</value>
+    </params>
+    <params>
         <name>open</name>
         <value>open</value>
     </params>

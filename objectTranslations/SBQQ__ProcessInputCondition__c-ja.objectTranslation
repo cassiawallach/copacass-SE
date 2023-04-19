@@ -6,18 +6,18 @@
     </caseValues>
     <fields>
         <help>このルールが有効か無効かを示すフラグ。</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>このプロセス入力の値によって現在の入力が表示されるかどうかが決定されます。</help>
-        <label></label>
+        <label><!-- Master Process Input --></label>
         <name>SBQQ__MasterProcessInput__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Process Inputs Regulated --></relationshipLabel>
     </fields>
     <fields>
         <help>プロセス入力値の比較に使用する演算子を選択します。</help>
-        <label></label>
+        <label><!-- Operator --></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -58,14 +58,25 @@
     </fields>
     <fields>
         <help>条件を所有するプロセス入力。</help>
-        <label></label>
+        <label><!-- Process Input --></label>
         <name>SBQQ__ProcessInput__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Process Input Conditions --></relationshipLabel>
     </fields>
     <fields>
         <help>制御プロセス入力との比較に使用する値。</help>
-        <label></label>
+        <label><!-- Value --></label>
         <name>SBQQ__Value__c</name>
     </fields>
+    <layouts>
+        <layout>Process Input Condition Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>条件情報</label>
+            <section>Filter Information</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>プロセス入力条件名</nameFieldLabel>
 </CustomObjectTranslation>

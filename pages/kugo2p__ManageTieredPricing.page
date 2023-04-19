@@ -1,0 +1,17 @@
+<apex:page standardController="kugo2p__TieredPricing__c" title="Manage Tier Pricing | Kugamon" applyBodyTag="false" sidebar="false" docType="html-5.0">
+
+    <script>
+        var tieredPricingId = "{!JSENCODE(kugo2p__TieredPricing__c.Id)}";
+        var productId = "{!JSENCODE(kugo2p__TieredPricing__c.kugo2p__Product__c)}";
+        // debugger;
+
+        const appName = 'TieredPricingApp';
+        const cmpName = 'tieredPricing';
+        const cmpParams = {
+            recordId: tieredPricingId,
+            productId: productId
+        };
+    </script>
+
+    <c:BaseLightningOut />
+</apex:page>

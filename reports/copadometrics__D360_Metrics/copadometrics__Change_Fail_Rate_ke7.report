@@ -35,6 +35,7 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>copado__Promotion__c.copadometrics__Caused_Business_Disruption__c</field>
     </columns>
+    <currency>USD</currency>
     <description>The change failure rate is a measure of how often promotion failures occur in production that require immediate remedy (particularity, rollbacks).</description>
     <filter>
         <criteriaItems>
@@ -51,6 +52,7 @@
             <operator>equals</operator>
             <value>1</value>
         </criteriaItems>
+        <language>en_US</language>
     </filter>
     <format>Summary</format>
     <groupingsDown>
@@ -70,6 +72,6 @@
     <showSubTotals>true</showSubTotals>
     <timeFrameFilter>
         <dateColumn>CUST_CREATED_DATE</dateColumn>
-        <interval>INTERVAL_CUSTOM</interval>
+        <interval>INTERVAL_CURPREV1</interval>
     </timeFrameFilter>
 </Report>

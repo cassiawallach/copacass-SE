@@ -42,4 +42,14 @@ global class TriggerControl {
     global Boolean shouldRun(SObject record) {
         return null;
     }
+global class CrossPackageDisableHook {
+    global CrossPackageDisableHook() {
+
+    }
+}
+global class CrossPackageEnableHook {
+    global CrossPackageEnableHook() {
+
+    }
+}
 }

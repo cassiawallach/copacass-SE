@@ -6,19 +6,26 @@
     </caseValues>
     <fields>
         <help>コストを有効化するにはチェックボックスをオンにします。</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>このコストに関連付けられている商品。</help>
-        <label></label>
+        <label><!-- Product --></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Costs --></relationshipLabel>
     </fields>
     <fields>
         <help>単位コストを入力します。</help>
-        <label></label>
+        <label><!-- Unit Cost --></label>
         <name>SBQQ__UnitCost__c</name>
     </fields>
+    <layouts>
+        <layout>Cost Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>コスト番号</nameFieldLabel>
 </CustomObjectTranslation>

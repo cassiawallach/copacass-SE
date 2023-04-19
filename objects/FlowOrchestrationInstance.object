@@ -76,7 +76,7 @@
     <listViews>
         <fullName>All_Orchestration_Instances</fullName>
         <filterScope>Everything</filterScope>
-        <label>All Orchestration Runs</label>
+        <label>Todas las ejecuciones de orquestaciones</label>
     </listViews>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

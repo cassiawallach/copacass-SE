@@ -9,13 +9,17 @@
         <value>Conteúdo dos modelos</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>URL para uma página do Visualforce que gera conteúdo quando o tipo é definido como &quot;Personalizado&quot;.</help>
-        <label></label>
+        <label><!-- Custom Source --></label>
         <name>SBQQ__CustomSource__c</name>
     </fields>
     <fields>
         <help>Família de fonte a ser usada na renderização desse conteúdo no documento de cotação PDF gerado.</help>
-        <label></label>
+        <label><!-- Font Family --></label>
         <name>SBQQ__FontFamily__c</name>
         <picklistValues>
             <masterLabel>Courier</masterLabel>
@@ -74,10 +78,6 @@
             <translation>PT Serif</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Play</masterLabel>
-            <translation>Play</translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Roboto</masterLabel>
             <translation>Roboto</translation>
         </picklistValues>
@@ -93,29 +93,25 @@
             <masterLabel>Titillium Web</masterLabel>
             <translation>Titillium Web</translation>
         </picklistValues>
-        <picklistValues>
-            <masterLabel>Ubuntu</masterLabel>
-            <translation>Ubuntu</translation>
-        </picklistValues>
     </fields>
     <fields>
         <help>Tamanho de fonte a ser usada na renderização desse conteúdo no documento de cotação PDF gerado.</help>
-        <label></label>
+        <label><!-- Font Size --></label>
         <name>SBQQ__FontSize__c</name>
     </fields>
     <fields>
         <help>Conterá o aumento se esse conteúdo for do tipo &quot;Aumento&quot;.</help>
-        <label></label>
+        <label><!-- Markup --></label>
         <name>SBQQ__Markup__c</name>
     </fields>
     <fields>
         <help>Versão HTML original do conteúdo no campo Aumento.</help>
-        <label></label>
+        <label><!-- Raw Markup --></label>
         <name>SBQQ__RawMarkup__c</name>
     </fields>
     <fields>
         <help>Estilo de lista usado para itens de linha. Padrão = campos definidos pelo usuário, como colunas com itens de linha listados verticalmente.</help>
-        <label></label>
+        <label><!-- Table Style --></label>
         <name>SBQQ__TableStyle__c</name>
         <picklistValues>
             <masterLabel>Price Dimensions as Columns</masterLabel>
@@ -132,12 +128,12 @@
     </fields>
     <fields>
         <help>Cor padrão (em HEX) aplicada ao texto renderizado por esse conteúdo.</help>
-        <label></label>
+        <label><!-- Text Color --></label>
         <name>SBQQ__TextColor__c</name>
     </fields>
     <fields>
         <help>Tipo desse conteúdo.</help>
-        <label></label>
+        <label><!-- Type --></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Custom</masterLabel>
@@ -157,9 +153,20 @@
         </picklistValues>
     </fields>
     <gender>Masculine</gender>
+    <layouts>
+        <layout>Template Content Layout</layout>
+        <sections>
+            <label>Corpo</label>
+            <section>Body</section>
+        </sections>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nome do conteúdo</nameFieldLabel>
     <webLinks>
-        <label></label>
+        <label><!-- Translate --></label>
         <name>SBQQ__Translate</name>
     </webLinks>
 </CustomObjectTranslation>

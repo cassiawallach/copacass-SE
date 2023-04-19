@@ -260,7 +260,7 @@
         <description>All AEs that are mapped to one particular SE</description>
         <label>SE Mappings</label>
     </recordTypes>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>Read</sharingModel>
     <startsWith>Vowel</startsWith>
     <visibility>Public</visibility>

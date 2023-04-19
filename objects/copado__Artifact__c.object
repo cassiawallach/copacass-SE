@@ -128,16 +128,16 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Package_Record_Page_SFDX1</content>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
+        <content>Package_Record_Page2</content>
         <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Package_Record_Page_SFDX1</content>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
+        <content>Package_Record_Page2</content>
         <formFactor>Small</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
@@ -162,7 +162,6 @@
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
@@ -171,25 +170,6 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <fieldSets>
-        <fullName>cmcSf__SFDX_Package_CustomFields</fullName>
-        <description>Display Custom Fields in Package Lightning Page in SFDX</description>
-        <label>SFDX Package Lightning Page</label>
-    </fieldSets>
-    <fields>
-        <fullName>cmcSf__Api_Version__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>The api version to be used for the packaging CLI commands. If this is not specified, the default value, i.e. the api version of the Dev Hub, will be used. Specify in the format, e.g. 54.0.
-Note that if Api Version has also been specified in the child Package Version, that value will be used.</inlineHelpText>
-        <label>Api Version</label>
-        <length>5</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
     <fields>
         <fullName>cmcSf__IsOrgDependent__c</fullName>
         <defaultValue>false</defaultValue>
@@ -199,19 +179,6 @@ Note that if Api Version has also been specified in the child Package Version, t
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>cmcSf__PackagePath__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>Use this to specify the path for creating the package. This path should be available in sfdx-project.json of your repository.</inlineHelpText>
-        <label>Package Path</label>
-        <length>255</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
     <fields>
         <fullName>copado__Artifact_Repository__c</fullName>
@@ -293,7 +260,6 @@ Note that if Api Version has also been specified in the child Package Version, t
         <fullName>copado__Description__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>The description of the package</inlineHelpText>
         <label>Description</label>
         <length>131072</length>
         <trackHistory>false</trackHistory>
@@ -329,8 +295,7 @@ Note that if Api Version has also been specified in the child Package Version, t
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>The credential where the metadata of the Artifact is going to be retrieved from, for unlocked packages and 2GP.
-The credential where the unmanaged package is created from.</inlineHelpText>
+        <inlineHelpText>Org Credential where the metadata of the Artifact is going to be retrieved from</inlineHelpText>
         <label>Source Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Artifacts</relationshipLabel>
@@ -383,6 +348,16 @@ The credential where the unmanaged package is created from.</inlineHelpText>
                     <fullName>Unlocked</fullName>
                     <default>true</default>
                     <label>Unlocked</label>
+                </value>
+                <value>
+                    <fullName>Second-Generation Package</fullName>
+                    <default>false</default>
+                    <label>Second-Generation Package</label>
+                </value>
+                <value>
+                    <fullName>Unmanaged</fullName>
+                    <default>false</default>
+                    <label>Unmanaged</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -646,13 +621,18 @@ The credential where the unmanaged package is created from.</inlineHelpText>
                 </value>
                 <value>
                     <fullName>44.0</fullName>
-                    <default>false</default>
+                    <default>true</default>
                     <label>44.0</label>
                 </value>
                 <value>
                     <fullName>45.0</fullName>
-                    <default>true</default>
+                    <default>false</default>
                     <label>45.0</label>
+                </value>
+                <value>
+                    <fullName>46.0</fullName>
+                    <default>false</default>
+                    <label>46.0</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -685,15 +665,10 @@ The credential where the unmanaged package is created from.</inlineHelpText>
     <listViews>
         <fullName>copado__All</fullName>
         <columns>NAME</columns>
-        <columns>copado__Package_Id__c</columns>
-        <columns>copado__Artifact_Version__c</columns>
-        <columns>copado__Package_Namespace__c</columns>
-        <columns>copado__Package_Type__c</columns>
-        <columns>copado__Artifact_Repository__c</columns>
         <columns>RECORDTYPE</columns>
         <columns>copado__Org_Credential__c</columns>
+        <columns>copado__Artifact_Repository__c</columns>
         <columns>copado__Description__c</columns>
-        <columns>copado__Target_Dev_Hub_Org__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -712,196 +687,16 @@ The credential where the unmanaged package is created from.</inlineHelpText>
         <picklistValues>
             <picklist>copado__Package_Type__c</picklist>
             <values>
+                <fullName>Second-Generation Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Unlocked</fullName>
                 <default>true</default>
             </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>copado__Source_Api_Version__c</picklist>
             <values>
-                <fullName>1%2E0</fullName>
+                <fullName>Unmanaged</fullName>
                 <default>false</default>
-            </values>
-            <values>
-                <fullName>10%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>11%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>12%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>13%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>14%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>15%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>16%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>17%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>18%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>19%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>20%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>21%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>22%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>23%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>24%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>25%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>26%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>27%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>28%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>29%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>3%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>30%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>31%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>32%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>33%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>34%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>35%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>36%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>37%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>38%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>39%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>4%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>40%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>41%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>42%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>43%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>5%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>6%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>7%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>8%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>9%2E0</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>copado__Package_Artifact</fullName>
-        <active>true</active>
-        <description>Salesforce Unlocked and Second-Generation Managed Package</description>
-        <label>Salesforce Package</label>
-        <picklistValues>
-            <picklist>copado__Package_Type__c</picklist>
-            <values>
-                <fullName>Unlocked</fullName>
-                <default>true</default>
             </values>
         </picklistValues>
         <picklistValues>
@@ -1060,11 +855,215 @@ The credential where the unmanaged package is created from.</inlineHelpText>
             </values>
             <values>
                 <fullName>44%2E0</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>5%2E0</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>45%2E0</fullName>
+                <fullName>6%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E0</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>copado__Package_Artifact</fullName>
+        <active>true</active>
+        <description>Salesforce unlocked, First Generation Package or Second-Generation Package as a package</description>
+        <label>Salesforce Package</label>
+        <picklistValues>
+            <picklist>copado__Package_Type__c</picklist>
+            <values>
+                <fullName>Second-Generation Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unlocked</fullName>
                 <default>true</default>
+            </values>
+            <values>
+                <fullName>Unmanaged</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Source_Api_Version__c</picklist>
+            <values>
+                <fullName>1%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>21%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>22%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>23%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>24%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>26%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>27%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>28%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>29%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>31%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>32%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>33%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>34%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>35%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>36%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>37%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>38%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>39%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>41%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>42%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>43%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>44%2E0</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>45%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>46%2E0</fullName>
+                <default>false</default>
             </values>
             <values>
                 <fullName>5%2E0</fullName>
@@ -1096,6 +1095,10 @@ The credential where the unmanaged package is created from.</inlineHelpText>
         <picklistValues>
             <picklist>copado__Package_Type__c</picklist>
             <values>
+                <fullName>Second-Generation Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Unlocked</fullName>
                 <default>true</default>
             </values>
@@ -1284,57 +1287,8 @@ The credential where the unmanaged package is created from.</inlineHelpText>
             </values>
         </picklistValues>
     </recordTypes>
-    <searchLayouts>
-        <customTabListAdditionalFields>copado__Pipeline__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>copado__Package_Type__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>OWNER.ALIAS</customTabListAdditionalFields>
-        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
-        <customTabListAdditionalFields>copado__Artifact_Repository__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>copado__Artifact_Version__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>copado__DefaultBranch__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>copado__DefaultPath__c</customTabListAdditionalFields>
-        <lookupDialogsAdditionalFields>copado__Pipeline__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>OWNER.ALIAS</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>copado__Package_Type__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>copado__Artifact_Version__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>copado__Artifact_Repository__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>copado__DefaultBranch__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>copado__DefaultPath__c</lookupDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>copado__Pipeline__c</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>copado__Package_Type__c</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>OWNER.ALIAS</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>RECORDTYPE</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>copado__Artifact_Repository__c</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>copado__Artifact_Version__c</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>copado__DefaultBranch__c</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>copado__DefaultPath__c</lookupPhoneDialogsAdditionalFields>
-        <searchFilterFields>NAME</searchFilterFields>
-        <searchFilterFields>copado__Pipeline__c</searchFilterFields>
-        <searchFilterFields>copado__Package_Type__c</searchFilterFields>
-        <searchFilterFields>OWNER.ALIAS</searchFilterFields>
-        <searchFilterFields>RECORDTYPE</searchFilterFields>
-        <searchFilterFields>copado__Artifact_Repository__c</searchFilterFields>
-        <searchFilterFields>copado__Artifact_Version__c</searchFilterFields>
-        <searchFilterFields>copado__DefaultBranch__c</searchFilterFields>
-        <searchFilterFields>copado__DefaultPath__c</searchFilterFields>
-        <searchResultsAdditionalFields>copado__Pipeline__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__Package_Type__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>OWNER.ALIAS</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__Artifact_Repository__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__Artifact_Version__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__DefaultBranch__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__DefaultPath__c</searchResultsAdditionalFields>
-    </searchLayouts>
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
-    <validationRules>
-        <fullName>cmcSf__Api_Version_Format</fullName>
-        <active>true</active>
-        <errorConditionFormula>NOT(ISBLANK(cmcSf__Api_Version__c)) &amp;&amp; NOT(REGEX(cmcSf__Api_Version__c, &quot;^\\d*.0&quot;))</errorConditionFormula>
-        <errorDisplayField>cmcSf__Api_Version__c</errorDisplayField>
-        <errorMessage>The API version specified is not valid. It must be in the format, Number.0</errorMessage>
-    </validationRules>
     <validationRules>
         <fullName>copado__ArtifactNameCannotChange</fullName>
         <active>true</active>

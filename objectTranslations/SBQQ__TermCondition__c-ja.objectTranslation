@@ -5,13 +5,17 @@
         <value>契約条件</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>見積規約の詳細条件で参照する一意の番号をこの条件に割り当てます。</help>
-        <label></label>
+        <label><!-- Index --></label>
         <name>SBQQ__Index__c</name>
     </fields>
     <fields>
         <help>項目の演算子を選択します。</help>
-        <label></label>
+        <label><!-- Operator --></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -52,13 +56,13 @@
     </fields>
     <fields>
         <help>この規約の親規約。</help>
-        <label></label>
+        <label><!-- Quote Term --></label>
         <name>SBQQ__QuoteTerm__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Term Conditions --></relationshipLabel>
     </fields>
     <fields>
         <help>この条件をテストするために使用される見積オブジェクトの項目。</help>
-        <label></label>
+        <label><!-- Tested Field --></label>
         <name>SBQQ__TestedField__c</name>
         <picklistValues>
             <masterLabel>Customer Amount</masterLabel>
@@ -79,22 +83,29 @@
     </fields>
     <fields>
         <help>この条件のテストで使用されるサマリー変数。</help>
-        <label></label>
+        <label><!-- Tested Variable --></label>
         <name>SBQQ__TestedVariable__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Term Conditions --></relationshipLabel>
     </fields>
     <fields>
         <help>テスト対象の値。</help>
-        <label></label>
+        <label><!-- Value --></label>
         <name>SBQQ__Value__c</name>
     </fields>
+    <layouts>
+        <layout>Term Condition Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>条件番号</nameFieldLabel>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- You may not select both field and variable to test. Create separate conditions to test against field and variable. --></errorMessage>
         <name>SBQQ__Field_and_Variable</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- You must select either field or variable to test. --></errorMessage>
         <name>SBQQ__Field_or_Variable</name>
     </validationRules>
 </CustomObjectTranslation>

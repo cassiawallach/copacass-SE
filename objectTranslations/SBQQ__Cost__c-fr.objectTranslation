@@ -10,21 +10,28 @@
     </caseValues>
     <fields>
         <help>Sélectionnez la case pour activer le coût.</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Produit associé à ce coût.</help>
-        <label></label>
+        <label><!-- Product --></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Costs --></relationshipLabel>
     </fields>
     <fields>
         <help>Saisissez le coût unitaire.</help>
-        <label></label>
+        <label><!-- Unit Cost --></label>
         <name>SBQQ__UnitCost__c</name>
     </fields>
     <gender>Masculine</gender>
+    <layouts>
+        <layout>Cost Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>N° de coût</nameFieldLabel>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

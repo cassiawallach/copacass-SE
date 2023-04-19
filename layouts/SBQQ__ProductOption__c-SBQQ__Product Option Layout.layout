@@ -46,16 +46,16 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>SBQQ__ConfiguredSKU__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>SBQQ__OptionalSKU__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>SBQQ__Feature__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>SBQQ__OptionalSKU__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -195,21 +195,13 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>SBQQ__AttributeSet__c</fields>
-        <fields>SBQQ__Sequence__c</fields>
-        <relatedList>SBQQ__ProductAttributeSet__c.SBQQ__ProductOption__c</relatedList>
-        <sortField>SBQQ__Sequence__c</sortField>
-        <sortOrder>Asc</sortOrder>
-    </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>true</showHighlightsPanel>
     <showInteractionLogPanel>true</showInteractionLogPanel>
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h61000002yD5f</masterLabel>
+        <masterLabel>00hb000000WZdcD</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

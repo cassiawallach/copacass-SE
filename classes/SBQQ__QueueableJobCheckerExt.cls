@@ -9,6 +9,9 @@ global class QueueableJobCheckerExt {
     global QueueableJobCheckerExt(ApexPages.StandardController controller) {
 
     }
+    global QueueableJobCheckerExt(ApexPages.StandardSetController controller) {
+
+    }
     global static AsyncApexJob checkJobStatus(String recordId, String jobId) {
         return null;
     }
@@ -16,6 +19,9 @@ global class QueueableJobCheckerExt {
         return null;
     }
     global Boolean getAutoRefresh() {
+        return null;
+    }
+    global String getClassPrefix() {
         return null;
     }
     global String getJobDetails() {
@@ -37,7 +43,15 @@ global class QueueableJobCheckerExt {
     global String getJobType() {
         return null;
     }
+    @RemoteAction
+    global static Map<String,Object> getJobsStatuses(List<String> recordIds, String jobType, String asyncJobId) {
+        return null;
+    }
     global String getQueueableJobId() {
+        return null;
+    }
+    @RemoteAction
+    global static Boolean getUncalculatedWithSetting(Id quoteId) {
         return null;
     }
 }

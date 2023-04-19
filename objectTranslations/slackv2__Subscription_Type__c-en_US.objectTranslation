@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label></label>
+        <label><!-- Activity Api Name --></label>
         <name>slackv2__Activity_Api_Name__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Custom --></label>
         <name>slackv2__Custom__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Displayable --></label>
         <name>slackv2__Displayable__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Has Assigned To Me --></label>
         <name>slackv2__Has_Assigned_To_Me__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Object Level --></label>
         <name>slackv2__Object_Level__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Order --></label>
         <name>slackv2__Order__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Standard Type ENUM --></label>
         <name>slackv2__Standard_Type_ENUM__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Subscription Object --></label>
         <name>slackv2__Subscription_Object__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Subscription Types --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- User Defined --></label>
         <name>slackv2__User_Defined__c</name>
     </fields>
 </CustomObjectTranslation>

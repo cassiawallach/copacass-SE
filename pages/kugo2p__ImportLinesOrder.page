@@ -1,0 +1,16 @@
+<apex:page standardController="kugo2p__SalesOrder__c" title="Import Lines | Kugamon" applyBodyTag="false" sidebar="false" docType="html-5.0">
+
+    <script>
+        // get the id of the Order record
+        var orderId = "{!JSENCODE(kugo2p__SalesOrder__c.Id)}";
+
+        const appName = 'ImportLinesApp';
+        const cmpName = 'importLinesLwc';
+        const cmpParams = {
+            objectName: 'Order',
+            recordId: orderId
+        };
+    </script>
+
+    <c:BaseLightningOut />
+</apex:page>

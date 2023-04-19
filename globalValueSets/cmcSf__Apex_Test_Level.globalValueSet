@@ -16,9 +16,9 @@
         <label>Run Local Tests</label>
     </customValue>
     <customValue>
-        <fullName>Run All Tests In Org</fullName>
+        <fullName>Run All Tests in Org</fullName>
         <default>false</default>
-        <label>Run All Tests In Org</label>
+        <label>Run All Tests in Org</label>
     </customValue>
     <description>Test levels in order from least to most restrictive</description>
     <masterLabel>Apex Test Level</masterLabel>

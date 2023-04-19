@@ -5,4 +5,6 @@
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <tabs>redwing__ILT_Instructor__c</tabs>
+    <tabs>redwing__ILT_Roster__c</tabs>
 </CustomApplication>

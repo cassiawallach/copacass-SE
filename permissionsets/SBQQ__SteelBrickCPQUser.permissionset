@@ -13,6 +13,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SBQQ__AbstractDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SBQQ__AbstractPriceRuleEvaluator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -81,6 +85,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SBQQ__AssetDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SBQQ__AssetLookupController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -130,6 +138,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__BinaryTree</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BinaryTreeTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -249,6 +261,42 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SBQQ__ConsumptionClientModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionJunction</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionJunctionFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionJunctionUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionRateDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionScheduleDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionScheduleTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SBQQ__ContractDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -282,6 +330,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__ContractedPriceDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractedPriceDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -326,6 +378,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__DateRange</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DefaultDatabase</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -450,6 +506,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__ElectronicSignaturePlugin3</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ErrorConditionDependencyGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ErrorConditionDependencyServiceProvider</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -689,6 +753,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SBQQ__LocalizationFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SBQQ__LocalizationIndexSearcher</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -801,6 +869,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SBQQ__OpportunityLineItemDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SBQQ__OpportunityService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -818,6 +890,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__OrderControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderCreateController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -854,6 +930,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__PermissionSetsService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PermissionUtil</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -910,6 +990,26 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__PricebookEntryDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricingGuidanceDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricingGuidanceModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricingGuidanceService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricingGuidanceServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricingGuidanceTierModel</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -993,6 +1093,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SBQQ__ProductFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SBQQ__ProductLookupController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1026,6 +1130,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__ProductOptionTree</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRecommendationPlugin</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1093,6 +1201,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SBQQ__ProductServices</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SBQQ__ProductTrigger</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1126,6 +1238,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__QueryBuilderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__Queryable</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1182,6 +1298,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__QuoteDataProcessorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteDocumentAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1249,6 +1369,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SBQQ__QuoteLineDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SBQQ__QuoteLineEditorController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1282,6 +1406,18 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__QuoteLinePriceRuleEvaluatorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLinePricingGuidanceDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLinePricingGuidanceVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineUBPDataProcessorTests</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1365,6 +1501,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SBQQ__QuoteTemplateDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SBQQ__QuoteTemplateExtController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1373,7 +1513,19 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SBQQ__QuoteTermAPI</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermAPITests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SBQQ__QuoteTermDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermDAOTests</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1394,6 +1546,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__QuoteTermServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermTriggerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1446,14 +1602,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__RecordJobService</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>SBQQ__ReferencedFieldCache</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>SBQQ__ReferencedFieldCacheTests</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1586,6 +1734,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__SearchFilterDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SearchFilterDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1750,6 +1902,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__SummaryVariableTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SynchronousProductServices</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -2059,7 +2215,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Asset.SBQQ__PackageProductCode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Asset.SBQQ__PackageProductDescription__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Asset.SBQQ__PartnerDiscount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Asset.SBQQ__PriceDimension__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2224,6 +2395,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contract.SBQQ__Evergreen__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contract.SBQQ__ExpirationDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2360,6 +2536,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>OpportunityLineItem.SBQQ__QuoteLine__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>OpportunityLineItem.SBQQ__SubscriptionType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2509,6 +2690,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>OrderItem.SBQQ__PricingMethod__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>OrderItem.SBQQ__ProductSubscriptionType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>OrderItem.SBQQ__ProrateMultiplier__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2544,6 +2735,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>OrderItem.SBQQ__SegmentKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>OrderItem.SBQQ__Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2555,6 +2751,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>OrderItem.SBQQ__SubscriptionTerm__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>OrderItem.SBQQ__SubscriptionType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2585,6 +2786,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>OrderItem.SBQQ__UnproratedNetPrice__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>OrderItem.SBQQ__UpgradedSubscription__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2679,6 +2885,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Product2.SBQQ__CostSchedule__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Product2.SBQQ__CustomConfigurationPage__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2715,6 +2926,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Product2.SBQQ__DynamicPricingConstraint__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Product2.SBQQ__EnableLargeConfiguration__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2790,6 +3006,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Product2.SBQQ__PriceEditable__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product2.SBQQ__PricingGuidance__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3984,6 +4205,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SBQQ__OrderItemConsumptionSchedule__c.SBQQ__ConsumptionSchedule__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SBQQ__PriceAction__c.SBQQ__Field__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4305,6 +4531,66 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SBQQ__PriceTier__c.SBQQ__VolumnDiscount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__PricingGuidanceTier__c.SBQQ__FloorDiscount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__PricingGuidanceTier__c.SBQQ__LowerBound__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__PricingGuidanceTier__c.SBQQ__NormDiscount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__PricingGuidanceTier__c.SBQQ__TargetDiscount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__PricingGuidanceTier__c.SBQQ__UpperBound__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__PricingGuidance__c.SBQQ__Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__PricingGuidance__c.SBQQ__Explanation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__PricingGuidance__c.SBQQ__IncludePriorPurchases__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__PricingGuidance__c.SBQQ__IsActive__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__PricingGuidance__c.SBQQ__Summary__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__PricingGuidance__c.SBQQ__Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__PricingGuidance__c.SBQQ__Unit__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4859,6 +5145,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SBQQ__QuoteLineConsumptionSchedule__c.SBQQ__ConsumptionSchedule__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SBQQ__QuoteLineGroup__c.SBQQ__Account__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4945,6 +5236,41 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SBQQ__QuoteLineGroup__c.SBQQ__TargetCustomerAmount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__QuoteLinePricingGuidance__c.SBQQ__Explanation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__QuoteLinePricingGuidance__c.SBQQ__Floor__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__QuoteLinePricingGuidance__c.SBQQ__GuidanceUsed__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__QuoteLinePricingGuidance__c.SBQQ__IsViewed__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__QuoteLinePricingGuidance__c.SBQQ__Norm__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__QuoteLinePricingGuidance__c.SBQQ__Quote__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__QuoteLinePricingGuidance__c.SBQQ__Target__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5129,6 +5455,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SBQQ__QuoteLine__c.SBQQ__EarliestValidAmendmentStartDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SBQQ__QuoteLine__c.SBQQ__EffectiveEndDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -5140,6 +5471,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SBQQ__QuoteLine__c.SBQQ__EffectiveStartDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__QuoteLine__c.SBQQ__EffectiveSubscriptionTerm__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5165,6 +5501,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SBQQ__QuoteLine__c.SBQQ__Group__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__QuoteLine__c.SBQQ__Guidance__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__QuoteLine__c.SBQQ__HasConsumptionSchedule__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5368,6 +5714,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__QuoteLine__c.SBQQ__ProductSubscriptionType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SBQQ__QuoteLine__c.SBQQ__Product__c</field>
         <readable>true</readable>
@@ -5500,6 +5851,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SBQQ__QuoteLine__c.SBQQ__SubscriptionTerm__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SBQQ__QuoteLine__c.SBQQ__SubscriptionType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6139,6 +6495,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SBQQ__Quote__c.SBQQ__LastCalculatedOn__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__Quote__c.SBQQ__LastSavedOn__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SBQQ__Quote__c.SBQQ__LineItemCount__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6165,6 +6531,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SBQQ__Quote__c.SBQQ__MasterContract__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SBQQ__Quote__c.SBQQ__MasterEvergreenContract__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6245,6 +6616,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SBQQ__Quote__c.SBQQ__Primary__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SBQQ__Quote__c.SBQQ__ProrationDayOfMonth__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6345,6 +6721,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SBQQ__Quote__c.SBQQ__Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__Quote__c.SBQQ__Uncalculated__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6493,6 +6874,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__SubscribedAsset__c.SBQQ__AssetRootId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SBQQ__SubscribedAsset__c.SBQQ__Asset__c</field>
         <readable>true</readable>
@@ -6540,6 +6926,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SBQQ__SubscribedQuoteLine__c.SBQQ__SubscriptionQuoteLine__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SBQQ__SubscriptionConsumptionSchedule__c.SBQQ__ConsumptionSchedule__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6654,6 +7045,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SBQQ__Subscription__c.SBQQ__HasConsumptionSchedule__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SBQQ__Subscription__c.SBQQ__ListPrice__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6714,6 +7110,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SBQQ__Subscription__c.SBQQ__PackageProductCode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SBQQ__Subscription__c.SBQQ__PackageProductDescription__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SBQQ__Subscription__c.SBQQ__PartnerDiscount__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6735,6 +7141,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SBQQ__Subscription__c.SBQQ__ProductOption__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__Subscription__c.SBQQ__ProductSubscriptionType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6875,6 +7286,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SBQQ__Subscription__c.SBQQ__SubscriptionStartDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__Subscription__c.SBQQ__SubscriptionType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -8293,86 +8709,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRateCardAssignment__c.SBQQ__Product__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRateCard__c.SBQQ__AttributeField__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRateCard__c.SBQQ__BillingFrequency__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRateCard__c.SBQQ__Description__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRateCard__c.SBQQ__OriginalUsageRateCard__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRateCard__c.SBQQ__QuoteLine__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRateCard__c.SBQQ__Subscription__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRateCard__c.SBQQ__TemplateRateCard__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRateCard__c.SBQQ__Type__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRate__c.SBQQ__Description__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRate__c.SBQQ__LowerBound__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRate__c.SBQQ__PriceBook__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRate__c.SBQQ__PriceType__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRate__c.SBQQ__Price__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRate__c.SBQQ__UpperBound__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__UsageRate__c.SBQQ__UsageProcessingOrder__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>SBQQ__WebQuoteLine__c.SBQQ__AdditionalDiscountAmount__c</field>
         <readable>true</readable>
@@ -9194,6 +9530,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>User.SBQQ__DiagnosticToolEnabled__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>User.SBQQ__OutputFormatChangeAllowed__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9230,6 +9571,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>SBQQ__BlockPrice__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>SBQQ__ColumnMetadata__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -9359,6 +9709,15 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>SBQQ__FieldSetMetadata__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>false</allowEdit>
@@ -9400,6 +9759,15 @@
         <allowEdit>false</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
+        <object>SBQQ__Localization__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
         <object>SBQQ__LookupData__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
@@ -9419,6 +9787,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>SBQQ__OptionConstraint__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>SBQQ__OrderItemConsumptionSchedule__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -9446,6 +9823,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>SBQQ__PriceRule__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>SBQQ__PriceSchedule__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -9521,6 +9907,42 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>SBQQ__QuoteDocument__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>SBQQ__QuoteLineGroup__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>SBQQ__QuoteLinePricingGuidance__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>SBQQ__QuoteLine__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>false</allowEdit>
@@ -9545,6 +9967,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>SBQQ__QuoteTerm__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>SBQQ__Quote__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -9590,6 +10021,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>SBQQ__SubscribedAsset__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>SBQQ__SubscribedQuoteLine__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -9656,33 +10096,6 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
-        <allowCreate>false</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>SBQQ__UsageRateCardAssignment__c</object>
-        <viewAllRecords>false</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>false</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>SBQQ__UsageRateCard__c</object>
-        <viewAllRecords>false</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>false</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>SBQQ__UsageRate__c</object>
-        <viewAllRecords>false</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -9734,6 +10147,18 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>SBQQ__BlockPriceHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CalculateQuote</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CalculateQuoteFromQuoteLine</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CalculateQuoteFromQuoteLineGroup</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -10195,6 +10620,10 @@
     <tabSettings>
         <tab>SBQQ__PriceRule__c</tab>
         <visibility>Available</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>SBQQ__PricingGuidance__c</tab>
+        <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
         <tab>SBQQ__ProductRule__c</tab>

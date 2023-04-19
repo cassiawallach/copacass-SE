@@ -6,32 +6,17 @@
         <value>Favorit</value>
     </caseValues>
     <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value>Favorit</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Favorit</value>
-    </caseValues>
-    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Favoriten</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
-        <plural>true</plural>
-        <value>Favoriten</value>
+        <plural>false</plural>
+        <value>Favorit</value>
     </caseValues>
     <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>true</plural>
-        <value>Favoriten</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
+        <caseType>Accusative</caseType>
         <plural>true</plural>
         <value>Favoriten</value>
     </caseValues>
@@ -40,18 +25,40 @@
         <plural>false</plural>
         <value>Favorits</value>
     </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Favoriten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Favorit</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Favoriten</value>
+    </caseValues>
     <fieldSets>
-        <label></label>
+        <label><!-- FavoritesManager --></label>
         <name>SBQQ__FavoritesManager</name>
     </fieldSets>
     <fields>
-        <label></label>
+        <label><!-- Description --></label>
         <name>SBQQ__Description__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Owner Name --></label>
         <name>SBQQ__OwnerName__c</name>
     </fields>
     <gender>Masculine</gender>
+    <layouts>
+        <layout>Favorite Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Name des Favoriten</nameFieldLabel>
 </CustomObjectTranslation>

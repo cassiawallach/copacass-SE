@@ -12,6 +12,9 @@ global class ContractAPI {
     global static List<SObject> loadContracts(Set<Id> contractIds) {
         return null;
     }
+    global static void processSubscriptionTriggerAfterUpdate(SObject recordObject) {
+
+    }
     global static void processTriggerAfter() {
 
     }

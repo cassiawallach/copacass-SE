@@ -6,17 +6,17 @@
     </caseValues>
     <fields>
         <help>インストールスクリプト内で実行されたメソッドの名前</help>
-        <label></label>
+        <label><!-- Method Name --></label>
         <name>SBQQ__MethodName__c</name>
     </fields>
     <fields>
         <help>メソッド実行のタイムスタンプ</help>
-        <label></label>
+        <label><!-- Time --></label>
         <name>SBQQ__Time__c</name>
     </fields>
     <fields>
         <help>メソッド実行時のパッケージバージョン</help>
-        <label></label>
+        <label><!-- Version --></label>
         <name>SBQQ__Version__c</name>
     </fields>
     <nameFieldLabel>インストールプロセッサログ名</nameFieldLabel>

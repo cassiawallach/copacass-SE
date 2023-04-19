@@ -366,6 +366,19 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>rh2__appendTrailingWhitespace__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Controls whether TXT rollups will append a space at the end of each delimiter.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Controls whether TXT rollups will append a space at the end of each delimiter.</inlineHelpText>
+        <label>Append Trailing Whitespace</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>rh2__append__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
@@ -535,6 +548,64 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>rh2__intermediaryObjectName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The sObject of the Intermediary Lookup Field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The sObject of the Intermediary Lookup Field</inlineHelpText>
+        <label>Intermediary Object Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>rh2__intermediaryRelationshipFieldName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>API Name of the Rollup&apos;s intermediary relationship field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>API Name of the Rollup&apos;s intermediary relationship field</inlineHelpText>
+        <label>Intermediary Relationship Field Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>rh2__intermediaryRelationshipField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Lookup Relationship field on the intermediary object which points to the target object. For example: Opportunity.AccountId</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Lookup Relationship field on the intermediary object which points to the target object. For example: Opportunity.AccountId</inlineHelpText>
+        <label>Intermediary Relationship Field</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>rh2__isGrandchildRollup__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates whether the rollup is a grandchild rollup.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether the rollup is a grandchild rollup.</inlineHelpText>
+        <label>Is Grandchild Rollup</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>rh2__lastModifiedBy__c</fullName>

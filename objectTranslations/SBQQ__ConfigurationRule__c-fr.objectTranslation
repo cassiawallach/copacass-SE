@@ -9,13 +9,17 @@
         <value>Règles de configuration</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>Indique si cette règle doit être utilisée pour valider les configurations.</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
-        <help>Inclure la configuration d’offre groupée parente avec le niveau spécifié lors de l’évaluation des conditions de cette règle dans le configurateur, pour les règles d’alerte, de validation et de sélection.</help>
-        <label></label>
+        <help>Insérez des options d&apos;ascendance à l&apos;événement spécifié lors de l&apos;évaluation des conditions de cette règle dans le configurateur.</help>
+        <label><!-- Parent Bundle Condition Level --></label>
         <name>SBQQ__AscendingNestedLevel__c</name>
         <picklistValues>
             <masterLabel>1</masterLabel>
@@ -23,8 +27,8 @@
         </picklistValues>
     </fields>
     <fields>
-        <help>Autoriser les configurations d’offre groupée enfant jusqu&apos;au niveau spécifié que les actions de cette règle doivent cibler lorsqu&apos;elles sont exécutées dans le configurateur, pour les règles de sélection uniquement.</help>
-        <label></label>
+        <help>Autoriser les options de descendance jusqu&apos;au niveau spécifié que les actions de cette règle doivent cibler lorsqu&apos;elles sont exécutées dans le configurateur.</help>
+        <label><!-- Child Bundle Action Level --></label>
         <name>SBQQ__DescendingActionNesting__c</name>
         <picklistValues>
             <masterLabel>1</masterLabel>
@@ -32,8 +36,8 @@
         </picklistValues>
     </fields>
     <fields>
-        <help>Inclure les configurations d’offre groupée enfant au niveau spécifié lors de l’évaluation des conditions de cette règle dans le configurateur, pour les règles d’alerte, de validation et de sélection.</help>
-        <label></label>
+        <help>Insérez des options de descendance à l&apos;événement spécifié lors de l&apos;évaluation des conditions de cette règle dans le configurateur.</help>
+        <label><!-- Child Bundle Condition Level --></label>
         <name>SBQQ__DescendingNestedLevel__c</name>
         <picklistValues>
             <masterLabel>1</masterLabel>
@@ -42,45 +46,52 @@
     </fields>
     <fields>
         <help>Sélectionnez la fonctionnalité produit que cette règle doit valider.</help>
-        <label></label>
+        <label><!-- Product Feature --></label>
         <name>SBQQ__ProductFeature__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Configuration Rules --></relationshipLabel>
     </fields>
     <fields>
         <help>Sélectionnez la règle produit qui contient la logique de validation de vos configurations produit.</help>
-        <label></label>
+        <label><!-- Product Rule --></label>
         <name>SBQQ__ProductRule__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Configuration Rules --></relationshipLabel>
     </fields>
     <fields>
         <help>Sélectionnez le produit configuré que cette règle doit valider.</help>
-        <label></label>
+        <label><!-- Product --></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Configuration Rules --></relationshipLabel>
     </fields>
     <fields>
         <help>Spécifiez quand cette règle doit être évaluée.</help>
-        <label></label>
+        <label><!-- Rule Evaluation Event --></label>
         <name>SBQQ__RuleEvaluationEvent__c</name>
     </fields>
     <fields>
         <help>Type de règle produit référencée par cette règle de configuration.</help>
-        <label></label>
+        <label><!-- Rule Type --></label>
         <name>SBQQ__RuleType__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Configuration Rule Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>N° de règle</nameFieldLabel>
     <startsWith>Consonant</startsWith>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- Condition Level only supported for Validation, Alert and Selection product rules. --></errorMessage>
         <name>SBQQ__Ensure_rule_type_nested_level</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- Action Level only supported for Selection product rules. --></errorMessage>
         <name>SBQQ__Ensure_rule_type_nested_level_actions</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- The maximum supported Bundle Level is 1. --></errorMessage>
         <name>SBQQ__Ensure_supported_nested_level</name>
     </validationRules>
 </CustomObjectTranslation>

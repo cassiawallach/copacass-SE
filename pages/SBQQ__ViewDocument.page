@@ -10,7 +10,7 @@
                 <c:pageBlockSection >
                     <apex:outputText value="{!$ObjectType.SBQQ__QuoteDocument__c.label} "/>
                     <apex:outputLink value="{!$CurrentPage.parameters.retURL}" id="qDocLink">{!quoteDocName}</apex:outputLink>
-                    <apex:outputText value=" {!$Label.sbqq__msg_attachment_is_downloaded_successfully}"/>
+                    <apex:outputText value=" {!$Label.SBQQ__msg_attachment_is_downloaded_successfully}"/>
                 </c:pageBlockSection>
             </div>
         </div>
@@ -19,7 +19,7 @@
         function redirect(){
             window.location.href = window.location.origin + {!viewLink};
         }
-        
+
         if (typeof sforce != 'undefined' && sforce && sforce.one && {!isAttachment} && {!$User.UITheme == 'Theme4t'}) {
              sforce.one.navigateToSObject('{!viewRecordId}');
         } else {

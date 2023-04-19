@@ -1,4 +1,4 @@
-<apex:page standardController="SBQQ__WebQuote__c" extensions="SBQQ.QuoteLineEditorController" docType="html-5.0" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader) && formFactor == 'desktop'}" standardStylesheets="false">
+<apex:page standardController="SBQQ__WebQuote__c" extensions="SBQQ.QuoteLineEditorController,SBQQ.AccountExtController" docType="html-5.0" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader) && formFactor == 'desktop'}" standardStylesheets="false">
   <script>
     !function(global){
       var webComponentsSupported = ('registerElement' in document
@@ -37,7 +37,12 @@
 		$(document).ready(function() {
 			var quoteName = '{!$ObjectType.WebQuote__c.Name}';
 			var decimalSymbol = '{!JSENCODE(decimalSymbol)}';
-			var namespace = (quoteName.toLowerCase().substring(0,4) == 'sbqq') ? 'SBQQ' : '';
+			var namespace;
+			if(quoteName === 'Quote__c'){
+				namespace = '';
+			}else{
+				namespace = quoteName.slice(0, quoteName.indexOf('__'));
+			}
 
             // Encode and inject Apex variables into angular controllers
             var quoteId = '{!JSENCODE($CurrentPage.parameters.id)}' == '' ? '{!JSENCODE($CurrentPage.parameters.newid)}' : '{!JSENCODE($CurrentPage.parameters.id)}';

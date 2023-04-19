@@ -1623,6 +1623,14 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <recordTypeVisibilities>
+        <recordType>copado__User_Story__c.copado__Bug</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>copado__User_Story__c.copado__Investigation</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
         <recordType>copado__User_Story__c.copado__User_Story</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>

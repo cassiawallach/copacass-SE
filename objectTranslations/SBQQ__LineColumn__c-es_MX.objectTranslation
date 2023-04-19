@@ -9,8 +9,12 @@
         <value>Columnas de partidas</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>Determina el modo en que se alinean la etiqueta y los valores de las columnas.</help>
-        <label></label>
+        <label><!-- Alignment --></label>
         <name>SBQQ__Alignment__c</name>
         <picklistValues>
             <masterLabel>Center</masterLabel>
@@ -27,12 +31,12 @@
     </fields>
     <fields>
         <help>La cantidad de espacio en píxeles entre el margen inferior y el contenido.</help>
-        <label></label>
+        <label><!-- Bottom Margin (px) --></label>
         <name>SBQQ__BottomMargin__c</name>
     </fields>
     <fields>
         <help>El campo que sirve de origen al encabezado dinámico para esta columna.</help>
-        <label></label>
+        <label><!-- Column Heading Field --></label>
         <name>SBQQ__ColumnHeadingField__c</name>
         <picklistValues>
             <masterLabel>Type</masterLabel>
@@ -41,31 +45,31 @@
     </fields>
     <fields>
         <help>Campo en el objeto Presupuesto que controla si esta columna se imprime en el documento PDF generado.</help>
-        <label></label>
+        <label><!-- Conditional Print Field --></label>
         <name>SBQQ__ConditionalPrintField__c</name>
         <picklistValues>
             <masterLabel>Group Line Items</masterLabel>
-            <translation>Agrupar partidas</translation>
+            <translation>Partidas de grupos</translation>
         </picklistValues>
     </fields>
     <fields>
         <help>Orden en el que se visualiza la columna que aloja este campo.</help>
-        <label></label>
+        <label><!-- Display Order --></label>
         <name>SBQQ__DisplayOrder__c</name>
     </fields>
     <fields>
         <help>La escala decimal para los números de la columna se establece en base a la precisión más grande de la columna.</help>
-        <label></label>
+        <label><!-- Dynamic Number Scale --></label>
         <name>SBQQ__DynamicNumberScale__c</name>
     </fields>
     <fields>
         <help>Nombre de API para el campo en el objeto Partida de presupuesto que desea que se muestre en esta columna.</help>
-        <label></label>
+        <label><!-- Field Name --></label>
         <name>SBQQ__FieldName__c</name>
     </fields>
     <fields>
         <help>Seleccione la familia de tipos de letra para aplicar a esta columna. Si se deja en blanco, se hereda desde la plantilla.</help>
-        <label></label>
+        <label><!-- Font Family --></label>
         <name>SBQQ__FontFamily__c</name>
         <picklistValues>
             <masterLabel>Courier</masterLabel>
@@ -124,10 +128,6 @@
             <translation>PT Serif</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Play</masterLabel>
-            <translation>Play</translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Roboto</masterLabel>
             <translation>Roboto</translation>
         </picklistValues>
@@ -143,19 +143,15 @@
             <masterLabel>Titillium Web</masterLabel>
             <translation>Titillium Web</translation>
         </picklistValues>
-        <picklistValues>
-            <masterLabel>Ubuntu</masterLabel>
-            <translation>Ubuntu</translation>
-        </picklistValues>
     </fields>
     <fields>
         <help>Especifique el tamaño del tipo de letra (en puntos) para el texto de esta columna. Si se deja en blanco, se hereda desde la plantilla.</help>
-        <label></label>
+        <label><!-- Font Size (pt) --></label>
         <name>SBQQ__FontSize__c</name>
     </fields>
     <fields>
         <help>Especifique el peso del tipo de letra de esta columna. Si se deja en blanco, se toma &quot;Normal&quot; como valor predeterminado.</help>
-        <label></label>
+        <label><!-- Font Weight --></label>
         <name>SBQQ__FontWeight__c</name>
         <picklistValues>
             <masterLabel>Bold</masterLabel>
@@ -168,48 +164,48 @@
     </fields>
     <fields>
         <help>Especifique el color (en notación hexadecimal) para el texto del encabezado de esta columna. Si se deja en blanco, se hereda desde el color del texto para esta columna.</help>
-        <label></label>
+        <label><!-- Heading Text Color --></label>
         <name>SBQQ__HeadingTextColor__c</name>
     </fields>
     <fields>
-        <help>Oculta el valor en esta columna si la partida es una Opción de producto.</help>
-        <label></label>
+        <help>Oculta el valor de esta columna si la partida es un componente.</help>
+        <label><!-- Hide On Product Options --></label>
         <name>SBQQ__HideOnComponents__c</name>
     </fields>
     <fields>
         <help>La cantidad de espacio en píxeles entre el margen izquierdo y el contenido.</help>
-        <label></label>
+        <label><!-- Left Margin (px) --></label>
         <name>SBQQ__LeftMargin__c</name>
     </fields>
     <fields>
         <help>La cantidad de espacio en píxeles entre el margen derecho y el contenido.</help>
-        <label></label>
+        <label><!-- Right Margin (px) --></label>
         <name>SBQQ__RightMargin__c</name>
     </fields>
     <fields>
         <help>Indica si este campo debe resumirse en la partida principal. Solo se aplica si se especifica el campo Resumen en la plantilla.</help>
-        <label></label>
+        <label><!-- Roll Up --></label>
         <name>SBQQ__RollUp__c</name>
     </fields>
     <fields>
-        <help>Sección a la que se aplica esta columna de partidas. Si no hay ninguna sección se aplica la columna a todas las secciones.</help>
-        <label></label>
+        <help>Sección a la que se aplica esta columna de líneas. Si no hay ninguna sección se aplica la columna a todas las secciones.</help>
+        <label><!-- Section --></label>
         <name>SBQQ__Section__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Line Columns --></relationshipLabel>
     </fields>
     <fields>
         <help>Seleccione la casilla de verificación para que este campo se imprima en su propia línea. Se utiliza para campos de texto largo como la descripción de los productos.</help>
-        <label></label>
+        <label><!-- Separate Line --></label>
         <name>SBQQ__SeparateLine__c</name>
     </fields>
     <fields>
         <help>La etiqueta de resumen para el nivel de subgrupos.</help>
-        <label></label>
+        <label><!-- Sub Group Summary Label --></label>
         <name>SBQQ__SubGroupSummaryLabel__c</name>
     </fields>
     <fields>
         <help>Especifique el peso del tipo de letra de la fila de resumen para esta columna. Si se deja en blanco, se toma como valor predeterminado el peso del tipo de letra para el total de columnas.</help>
-        <label></label>
+        <label><!-- Summary Font Weight --></label>
         <name>SBQQ__SummaryFontWeight__c</name>
         <picklistValues>
             <masterLabel>Bold</masterLabel>
@@ -222,7 +218,7 @@
     </fields>
     <fields>
         <help>Función empleada para resumir valores en esta columna.</help>
-        <label></label>
+        <label><!-- Summary Function --></label>
         <name>SBQQ__SummaryFunction__c</name>
         <picklistValues>
             <masterLabel>SUM</masterLabel>
@@ -231,12 +227,12 @@
     </fields>
     <fields>
         <help>Etiqueta del resultado para esta columna en la fila de resumen.</help>
-        <label></label>
+        <label><!-- Summary Label --></label>
         <name>SBQQ__SummaryLabel__c</name>
     </fields>
     <fields>
         <help>Establece el nivel en el que se debe resumir esta columna.</help>
-        <label></label>
+        <label><!-- Summary Level --></label>
         <name>SBQQ__SummaryLevel__c</name>
         <picklistValues>
             <masterLabel>All</masterLabel>
@@ -249,44 +245,59 @@
     </fields>
     <fields>
         <help>Especifique el color (en notación hexadecimal) para el fondo de las celdas en la fila de resumen de esta columna. Si se deja en blanco, se hereda desde el color del sombreado de la plantilla.</help>
-        <label></label>
+        <label><!-- Summary Shading Color --></label>
         <name>SBQQ__SummaryShadingColor__c</name>
     </fields>
     <fields>
         <help>Especifique el color (en notación hexadecimal) para el texto de la fila de resumen de esta columna. Si se deja en blanco, se hereda desde el color del texto para esta columna.</help>
-        <label></label>
+        <label><!-- Summary Text Color --></label>
         <name>SBQQ__SummaryTextColor__c</name>
     </fields>
     <fields>
         <help>Plantilla en la que se va a mostrar este campo.</help>
-        <label></label>
+        <label><!-- Template --></label>
         <name>SBQQ__Template__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Line Columns --></relationshipLabel>
     </fields>
     <fields>
         <help>Especifique el color (en notación hexadecimal) para el texto de esta columna. Si se deja en blanco, se hereda desde la plantilla.</help>
-        <label></label>
+        <label><!-- Text Color --></label>
         <name>SBQQ__TextColor__c</name>
     </fields>
     <fields>
         <help>La cantidad de espacio en píxeles entre el margen superior y el contenido.</help>
-        <label></label>
+        <label><!-- Top Margin (px) --></label>
         <name>SBQQ__TopMargin__c</name>
     </fields>
     <fields>
         <help>Seleccione la casilla para que la columna mostrada de forma condicional sustituya otras columnas. Si se deja esta casilla sin seleccionar se reasignará la anchura de esta columna cuando esté oculta a otra columna manteniendo la anchura de la tabla sin cambios.</help>
-        <label></label>
+        <label><!-- Discard Width When Hidden --></label>
         <name>SBQQ__WidthDiscardedWhenHidden__c</name>
     </fields>
     <fields>
         <help>La anchura (porcentaje) de la columna tomada por este campo.</help>
-        <label></label>
+        <label><!-- Width --></label>
         <name>SBQQ__Width__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Line Column Layout</layout>
+        <sections>
+            <label>Opciones de columna</label>
+            <section>Column Options</section>
+        </sections>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Información de estilo</label>
+            <section>Style Information</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Encabezado de columna</nameFieldLabel>
     <webLinks>
-        <label></label>
+        <label><!-- Translate --></label>
         <name>SBQQ__Translate</name>
     </webLinks>
 </CustomObjectTranslation>

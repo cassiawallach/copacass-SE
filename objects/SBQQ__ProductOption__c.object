@@ -902,6 +902,20 @@
         <errorConditionFormula>AND(TEXT(SBQQ__AppliedImmediatelyContext__c) != null, SBQQ__AppliedImmediately__c == false)</errorConditionFormula>
         <errorMessage>The &apos;Apply Immediately&apos; field must be checked before providing an &apos;Apply Immediately Context&apos;. Otherwise, please change the &apos;Apply Immediately Context&apos; field to ‘None&apos;.</errorMessage>
     </validationRules>
+    <validationRules>
+        <fullName>SBQQ__Cannot_Bundle_Evergreen_Renewable_SKUs</fullName>
+        <active>true</active>
+        <description>The Evergreen and Renewable bundle cannot coexist in a bundle</description>
+        <errorConditionFormula>AND(OR(AND(ISPICKVAL( SBQQ__ConfiguredSKU__r.SBQQ__SubscriptionType__c , &apos;Evergreen&apos;), ISPICKVAL( SBQQ__OptionalSKU__r.SBQQ__SubscriptionType__c ,&apos;Renewable&apos;)),AND(ISPICKVAL( SBQQ__ConfiguredSKU__r.SBQQ__SubscriptionType__c , &apos;Renewable&apos;),ISPICKVAL( SBQQ__OptionalSKU__r.SBQQ__SubscriptionType__c ,&apos;Evergreen&apos;))))</errorConditionFormula>
+        <errorMessage>Can’t include evergreen and renewable products in the same bundle.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SBQQ__Cannot_Have_RenewableEvergreen_In_Bundle</fullName>
+        <active>true</active>
+        <description>The bundle cannot have configured or optional SKU subscription type as Renewable/Evergreen</description>
+        <errorConditionFormula>AND(OR(ISPICKVAL( SBQQ__ConfiguredSKU__r.SBQQ__SubscriptionType__c , &apos;Renewable/Evergreen&apos;),ISPICKVAL( SBQQ__OptionalSKU__r.SBQQ__SubscriptionType__c ,&apos;Renewable/Evergreen&apos;)))</errorConditionFormula>
+        <errorMessage>Can’t include evergreen and renewable products in the same bundle.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
     <webLinks>
         <fullName>SBQQ__Translate</fullName>

@@ -10,30 +10,42 @@
     </caseValues>
     <fields>
         <help>Indica se o registro do ativo assinado está ativo.</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
+        <help>O ID da assinatura ou ativo na raiz do pacote que contém o ativo relacionado</help>
+        <label><!-- Asset Root Id --></label>
+        <name>SBQQ__AssetRootId__c</name>
+    </fields>
+    <fields>
         <help>Ativo coberto por uma assinatura.</help>
-        <label></label>
+        <label><!-- Asset --></label>
         <name>SBQQ__Asset__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Subscriptions --></relationshipLabel>
     </fields>
     <fields>
         <help>Identifica o contrato para a assinatura.</help>
-        <label></label>
+        <label><!-- Contract Id --></label>
         <name>SBQQ__ContractId__c</name>
     </fields>
     <fields>
         <help>Assinatura que cobre o ativo.</help>
-        <label></label>
+        <label><!-- Subscription --></label>
         <name>SBQQ__Subscription__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Subscribed Assets --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Asset Usage End Date --></label>
         <name>SBQQ__UsageEndDate__c</name>
     </fields>
     <gender>Masculine</gender>
+    <layouts>
+        <layout>Subscribed Asset Layout</layout>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nº do ativo assinado</nameFieldLabel>
 </CustomObjectTranslation>

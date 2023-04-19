@@ -1,1201 +1,2194 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
-        <plural>true</plural>
-        <value>User Stories</value>
-    </caseValues>
-    <caseValues>
         <plural>false</plural>
         <value>User Story</value>
     </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>User Stories</value>
+    </caseValues>
     <fieldSets>
-        <label></label>
-        <name>VSMCCG1</name>
-    </fieldSets>
-    <fieldSets>
-        <label></label>
+        <label><!-- Add Test Classes --></label>
         <name>cmcSf__Add_Test_Classes</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- Pipeline Based Package Distribution --></label>
         <name>cmcSf__PipelineBasedPackageDistribution</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- Bundle --></label>
         <name>copado__Bundle</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- Bundle Sync Fields --></label>
         <name>copado__Bundle_Sync_Fields</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- CBM Fields --></label>
         <name>copado__CBM_Fields</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- Commit Files Information --></label>
         <name>copado__Commit_Files_Information</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- Commit Page --></label>
         <name>copado__Commit_Page</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- Copado Header Fields --></label>
         <name>copado__Copado_Header_Fields</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- Git Commit Header --></label>
         <name>copado__Git_Commit_Header</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- Mass Back Promote --></label>
         <name>copado__Mass_Back_Promote</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- Pipeline Manager Pending Approvals --></label>
         <name>copado__Pipeline_Manager_Pending_Approvals</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- Promotion Related List --></label>
         <name>copado__PromotionRelatedList</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- Promotion Related List Datatable --></label>
         <name>copado__Promotion_Related_List_Datatable</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- SprintWall_MassUpdate --></label>
         <name>copado__SprintWall_MassUpdate</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- Sprint Wall Columns --></label>
         <name>copado__Sprint_Wall_Columns</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- User Story Waiting Page --></label>
         <name>copado__User_Story_Waiting_Page</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- Work Manager Columns --></label>
         <name>copado__Work_Manager_Columns</name>
     </fieldSets>
     <fieldSets>
-        <label></label>
+        <label><!-- Work Manager Relations --></label>
         <name>copado__Work_Manager_Relations</name>
     </fieldSets>
     <fields>
-        <label></label>
-        <name>Deployment_Status__c</name>
+        <label><!-- Action Plan --></label>
+        <name>Action_Plan__c</name>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
-        <name>DigitSec_Scan_Result__c</name>
+        <label><!-- Application --></label>
+        <name>Application__c</name>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Blocked by --></label>
+        <name>Blocked_by__c</name>
+        <relationshipLabel><!-- Blocked by (User Stories) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Business Owner --></label>
+        <name>Business_Owner__c</name>
+        <relationshipLabel><!-- User Stories (Business Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Business Value --></label>
+        <name>Business_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Centro Slack Channel --></label>
+        <name>Centro_Slack_Channel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copado Work Item Priority --></label>
+        <name>Copado_Work_Item_Priority__c</name>
         <picklistValues>
-            <masterLabel>Cancelled</masterLabel>
-            <translation></translation>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Failed</masterLabel>
-            <translation></translation>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>In Progress</masterLabel>
-            <translation></translation>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The version where the issue was found --></help>
+        <label><!-- Customer Version --></label>
+        <name>Customer_Version__c</name>
+        <relationshipLabel><!-- User Stories (Customer Version) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Date Released --></label>
+        <name>Date_Released__c</name>
+    </fields>
+    <fields>
+        <help><!-- The following documentation must be provided:
+- Release Notes
+- Functional documentation (for docs.copa.do)
+- Upgrade instructions
+- PoC
+- Copado Academy --></help>
+        <label><!-- Documentation Status --></label>
+        <name>Documentation_Completed__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Not Started</masterLabel>
-            <translation></translation>
+            <masterLabel>Not Required</masterLabel>
+            <translation><!-- Not Required --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Success</masterLabel>
-            <translation></translation>
+            <masterLabel>Required</masterLabel>
+            <translation><!-- Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Under Review</masterLabel>
+            <translation><!-- Under Review --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
-        <name>DigitSec_Security_Scan__c</name>
-        <relationshipLabel></relationshipLabel>
+        <label><!-- Documentation --></label>
+        <name>Documentation__c</name>
     </fields>
     <fields>
-        <label></label>
-        <name>Jira_Key__c</name>
+        <label><!-- Estimated Time (hours) --></label>
+        <name>Estimated_Time_Hours__c</name>
     </fields>
     <fields>
-        <label></label>
-        <name>Jira_Link_formula__c</name>
+        <help><!-- Please use the format: &quot;X y&quot; where &quot;X&quot; is the amount of time (number) and &quot;y&quot; is the unit defined in &quot;d&quot; (day) or &quot;h&quot; (hour). For example &quot;1h&quot;, &quot;3d&quot; or &quot;1d 3h&quot;. If the amount of hours is equals or higher than 8, the value will be automatically translated into days and hours. For example: &quot;10h&quot; will be translated into &quot;1d2h&quot;. --></help>
+        <label><!-- Estimated Time --></label>
+        <name>Estimated_Time__c</name>
     </fields>
     <fields>
-        <label></label>
-        <name>Regression_Ready__c</name>
+        <label><!-- Execution Order --></label>
+        <name>Execution_Order__c</name>
     </fields>
     <fields>
-        <label></label>
-        <name>Requester__c</name>
-        <relationshipLabel></relationshipLabel>
+        <label><!-- IT Ops Priority --></label>
+        <name>IT_Ops_Priority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
     </fields>
     <fields>
-        <label></label>
-        <name>SF_Request__c</name>
-        <relationshipLabel></relationshipLabel>
+        <label><!-- Known Issue --></label>
+        <name>Known_Issue__c</name>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
-        <name>Work_Item__c</name>
-        <relationshipLabel></relationshipLabel>
+        <label><!-- Lead Time End Date --></label>
+        <name>Lead_Time_End_Date__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Lead Time Start Date --></label>
+        <name>Lead_Time_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Time --></label>
+        <name>Lead_Time__c</name>
+    </fields>
+    <fields>
+        <help><!-- Documents hourly contribution estimated on developing a story --></help>
+        <label><!-- Level of Efforts --></label>
+        <name>Level_of_Efforts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Module Name --></label>
+        <name>Module_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Module --></label>
+        <name>Module__c</name>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- My Copado Task --></label>
+        <name>My_Copado_Task__c</name>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Parent User Story --></label>
+        <name>Parent_User_Story__c</name>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This field will keep the relationship with the Patch release after a patched user story is promoted and merged into the major next release. --></help>
+        <label><!-- Patch Release --></label>
+        <name>Patch_Release__c</name>
+        <relationshipLabel><!-- User Stories (Patch Release) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pending User Story Tasks Counter --></label>
+        <name>Pending_User_Story_Tasks_Counter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Planned Release --></label>
+        <name>Planned_Release__c</name>
+    </fields>
+    <fields>
+        <label><!-- Progress Old --></label>
+        <name>Progress_Old__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pull Requests Counter --></label>
+        <name>Pull_Requests_Counter__c</name>
+    </fields>
+    <fields>
+        <help><!-- Small 1 week or less /
+Medium 2 weeks or less /
+Large 4 weeks or less /
+XLarge +4 weeks /
+XXL +12 weeks (?) --></help>
+        <label><!-- Size --></label>
+        <name>Size__c</name>
+        <picklistValues>
+            <masterLabel>L</masterLabel>
+            <translation><!-- L --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M</masterLabel>
+            <translation><!-- M --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S</masterLabel>
+            <translation><!-- S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XL</masterLabel>
+            <translation><!-- XL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XXL</masterLabel>
+            <translation><!-- XXL --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Spillover --></label>
+        <name>Spillover__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Notes --></label>
+        <name>Status_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Runs Counter --></label>
+        <name>Test_Runs_Counter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Remaining (hours) --></label>
+        <name>Time_Remaining_Hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total time spent working on this User Story including Work Logs from the story and its related User Story Tasks --></help>
+        <label><!-- Time Spent (hours) --></label>
+        <name>Time_Spent_hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Spent on US Tasks (hours) --></label>
+        <name>Time_Spent_on_US_Tasks_hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Spent on User Story (hours) --></label>
+        <name>Time_Spent_on_User_Story_hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time to Recover --></label>
+        <name>Time_to_Recover__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type of resolution --></label>
+        <name>Type_of_resolution__c</name>
+        <picklistValues>
+            <masterLabel>Bug</masterLabel>
+            <translation><!-- Bug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feature request</masterLabel>
+            <translation><!-- Feature request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working as designed</masterLabel>
+            <translation><!-- Working as designed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- US Power of One --></label>
+        <name>US_Power_of_One__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Story Type --></label>
+        <name>User_Story_Type__c</name>
+        <picklistValues>
+            <masterLabel>Bug</masterLabel>
+            <translation><!-- Bug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Migration</masterLabel>
+            <translation><!-- Data Migration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enhancement</masterLabel>
+            <translation><!-- Enhancement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Investigation</masterLabel>
+            <translation><!-- Investigation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Feature</masterLabel>
+            <translation><!-- New Feature --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Apex Test Level --></label>
         <name>cmcSf__Apex_Test_Level__c</name>
     </fields>
     <fields>
-        <label></label>
-        <name>cmcSnow__User_Story_Id__c</name>
-    </fields>
-    <fields>
-        <label></label>
-        <name>cml_First_Ready_to_Promote_Time__c</name>
-    </fields>
-    <fields>
-        <label></label>
-        <name>cml_First_Time_Promoted_Prod_or_RB__c</name>
-    </fields>
-    <fields>
-        <label></label>
-        <name>cml_Found_in_Promotion__c</name>
-        <relationshipLabel></relationshipLabel>
-    </fields>
-    <fields>
-        <label></label>
-        <name>cml_Is_Business_Disruption_Failure__c</name>
-    </fields>
-    <fields>
-        <label></label>
-        <name>cml_Severity__c</name>
-        <picklistValues>
-            <masterLabel>P0 - Blocker - Business Disruption</masterLabel>
-            <translation></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>P1 - Critical - No Workaround</masterLabel>
-            <translation></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>P2 - Major</masterLabel>
-            <translation></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>P3 - Minor</masterLabel>
-            <translation></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label></label>
+        <label><!-- Acceptance Criteria Status --></label>
         <name>copado__Acceptance_Criteria_Status__c</name>
         <picklistValues>
             <masterLabel>Accepted</masterLabel>
-            <translation></translation>
+            <translation><!-- Accepted --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Draft</masterLabel>
-            <translation></translation>
+            <translation><!-- Draft --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Rejected</masterLabel>
-            <translation></translation>
+            <translation><!-- Rejected --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Acceptance Criteria --></label>
         <name>copado__Acceptance_Criteria__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- Use this field to split your User Story&apos;s actual effort on implementation, reviews, testing, and documentation among different scopes. Example: Dev and QA, Frontend and Backend. You can label this field to match your scope. --></help>
+        <label><!-- Actual Points Other --></label>
         <name>copado__Actual_Points_Other__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Apex Code Coverage --></label>
         <name>copado__Apex_Code_Coverage__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Apex Tests Passed --></label>
         <name>copado__Apex_Tests_Passed__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Backburner Rank --></label>
         <name>copado__Backburner_Rank__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Backlog Rank --></label>
         <name>copado__Backlog_Rank__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- Git branch which the feature branch is created from. This value is updated when committing in the user story and by default, it will be the main branch of the Deployment Flow or the base branch of the Release linked to the user story.e user story. --></help>
+        <label><!-- Base Branch --></label>
         <name>copado__Base_Branch__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Business Analyst --></label>
         <name>copado__Business_Analyst__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label>Status Notes</label>
         <name>copado__Cancellation_Reason__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Classes Without Coverage --></label>
         <name>copado__Classes_Without_Coverage__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label>Due Date</label>
         <name>copado__Close_Date__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Compliance Criteria --></label>
         <name>copado__Compliance_Criteria__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Compliance Status --></label>
         <name>copado__Compliance_Status__c</name>
         <picklistValues>
             <masterLabel>Completed - Findings detected</masterLabel>
-            <translation></translation>
+            <translation><!-- Completed - Findings detected --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Completed - No Findings</masterLabel>
-            <translation></translation>
+            <translation><!-- Completed - No Findings --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Completed - Resolved</masterLabel>
-            <translation></translation>
+            <translation><!-- Completed - Resolved --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Error</masterLabel>
-            <translation></translation>
+            <translation><!-- Error --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>In Progress</masterLabel>
-            <translation></translation>
+            <translation><!-- In Progress --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Under Investigation</masterLabel>
-            <translation></translation>
+            <translation><!-- Under Investigation --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Compliance --></label>
         <name>copado__Compliance__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Data Privacy --></label>
         <name>copado__Data_Privacy__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label>Assignee</label>
         <name>copado__Developer__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Stories (Developer) --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Documentation Complete --></label>
         <name>copado__Documentation_Complete__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Environment Type --></label>
         <name>copado__Environment_Type__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Environment --></label>
         <name>copado__Environment__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Epic --></label>
         <name>copado__Epic__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- If checked, this user story will not be included in the count of user stories ahead and behind. --></help>
+        <label><!-- Exclude From CBM --></label>
         <name>copado__Exclude_From_CBM__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Failing Methods --></label>
         <name>copado__Failing_Methods__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Feature --></label>
+        <name>copado__Feature__c</name>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Functional Specifications --></label>
         <name>copado__Functional_Specifications__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- The git merge status of the latest pull request between the feature branch and the target branch. This value is provided by the Git Repository. If there is no value, the Git Repository did not provide one. --></help>
+        <label><!-- Git Merge Status --></label>
         <name>copado__Git_Merge_Status__c</name>
         <picklistValues>
             <masterLabel>Conflicts Detected</masterLabel>
-            <translation></translation>
+            <translation><!-- Conflicts Detected --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Mergeable</masterLabel>
-            <translation></translation>
+            <translation><!-- Mergeable --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Git Repository --></label>
         <name>copado__Git_Repository__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Has Apex Code --></label>
         <name>copado__Has_Apex_Code__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Is Bundle --></label>
         <name>copado__Is_Bundle__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Last Compliance Scan Date --></label>
         <name>copado__Last_Compliance_Scan_Date__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Last Promotion Date --></label>
         <name>copado__Last_Promotion_Date__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Last Validation Status --></label>
         <name>copado__Last_Validation_Deployment_Status__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Last Validation Deployment --></label>
         <name>copado__Last_Validation_Deployment__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Last Validation Promotion --></label>
         <name>copado__Last_Validation_Promotion__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Latest Commit Date --></label>
         <name>copado__Latest_Commit_Date__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Legal --></label>
         <name>copado__Legal__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Manual Step Required --></label>
         <name>copado__Manual_Step_Required__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Manual Tests Passed --></label>
         <name>copado__Manual_Tests_Passed__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Metadata Types in Selection --></label>
         <name>copado__Metadata_Types_in_Selection__c</name>
         <picklistValues>
             <masterLabel>ActionLinkGroupTemplate</masterLabel>
-            <translation></translation>
+            <translation><!-- ActionLinkGroupTemplate --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>AnalyticSnapshot</masterLabel>
-            <translation></translation>
+            <translation><!-- AnalyticSnapshot --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>ApexClass</masterLabel>
-            <translation></translation>
+            <translation><!-- ApexClass --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>ApexComponent</masterLabel>
-            <translation></translation>
+            <translation><!-- ApexComponent --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>ApexPage</masterLabel>
-            <translation></translation>
+            <translation><!-- ApexPage --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>ApexTrigger</masterLabel>
-            <translation></translation>
+            <translation><!-- ApexTrigger --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>AppMenu</masterLabel>
-            <translation></translation>
+            <translation><!-- AppMenu --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>ApprovalProcess</masterLabel>
-            <translation></translation>
+            <translation><!-- ApprovalProcess --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>AssignmentRule</masterLabel>
-            <translation></translation>
+            <translation><!-- AssignmentRule --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>AssignmentRules</masterLabel>
-            <translation></translation>
+            <translation><!-- AssignmentRules --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>AuraDefinitionBundle</masterLabel>
-            <translation></translation>
+            <translation><!-- AuraDefinitionBundle --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>AuthProvider</masterLabel>
-            <translation></translation>
+            <translation><!-- AuthProvider --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>AutoResponseRule</masterLabel>
-            <translation></translation>
+            <translation><!-- AutoResponseRule --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>AutoResponseRules</masterLabel>
-            <translation></translation>
+            <translation><!-- AutoResponseRules --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>BusinessProcess</masterLabel>
-            <translation></translation>
+            <translation><!-- BusinessProcess --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CallCenter</masterLabel>
-            <translation></translation>
+            <translation><!-- CallCenter --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Certificate</masterLabel>
-            <translation></translation>
+            <translation><!-- Certificate --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>ChannelLayout</masterLabel>
-            <translation></translation>
+            <translation><!-- ChannelLayout --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Community</masterLabel>
-            <translation></translation>
+            <translation><!-- Community --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CompactLayout</masterLabel>
-            <translation></translation>
+            <translation><!-- CompactLayout --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>ConnectedApp</masterLabel>
-            <translation></translation>
+            <translation><!-- ConnectedApp --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CorsWhitelistOrigin</masterLabel>
-            <translation></translation>
+            <translation><!-- CorsWhitelistOrigin --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CustomApplication</masterLabel>
-            <translation></translation>
+            <translation><!-- CustomApplication --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CustomField</masterLabel>
-            <translation></translation>
+            <translation><!-- CustomField --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CustomLabel</masterLabel>
-            <translation></translation>
+            <translation><!-- CustomLabel --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CustomLabels</masterLabel>
-            <translation></translation>
+            <translation><!-- CustomLabels --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CustomMetadata</masterLabel>
-            <translation></translation>
+            <translation><!-- CustomMetadata --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CustomObject</masterLabel>
-            <translation></translation>
+            <translation><!-- CustomObject --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CustomObjectTranslation</masterLabel>
-            <translation></translation>
+            <translation><!-- CustomObjectTranslation --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CustomPageWebLink</masterLabel>
-            <translation></translation>
+            <translation><!-- CustomPageWebLink --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CustomPermission</masterLabel>
-            <translation></translation>
+            <translation><!-- CustomPermission --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CustomSite</masterLabel>
-            <translation></translation>
+            <translation><!-- CustomSite --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CustomTab</masterLabel>
-            <translation></translation>
+            <translation><!-- CustomTab --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Dashboard</masterLabel>
-            <translation></translation>
+            <translation><!-- Dashboard --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>DataCategoryGroup</masterLabel>
-            <translation></translation>
+            <translation><!-- DataCategoryGroup --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>DelegateGroup</masterLabel>
-            <translation></translation>
+            <translation><!-- DelegateGroup --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Document</masterLabel>
-            <translation></translation>
+            <translation><!-- Document --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>EmailTemplate</masterLabel>
-            <translation></translation>
+            <translation><!-- EmailTemplate --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>EscalationRule</masterLabel>
-            <translation></translation>
+            <translation><!-- EscalationRule --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>EscalationRules</masterLabel>
-            <translation></translation>
+            <translation><!-- EscalationRules --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>ExternalDataSource</masterLabel>
-            <translation></translation>
+            <translation><!-- ExternalDataSource --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>FieldSet</masterLabel>
-            <translation></translation>
+            <translation><!-- FieldSet --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>FlexiPaFlow</masterLabel>
-            <translation></translation>
+            <translation><!-- FlexiPaFlow --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>FlowDefinitioGroup</masterLabel>
-            <translation></translation>
+            <translation><!-- FlowDefinitioGroup --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>HomePageComponent</masterLabel>
-            <translation></translation>
+            <translation><!-- HomePageComponent --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>HomePageLayout</masterLabel>
-            <translation></translation>
+            <translation><!-- HomePageLayout --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>InstalledPackageLayout</masterLabel>
-            <translation></translation>
+            <translation><!-- InstalledPackageLayout --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Letterhead</masterLabel>
-            <translation></translation>
+            <translation><!-- Letterhead --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>ListView</masterLabel>
-            <translation></translation>
+            <translation><!-- ListView --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>MatchingRule</masterLabel>
-            <translation></translation>
+            <translation><!-- MatchingRule --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>MatchingRules</masterLabel>
-            <translation></translation>
+            <translation><!-- MatchingRules --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>NamedCredential</masterLabel>
-            <translation></translation>
+            <translation><!-- NamedCredential --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>PathAssistant</masterLabel>
-            <translation></translation>
+            <translation><!-- PathAssistant --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>PermissionSet</masterLabel>
-            <translation></translation>
+            <translation><!-- PermissionSet --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>PlatformCachePartition</masterLabel>
-            <translation></translation>
+            <translation><!-- PlatformCachePartition --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>PostTemplate</masterLabel>
-            <translation></translation>
+            <translation><!-- PostTemplate --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>ProfilQueue</masterLabel>
-            <translation></translation>
+            <translation><!-- ProfilQueue --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>QuickAction</masterLabel>
-            <translation></translation>
+            <translation><!-- QuickAction --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>RecordType</masterLabel>
-            <translation></translation>
+            <translation><!-- RecordType --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>RemoteSiteSettingReport</masterLabel>
-            <translation></translation>
+            <translation><!-- RemoteSiteSettingReport --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>ReportTyRole</masterLabel>
-            <translation></translation>
+            <translation><!-- ReportTyRole --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>SamlSsoConfig</masterLabel>
-            <translation></translation>
+            <translation><!-- SamlSsoConfig --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Scontrol</masterLabel>
-            <translation></translation>
+            <translation><!-- Scontrol --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Settings</masterLabel>
-            <translation></translation>
+            <translation><!-- Settings --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>SharingCriteriaRule</masterLabel>
-            <translation></translation>
+            <translation><!-- SharingCriteriaRule --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>SharingOwnerRule</masterLabel>
-            <translation></translation>
+            <translation><!-- SharingOwnerRule --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>SharingReason</masterLabel>
-            <translation></translation>
+            <translation><!-- SharingReason --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>SharingRules</masterLabel>
-            <translation></translation>
+            <translation><!-- SharingRules --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>SiteDotCom</masterLabel>
-            <translation></translation>
+            <translation><!-- SiteDotCom --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>StaticResource</masterLabel>
-            <translation></translation>
+            <translation><!-- StaticResource --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>SynonymDictionary</masterLabel>
-            <translation></translation>
+            <translation><!-- SynonymDictionary --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Translations</masterLabel>
-            <translation></translation>
+            <translation><!-- Translations --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>ValidationRule</masterLabel>
-            <translation></translation>
+            <translation><!-- ValidationRule --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>WebLink</masterLabel>
-            <translation></translation>
+            <translation><!-- WebLink --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Workflow</masterLabel>
-            <translation></translation>
+            <translation><!-- Workflow --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>WorkflowAlert</masterLabel>
-            <translation></translation>
+            <translation><!-- WorkflowAlert --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>WorkflowFieldUpdate</masterLabel>
-            <translation></translation>
+            <translation><!-- WorkflowFieldUpdate --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>WorkflowOutboundMessage</masterLabel>
-            <translation></translation>
+            <translation><!-- WorkflowOutboundMessage --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>WorkflowRule</masterLabel>
-            <translation></translation>
+            <translation><!-- WorkflowRule --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>WorkflowSend</masterLabel>
-            <translation></translation>
+            <translation><!-- WorkflowSend --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>WorkflowTask</masterLabel>
-            <translation></translation>
+            <translation><!-- WorkflowTask --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Minimum Apex Code Coverage --></label>
         <name>copado__Minimum_Apex_Code_Coverage__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Order --></label>
         <name>copado__Order__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Credential --></label>
         <name>copado__Org_Credential__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Stories (Credential) --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label>Epic Title</label>
         <name>copado__Parent_Epic_Title__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- Use this field to split your User Story effort estimation among different scopes. Example: Dev and QA, Frontend and Backend. You can label this field to match your scope. --></help>
+        <label><!-- Planned Points Other --></label>
         <name>copado__Planned_Points_Other__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- This field auto-populates and displays the pipeline platform --></help>
+        <label><!-- Platform --></label>
         <name>copado__Platform__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Priority --></label>
         <name>copado__Priority__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Progress Status --></label>
         <name>copado__Progress_Status__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Progress --></label>
         <name>copado__Progress__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Project --></label>
         <name>copado__Project__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Ready to Promote --></label>
         <name>copado__Promote_Change__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- When this checkbox is checked, a promotion and deployment of this User Story will be started. --></help>
+        <label><!-- Promote and Deploy --></label>
         <name>copado__Promote_and_Deploy__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Promote as Single Step --></label>
         <name>copado__Promote_as_Single_Step__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Promotion Test Level --></label>
         <name>copado__Promotion_Test_Level__c</name>
         <picklistValues>
             <masterLabel>NoTestRun</masterLabel>
-            <translation></translation>
+            <translation><!-- NoTestRun --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>RunAllTestsInOrg</masterLabel>
-            <translation></translation>
+            <translation><!-- RunAllTestsInOrg --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>RunLocalTests</masterLabel>
-            <translation></translation>
+            <translation><!-- RunLocalTests --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>RunSpecifiedTests</masterLabel>
-            <translation></translation>
+            <translation><!-- RunSpecifiedTests --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Pull Requests Approved --></label>
         <name>copado__Pull_Requests_Approved__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- QR Code --></label>
         <name>copado__QR_Code__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Release --></label>
         <name>copado__Release__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Sprint --></label>
         <name>copado__Sprint__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Status --></label>
         <name>copado__Status__c</name>
         <picklistValues>
+            <masterLabel>Acceptance Blocked</masterLabel>
+            <translation><!-- Acceptance Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Acceptance in Progress</masterLabel>
+            <translation><!-- Acceptance in Progress --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Approved</masterLabel>
-            <translation></translation>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting Approval</masterLabel>
+            <translation><!-- Awaiting Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Backburner</masterLabel>
+            <translation><!-- Backburner --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Backlog</masterLabel>
-            <translation></translation>
+            <translation><!-- Backlog --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beta</masterLabel>
+            <translation><!-- Beta --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Cancelled</masterLabel>
-            <translation></translation>
+            <translation><!-- Cancelled --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Completed</masterLabel>
-            <translation></translation>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Design Blocked</masterLabel>
+            <translation><!-- Design Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Design In Progress</masterLabel>
+            <translation><!-- Design In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Development Blocked</masterLabel>
+            <translation><!-- Development Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Development In Progress</masterLabel>
+            <translation><!-- Development In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Done</masterLabel>
+            <translation><!-- Done --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Draft</masterLabel>
-            <translation></translation>
+            <translation><!-- Draft --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>In Progress</masterLabel>
-            <translation></translation>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Investigation Blocked</masterLabel>
+            <translation><!-- Investigation Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Investigation in Progress</masterLabel>
+            <translation><!-- Investigation in Progress --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>New</masterLabel>
-            <translation></translation>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Packaging Blocked</masterLabel>
+            <translation><!-- Packaging Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Packaging in Progress</masterLabel>
+            <translation><!-- Packaging in Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Planning Blocked</masterLabel>
+            <translation><!-- Planning Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Planning in Progress</masterLabel>
+            <translation><!-- Planning in Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA DEV Testing Blocked</masterLabel>
+            <translation><!-- QA DEV Testing Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA DEV Testing Completed</masterLabel>
+            <translation><!-- QA DEV Testing Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA DEV Testing In Progress</masterLabel>
+            <translation><!-- QA DEV Testing In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA UAT Testing Blocked</masterLabel>
+            <translation><!-- QA UAT Testing Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA UAT Testing In Progress</masterLabel>
+            <translation><!-- QA UAT Testing In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for Acceptance</masterLabel>
+            <translation><!-- Ready for Acceptance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for Design</masterLabel>
+            <translation><!-- Ready for Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for Development</masterLabel>
+            <translation><!-- Ready for Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for Investigation</masterLabel>
+            <translation><!-- Ready for Investigation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for Packaging</masterLabel>
+            <translation><!-- Ready for Packaging --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for Planning</masterLabel>
+            <translation><!-- Ready for Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for QA DEV Testing</masterLabel>
+            <translation><!-- Ready for QA DEV Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for QA UAT Testing</masterLabel>
+            <translation><!-- Ready for QA UAT Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for Regression</masterLabel>
+            <translation><!-- Ready for Regression --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Ready for Release</masterLabel>
-            <translation></translation>
+            <translation><!-- Ready for Release --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Ready for UAT</masterLabel>
-            <translation></translation>
+            <masterLabel>Ready for Tech. Review</masterLabel>
+            <translation><!-- Ready for Tech. Review --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Ready for testing</masterLabel>
-            <translation></translation>
+            <masterLabel>Ready for Testing</masterLabel>
+            <translation><!-- Ready for Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for Work</masterLabel>
+            <translation><!-- Ready for Work --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regression Blocked</masterLabel>
+            <translation><!-- Regression Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regression in Progress</masterLabel>
+            <translation><!-- Regression in Progress --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Rejected</masterLabel>
-            <translation></translation>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Release Blocked</masterLabel>
+            <translation><!-- Release Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Release in Progress</masterLabel>
+            <translation><!-- Release in Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Released</masterLabel>
+            <translation><!-- Released --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tech. Review Blocked</masterLabel>
+            <translation><!-- Tech. Review Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tech. Review in Progress</masterLabel>
+            <translation><!-- Tech. Review in Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tested in Base Package</masterLabel>
+            <translation><!-- Tested in Base Package --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Testing Blocked</masterLabel>
+            <translation><!-- Testing Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Testing in Progress</masterLabel>
+            <translation><!-- Testing in Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting for customer</masterLabel>
+            <translation><!-- Waiting for customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work Blocked</masterLabel>
+            <translation><!-- Work Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work in Progress</masterLabel>
+            <translation><!-- Work in Progress --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- Check to Stop Indexing Metadata in Copado&apos;s Overlap Awareness. --></help>
+        <label><!-- Stop Indexing Metadata --></label>
         <name>copado__Stop_Indexing_Metadata__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- The estimated effort your team plans to allocate on implementing, reviewing, testing, and documenting the User Story. 
+1 point = The smallest US you can think of / 
+2 points = ½ day / 
+3 points = 1 day / 
+5 points = 2-3 days / 
+8 points = 1 week / 
+13 points = 8 days / 
+21 points = 15 days --></help>
+        <label>Planned Points</label>
         <name>copado__Story_Points_Other__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- The actual effort the team put into the implementation, reviews, testing, and documentation of the User Story.
+1 point = The smallest US you can think of / 
+2 points = ½ day / 
+3 points = 1 day / 
+5 points = 2-3 days / 
+8 points = 1 week / 
+13 points = 8 days / 
+21 points = 15 days --></help>
+        <label>Actual Points</label>
         <name>copado__Story_Points_SFDC__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Team --></label>
         <name>copado__Team__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Technical Specifications --></label>
         <name>copado__Technical_Specifications__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Test Script Owner --></label>
         <name>copado__Test_Script_Owner__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Stories (Test Script Owner) --></relationshipLabel>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- A theme is a group of user stories which contribute to a common goal. It is the highest level of the user story hierarchy. On the other hand, an epic is a big user story that has to be divided into several user stories because it can&apos;t be completed within --></help>
+        <label><!-- Theme --></label>
         <name>copado__Theme__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- Sum of Actual Points and Actual Points Other. Use this field along with Actual Points Other if you need to split your User Story effort among different scopes. --></help>
+        <label><!-- Total Actual Points --></label>
         <name>copado__Total_Actual_Points__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- Sum of Planned Points and Planned Points Other. Use this field along with Planned Points Other if you need to split your User Story effort estimation among different scopes. --></help>
+        <label><!-- Total Planned Points --></label>
         <name>copado__Total_Story_Points__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- Triggers Without Coverage --></label>
         <name>copado__Triggers_Without_Coverage__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Feature --></label>
         <name>copado__US_Feature__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- User Story Title --></label>
         <name>copado__User_Story_Title__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- This will create a validation deployment.  When checked, Git metadata and regular metadata will be merged to create 1 validation deployment. --></help>
+        <label><!-- Validate Only --></label>
         <name>copado__Validate_Only__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <label><!-- View in Git --></label>
         <name>copado__View_in_Git__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- As a... --></label>
         <name>copado__userStory_Role__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Want to... --></label>
         <name>copado__userStory_need__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- So that... --></label>
         <name>copado__userStory_reason__c</name>
     </fields>
     <fields>
-        <label></label>
-        <name>copadoconnect__Connect_log__c</name>
+        <label><!-- Enable Logs --></label>
+        <name>copadoccmint__Enable_Logs__c</name>
     </fields>
     <fields>
-        <label></label>
-        <name>copadoconnect__External_ID__c</name>
+        <label><!-- External Id --></label>
+        <name>copadoccmint__External_Id__c</name>
     </fields>
     <fields>
-        <label></label>
-        <name>copadoconnect__Last_Synced_Date__c</name>
+        <label><!-- JIRA key --></label>
+        <name>copadoccmint__JIRA_key__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Business Disruption Failure? --></label>
         <name>copadometrics__Business_Disruption_Failure__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Development Complete --></label>
         <name>copadometrics__Development_Complete__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Elapsed Time to Resolve --></label>
         <name>copadometrics__Elapsed_Time_to_Resolve__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Elapsed Time to Resolve (days) --></label>
         <name>copadometrics__Elapsed_Time_to_Resolve_days__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Elapsed Time to Resolve (hours) --></label>
         <name>copadometrics__Elapsed_Time_to_Resolve_hours__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Elapsed Time to Resolve (minutes) --></label>
         <name>copadometrics__Elapsed_Time_to_Resolve_minutes__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- First Ready to Promote Time --></label>
         <name>copadometrics__First_Ready_to_Promote_Time__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- First Time Promoted to Production --></label>
         <name>copadometrics__First_Time_Promoted_to_Production__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Found in Promotion --></label>
         <name>copadometrics__Found_in_Promotion__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- User Stories (Found in Promotion) --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Lead Time --></label>
         <name>copadometrics__Lead_Time__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Lead Time (days) --></label>
         <name>copadometrics__Lead_Time_days__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Lead Time (hours) --></label>
         <name>copadometrics__Lead_Time_hours__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Lead Time (minutes) --></label>
         <name>copadometrics__Lead_Time_minutes__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Severity --></label>
         <name>copadometrics__Severity__c</name>
         <picklistValues>
             <masterLabel>P0 - Blocker - Business Disruption</masterLabel>
-            <translation></translation>
+            <translation><!-- P0 - Blocker - Business Disruption --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>P1 - Critical - No Workaround</masterLabel>
-            <translation></translation>
+            <translation><!-- P1 - Critical - No Workaround --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>P2 - Major</masterLabel>
-            <translation></translation>
+            <translation><!-- P2 - Major --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>P3 - Minor</masterLabel>
-            <translation></translation>
+            <translation><!-- P3 - Minor --></translation>
         </picklistValues>
     </fields>
+    <layouts>
+        <layout>APO User Story</layout>
+        <sections>
+            <label><!-- Acceptance --></label>
+            <section>Acceptance</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Agile content --></label>
+            <section>Agile content</section>
+        </sections>
+        <sections>
+            <label><!-- Apex Code Coverage --></label>
+            <section>Apex Code Coverage</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Definition of Done --></label>
+            <section>Definition of Done</section>
+        </sections>
+        <sections>
+            <label><!-- Estimation --></label>
+            <section>Estimation</section>
+        </sections>
+        <sections>
+            <label><!-- Header --></label>
+            <section>Header</section>
+        </sections>
+        <sections>
+            <label><!-- Last Deployment Validation Results --></label>
+            <section>Last Deployment Validation Results</section>
+        </sections>
+        <sections>
+            <label><!-- Release Controls --></label>
+            <section>Release Controls</section>
+        </sections>
+        <sections>
+            <label><!-- Resourcing --></label>
+            <section>Resourcing</section>
+        </sections>
+        <sections>
+            <label><!-- Summary Fields --></label>
+            <section>Summary Fields</section>
+        </sections>
+        <sections>
+            <label><!-- User Story selections --></label>
+            <section>User Story selections</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Bug Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Apex Code Coverage --></label>
+            <section>Apex Code Coverage</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Definition of Done (Passed or not needed) --></label>
+            <section>Definition of Done (Passed or not needed)</section>
+        </sections>
+        <sections>
+            <label><!-- Environment --></label>
+            <section>Environment</section>
+        </sections>
+        <sections>
+            <label><!-- Estimation --></label>
+            <section>Estimation</section>
+        </sections>
+        <sections>
+            <label><!-- Git Information --></label>
+            <section>Git Information</section>
+        </sections>
+        <sections>
+            <label><!-- Header --></label>
+            <section>Header</section>
+        </sections>
+        <sections>
+            <label><!-- Last Deployment Validation Results --></label>
+            <section>Last Deployment Validation Results</section>
+        </sections>
+        <sections>
+            <label><!-- Promotion Settings --></label>
+            <section>Promotion Settings</section>
+        </sections>
+        <sections>
+            <label><!-- Specifications --></label>
+            <section>Specifications</section>
+        </sections>
+        <sections>
+            <label><!-- Summary fields --></label>
+            <section>Summary fields</section>
+        </sections>
+        <sections>
+            <label><!-- User Story Selections --></label>
+            <section>User Story Selections</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Bug Layout V.17</layout>
+        <sections>
+            <label><!-- Apex Code Coverage --></label>
+            <section>Apex Code Coverage</section>
+        </sections>
+        <sections>
+            <label><!-- Approvals --></label>
+            <section>Approvals</section>
+        </sections>
+        <sections>
+            <label><!-- Compliance --></label>
+            <section>Compliance</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Deployment Flow --></label>
+            <section>Deployment Flow</section>
+        </sections>
+        <sections>
+            <label><!-- Deployment Options --></label>
+            <section>Deployment Options</section>
+        </sections>
+        <sections>
+            <label><!-- Estimation --></label>
+            <section>Estimation</section>
+        </sections>
+        <sections>
+            <label><!-- Project Management --></label>
+            <section>Project Management</section>
+        </sections>
+        <sections>
+            <label><!-- Resourcing --></label>
+            <section>Resourcing</section>
+        </sections>
+        <sections>
+            <label><!-- Specifications --></label>
+            <section>Specifications</section>
+        </sections>
+        <sections>
+            <label><!-- User Story selections --></label>
+            <section>User Story selections</section>
+        </sections>
+        <sections>
+            <label><!-- Validation Deployment Results --></label>
+            <section>Validation Deployment Results</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Copado Work Management Work Item</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Estimation --></label>
+            <section>Estimation</section>
+        </sections>
+        <sections>
+            <label><!-- Header --></label>
+            <section>Header</section>
+        </sections>
+        <sections>
+            <label><!-- Specification --></label>
+            <section>Specification</section>
+        </sections>
+        <sections>
+            <label><!-- Summary Fields --></label>
+            <section>Summary Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>IT Ops User Story Layout</layout>
+        <sections>
+            <label><!-- Acceptance --></label>
+            <section>Acceptance</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Estimation --></label>
+            <section>Estimation</section>
+        </sections>
+        <sections>
+            <label><!-- Header --></label>
+            <section>Header</section>
+        </sections>
+        <sections>
+            <label><!-- Specifications --></label>
+            <section>Specifications</section>
+        </sections>
+        <sections>
+            <label><!-- Summary fields --></label>
+            <section>Summary fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Investigation Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Estimation --></label>
+            <section>Estimation</section>
+        </sections>
+        <sections>
+            <label><!-- Header --></label>
+            <section>Header</section>
+        </sections>
+        <sections>
+            <label><!-- Specifications --></label>
+            <section>Specifications</section>
+        </sections>
+        <sections>
+            <label><!-- Summary fields --></label>
+            <section>Summary fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Investigation Layout V.17</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Estimation --></label>
+            <section>Estimation</section>
+        </sections>
+        <sections>
+            <label><!-- Project Management --></label>
+            <section>Project Management</section>
+        </sections>
+        <sections>
+            <label><!-- Specifications --></label>
+            <section>Specifications</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SFDX User Story Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Agile Information --></label>
+            <section>Agile Information</section>
+        </sections>
+        <sections>
+            <label><!-- Apex Code Coverage --></label>
+            <section>Apex Code Coverage</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Definition of Done (Passed or not needed) --></label>
+            <section>Definition of Done (Passed or not needed)</section>
+        </sections>
+        <sections>
+            <label><!-- Environment --></label>
+            <section>Environment</section>
+        </sections>
+        <sections>
+            <label><!-- Estimation --></label>
+            <section>Estimation</section>
+        </sections>
+        <sections>
+            <label><!-- Git Information --></label>
+            <section>Git Information</section>
+        </sections>
+        <sections>
+            <label><!-- Header --></label>
+            <section>Header</section>
+        </sections>
+        <sections>
+            <label><!-- Last Deployment Validation Results --></label>
+            <section>Last Deployment Validation Results</section>
+        </sections>
+        <sections>
+            <label><!-- Promotion Settings --></label>
+            <section>Promotion Settings</section>
+        </sections>
+        <sections>
+            <label><!-- Specifications --></label>
+            <section>Specifications</section>
+        </sections>
+        <sections>
+            <label><!-- Summary fields --></label>
+            <section>Summary fields</section>
+        </sections>
+        <sections>
+            <label><!-- User Story Selections --></label>
+            <section>User Story Selections</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Subtask Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Apex Code Coverage --></label>
+            <section>Apex Code Coverage</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Definition of Done (Passed or not needed) --></label>
+            <section>Definition of Done (Passed or not needed)</section>
+        </sections>
+        <sections>
+            <label><!-- Environment --></label>
+            <section>Environment</section>
+        </sections>
+        <sections>
+            <label><!-- Estimation --></label>
+            <section>Estimation</section>
+        </sections>
+        <sections>
+            <label><!-- Git Information --></label>
+            <section>Git Information</section>
+        </sections>
+        <sections>
+            <label><!-- Header --></label>
+            <section>Header</section>
+        </sections>
+        <sections>
+            <label><!-- Last Deployment Validation Results --></label>
+            <section>Last Deployment Validation Results</section>
+        </sections>
+        <sections>
+            <label><!-- Planning --></label>
+            <section>Planning</section>
+        </sections>
+        <sections>
+            <label><!-- Promotion Settings --></label>
+            <section>Promotion Settings</section>
+        </sections>
+        <sections>
+            <label><!-- Specifications --></label>
+            <section>Specifications</section>
+        </sections>
+        <sections>
+            <label><!-- User Story selections --></label>
+            <section>User Story selections</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>User Story Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Agile Information --></label>
+            <section>Agile Information</section>
+        </sections>
+        <sections>
+            <label><!-- Apex Code Coverage --></label>
+            <section>Apex Code Coverage</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Definition of Done (Passed or not needed) --></label>
+            <section>Definition of Done (Passed or not needed)</section>
+        </sections>
+        <sections>
+            <label><!-- Environment --></label>
+            <section>Environment</section>
+        </sections>
+        <sections>
+            <label><!-- Estimation --></label>
+            <section>Estimation</section>
+        </sections>
+        <sections>
+            <label><!-- Git Information --></label>
+            <section>Git Information</section>
+        </sections>
+        <sections>
+            <label><!-- Header --></label>
+            <section>Header</section>
+        </sections>
+        <sections>
+            <label><!-- Last Deployment Validation Results --></label>
+            <section>Last Deployment Validation Results</section>
+        </sections>
+        <sections>
+            <label><!-- Promotion Settings --></label>
+            <section>Promotion Settings</section>
+        </sections>
+        <sections>
+            <label><!-- Specifications --></label>
+            <section>Specifications</section>
+        </sections>
+        <sections>
+            <label><!-- Summary fields --></label>
+            <section>Summary fields</section>
+        </sections>
+        <sections>
+            <label><!-- User Story Selections --></label>
+            <section>User Story Selections</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>User Story Layout V.17</layout>
+        <sections>
+            <label><!-- Agile content --></label>
+            <section>Agile content</section>
+        </sections>
+        <sections>
+            <label><!-- Apex Code Coverage --></label>
+            <section>Apex Code Coverage</section>
+        </sections>
+        <sections>
+            <label><!-- Approvals --></label>
+            <section>Approvals</section>
+        </sections>
+        <sections>
+            <label><!-- Compliance --></label>
+            <section>Compliance</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Deployment Flow --></label>
+            <section>Deployment Flow</section>
+        </sections>
+        <sections>
+            <label><!-- Deployment Options --></label>
+            <section>Deployment Options</section>
+        </sections>
+        <sections>
+            <label><!-- Estimation --></label>
+            <section>Estimation</section>
+        </sections>
+        <sections>
+            <label><!-- Project Management --></label>
+            <section>Project Management</section>
+        </sections>
+        <sections>
+            <label><!-- Resourcing --></label>
+            <section>Resourcing</section>
+        </sections>
+        <sections>
+            <label><!-- Specifications --></label>
+            <section>Specifications</section>
+        </sections>
+        <sections>
+            <label><!-- User Story selections --></label>
+            <section>User Story selections</section>
+        </sections>
+        <sections>
+            <label><!-- Validation Deployment Results --></label>
+            <section>Validation Deployment Results</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Utility</layout>
+        <sections>
+            <label><!-- Apex Code Coverage --></label>
+            <section>Apex Code Coverage</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Deployment Flow --></label>
+            <section>Deployment Flow</section>
+        </sections>
+        <sections>
+            <label><!-- Deployment Options --></label>
+            <section>Deployment Options</section>
+        </sections>
+        <sections>
+            <label><!-- Project Management --></label>
+            <section>Project Management</section>
+        </sections>
+        <sections>
+            <label><!-- Resourcing --></label>
+            <section>Resourcing</section>
+        </sections>
+        <sections>
+            <label><!-- User Story selections --></label>
+            <section>User Story selections</section>
+        </sections>
+        <sections>
+            <label><!-- Validation Deployment Results --></label>
+            <section>Validation Deployment Results</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Submit for Approval --></label>
+        <name>Custom_Approval</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send to Slack --></label>
+        <name>Send_to_Slack</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Slack Alerts --></label>
+        <name>Slack_Alerts</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update User Story --></label>
+        <name>Update_User_Story_on_Security_Vulnerability</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Add Apex Tests --></label>
+        <name>cmcSf__Add_Apex_Tests</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Validate Changes --></label>
+        <name>copado__ValidateChanges</name>
+    </quickActions>
     <recordTypes>
-        <label></label>
+        <label><!-- APO User Story --></label>
+        <name>APO_User_Story</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- For non-development work --></description>
+        <label><!-- Copado Work Item --></label>
+        <name>IT_Operations</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record type used for SFDX user stories --></description>
+        <label><!-- SFDX User Story --></label>
+        <name>SFDX_User_Story</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Subtask --></label>
+        <name>Subtask</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Bug --></label>
         <name>copado__Bug</name>
     </recordTypes>
     <recordTypes>
-        <label></label>
+        <label><!-- Investigation --></label>
         <name>copado__Investigation</name>
     </recordTypes>
     <recordTypes>
-        <label></label>
+        <label><!-- User Story --></label>
         <name>copado__User_Story</name>
     </recordTypes>
     <recordTypes>
-        <label></label>
+        <label><!-- Utility --></label>
         <name>copado__Utility</name>
     </recordTypes>
     <startsWith>Consonant</startsWith>
     <validationRules>
-        <errorMessage></errorMessage>
-        <name>ManualTestPassRequired</name>
+        <errorMessage><!-- Please Select Document Status --></errorMessage>
+        <name>APO_DocumentStatus_Required</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
-        <name>Restrict_US_Promote_Deploy</name>
+        <errorMessage><!-- The user story must have Actual Points, Technical Specifications and a Validation Deployment before submitting for Tech Review --></errorMessage>
+        <name>APO_Ready_Tech_Review</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- Pull Request Approved and Manual Tests Passed should be true to mark user story Ready to Promote or Promote &amp; Deploy --></errorMessage>
+        <name>APO_User_Story_should_have_PR_Approval</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The record type must be Subtask --></errorMessage>
+        <name>Create_Subtask_Record_Type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please populate the Customer Version field. --></errorMessage>
+        <name>Customer_Version_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Module, Theme, Sprint, Planned and Actual Points cannot be null
+All Definition of Done section checks should be marked --></errorMessage>
+        <name>DoD_for_ReadyforPackaging_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Documentation needs to be updated prior to the feature being marked as &quot;Released&quot; --></errorMessage>
+        <name>Documentation_Completed_check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The provided format is incorrect. Please use the format: “X y” where “X” is the amount of time (number) and “y” is the unit defined in “d” (day) or “h” (hour). For example “1h”, “3d” or “1d 3h”. --></errorMessage>
+        <name>Estimated_Time_Correct_Format</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Release must be given. Set as NA if it&apos;s not applicable --></errorMessage>
+        <name>Investigation_Completed_With_No_Release</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You don&apos;t have permission to mark as Exclude from CBM or Promote_and_Deploy --></errorMessage>
+        <name>Mark_as_Exclude_from_CBM</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a release with no &quot;Released&quot; status. In case you need it, please contact the release manager or a system administrator --></errorMessage>
+        <name>Release_cannot_be_released</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The selected release does not accept more User Story because it is closed or released. Please, select the correct release for this User Story. --></errorMessage>
+        <name>Release_is_closed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A Resolution type must be given --></errorMessage>
+        <name>Resolution_type_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Subtask cannot be parent of a subtask --></errorMessage>
+        <name>Subtask_cannot_be_parent_of_a_subtask</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must add an Assignee and Test Script Owner to this user story. --></errorMessage>
+        <name>Test_Script_owner_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- All related User Story Tasks should be in &quot;Completed&quot; or &quot;Cancelled&quot; status before the parent User Story is set to &quot;Completed&quot; status. --></errorMessage>
+        <name>US_Cannot_Be_Completed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- User stories can only be added to a Sprint by a Scrum Master. Please, contact your Scrum Master for more information. --></errorMessage>
+        <name>US_added_to_a_Sprint</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A user story needs to have Project, Module and Theme set in order to be assigned to a sprint. --></errorMessage>
+        <name>User_Story_Set_Sprint_With_empty_fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A user story needs to be in Ready for Development status in order to be assigned to a sprint. --></errorMessage>
+        <name>User_Story_in_Ready_for_Development</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A cancellation reason must be given. --></errorMessage>
         <name>copado__Cancellation_reason_required</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- The credential must belong to the environment. --></errorMessage>
         <name>copado__CredentialsMustBelongToTheEnvironment</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
-        <name>copado__Excluded_User_Stories_Not_Promotable</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- This User Story does not meet the required Apex coverage threshold to be promoted. --></errorMessage>
         <name>copado__Promote_User_Story_Apex_validation</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- Test scratch orgs cannot be used for developments --></errorMessage>
         <name>copado__Test_scratch_orgs_cannot_be_used_for_dev</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- Enter a value between 0 to 100 to specify the Progress in percentage. --></errorMessage>
         <name>copado__User_Story_Progress_Range_Validation</name>
     </validationRules>
-    <validationRules>
-        <errorMessage></errorMessage>
-        <name>regression_tests_must_be_added</name>
-    </validationRules>
     <webLinks>
-        <label></label>
-        <name>DigitSec_S4_Security_Scan</name>
-    </webLinks>
-    <webLinks>
-        <label></label>
+        <label><!-- Add_Apex_Tests --></label>
         <name>copado__Add_Apex_Tests</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Add_Commits --></label>
         <name>copado__Add_Commits</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Add_Metadata --></label>
         <name>copado__Add_Metadata</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Apex_Test --></label>
         <name>copado__Apex_Test</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Assign_to_Release --></label>
         <name>copado__Assign_to_Release</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Commit_Data --></label>
         <name>copado__Commit_Data</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Commit_Files --></label>
         <name>copado__Commit_Files</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Copado_DX --></label>
         <name>copado__Copado_DX</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Create_Bundle --></label>
         <name>copado__Create_Bundle</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Create_Scratch_Org --></label>
         <name>copado__Create_Scratch_Org</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Import_to_User_Story --></label>
         <name>copado__Import_to_User_Story</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- MC_Commit_Changes --></label>
         <name>copado__MC_Commit_Changes</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Manage_Selenium_Tests --></label>
         <name>copado__Manage_Selenium_Tests</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Mass_Add_User_Stories --></label>
         <name>copado__Mass_Add_User_Stories</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Mass_Add_User_Stories_Sprint --></label>
         <name>copado__Mass_Add_User_Stories_Sprint</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Open_Org --></label>
         <name>copado__Open_Org</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Perform_Validation --></label>
         <name>copado__Perform_Validation</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Pull_Request --></label>
         <name>copado__Pull_Request</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Ready_for_Promotion --></label>
         <name>copado__Ready_for_Promotion</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Run_Compliance_Scan --></label>
         <name>copado__Run_Compliance_Scan</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Run_Static_Code_Analysis --></label>
         <name>copado__Run_Static_Code_Analysis</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Select_Base_Branch --></label>
         <name>copado__Select_Base_Branch</name>
     </webLinks>
+    <webLinks>
+        <label><!-- Static_Code_Analysis_Summary --></label>
+        <name>copado__Static_Code_Analysis_Summary</name>
+    </webLinks>
+    <workflowTasks>
+        <description><!-- Your user story is ready to test. If you only need to verify then please check and select completed in user story testing date. --></description>
+        <name>APO_User_Story_Testing</name>
+        <subject><!-- APO User Story Testing --></subject>
+    </workflowTasks>
 </CustomObjectTranslation>

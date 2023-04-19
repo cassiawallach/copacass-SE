@@ -27,7 +27,15 @@
 			whiteBackground();
 			var rootPage = sessionStorage.getItem('rootPage') || 'home';
 			selectBreadcrumb_HS();
+			openSourceObjAnswer();
         });
+
+		function openSourceObjAnswer() {
+			var urlParams = new URLSearchParams(window.location.search);
+			if (urlParams.has('sObjQ')) {
+				selectTab(1);
+			}
+		}
 
 		function whiteBackground() {
 			document.getElementById('tabWrapper').style="background-color: white !important";
@@ -100,8 +108,13 @@
 			         	var rh = rh || {};
 			    		rh.j$ = jQuery.noConflict();
 			            rh.j$(function() {
-			                rh.j$( "#faq" ).accordion({ collapsible: true, active: false, heightStyle: "content"});
-			            });    
+							var urlParams = new URLSearchParams(window.location.search);
+							if (urlParams.has('sObjQ')) {
+								rh.j$( "#faq" ).accordion({ collapsible: true, active: 6, heightStyle: "content"});
+							} else {
+								rh.j$( "#faq" ).accordion({ collapsible: true, active: false, heightStyle: "content"});
+							}
+						});
 		        	</script>
 		      
 		     

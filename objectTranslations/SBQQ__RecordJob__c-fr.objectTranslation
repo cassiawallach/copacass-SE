@@ -10,35 +10,35 @@
     </caseValues>
     <fields>
         <help>Si cette case est sélectionnée, l&apos;utilisateur a été alerté du statut terminé de la tâche de l&apos;enregistrement.</help>
-        <label></label>
+        <label><!-- Is Read --></label>
         <name>SBQQ__IsRead__c</name>
     </fields>
     <fields>
         <help>Les détails de la tâche d’arrière-plan exécutée si aucun ID de tâche n’a été spécifié.</help>
-        <label></label>
+        <label><!-- Job Details --></label>
         <name>SBQQ__JobDetails__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Job Id --></label>
         <name>SBQQ__JobId__c</name>
     </fields>
     <fields>
         <help>Le statut de la tâche d’arrière-plan exécutée si aucun ID de tâche n’a été spécifié.</help>
-        <label></label>
+        <label><!-- Job Status --></label>
         <name>SBQQ__JobStatus__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Record Id --></label>
         <name>SBQQ__RecordId__c</name>
     </fields>
     <fields>
         <help>URL de redirection utilisée une fois la tâche terminée.</help>
-        <label></label>
+        <label><!-- Redirect URL --></label>
         <name>SBQQ__RedirectUrl__c</name>
     </fields>
     <fields>
         <help>La trace de pile de la tâche exécutée en arrière-plan si aucun ID de tâche n&apos;a été spécifié.</help>
-        <label></label>
+        <label><!-- Stacktrace --></label>
         <name>SBQQ__Stacktrace__c</name>
     </fields>
     <gender>Feminine</gender>

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label></label>
+        <label><!-- Channels --></label>
         <name>copado__Channels__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Notification Name --></label>
         <name>copado__Notification_Name__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Subscribed --></label>
         <name>copado__Subscribed__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- User Default Notification --></label>
         <name>copado__User_Default_Notification__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Notification Subscriptions --></relationshipLabel>
     </fields>
 </CustomObjectTranslation>

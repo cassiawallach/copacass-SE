@@ -10,18 +10,18 @@
     </caseValues>
     <fields>
         <help>Indicateur qui informe si cette règle est active ou inactive.</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Les valeurs de cette entrée de processus déterminent la visibilité de l&apos;entrée actuelle.</help>
-        <label></label>
+        <label><!-- Master Process Input --></label>
         <name>SBQQ__MasterProcessInput__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Process Inputs Regulated --></relationshipLabel>
     </fields>
     <fields>
         <help>Sélectionnez l&apos;opérateur à utiliser lors de la comparaison des valeurs d&apos;entrée de processus.</help>
-        <label></label>
+        <label><!-- Operator --></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -62,16 +62,27 @@
     </fields>
     <fields>
         <help>Entrée de processus à laquelle la condition appartient.</help>
-        <label></label>
+        <label><!-- Process Input --></label>
         <name>SBQQ__ProcessInput__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Process Input Conditions --></relationshipLabel>
     </fields>
     <fields>
         <help>La valeur utilisée pour comparer l&apos;entrée de processus de contrôle.</help>
-        <label></label>
+        <label><!-- Value --></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Process Input Condition Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Informations sur le filtre</label>
+            <section>Filter Information</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nom des conditions d&apos;entrée de processus</nameFieldLabel>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

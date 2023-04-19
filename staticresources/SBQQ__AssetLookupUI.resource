@@ -230,8 +230,14 @@ AssetLookupCtrl.prototype.getCurrentPageItems = function() {
 
 AssetLookupCtrl.prototype.onAction = function(/*String*/ accountOrOppId, /*Boolean*/ isAmend, /*Boolean*/ retrievedPricebookId) {
 	var scope = this;
+	var assetIds = new Array();
+	this.searchModel.getSelectedAssets().forEach(function(asset){assetIds.push(asset.record.Id)});
 
-	if (isAmend && !retrievedPricebookId) {
+	if(assetIds.length == 0) {
+		scope.messages = [{severity:'error', summary:this.searchModel.customLabels['msg_asset_required']}];
+		scope.blockingOperationInProgress = false;
+	}
+	if (isAmend && !retrievedPricebookId && assetIds.length != 0) {
 		if (!scope.pricebooks) {
 			var successHandler = function(/*String*/ result) {
 				scope.pricebooks = angular.fromJson(result);
@@ -250,33 +256,41 @@ AssetLookupCtrl.prototype.onAction = function(/*String*/ accountOrOppId, /*Boole
 	scope.blockingOperationInProgress = true;
 
 	var pricebookId = isAmend ? $('#sbPricebookSelection')[0].value : null;
-	var assetIds = new Array();
-	this.searchModel.getSelectedAssets().forEach(function(asset){assetIds.push(asset.record.Id)});
+
 	console.log(this.searchModel);
 	console.log(assetIds);
+
 	if(assetIds.length == 0) {
-		scope.messages = [{severity:'error', summary:this.searchModel.customLabels['msg_contract_required']}];
+		scope.messages = [{severity:'error', summary:this.searchModel.customLabels['msg_asset_required']}];
 		scope.blockingOperationInProgress = false;
-	} else {
-	    var successHandler = function(/*String*/ result) {
-	        document.location.assign(result);
-	    }
-	    if (isAmend) {
-	        scope.assetService.amendAssets(assetIds, accountOrOppId, scope.searchModel.isAssetBased, pricebookId, successHandler, this.controller.createErrorHandler());
-	    } else {
+	}else {
+		var successHandler = function (/*String*/ result) {
+			if(sforce && sforce.one) { // LEX navigation
+				sforce.one.navigateToURL(result, true);
+			} else { // classic navigation
+				document.location.assign(result);
+			}
+		}
+		if (isAmend) {
+			scope.assetService.amendAssets(assetIds, accountOrOppId, scope.searchModel.isAssetBased, pricebookId, successHandler, this.controller.createErrorHandler());
+		} else {
 			// accountOrOppId is always account id in the else statement
-			if(this.searchModel.masterAssetId != null){
-				if(!scope.assetDatesCompatibleWithMaster()){
-					scope.messages = [{severity:'error', summary:'You have selected asset/s that have a start date after the master asset renewal end date. Deselect this asset or the master asset to continue renewal.'}];
+			if (this.searchModel.masterAssetId != null) {
+				if (!scope.assetDatesCompatibleWithMaster()) {
+					scope.messages = [{
+						severity: 'error',
+						summary: 'You have selected asset/s that have a start date after the master asset renewal end date. Deselect this asset or the master asset to continue renewal.'
+					}];
 					scope.blockingOperationInProgress = false;
-				}else{
+				} else {
 					scope.assetService.renewAssetsByMasterId(assetIds, accountOrOppId, scope.searchModel.isAssetBased, this.searchModel.masterAssetId, successHandler, this.controller.createErrorHandler());
 				}
-			}else{
+			} else {
 				scope.assetService.renewAssets(assetIds, accountOrOppId, scope.searchModel.isAssetBased, successHandler, this.controller.createErrorHandler());
 			}
-	    }
+		}
 	}
+
 }
 
 AssetLookupCtrl.prototype.assetDatesCompatibleWithMaster = function() {

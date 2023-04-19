@@ -51,13 +51,13 @@
         <label>Lookup Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>SBQQ__Operator__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>SBQQ__LookupField__c</field>
             </layoutItems>
         </layoutColumns>

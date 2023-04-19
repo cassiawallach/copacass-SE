@@ -55,11 +55,21 @@ The converted leads are identified by the &quot;isConverted&quot; system field.<
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>rh2__Batch_Process_Recurring_Activities__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If this setting is checked, Rollup Helper will update recurring Event and Task records individually through batch jobs. If this setting is unchecked, Rollup Helper will attempt to update recurring Event and Task records in bulk. Enable this setting if multiple Events or Tasks of the same recurrence type (e.g. Recurs Daily, Recurs Monthly, etc.) are targeted by a rollup.</inlineHelpText>
+        <label>Process Recurring Activities In Batches</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>rh2__Data_Load_Batch_Size__c</fullName>
         <defaultValue>200</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>The number of records per batch when a data load is performed in the environment.  Will not need to be adjusted unless the smallest number of records per batch you use when loading data in your environment is below 200.</inlineHelpText>
+        <inlineHelpText>The number of records per batch when a data load is performed in the environment.  Will not need to be adjusted unless the value is below 200.</inlineHelpText>
         <label>Data Load Batch Size</label>
         <precision>3</precision>
         <required>false</required>
@@ -159,7 +169,6 @@ The converted leads are identified by the &quot;isConverted&quot; system field.<
         <deprecated>false</deprecated>
         <description>The number of days that exceptions should be saved for before being cleaned up by Rollup Helper</description>
         <externalId>false</externalId>
-        <inlineHelpText>The number of days that exceptions should be saved for before being cleaned up by Rollup Helper.  The default value is 2 days.</inlineHelpText>
         <label>Exception Lifespan</label>
         <precision>2</precision>
         <required>false</required>
@@ -185,7 +194,7 @@ The converted leads are identified by the &quot;isConverted&quot; system field.<
         <deprecated>false</deprecated>
         <description>Checking this field removes non-essential processing such as filtering out fields that don&apos;t need to be updated.  Leave this unchecked if you only want rollups to be processed when a change is actually made to the source field. However, disabling this setting does not guarantee that rollups will not process, as other conditions can necessitate that processing occurs. Some examples are if the source object is a knowledge article, or the source object has custom formula fields.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Check this field to remove non-essential processing such as filtering out fields that don&apos;t need to be updated. Leave this unchecked to have rollups only process when a change is made to the source field and no fields used in the rollup were updated.</inlineHelpText>
+        <inlineHelpText>Leave this unchecked if you only want rollups / records to be processed where a change was actually made to the source field.  Removes non-essential processing such as filtering out fields that don&apos;t need to be updated (Can help w/ Timeout issues).</inlineHelpText>
         <label>Limit Pre Processing</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -314,7 +323,7 @@ The converted leads are identified by the &quot;isConverted&quot; system field.<
         <fullName>rh2__RecordScope__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Maximum number of records to process per asynchronous job with Rollup Helper.  This impacts the number of async calls needed to complete an asynchronous transaction.  Best to be a multiple of 5, default value is 400.</inlineHelpText>
+        <inlineHelpText>Maximum number of records to process per asynchronous job with Rollup Helper.  This impacts the number of async calls needed in order to process your entire set of records to complete an asynchronous transaction.  Best to be a multiple of 5.</inlineHelpText>
         <label>Record Scope</label>
         <precision>5</precision>
         <required>false</required>
@@ -350,7 +359,7 @@ The converted leads are identified by the &quot;isConverted&quot; system field.<
         <fullName>rh2__Rollups_Per_Async__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>This setting modifies the number of rollups processed per asynchronous job request.  This should generally be set to the highest count of rollups which share the same source object, target object, and filter.</inlineHelpText>
+        <inlineHelpText>This setting modifies the number of rollups processed per asynchronous job request.</inlineHelpText>
         <label>Rollups Per Asynchronous Request</label>
         <precision>2</precision>
         <required>false</required>
@@ -382,6 +391,30 @@ The converted leads are identified by the &quot;isConverted&quot; system field.<
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>rh2__SortDirection__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The sort direction to be used on the all rollups page. This value is set per user after sorting a column on the all rollups page.</inlineHelpText>
+        <label>Sort Direction</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>rh2__SortField__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The sort direction to be used on the all rollups page. This value is set per user after sorting a column on the all rollups page.</inlineHelpText>
+        <label>Sort Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>rh2__Static_Asynchronous_Processing_Enabled__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
@@ -405,7 +438,7 @@ The converted leads are identified by the &quot;isConverted&quot; system field.<
         <defaultValue>90</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Determines the percentage of package specific limit usage at which Rollup Helper should switch to asynchronous processing.  It is generally not recommended to lower this value below 60%, and the default is 90%.</inlineHelpText>
+        <inlineHelpText>Determines the percentage of governor limit usage at which Rollup Helper should switch to asynchronous processing.  It is generally not recommended to lower this value below 60%.</inlineHelpText>
         <label>Usage % of Limits</label>
         <precision>3</precision>
         <required>false</required>
@@ -481,7 +514,7 @@ The converted leads are identified by the &quot;isConverted&quot; system field.<
         <deprecated>false</deprecated>
         <description>This checkbox will cause Rollup Helper to only process queued asynchronous requests for the user that initiated the asynchronous request. If there is a queue record for a user that is not the Modified By user then the queue record will not be processed until a scheduled class runs the queue record or the user associated with the queue record adds an item to the Rollup Helper queue.</description>
         <externalId>false</externalId>
-        <inlineHelpText>This checkbox will cause Rollup Helper to only process queued asynchronous requests for the user that initiated the asynchronous request. Enabling this setting may be necessary if there are parent objects that have custom field-level security checks or have field-level security checks from a third-party managed package.</inlineHelpText>
+        <inlineHelpText>This checkbox will cause Rollup Helper to only process queued asynchronous requests for the user that initiated the asynchronous request.</inlineHelpText>
         <label>Process Queue Items Based On Modified By</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>

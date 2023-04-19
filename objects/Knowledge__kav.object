@@ -18,58 +18,37 @@
             <template>Toc</template>
         </articleTypeTemplates>
     </articleTypeChannelDisplay>
-    <compactLayoutAssignment>Knowledgekav</compactLayoutAssignment>
-    <compactLayouts>
-        <fullName>Knowledgekav</fullName>
-        <fields>Title</fields>
-        <fields>ArticleNumber</fields>
-        <fields>VersionNumber</fields>
-        <fields>IsLatestVersion</fields>
-        <fields>LastModifiedDate</fields>
-        <fields>PublishStatus</fields>
-        <fields>Language</fields>
-        <label>Formato de Knowledge (Preconfigurado)</label>
-    </compactLayouts>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
-    <externalSharingModel>Private</externalSharingModel>
     <fields>
-        <fullName>Content__c</fullName>
+        <fullName>Body__c</fullName>
         <externalId>false</externalId>
-        <inlineHelpText>Indicate what information is provided in basic articles. You can create additional fields to further structure article content.</inlineHelpText>
-        <label>Content</label>
-        <length>32768</length>
+        <label>Body</label>
+        <length>131072</length>
         <type>Html</type>
-        <visibleLines>20</visibleLines>
+        <visibleLines>30</visibleLines>
     </fields>
     <fields>
-        <fullName>DigitalEngagementResponse__c</fullName>
+        <fullName>HelpDocs_Id__c</fullName>
         <externalId>false</externalId>
-        <inlineHelpText>Provide a short response for digital engagement channels like Chat, Messaging, Social, and Bots.</inlineHelpText>
-        <label>Digital Engagement Response</label>
+        <label>HelpDocs Id</label>
         <length>255</length>
         <required>false</required>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>InternalNotes__c</fullName>
+        <fullName>Known_Issue__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
-        <inlineHelpText>Provide any internal notes.  Notes are only visible to specific internal user profiles and aren’t shared with external user profiles when the article is shared externally.</inlineHelpText>
-        <label>Internal Notes</label>
-        <length>32768</length>
-        <type>Html</type>
-        <visibleLines>20</visibleLines>
-    </fields>
-    <fields>
-        <fullName>Question__c</fullName>
-        <externalId>false</externalId>
-        <inlineHelpText>Describe the question or issue that this article answers.</inlineHelpText>
-        <label>Question</label>
-        <length>32768</length>
-        <type>Html</type>
-        <visibleLines>20</visibleLines>
+        <label>Known Issue</label>
+        <referenceTo>Known_Issue__c</referenceTo>
+        <relationshipLabel>Knowledge</relationshipLabel>
+        <relationshipName>Knowledge</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
     </fields>
     <label>Knowledge</label>
     <listViews>
@@ -116,6 +95,9 @@
         <columns>ABSTRACT</columns>
         <columns>ARTICLE_NUMBER</columns>
         <columns>LANGUAGE</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>IS_CHANNEL_CSP</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>PUBLISH_STATUS</field>
@@ -130,6 +112,10 @@
         <label>Published Articles</label>
     </listViews>
     <pluralLabel>Knowledge</pluralLabel>
+    <recordTypes>
+        <fullName>Support</fullName>
+        <active>true</active>
+        <label>Support</label>
+    </recordTypes>
     <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

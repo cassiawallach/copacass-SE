@@ -238,16 +238,6 @@
                     <default>false</default>
                     <label>Data Population Batch Log</label>
                 </value>
-                <value>
-                    <fullName>Scheduled Data Population Log</fullName>
-                    <default>false</default>
-                    <label>Scheduled Data Population Log</label>
-                </value>
-                <value>
-                    <fullName>Picklist Values Population</fullName>
-                    <default>false</default>
-                    <label>Picklist Values Population</label>
-                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -255,9 +245,9 @@
     <listViews>
         <fullName>Q9__All</fullName>
         <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
         <columns>Q9__Type__c</columns>
-        <columns>Q9__ObjectName__c</columns>
-        <columns>Q9__RecordType__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

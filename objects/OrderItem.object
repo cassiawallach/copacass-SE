@@ -104,6 +104,25 @@
         <fullName>AvailableQuantity</fullName>
     </fields>
     <fields>
+        <fullName>Deferred_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+ AND(
+  UnitPrice &gt; 0,
+  AND( Order.EffectiveDate &lt;=TODAY(),  Order.Contract.EndDate &gt;TODAY())
+ ),
+((Order.Contract.EndDate+1)-TODAY()) / ((Order.Contract.EndDate+1)-Order.EffectiveDate) * UnitPrice,
+0
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Deferred Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>Description</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -132,6 +151,21 @@
     <fields>
         <fullName>Quantity</fullName>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>QuoteLineItemId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Recurring_Monthly_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurring Monthly Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
     </fields>
     <fields>
         <fullName>SBQQ__Activated__c</fullName>
@@ -428,6 +462,62 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>SBQQ__PricingMethod__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Determines how the price for this line item is set. &quot;List&quot; = calculated by subtracting discount from list price. &quot;Cost&quot;  = calculated by adding markup to cost.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates how the price for this line item is calculated. &quot;List&quot; = subtracting discount from list price. &quot;Cost&quot; = adding markup to cost.</inlineHelpText>
+        <label>Pricing Method</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>List</fullName>
+                    <default>true</default>
+                    <label>List</label>
+                </value>
+                <value>
+                    <fullName>Cost</fullName>
+                    <default>false</default>
+                    <label>Cost</label>
+                </value>
+                <value>
+                    <fullName>Block</fullName>
+                    <default>false</default>
+                    <label>Block</label>
+                </value>
+                <value>
+                    <fullName>Percent Of Total</fullName>
+                    <default>false</default>
+                    <label>Percent Of Total</label>
+                </value>
+                <value>
+                    <fullName>Custom</fullName>
+                    <default>false</default>
+                    <label>Custom</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ProductSubscriptionType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Set the order item&apos;s product subscription type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set the order item&apos;s product subscription type.</inlineHelpText>
+        <label>Product Subscription Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>SBQQ__SubscriptionType</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>SBQQ__ProrateMultiplier__c</fullName>
         <deprecated>false</deprecated>
         <description>Calculated ratio used to compute Prorated Price.</description>
@@ -569,7 +659,7 @@
     <fields>
         <fullName>SBQQ__SubscriptionPricing__c</fullName>
         <deprecated>false</deprecated>
-        <description>Determines how the subscription on this line item is priced. Blank value means this line contains product that&apos;s not a subscription.</description>
+        <description>Method of calculating the subscription price. A blank value indicates that the line item isn&apos;t a subscription product.</description>
         <externalId>false</externalId>
         <inlineHelpText>Indicates how the subscription price is calculated. If this is blank, the line items is not a subscription product.</inlineHelpText>
         <label>Subscription Pricing</label>
@@ -592,6 +682,36 @@
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__SubscriptionType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates the subscription type to determine contract&apos;s pricing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the subscription type to determine contract&apos;s pricing.</inlineHelpText>
+        <label>Subscription Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>SBQQ__ProductSubscriptionType__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetName>SBQQ__SubscriptionType</valueSetName>
+            <valueSettings>
+                <controllingFieldValue>Renewable</controllingFieldValue>
+                <controllingFieldValue>Renewable/Evergreen</controllingFieldValue>
+                <valueName>Renewable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>One-time</controllingFieldValue>
+                <valueName>One-time</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Renewable/Evergreen</controllingFieldValue>
+                <controllingFieldValue>Evergreen</controllingFieldValue>
+                <valueName>Evergreen</valueName>
+            </valueSettings>
+        </valueSet>
     </fields>
     <fields>
         <fullName>SBQQ__Subscription__c</fullName>
@@ -659,6 +779,19 @@
         <required>false</required>
         <trackHistory>false</trackHistory>
         <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__TotalAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total amount with tax included</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total amount with tax included</inlineHelpText>
+        <label>Total Amount (With Tax)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
     </fields>
     <fields>
         <fullName>SBQQ__UnproratedNetPrice__c</fullName>

@@ -5,12 +5,16 @@
         <value>検索インデックス</value>
     </caseValues>
     <fields>
-        <label></label>
-        <name>SBQQ__Localization__c</name>
-        <relationshipLabel></relationshipLabel>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Localization --></label>
+        <name>SBQQ__Localization__c</name>
+        <relationshipLabel><!-- Search Index --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <nameFieldLabel>名前</nameFieldLabel>

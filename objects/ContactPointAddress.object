@@ -142,18 +142,6 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>AddressFirstName</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>AddressLastName</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>AddressMiddleName</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
         <fullName>AddressType</fullName>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
@@ -168,10 +156,6 @@
     </fields>
     <fields>
         <fullName>BestTimeToContactTimezone</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>CompanyName</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
@@ -199,10 +183,6 @@
         <fullName>ParentId</fullName>
         <trackHistory>false</trackHistory>
         <type>MasterDetail</type>
-    </fields>
-    <fields>
-        <fullName>PhoneNumber</fullName>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>PreferenceRank</fullName>

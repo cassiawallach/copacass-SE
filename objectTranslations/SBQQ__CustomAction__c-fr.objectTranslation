@@ -9,8 +9,12 @@
         <value>Actions personnalisées</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>Action exécutée par cette action personnalisée.</help>
-        <label></label>
+        <label><!-- Action --></label>
         <name>SBQQ__Action__c</name>
         <picklistValues>
             <masterLabel>Add Favorites</masterLabel>
@@ -114,7 +118,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Modify Quote Terms</masterLabel>
-            <translation>Modifier les clauses du devis</translation>
+            <translation>Modifier les durées de devis</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Optional: All</masterLabel>
@@ -169,16 +173,12 @@
             <translation>Enregistrer</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Save and Navigate</masterLabel>
-            <translation>Enregistrer et naviguer</translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Ungroup</masterLabel>
             <translation>Dissocier</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Upgrade Assets</masterLabel>
-            <translation>Actifs de mise à niveau</translation>
+            <translation>Mettre à niveau les ressources</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>View</masterLabel>
@@ -191,22 +191,22 @@
     </fields>
     <fields>
         <help>Sélectionnez la case pour rendre cette action disponible.</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Indique que cette action personnalisée est un bouton de marque. Affecte uniquement les styles des actions non imbriquées.</help>
-        <label></label>
+        <label><!-- Brand Button --></label>
         <name>SBQQ__BrandButton__c</name>
     </fields>
     <fields>
         <help>Classe CSS de l&apos;action personnalisée pour faciliter l&apos;identification en HTML.</help>
-        <label></label>
+        <label><!-- Class --></label>
         <name>SBQQ__Class__c</name>
     </fields>
     <fields>
         <help>Sélectionnez le comportement de vos conditions : Toutes correspond à AND, N&apos;importe correspond à OR.</help>
-        <label></label>
+        <label><!-- Conditions Met --></label>
         <name>SBQQ__ConditionsMet__c</name>
         <picklistValues>
             <masterLabel>All</masterLabel>
@@ -219,32 +219,32 @@
     </fields>
     <fields>
         <help>Sélectionnez cette case pour définir l&apos;action en tant qu&apos;action de remplacement par défaut.</help>
-        <label></label>
+        <label><!-- Default --></label>
         <name>SBQQ__Default__c</name>
     </fields>
     <fields>
         <help>Saisissez la valeur que vous souhaitez afficher lorsqu&apos;un utilisateur survole le bouton Action personnalisée.</help>
-        <label></label>
+        <label><!-- Description --></label>
         <name>SBQQ__Description__c</name>
     </fields>
     <fields>
         <help>L&apos;ordre d&apos;affichage de cette action dans l&apos;interface utilisateur.</help>
-        <label></label>
+        <label><!-- Display Order --></label>
         <name>SBQQ__DisplayOrder__c</name>
     </fields>
     <fields>
         <help>Nom de la méthode du gestionnaire de clics de cette action personnalisée.</help>
-        <label></label>
+        <label><!-- Event Handler Name --></label>
         <name>SBQQ__EventHandlerName__c</name>
     </fields>
     <fields>
         <help>Nom de la classe CSS de l&apos;icône de cette action personnalisée.</help>
-        <label></label>
+        <label><!-- Icon Class --></label>
         <name>SBQQ__IconClass__c</name>
     </fields>
     <fields>
         <help>Icône de cette action personnalisée</help>
-        <label></label>
+        <label><!-- Icon --></label>
         <name>SBQQ__Icon__c</name>
         <picklistValues>
             <masterLabel>3dots</masterLabel>
@@ -300,7 +300,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>bold</masterLabel>
-            <translation>gras</translation>
+            <translation>bold</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>builder</masterLabel>
@@ -888,7 +888,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>underline</masterLabel>
-            <translation>souligné</translation>
+            <translation>underline</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>undo</masterLabel>
@@ -929,7 +929,7 @@
     </fields>
     <fields>
         <help>Étiquette de cette action affichée dans l&apos;interface utilisateur.</help>
-        <label></label>
+        <label><!-- Label --></label>
         <name>SBQQ__Label__c</name>
         <picklistValues>
             <masterLabel>Add Favorites</masterLabel>
@@ -1033,7 +1033,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Modify Quote Terms</masterLabel>
-            <translation>Modifier les clauses du devis</translation>
+            <translation>Modifier les durées de devis</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Optional: All</masterLabel>
@@ -1089,7 +1089,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Upgrade Assets</masterLabel>
-            <translation>Actifs de mise à niveau</translation>
+            <translation>Mettre à niveau les ressources</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>View</masterLabel>
@@ -1102,7 +1102,7 @@
     </fields>
     <fields>
         <help>Emplacement de cette action sur la page.</help>
-        <label></label>
+        <label><!-- Location --></label>
         <name>SBQQ__Location__c</name>
         <picklistValues>
             <masterLabel>Account Panel</masterLabel>
@@ -1151,12 +1151,12 @@
     </fields>
     <fields>
         <help>Nom de la page de cette action personnalisée.</help>
-        <label></label>
+        <label><!-- Page Handler Name --></label>
         <name>SBQQ__PageHandlerName__c</name>
     </fields>
     <fields>
         <help>La page à laquelle ajouter l&apos;action personnalisée.</help>
-        <label></label>
+        <label><!-- Page --></label>
         <name>SBQQ__Page__c</name>
         <picklistValues>
             <masterLabel>Account Detail</masterLabel>
@@ -1193,18 +1193,18 @@
     </fields>
     <fields>
         <help>Référence à l&apos;action personnalisée parente sous laquelle cette action est regroupée.</help>
-        <label></label>
+        <label><!-- Parent Custom Action --></label>
         <name>SBQQ__ParentCustomAction__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Custom Actions --></relationshipLabel>
     </fields>
     <fields>
         <help>URL à laquelle revenir après une exécution réussie. Ne s&apos;applique pas à toutes les actions.</help>
-        <label></label>
+        <label><!-- Return URL --></label>
         <name>SBQQ__ReturnURL__c</name>
     </fields>
     <fields>
         <help>Objet ciblé par cette action.</help>
-        <label></label>
+        <label><!-- Target Object --></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Asset</masterLabel>
@@ -1225,7 +1225,7 @@
     </fields>
     <fields>
         <help>Élément de l&apos;interface utilisateur sous lequel cette action personnalisée est restituée.</help>
-        <label></label>
+        <label><!-- Type --></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Button</masterLabel>
@@ -1242,7 +1242,7 @@
     </fields>
     <fields>
         <help>Méthode de navigation jusqu&apos;à l&apos;URL.</help>
-        <label></label>
+        <label><!-- URL Target --></label>
         <name>SBQQ__URLTarget__c</name>
         <picklistValues>
             <masterLabel>Popup</masterLabel>
@@ -1255,18 +1255,29 @@
     </fields>
     <fields>
         <help>Spécifiez l&apos;URL à laquelle accéder. Vous pouvez accéder aux champs Lignes, Groupes et Enregistrement de devis, selon l&apos;emplacement sélectionné. Exemples : http://www.salesforce.com, http://www.yoursite.com/{!Id}, or /{!SBQQ__Quote__c.Name}/{!SBQQ__YourCustomVar__c}</help>
-        <label></label>
+        <label><!-- URL --></label>
         <name>SBQQ__URL__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Custom Action Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Présentation</label>
+            <section>Layout</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nom</nameFieldLabel>
     <startsWith>Vowel</startsWith>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- URL can&apos;t be empty for Custom Action &quot;Save and Navigate&quot; --></errorMessage>
         <name>SBQQ__Non_empty_URL_for_Save_and_Navigate</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- URL target needs to be Replace Page for Custom Action &quot;Save and Navigate&quot; --></errorMessage>
         <name>SBQQ__URLTarget_for_Save_and_Navigate</name>
     </validationRules>
 </CustomObjectTranslation>

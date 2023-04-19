@@ -2,7 +2,7 @@
 "use strict";
 
 System.register("perfMetrics/MetricsService.js", [], function (_export, _context) {
-	var _slicedToArray, _createClass, CORE_LOG_NAME, CORE_LOG_ENDPOINT, METRICSSERVICE_VERSION, IDLE_RETRIES, MetricsService;
+	var _slicedToArray, _createClass, CORE_LOG_NAME, CORE_LOG_ENDPOINT, METRICSSERVICE_VERSION, IDLE_RETRIES, API_VERSION, MetricsService;
 
 	function _classCallCheck(instance, Constructor) {
 		if (!(instance instanceof Constructor)) {
@@ -77,9 +77,15 @@ System.register("perfMetrics/MetricsService.js", [], function (_export, _context
 
 			_export("IDLE_RETRIES", IDLE_RETRIES);
 
+			API_VERSION = 56;
+
 			_export("MetricsService", MetricsService = function () {
 				function MetricsService() {
+					var salesforceBaseUrl = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
 					_classCallCheck(this, MetricsService);
+
+					this.salesforceBaseUrl = salesforceBaseUrl;
 				}
 
 				_createClass(MetricsService, [{
@@ -377,34 +383,49 @@ System.register("perfMetrics/MetricsService.js", [], function (_export, _context
 				}, {
 					key: "_logMetrics",
 					value: function _logMetrics() {
+						var retry = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
 						if (window.sb.MetricsService.currentPage.ept < 150) {
 							return;
 						}
 
-						var hostname = this._normalizeApiHost(location.host);
-						var url = location.protocol + "//" + hostname + CORE_LOG_ENDPOINT;
+						if (!this.salesforceBaseUrl) {
+							return;
+						}
+						var url = this.salesforceBaseUrl + CORE_LOG_ENDPOINT;
 
 						var xhr = new XMLHttpRequest();
 						xhr.withCredentials = true;
 						xhr.open("POST", url, true);
 
+						var self = this;
 						xhr.onreadystatechange = function () {
 							if (xhr.readyState == XMLHttpRequest.DONE) {
 								if (xhr.status == 200) {
 									console.log("CPQ Performance Metrics service Successfully logged");
 								} else {
-									console.log("Error while logging CPQ Performance Metrics Service:");
-									console.log(xhr.getAllResponseHeaders());
+									if (retry) {
+										console.log("Error while logging CPQ Performance Metrics Service:");
+										console.log(xhr.getAllResponseHeaders());
+										return;
+									}
+
+									console.log("Logging failed, trying on different endpoint..");
+									var hostname = self._normalizeApiHost(location.host);
+									var url = location.protocol + "//" + hostname;
+									self.salesforceBaseUrl = url;
+									self._logMetrics(true);
 								}
 							}
 						};
 
 						var defaultAttrs = {
 							"pkgVersion": window.sb.pkgVersion,
-							"apiVersion": window.sb.common.core.AppContext.org.apiVersion,
+							"apiVersion": API_VERSION,
 							"url": window.sb.MetricsService.currentPage.page.attributes.url,
 							"pageStartTime": window.sb.MetricsService.currentPage.pageStartTime,
-							"version": METRICSSERVICE_VERSION
+							"version": METRICSSERVICE_VERSION,
+							"polymerVersion": "P1"
 						};
 
 						if (this._externalLogMetrics) Object.assign(defaultAttrs, this._externalLogMetrics);

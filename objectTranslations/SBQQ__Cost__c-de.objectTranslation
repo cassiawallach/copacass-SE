@@ -42,20 +42,27 @@
     </caseValues>
     <fields>
         <help>Aktivieren Sie dieses Kontrollkästchen, um die Kosten zu aktivieren.</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Produkt, das mit diesen Kosten verknüpft ist.</help>
-        <label></label>
+        <label><!-- Product --></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Costs --></relationshipLabel>
     </fields>
     <fields>
         <help>Geben Sie die Stückkosten ein.</help>
-        <label></label>
+        <label><!-- Unit Cost --></label>
         <name>SBQQ__UnitCost__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Cost Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Kosten – Nummer</nameFieldLabel>
 </CustomObjectTranslation>

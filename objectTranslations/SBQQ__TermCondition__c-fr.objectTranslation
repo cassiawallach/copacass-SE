@@ -9,13 +9,17 @@
         <value>Conditions de la durée</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>Attribuez une valeur unique à cette condition pour la référencer dans la Condition avancée de durée du devis.</help>
-        <label></label>
+        <label><!-- Index --></label>
         <name>SBQQ__Index__c</name>
     </fields>
     <fields>
         <help>Choisissez un opérateur pour ce champ.</help>
-        <label></label>
+        <label><!-- Operator --></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -56,13 +60,13 @@
     </fields>
     <fields>
         <help>Durée parente de cette durée.</help>
-        <label></label>
+        <label><!-- Quote Term --></label>
         <name>SBQQ__QuoteTerm__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Term Conditions --></relationshipLabel>
     </fields>
     <fields>
         <help>Champ dans l&apos;objet de devis utilisé pour tester cette condition.</help>
-        <label></label>
+        <label><!-- Tested Field --></label>
         <name>SBQQ__TestedField__c</name>
         <picklistValues>
             <masterLabel>Customer Amount</masterLabel>
@@ -83,24 +87,31 @@
     </fields>
     <fields>
         <help>Variable de synthèse utilisée dans le test de cette condition.</help>
-        <label></label>
+        <label><!-- Tested Variable --></label>
         <name>SBQQ__TestedVariable__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Term Conditions --></relationshipLabel>
     </fields>
     <fields>
         <help>Valeur par rapport à laquelle le test est effectué.</help>
-        <label></label>
+        <label><!-- Value --></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Term Condition Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>N° de condition</nameFieldLabel>
     <startsWith>Consonant</startsWith>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- You may not select both field and variable to test. Create separate conditions to test against field and variable. --></errorMessage>
         <name>SBQQ__Field_and_Variable</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- You must select either field or variable to test. --></errorMessage>
         <name>SBQQ__Field_or_Variable</name>
     </validationRules>
 </CustomObjectTranslation>

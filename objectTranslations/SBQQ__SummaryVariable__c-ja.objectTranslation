@@ -5,17 +5,45 @@
         <value>サマリー変数</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>集計関数に作用される見積品目項目。</help>
-        <label></label>
+        <label><!-- Aggregate Field --></label>
         <name>SBQQ__AggregateField__c</name>
+        <picklistValues>
+            <masterLabel>Default_Net_Total__c</masterLabel>
+            <translation><!-- Default_Net_Total__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly_net_total_for_Renewal__c</masterLabel>
+            <translation><!-- Monthly_net_total_for_Renewal__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net_Unit_Price__c</masterLabel>
+            <translation><!-- Net_Unit_Price__c --></translation>
+        </picklistValues>
         <picklistValues>
             <masterLabel>Quantity</masterLabel>
             <translation>数量</translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__ListPrice__c</masterLabel>
+            <translation><!-- SBQQ__ListPrice__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__NetPrice__c</masterLabel>
+            <translation><!-- SBQQ__NetPrice__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__NetTotal__c</masterLabel>
+            <translation><!-- SBQQ__NetTotal__c --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <help>この変数の計算に使用される集計関数。</help>
-        <label></label>
+        <label><!-- Aggregate Function --></label>
         <name>SBQQ__AggregateFunction__c</name>
         <picklistValues>
             <masterLabel>Average</masterLabel>
@@ -40,13 +68,13 @@
     </fields>
     <fields>
         <help>条件が 2 つのサマリー変数の結果に基づいている場合、このサマリー変数と共に構成元となるサマリー変数。</help>
-        <label></label>
+        <label><!-- Variable Element --></label>
         <name>SBQQ__CombineWith__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Composed By --></relationshipLabel>
     </fields>
     <fields>
         <help>この変数が変数要素または値要素でどのように構成されるのかを指定します。</help>
-        <label></label>
+        <label><!-- Composite Operator --></label>
         <name>SBQQ__CompositeOperator__c</name>
         <picklistValues>
             <masterLabel>Add</masterLabel>
@@ -67,7 +95,7 @@
     </fields>
     <fields>
         <help>見積項目に基づいてレコードをさらに制限する場合、見積の同じ項目に対して照合する項目を選択します。</help>
-        <label></label>
+        <label><!-- Constraint Field --></label>
         <name>SBQQ__ConstraintField__c</name>
         <picklistValues>
             <masterLabel>Status</masterLabel>
@@ -80,8 +108,20 @@
     </fields>
     <fields>
         <help>このサマリー変数に含める項目を絞り込むときに使用する項目を選択します。</help>
-        <label></label>
+        <label><!-- Filter Field --></label>
         <name>SBQQ__FilterField__c</name>
+        <picklistValues>
+            <masterLabel>ACV_Segment_Index__c</masterLabel>
+            <translation><!-- ACV_Segment_Index__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exclude_for_PSup_Product__c</masterLabel>
+            <translation><!-- Exclude_for_PSup_Product__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non_Segmented_or_Non_Subscription__c</masterLabel>
+            <translation><!-- Non_Segmented_or_Non_Subscription__c --></translation>
+        </picklistValues>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
             <translation>商品コード</translation>
@@ -90,15 +130,27 @@
             <masterLabel>Product Family</masterLabel>
             <translation>商品ファミリ</translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__PricingMethod__c</masterLabel>
+            <translation><!-- SBQQ__PricingMethod__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__SegmentIndex__c</masterLabel>
+            <translation><!-- SBQQ__SegmentIndex__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__SubscriptionCategory__c</masterLabel>
+            <translation><!-- SBQQ__SubscriptionCategory__c --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <help>この条件で照合する値を入力します。</help>
-        <label></label>
+        <label><!-- Filter Value --></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>条件で使用する演算子を選択します。</help>
-        <label></label>
+        <label><!-- Operator --></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -139,7 +191,7 @@
     </fields>
     <fields>
         <help>サマリー変数の範囲を入力します。</help>
-        <label></label>
+        <label><!-- Scope --></label>
         <name>SBQQ__Scope__c</name>
         <picklistValues>
             <masterLabel>Assets</masterLabel>
@@ -152,7 +204,7 @@
     </fields>
     <fields>
         <help>集計するオブジェクトを選択します。</help>
-        <label></label>
+        <label><!-- Target Object --></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Asset</masterLabel>
@@ -173,8 +225,23 @@
     </fields>
     <fields>
         <help>構成操作で使用する値を入力します。</help>
-        <label></label>
+        <label><!-- Value Element --></label>
         <name>SBQQ__ValueElement__c</name>
     </fields>
+    <layouts>
+        <layout>Summary Variable Layout</layout>
+        <sections>
+            <label>複合情報</label>
+            <section>Composite Information</section>
+        </sections>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>条件情報</label>
+            <section>Filter Information</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>変数名</nameFieldLabel>
 </CustomObjectTranslation>

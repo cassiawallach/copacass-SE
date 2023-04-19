@@ -9,17 +9,45 @@
         <value>Variables de synthèse</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>Champ Ligne de devis auquel la fonction d&apos;agrégation s&apos;applique.</help>
-        <label></label>
+        <label><!-- Aggregate Field --></label>
         <name>SBQQ__AggregateField__c</name>
+        <picklistValues>
+            <masterLabel>Default_Net_Total__c</masterLabel>
+            <translation><!-- Default_Net_Total__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly_net_total_for_Renewal__c</masterLabel>
+            <translation><!-- Monthly_net_total_for_Renewal__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net_Unit_Price__c</masterLabel>
+            <translation><!-- Net_Unit_Price__c --></translation>
+        </picklistValues>
         <picklistValues>
             <masterLabel>Quantity</masterLabel>
             <translation>Quantité</translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__ListPrice__c</masterLabel>
+            <translation><!-- SBQQ__ListPrice__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__NetPrice__c</masterLabel>
+            <translation><!-- SBQQ__NetPrice__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__NetTotal__c</masterLabel>
+            <translation><!-- SBQQ__NetTotal__c --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <help>Fonction d&apos;agrégation utilisée pour calculer cette variable.</help>
-        <label></label>
+        <label><!-- Aggregate Function --></label>
         <name>SBQQ__AggregateFunction__c</name>
         <picklistValues>
             <masterLabel>Average</masterLabel>
@@ -44,13 +72,13 @@
     </fields>
     <fields>
         <help>Une autre variable de synthèse à composer avec cette variable de synthèse si votre condition est basée sur les deux résultats.</help>
-        <label></label>
+        <label><!-- Variable Element --></label>
         <name>SBQQ__CombineWith__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Composed By --></relationshipLabel>
     </fields>
     <fields>
         <help>Spécifiez comment cette variable doit être composée avec l&apos;Élément de variable ou l&apos;Élément de valeur.</help>
-        <label></label>
+        <label><!-- Composite Operator --></label>
         <name>SBQQ__CompositeOperator__c</name>
         <picklistValues>
             <masterLabel>Add</masterLabel>
@@ -71,7 +99,7 @@
     </fields>
     <fields>
         <help>Si vous souhaitez limiter davantage les enregistrements en fonction d&apos;un champ de devis, sélectionnez le champ que vous souhaitez comparer au champ équivalent dans le devis.</help>
-        <label></label>
+        <label><!-- Constraint Field --></label>
         <name>SBQQ__ConstraintField__c</name>
         <picklistValues>
             <masterLabel>Status</masterLabel>
@@ -84,8 +112,20 @@
     </fields>
     <fields>
         <help>Sélectionnez le champ à utiliser lors du filtrage des éléments à inclure dans cette variable de synthèse.</help>
-        <label></label>
+        <label><!-- Filter Field --></label>
         <name>SBQQ__FilterField__c</name>
+        <picklistValues>
+            <masterLabel>ACV_Segment_Index__c</masterLabel>
+            <translation><!-- ACV_Segment_Index__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exclude_for_PSup_Product__c</masterLabel>
+            <translation><!-- Exclude_for_PSup_Product__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non_Segmented_or_Non_Subscription__c</masterLabel>
+            <translation><!-- Non_Segmented_or_Non_Subscription__c --></translation>
+        </picklistValues>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
             <translation>Code produit</translation>
@@ -94,15 +134,27 @@
             <masterLabel>Product Family</masterLabel>
             <translation>Famille de produits</translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__PricingMethod__c</masterLabel>
+            <translation><!-- SBQQ__PricingMethod__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__SegmentIndex__c</masterLabel>
+            <translation><!-- SBQQ__SegmentIndex__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__SubscriptionCategory__c</masterLabel>
+            <translation><!-- SBQQ__SubscriptionCategory__c --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <help>Saisissez la valeur qui doit correspondre dans ce filtre.</help>
-        <label></label>
+        <label><!-- Filter Value --></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>Sélectionnez l&apos;opérateur à utiliser dans votre filtre.</help>
-        <label></label>
+        <label><!-- Operator --></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -143,7 +195,7 @@
     </fields>
     <fields>
         <help>Saisissez l&apos;étendue de votre variable de synthèse.</help>
-        <label></label>
+        <label><!-- Scope --></label>
         <name>SBQQ__Scope__c</name>
         <picklistValues>
             <masterLabel>Assets</masterLabel>
@@ -156,7 +208,7 @@
     </fields>
     <fields>
         <help>Sélectionnez l&apos;objet que vous souhaitez agréger.</help>
-        <label></label>
+        <label><!-- Target Object --></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Asset</masterLabel>
@@ -177,10 +229,25 @@
     </fields>
     <fields>
         <help>Saisissez la valeur à utiliser dans l&apos;opération de composition.</help>
-        <label></label>
+        <label><!-- Value Element --></label>
         <name>SBQQ__ValueElement__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Summary Variable Layout</layout>
+        <sections>
+            <label>Informations sur la composition</label>
+            <section>Composite Information</section>
+        </sections>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Informations sur le filtre</label>
+            <section>Filter Information</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nom de la variable</nameFieldLabel>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

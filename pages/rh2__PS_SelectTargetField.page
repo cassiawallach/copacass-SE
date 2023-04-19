@@ -74,7 +74,7 @@
             </div>
         </apex:outputPanel>
         <div class="slds-card grayBackground">
-            <header class="slds-card__header slds-text-heading_small">
+            <header class="slds-card__header slds-text-heading_medium">
                 {!$Label.Step2SelectTargetField}
             </header>
             <header class="slds-card__header">
@@ -104,7 +104,7 @@
                 <div class="creationSelect half-width pad-left">
                     <apex:selectRadio styleClass="slds-input padded-rows-in-table" value="{!fieldFormStatus}" layout="">
                         <apex:selectOptions value="{!fieldOptions}"/>
-                        <apex:actionSupport event="onchange" reRender="createExistingSelector"/>
+                        <apex:actionSupport event="onchange" reRender="createExistingSelector" status="loading"/>
                     </apex:selectRadio>                    
                 </div>
                 <apex:outputPanel id="createFieldContainer" rendered="{!shouldRenderCreatingField}">
@@ -177,16 +177,9 @@
                                     <tr>
                                         <td style="width:10%;">
                                             <apex:outputPanel rendered="{!i.rh2__Selected__c}">
-                                                <apex:outputText rendered="{!ISBLANK(settingName)}">
-                                                    <a href="{!URLFOR($Page.rh2__PS_RollupType)}{!IF(CONTAINS(URLFOR($Page.rh2__PS_RollupType), '?'), '&', '?')}mast={!URLENCODE(masterAPI)}&mfld={!URLENCODE(i.rh2__Object__c)}">
-                                                        {!$Label.rh2__Select}
-                                                    </a>
-                                                </apex:outputText>
-                                                <apex:outputText rendered="{!NOT(ISBLANK(settingName))}">
-                                                    <a href="{!URLFOR($Page.rh2__PS_RollupType)}{!IF(CONTAINS(URLFOR($Page.rh2__PS_RollupType), '?'), '&', '?')}mast={!URLENCODE(masterAPI)}&mfld={!URLENCODE(i.rh2__Object__c)}&s={!URLENCODE(settingName)}">
-                                                        {!$Label.rh2__Select}
-                                                    </a>
-                                                </apex:outputText>
+                                                <apex:commandLink value="{!$Label.rh2__Select}" action="{! doSelectMasterField }">
+                                                    <apex:param name="masterAPIField" value="{!i.rh2__Object__c}" assignTo="{!masterAPIField}"/>
+                                                </apex:commandLink>
                                             </apex:outputPanel>
                                             <apex:outputPanel rendered="{!!i.rh2__Selected__c}">
                                                 <apex:outputText styleClass="color:grey;" rendered="{!CONTAINS(i.rh2__Test_Long_Text__c, 'in use')}" value="{!$Label.rh2__FieldInUse}"/>
@@ -194,7 +187,7 @@
                                             </apex:outputPanel>
                                         </td>
                                         <td style="width:25%;">{!i.Label__c}</td>
-                                        <td style="width:25%;">{!i.Object__c}</td>
+                                        <td style="width:25%;">{!i.rh2__Object__c}</td>
                                         <td style="width:15%;">{!i.Data_Type__c}</td>
                                         <td style="width:25%;" class="slds-cell-wrap"><span title="{!i.Test_Long_Text__c}">{!i.Test_Long_Text__c}</span></td>
                                     </tr>

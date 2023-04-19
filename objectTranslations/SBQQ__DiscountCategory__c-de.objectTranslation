@@ -6,34 +6,34 @@
         <value>Rabattkategorie</value>
     </caseValues>
     <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value>Rabattkategorie</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value>Rabattkategorie</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Rabattkategorie</value>
-    </caseValues>
-    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Rabattkategorien</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Rabattkategorie</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
         <plural>true</plural>
         <value>Rabattkategorien</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Rabattkategorie</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
         <plural>true</plural>
         <value>Rabattkategorien</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Rabattkategorie</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
@@ -41,10 +41,21 @@
         <value>Rabattkategorien</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>Geben Sie den maximal zulässigen Rabatt für diese Produktkategorie ein.</help>
-        <label></label>
+        <label><!-- Max Discount (%) --></label>
         <name>SBQQ__MaxDiscountRate__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Discount Category Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Kategoriename</nameFieldLabel>
 </CustomObjectTranslation>

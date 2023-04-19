@@ -54,6 +54,7 @@
             <operator>notContain</operator>
             <value>_ARCHIVED</value>
         </criteriaItems>
+        <language>en_US</language>
     </filter>
     <format>Tabular</format>
     <name>Archived User Badges</name>

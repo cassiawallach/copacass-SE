@@ -1,37 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
-        <plural>true</plural>
-        <value>Asignaciones de trailmixes</value>
-    </caseValues>
-    <caseValues>
         <plural>false</plural>
         <value>Asignación de trailmix</value>
     </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Asignaciones de trailmixes</value>
+    </caseValues>
     <fields>
         <help>La fecha en la que hay que completar el trailmix.</help>
-        <label></label>
+        <label><!-- Due Date --></label>
         <name>trailheadapp__Due_At__c</name>
     </fields>
     <fields>
         <help>La fecha y hora en las que hay que completar el trailmix.</help>
-        <label></label>
+        <label><!-- Due Datetime --></label>
         <name>trailheadapp__Due_Datetime__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Status --></label>
         <name>trailheadapp__Status__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Trailmix --></label>
         <name>trailheadapp__Trailmix__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Trailmix Assignments --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- User --></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Trailmix Assignments --></relationshipLabel>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Trailmix Assignment Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Id. de Asignación de trailmix</nameFieldLabel>
 </CustomObjectTranslation>

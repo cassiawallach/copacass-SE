@@ -63,7 +63,10 @@ function navigateToLineEditor(url) {
 	var notChrome = ua.indexOf('chrome') == -1;
 
 	if (!open && safari && notChrome) {
-		alert("To preview a theme, you must unblock pop-ups.\nIf you are on Safari, you must click the following:\nSafari > Preferences > Security > Block pop-up windows");
+		sb.dialog.alert(
+			"To preview a theme, you must unblock pop-ups.\nIf you are on Safari, you must click the following:\nSafari > Preferences > Security > Block pop-up windows",
+			{ ok: 'OK' }
+		);
 	}
 }
 

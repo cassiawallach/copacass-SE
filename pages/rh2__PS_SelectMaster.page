@@ -22,7 +22,21 @@
       }
         }
         #progressbar { height: 10px; margin-left:50px; margin-top: 10px; }
-    
+        
+        .popoverNubbinAlignment{
+            left: 15.6em; 
+            top: 0.8em;
+        }
+        
+        .popoverDefault{
+            display:none;
+            max-height:0px; 
+            overflow:visible;   
+            overflow-y:visible; 
+            position:relative; 
+            white-space:normal;
+            z-index:99;  
+        }
     </style>
     
     <script>
@@ -43,7 +57,7 @@
      <div class="slds-scope" role="main">
             <div class="slds-card grayBackground">
                 <header class="slds-card__header ">
-                    <h3 class="slds-text-heading_small ">{!$Label.rh2__Step1Destination}</h3><br/>
+                    <h3 class="slds-text-heading_medium ">{!$Label.rh2__Step1Destination}</h3><br/>
                     <nav role="navigation">
                         <ol class="slds-breadcrumb slds-list_horizontal">
                             <li class="slds-list__item slds-text-heading_label home-crumb"><a href="{!URLFOR($Page.rh2__PS_landingPage)}">{!$Label.rh2__Home}</a></li>
@@ -59,15 +73,38 @@
                 <header class="slds-card__header">                  
                     <h3 class="slds-text-heading_small slds-truncate">{!$Label.SelectWhereRollupsReside}</h3> 
                 </header>
-                
-                <div class="slds-form-element" style="display:flex;width:25%;margin-left:10px;">    
-                    &nbsp;&nbsp;
-                    <input class="slds-input" placeHolder="{!$Label.TypeForObject}" onkeypress="captureEnterAndBuildList(event, 'objectSearch', searchAllObjects);" type="text" id="objectSearch" />		
-                    <script>
-                        searchFromInput("objectSearch", searchAllObjects);
-                    </script>
+                <div>
+                    <div class="slds-form-element" style="float:left;width:25%;margin-left:10px;">    
+                        &nbsp;&nbsp;
+                        <input class="slds-input" placeHolder="{!$Label.TypeForObject}" onkeypress="captureEnterAndBuildList(event, 'objectSearch', searchAllObjects);" type="text" id="objectSearch" />		
+                        <script>
+                            searchFromInput("objectSearch", searchAllObjects);
+                        </script>
+                    </div>
+                    <div style="float:left;margin-left:10px;margin-top:9px;">
+                        <br/>
+                        <apex:outputPanel id="enableGrandchild" styleClass="slds-col" style="width:100px;padding-left:30px;">
+                            <apex:outputPanel >
+                                {!$Label.CreateGrandchildRollup} &nbsp;&nbsp;
+                                <apex:inputCheckbox disabled="{!notpaid}" value="{!isGrandchildRollup}"></apex:inputCheckbox>
+                                &nbsp;
+                                    <apex:outputPanel >
+                                        <a onmouseover="rh.j$('#grandchildInfo').toggle();" onmouseout="rh.j$('#grandchildInfo').toggle();" >
+                                            <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
+                                        </a>
+                                    <div class="slds-col popoverDefault" id="grandchildInfo">
+                                        <div class="slds-popover slds-popover_tooltip slds-nubbin_top-left popoverNubbinAlignment" role="dialog">
+                                            <div class="slds-popover__body">
+                                                {!$Label.GrandchildRollupsAllows}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </apex:outputPanel>
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                    </div>
                 </div>
-                <br/>     
+                <br/> <br/>  <br/>     
                 <section class="slds-card__body ">                    
                     <apex:outputPanel id="tablecontainer" style=" height:600px;">
                         <apex:pageMessages /> 
@@ -78,14 +115,14 @@
                                     <th style="width:33%;" class="slds-text-heading_label" scope="col">{!$Label.Action}</th>
                                     <th style="width:28%;" class="slds-text-heading_label slds-is-sortable hidecol" scope="col">
                                          <apex:commandLink value="{!$Label.rh2__Label}" action="{! doMasterObjectSort }" rerender="tablecontainer">
-                                            <apex:param name="sortField" value="Label__c" assignTo="{!sortField}"/>
-                                            <apex:outputText value="{!IF(sortField=='Label__c', IF(sortDirection=='asc', ' ▲', ' ▼'),'')}"/>
+                                            <apex:param name="sortField" value="Label__c" assignTo="{!sortVars.sortField}"/>
+                                            <apex:outputText value="{!IF(sortVars.sortField=='Label__c', IF(sortVars.sortDirection=='asc', ' ▲', ' ▼'),'')}"/>
                                         </apex:commandLink>
                                     </th>
                                     <th style="width:39%;" class="slds-text-heading_label slds-is-sortable" scope="col">
                                         <apex:commandLink value="{!$Label.rh2__APIName}" action="{!doMasterObjectSort}" rerender="tablecontainer">
-                                            <apex:param name="sortField" value="Object__c" assignTo="{!sortField}"/>
-                                            <apex:outputText value="{!IF(sortField=='Object__c', IF(sortDirection=='asc', ' ▲', ' ▼'),'')}"/>
+                                            <apex:param name="sortField" value="Object__c" assignTo="{!sortVars.sortField}"/>
+                                            <apex:outputText value="{!IF(sortVars.sortField=='Object__c', IF(sortVars.sortDirection=='asc', ' ▲', ' ▼'),'')}"/>
                                         </apex:commandLink>
                                     </th> 
                                 </tr>

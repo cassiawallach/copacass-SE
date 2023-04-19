@@ -5,8 +5,12 @@
         <value>ルックアップクエリ</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>クエリで使用されるカスタム項目の API 参照名。</help>
-        <label></label>
+        <label><!-- Lookup Field --></label>
         <name>SBQQ__LookupField__c</name>
         <picklistValues>
             <masterLabel>SBQQ__Category__c</masterLabel>
@@ -15,7 +19,7 @@
     </fields>
     <fields>
         <help>[一致項目] = [項目値] の場合、[テスト対象オブジェクト] と [テスト対象項目] を選択します。[一致項目] = [静的値] の場合、[テスト対象値] に値を入力します。[一致項目] = [設定属性] の場合、設定属性を指定します。</help>
-        <label></label>
+        <label><!-- Match Type --></label>
         <name>SBQQ__MatchType__c</name>
         <picklistValues>
             <masterLabel>Configuration Attribute Value</masterLabel>
@@ -32,7 +36,7 @@
     </fields>
     <fields>
         <help>項目を値と比較するときに適用される演算子。</help>
-        <label></label>
+        <label><!-- Operator --></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>equals</masterLabel>
@@ -60,38 +64,38 @@
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- ParentRuleIsActive --></label>
         <name>SBQQ__ParentRuleIsActive__c</name>
     </fields>
     <fields>
         <help>このルックアップクエリに関連する価格ルール。従来の主従関係項目を置き換えます。</help>
-        <label></label>
+        <label><!-- Price Rule --></label>
         <name>SBQQ__PriceRule2__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Lookup Queries (Price Rule) --></relationshipLabel>
     </fields>
     <fields>
         <help>このルックアップクエリに関連する商品ルール</help>
-        <label></label>
+        <label><!-- Product Rule --></label>
         <name>SBQQ__ProductRule__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Lookup Queries (Product Rule) --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Parent Rule Lookup Object --></label>
         <name>SBQQ__RuleLookupObject__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- RuleTargetsCalculator --></label>
         <name>SBQQ__RuleTargetsCalculator__c</name>
     </fields>
     <fields>
         <help>このクエリで評価される設定属性。[一致項目] = [設定属性] であって、このクエリが商品ルールに関連付けられている場合に限って必須です。</help>
-        <label></label>
+        <label><!-- Tested Configuration Attribute --></label>
         <name>SBQQ__TestedConfigurationAttribute__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Lookup Queries --></relationshipLabel>
     </fields>
     <fields>
         <help>このクエリによって評価される見積、見積品目、商品オプションオブジェクトのいずれかの項目。[一致項目] = [項目値] の場合は必須です。</help>
-        <label></label>
+        <label><!-- Tested Field --></label>
         <name>SBQQ__TestedField__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -100,7 +104,7 @@
     </fields>
     <fields>
         <help>クエリの評価対象となるオブジェクト。[一致項目] = [項目値] の場合は必須です。</help>
-        <label></label>
+        <label><!-- Tested Object --></label>
         <name>SBQQ__TestedObject__c</name>
         <picklistValues>
             <masterLabel>Product Option</masterLabel>
@@ -117,20 +121,31 @@
     </fields>
     <fields>
         <help>選択した演算子を使用して選択した項目内で一致させる値。[一致項目] = [静的値] の場合は必須です。</help>
-        <label></label>
+        <label><!-- Tested Value --></label>
         <name>SBQQ__TestedValue__c</name>
     </fields>
+    <layouts>
+        <layout>Lookup Query Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>ルックアップ情報</label>
+            <section>Lookup Information</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>ルックアップクエリ番号</nameFieldLabel>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- Testing Configuration Attributes is only supported for Lookup Queries associated with Product Rules. --></errorMessage>
         <name>SBQQ__Configuration_Attribute_Validation</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- Associate a lookup object on the product rule before creating a Lookup Query. --></errorMessage>
         <name>SBQQ__LookupObjectMustExist</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- Tested Value is required if Match Type = Static Value. Tested Object and Tested Field are required if Match Type = Field Value. Tested Configuration Attribute is required if Match Type = Configuration Attribute. --></errorMessage>
         <name>SBQQ__Match_Type_Validation</name>
     </validationRules>
 </CustomObjectTranslation>

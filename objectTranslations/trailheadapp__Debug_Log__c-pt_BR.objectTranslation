@@ -9,28 +9,28 @@
         <value>Registros de depuração</value>
     </caseValues>
     <fields>
-        <label></label>
+        <label><!-- Class --></label>
         <name>trailheadapp__Class__c</name>
     </fields>
     <fields>
         <help>A data e hora da mensagem de registro.</help>
-        <label></label>
+        <label><!-- Datetime --></label>
         <name>trailheadapp__Datetime__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Message --></label>
         <name>trailheadapp__Message__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Method --></label>
         <name>trailheadapp__Method__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Severity --></label>
         <name>trailheadapp__Severity__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Transaction --></label>
         <name>trailheadapp__Transaction__c</name>
     </fields>
     <gender>Masculine</gender>

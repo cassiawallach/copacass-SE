@@ -3,7 +3,7 @@
     <caseAccessLevel>Edit</caseAccessLevel>
     <contactAccessLevel>Edit</contactAccessLevel>
     <mayForecastManagerShare>false</mayForecastManagerShare>
-    <name>Developer</name>
+    <name>DevOPs Engineer</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
-    <parentRole>Copado_Admin</parentRole>
+    <parentRole>Head_of_Development</parentRole>
 </Role>

@@ -47,6 +47,10 @@
     </groupingsDown>
     <name>Closed Won Opportunities - All Time</name>
     <params>
+        <name>terr</name>
+        <value>all</value>
+    </params>
+    <params>
         <name>open</name>
         <value>closedwon</value>
     </params>

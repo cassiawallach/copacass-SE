@@ -6,29 +6,41 @@
     </caseValues>
     <fields>
         <help>サブスクリプション対象納入商品レコードが有効であるかどうかを示します。</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
+        <help>関連する納入商品が含まれるバンドルのルートのサブスクリプションまたは納入商品の ID</help>
+        <label><!-- Asset Root Id --></label>
+        <name>SBQQ__AssetRootId__c</name>
+    </fields>
+    <fields>
         <help>サブスクリプションの対象納入商品です。</help>
-        <label></label>
+        <label><!-- Asset --></label>
         <name>SBQQ__Asset__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Subscriptions --></relationshipLabel>
     </fields>
     <fields>
         <help>サブスクリプションの契約を示します。</help>
-        <label></label>
+        <label><!-- Contract Id --></label>
         <name>SBQQ__ContractId__c</name>
     </fields>
     <fields>
         <help>納入商品に適用されるサブスクリプションです。</help>
-        <label></label>
+        <label><!-- Subscription --></label>
         <name>SBQQ__Subscription__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Subscribed Assets --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Asset Usage End Date --></label>
         <name>SBQQ__UsageEndDate__c</name>
     </fields>
+    <layouts>
+        <layout>Subscribed Asset Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>サブスクリプション対象納入商品番号</nameFieldLabel>
 </CustomObjectTranslation>

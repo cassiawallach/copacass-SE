@@ -22,6 +22,10 @@
                 <field>SBQQ__AggregateFunction__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>External_Id__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Required</behavior>
                 <field>SBQQ__AggregateField__c</field>
             </layoutItems>
@@ -133,13 +137,17 @@
         <fields>NAME</fields>
         <relatedList>SBQQ__PriceAction__c.SBQQ__SourceVariable__c</relatedList>
     </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>SBQQ__TermCondition__c.SBQQ__TestedVariable__c</relatedList>
+    </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
     <showInteractionLogPanel>false</showInteractionLogPanel>
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hA000000QxKBG</masterLabel>
+        <masterLabel>00hb000000WZdcT</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

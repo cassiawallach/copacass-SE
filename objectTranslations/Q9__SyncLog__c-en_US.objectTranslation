@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label></label>
+        <label><!-- Date --></label>
         <name>Q9__Date__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Log --></label>
         <name>Q9__Log__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Type --></label>
         <name>Q9__Type__c</name>
         <picklistValues>
             <masterLabel>ERROR</masterLabel>
-            <translation></translation>
+            <translation><!-- ERROR --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>INFO</masterLabel>
-            <translation></translation>
+            <translation><!-- INFO --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>WARNING</masterLabel>
-            <translation></translation>
+            <translation><!-- WARNING --></translation>
         </picklistValues>
     </fields>
 </CustomObjectTranslation>

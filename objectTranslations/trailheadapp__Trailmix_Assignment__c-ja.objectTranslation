@@ -6,27 +6,34 @@
     </caseValues>
     <fields>
         <help>Trailmix の完了期限。</help>
-        <label></label>
+        <label><!-- Due Date --></label>
         <name>trailheadapp__Due_At__c</name>
     </fields>
     <fields>
         <help>Trailmix を完了する期限の日時。</help>
-        <label></label>
+        <label><!-- Due Datetime --></label>
         <name>trailheadapp__Due_Datetime__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Status --></label>
         <name>trailheadapp__Status__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Trailmix --></label>
         <name>trailheadapp__Trailmix__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Trailmix Assignments --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- User --></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Trailmix Assignments --></relationshipLabel>
     </fields>
+    <layouts>
+        <layout>Trailmix Assignment Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Trailmix 割り当て ID</nameFieldLabel>
 </CustomObjectTranslation>

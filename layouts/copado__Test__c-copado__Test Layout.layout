@@ -12,10 +12,6 @@
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>copado__ExtensionConfiguration__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>copado__Reference__c</field>
             </layoutItems>
@@ -23,12 +19,16 @@
                 <behavior>Edit</behavior>
                 <field>copado__User_Story__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>copado__Type__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>copado__Category__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>copado__Tool__c</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>copado__Configuration__c</field>
@@ -77,19 +77,6 @@
         <fields>copado__Start_Time__c</fields>
         <fields>copado__Status__c</fields>
         <relatedList>copado__Result__c.copado__Test__c</relatedList>
-        <sortField>NAME</sortField>
-        <sortOrder>Desc</sortOrder>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>copado__Test_Script__c</fields>
-        <fields>copado__Tester__c</fields>
-        <fields>copado__Percent_Passed__c</fields>
-        <fields>copado__Test_Completion__c</fields>
-        <fields>copado__Status__c</fields>
-        <relatedList>copado__Test_Run__c.copado__Test__c</relatedList>
-        <sortField>NAME</sortField>
-        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

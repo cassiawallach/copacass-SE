@@ -1,6 +1,7 @@
-<apex:page standardController="SBQQ__Quote__c" extensions="SBQQ.QuoteTermEditorController,SBQQ.ServiceRouter" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" docType="html-5.0" id="QuoteTermEditor" standardStylesheets="false" title="{!$Label.sbqq__lbl_modify_term}">
+<apex:page standardController="SBQQ__Quote__c" extensions="SBQQ.QuoteTermEditorController,SBQQ.ServiceRouter" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" docType="html-5.0" id="QuoteTermEditor" standardStylesheets="false" title="{!$Label.SBQQ__lbl_modify_term}">
 	<apex:variable var="stylesheet" value="{!IF(formFactor == 'desktop', 'sb', 'MobileCSS')}"/>
 	<apex:stylesheet value="{!$Resource[stylesheet]}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.SBQQ__dialog,'dialog.css')}"/>
 	<c:theme formFactor="{!formFactor}"/>
 
 	<apex:includeScript value="/soap/ajax/28.0/connection.js" />
@@ -18,10 +19,16 @@
 	<apex:includeScript value="{!$Resource.SBQQ__InfiniteScroll}"/>
 	<apex:includeScript value="{!$Resource.SBQQ__Ajax}"/>
 	<apex:includeScript value="{!$Resource.SBQQ__sb_ms_js}"/>
+	<apex:includeScript value="{!URLFOR($Resource.SBQQ__dialog,'dialog.js')}"/>
 	<script type="text/javascript">
 		$(document).ready(function () {
 			var quoteName = '{!$ObjectType.Quote__c.Name}';
-			var namespace = (quoteName.toLowerCase().substring(0,4) == 'sbqq') ? 'SBQQ' : '';
+			var namespace;
+			if(quoteName === 'Quote__c'){
+                  namespace = '';
+            }else{
+             	namespace = quoteName.slice(0, quoteName.indexOf('__'));
+            }
 			var qq = createSalesforceCPQModule();
 			qq.factory('packageNamespace', function() {return namespace});
 			qq.factory('quoteTermEditorProxy', ['packageNamespace', function(namespace) {return new RemotingQuoteTermEditorProxy(namespace);}]);
@@ -30,7 +37,9 @@
 				confirm_message: '{!JSENCODE($Label.msg_confirm_prompt)}',
 				dirty_message: '{!JSENCODE($Label.msg_dirty_prompt)}',
 				missing_templates_message: '{!JSENCODE($Label.msg_need_some_templates)}',
-				revert_message: '{!JSENCODE($Label.msg_revert_modified_quote_term)}'
+				revert_message: '{!JSENCODE($Label.msg_revert_modified_quote_term)}',
+				ok: '{!JSENCODE($Label.Ok)}',
+				cancel: '{!JSENCODE($Label.Cancel)}'
 			}});
 			angular.bootstrap(document, ['qq']);
 			document.getElementById('qq').style.display = 'block';
@@ -45,7 +54,7 @@
 
 	<div id="qq" style="display: none" class="sb">
 		<div id="sbQuoteTermEditor" ng-controller="QuoteTermEditorCtrl" ng-init="onLoad('{!Quote__c}')">
-			<c:pageHeader title="{!$Label.sbqq__lbl_modify_term}"
+			<c:pageHeader title="{!$Label.SBQQ__lbl_modify_term}"
 						  subtitle="{!SBQQ__Quote__c.Name}"
 						  formFactor="{!formFactor}"
 						  iconName="sf-icon-document"

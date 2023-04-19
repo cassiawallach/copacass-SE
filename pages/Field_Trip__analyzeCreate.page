@@ -2,7 +2,7 @@
 
     <apex:sectionHeader title="Field Trip (Powered By RingLead) - Edit" subtitle="{!subtitle}"/>
     <apex:messages style="color:red"/>
-    <apex:includeScript value="{!URLFOR($Resource.Field_Trip__staticfiles, '/Staticfiles/jquery-3.6.0.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Field_Trip__FieldTripGear, 'jQuery_1_7_1.js')}" />
     
     <style>
         .secret{

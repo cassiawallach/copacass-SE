@@ -10,18 +10,18 @@
     </caseValues>
     <fields>
         <help>Sinalizador que indica se essa regra está ativa ou inativa.</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Os valores dessa entrada de processo determinarão a visibilidade da entrada atual.</help>
-        <label></label>
+        <label><!-- Master Process Input --></label>
         <name>SBQQ__MasterProcessInput__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Process Inputs Regulated --></relationshipLabel>
     </fields>
     <fields>
         <help>Selecione o operador a ser usado ao comparar os valores de entrada do processo.</help>
-        <label></label>
+        <label><!-- Operator --></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -62,15 +62,26 @@
     </fields>
     <fields>
         <help>Entrada do processo que detém a condição.</help>
-        <label></label>
+        <label><!-- Process Input --></label>
         <name>SBQQ__ProcessInput__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Process Input Conditions --></relationshipLabel>
     </fields>
     <fields>
         <help>O valor usado para comparar a entrada do processo controladora.</help>
-        <label></label>
+        <label><!-- Value --></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Process Input Condition Layout</layout>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Informações do filtro</label>
+            <section>Filter Information</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nome das condições de entrada do process</nameFieldLabel>
 </CustomObjectTranslation>

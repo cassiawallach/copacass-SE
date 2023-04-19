@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
-        <plural>true</plural>
-        <value>Acciones de producto</value>
-    </caseValues>
-    <caseValues>
         <plural>false</plural>
         <value>Acción de producto</value>
     </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Acciones de producto</value>
+    </caseValues>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
     <fields>
         <help>Seleccione el campo que hay que actualizar cuando se desencadene la regla.</help>
-        <label></label>
+        <label><!-- Filter Field --></label>
         <name>SBQQ__FilterField__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -23,12 +27,12 @@
     </fields>
     <fields>
         <help>Ingrese el valor que hay que actualizar en el Campo de filtro elegido.</help>
-        <label></label>
+        <label><!-- Filter Value --></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>Seleccione el operador que determina el modo en que se aplicará el Campo de filtro al Valor de filtro.</help>
-        <label></label>
+        <label><!-- Operator --></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -48,29 +52,29 @@
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- ParentRuleIsActive --></label>
         <name>SBQQ__ParentRuleIsActive__c</name>
     </fields>
     <fields>
         <help>Seleccione el producto que se seleccionará automáticamente en el presupuesto. Nota: la regla de productos Tipo debe establecerse en &quot;Selección&quot;.</help>
-        <label></label>
+        <label><!-- Product --></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Product Actions --></relationshipLabel>
     </fields>
     <fields>
         <help>Seleccione si desea que el producto del campo Búsqueda de productos se seleccione en el presupuesto.</help>
-        <label></label>
+        <label><!-- Required --></label>
         <name>SBQQ__Required__c</name>
     </fields>
     <fields>
         <help>Regla que ejecuta esta acción de producto.</help>
-        <label></label>
+        <label><!-- Rule --></label>
         <name>SBQQ__Rule__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Actions --></relationshipLabel>
     </fields>
     <fields>
         <help>Especifique el tipo de acción.</help>
-        <label></label>
+        <label><!-- Type --></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Add</masterLabel>
@@ -123,13 +127,13 @@
     </fields>
     <fields>
         <help>Se utiliza para identificar el atributo específico si Campo de valor es un campo de Atributo de configuración global.</help>
-        <label></label>
+        <label><!-- Value Attribute --></label>
         <name>SBQQ__ValueAttribute__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Product Actions --></relationshipLabel>
     </fields>
     <fields>
         <help>Compara el Campo de filtro con este filtro en vez de con Valor de filtro.</help>
-        <label></label>
+        <label><!-- Value Field --></label>
         <name>SBQQ__ValueField__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -138,7 +142,7 @@
     </fields>
     <fields>
         <help>Seleccione el objeto de Salesforce donde se define el Campo de valor.</help>
-        <label></label>
+        <label><!-- Value Object --></label>
         <name>SBQQ__ValueObject__c</name>
         <picklistValues>
             <masterLabel>Configuration Attributes</masterLabel>
@@ -154,9 +158,20 @@
         </picklistValues>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Product Action Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Información de filtro</label>
+            <section>Filter Information</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nº de acción de producto</nameFieldLabel>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- Value Attribute required since the Value Field is a global Configuration Attribute field. --></errorMessage>
         <name>SBQQ__Value_attr_required_if_global_field</name>
     </validationRules>
 </CustomObjectTranslation>

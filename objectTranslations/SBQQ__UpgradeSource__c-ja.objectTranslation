@@ -6,24 +6,31 @@
     </caseValues>
     <fields>
         <help>アップグレード元の商品を指定します。</help>
-        <label></label>
+        <label><!-- Source Product --></label>
         <name>SBQQ__SourceProduct__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Available Upgrade Sources --></relationshipLabel>
     </fields>
     <fields>
         <help>アップグレード元からアップグレード商品への数量変換の比率を指定します。たとえば、「5.1」は、アップグレード元の 5 単位がアップグレード商品の 1 単位に変換されることを意味します。空白にすると、アップグレード換算レートは適用されません。</help>
-        <label></label>
+        <label><!-- Upgrade Conversion Rate --></label>
         <name>SBQQ__UpgradeConversionRate__c</name>
     </fields>
     <fields>
         <help>アップグレード先の商品を指定します。</help>
-        <label></label>
+        <label><!-- Upgrade Product --></label>
         <name>SBQQ__UpgradeProduct__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Upgrade Sources --></relationshipLabel>
     </fields>
+    <layouts>
+        <layout>Upgrade Source Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>ソース名</nameFieldLabel>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- Conversion Rate must be represented as a ratio of the format &quot;Upgrade Source:Upgrade Product&quot;. --></errorMessage>
         <name>SBQQ__Conversion_Rate_Must_Fit_Ratio_Format</name>
     </validationRules>
 </CustomObjectTranslation>

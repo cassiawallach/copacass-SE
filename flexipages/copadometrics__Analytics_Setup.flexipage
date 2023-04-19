@@ -4,7 +4,7 @@
         <itemInstances>
             <componentInstance>
                 <componentName>copadometrics:devOps360Setup</componentName>
-                <identifier>c_devOps360Setup</identifier>
+                <identifier>devOps360Setup</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>

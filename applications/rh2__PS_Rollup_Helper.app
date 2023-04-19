@@ -6,13 +6,14 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Rollup Helper</label>
-    <logo>rh2__Public_Images/rh2__Rollup_Helper_Logo.png</logo>
     <tabs>rh2__PS_Rollup_Helper</tabs>
     <tabs>rh2__PS_All_Rollups</tabs>
-    <tabs>rh2__PS_Getting_Started</tabs>
     <tabs>rh2__PS_Import_Export</tabs>
     <tabs>rh2__PS_Enable_Real_Time</tabs>
-    <tabs>rh2__PS_Use_Case</tabs>
     <tabs>rh2__Rollup_Helper_Home</tabs>
     <tabs>rh2__Rollup_Helper_Help</tabs>
+    <tabs>Competitor__c</tabs>
+    <tabs>Custom_Account_Trends__c</tabs>
+    <tabs>redwing__ILT_Instructor__c</tabs>
+    <tabs>redwing__ILT_Roster__c</tabs>
 </CustomApplication>

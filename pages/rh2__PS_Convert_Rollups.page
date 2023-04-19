@@ -195,10 +195,8 @@
                                         </div>
                                     </apex:outputPanel>
                                     <div class="slds-modal__footer">
-                                        <center>
-                                            <apex:commandButton value="Convert" action="{! convertSelectedRollup }" styleClass="slds-button slds-button_neutral"></apex:commandButton>
-                                            <apex:commandButton value="{!$Label.rh2__Close}" onclick="showModal(false, 'deactivateDLRSValidation')" styleClass="slds-button slds-button_neutral"></apex:commandButton>
-                                        </center>
+                                        <apex:commandButton value="Convert" action="{! convertSelectedRollup }" styleClass="slds-button slds-button_brand"></apex:commandButton>
+                                        <apex:commandButton value="{!$Label.rh2__Close}" onclick="showModal(false, 'deactivateDLRSValidation')" styleClass="slds-button slds-button_neutral"></apex:commandButton>
                                     </div>
                                 </div>
                             </div>

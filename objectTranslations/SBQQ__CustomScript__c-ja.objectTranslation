@@ -5,28 +5,68 @@
         <value>カスタムスクリプト</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the API names of any Account fields referenced by this plugin, one per line. --></help>
+        <label><!-- Account Fields --></label>
+        <name>SBQQ__AccountFields__c</name>
+    </fields>
+    <fields>
         <help>外部リソースによって実行可能なコード。</help>
-        <label></label>
+        <label><!-- Code --></label>
         <name>SBQQ__Code__c</name>
     </fields>
     <fields>
+        <help>このプラグインで参照される消費レート項目の API 参照名。最大 10 個の項目を入力します (各行に 1 つの項目)。</help>
+        <label><!-- Consumption Rate Fields --></label>
+        <name>SBQQ__ConsumptionRateFields__c</name>
+    </fields>
+    <fields>
+        <help>このプラグインで参照される消費スケジュール項目の API 参照名。最大 10 個の項目を入力します (各行に 1 つの項目)。</help>
+        <label><!-- Consumption Schedule Fields --></label>
+        <name>SBQQ__ConsumptionScheduleFields__c</name>
+    </fields>
+    <fields>
         <help>このプラグインで参照されるすべての見積品目グループ項目の API 参照名を 1 行に 1 つずつ入力します。</help>
-        <label></label>
+        <label><!-- Quote Line Group Fields --></label>
         <name>SBQQ__GroupFields__c</name>
     </fields>
     <fields>
+        <help><!-- Enter the API names of any Opportunity fields referenced by this plugin, one per line. --></help>
+        <label><!-- Opportunity Fields --></label>
+        <name>SBQQ__OpportunityFields__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the API names of any Product fields referenced by this plugin, one per line. --></help>
+        <label><!-- Product Fields --></label>
+        <name>SBQQ__ProductFields__c</name>
+    </fields>
+    <fields>
         <help>このプラグインで参照されるすべての見積項目の API 参照名を 1 行に 1 つずつ入力します。</help>
-        <label></label>
+        <label><!-- Quote Fields --></label>
         <name>SBQQ__QuoteFields__c</name>
     </fields>
     <fields>
         <help>このプラグインで参照されるすべての見積品目項目の API 参照名を 1 行に 1 つずつ入力します。</help>
-        <label></label>
+        <label><!-- Quote Line Fields --></label>
         <name>SBQQ__QuoteLineFields__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Transpiled Code --></label>
         <name>SBQQ__TranspiledCode__c</name>
     </fields>
+    <layouts>
+        <layout>Custom Script Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>変換</label>
+            <section>Transpiling</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>スクリプト名</nameFieldLabel>
 </CustomObjectTranslation>

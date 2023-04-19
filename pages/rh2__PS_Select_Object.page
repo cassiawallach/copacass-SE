@@ -96,7 +96,22 @@
      </style>
      <script>
       var prevValue;
+      var selectedObject;
+
+      function storeSelectedObj(obj) {
+        selectedObject = obj;
+      }
+
+      function navigateToSelectedObj(){
+        selectMasterObj(selectedObject);
+      }
      </script>
+
+    <apex:form >
+      <apex:actionFunction action="{!doSelectMasterObject}" name="selectMasterObj" rerender="none" status="loading">
+          <apex:param name="selectedObj" value="" assignTo="{!deployVars.deployObjectName}"/>
+      </apex:actionFunction>
+    </apex:form>
      
      <body>
      <apex:slds />
@@ -119,7 +134,7 @@
      	<div class="slds-card slds-m-vertical_medium grayBackground" style="min-width:1074px;">
      		<header class="slds-card__header slds-grid">
      			<div class="slds-media__body">
-                	<h3 class="slds-text-heading_small slds-truncate">{!$Label.rh2__SelectSourceObjectTo}</h3>
+                	<h3 class="slds-text-heading_medium slds-truncate">{!$Label.rh2__SelectSourceObjectTo}</h3>
               	</div>
      		</header>
      		<body>
@@ -221,13 +236,10 @@
                 				<tr> 
                 					<td data-label="{!$Label.rh2__Action}">
                             <apex:outputPanel rendered="{!AND(item.isOverwriteEnabled, !item.isTriggerDeployed)}">
-                                <apex:commandLink value="{!$Label.rh2__Select}" onclick="showModal(true, 'existingSettingModal');" reRender="existingSettingModal" status="loading">
-                                 	<apex:param name="masterAPI" value="{!item.ObjectName}" assignTo="{!deployVars.deployObjectName}"/>
-                       				</apex:commandLink>
+                              <apex:commandLink value="{!$Label.rh2__Select}" onclick="storeSelectedObj('{!item.ObjectName}');showModal(true, 'existingSettingModal');" reRender="existingSettingModal"/>
                             </apex:outputPanel>
                             <apex:outputPanel rendered="{!OR(!item.isOverwriteEnabled, item.isTriggerDeployed)}">
-                              <apex:commandLink value="{!$Label.rh2__Select}" action="{!doSelectMasterObject}" rerender="error, table" status="loading">
-                                  <apex:param name="masterAPI" value="{!item.ObjectName}" assignTo="{!deployVars.deployObjectName}"/>
+                              <apex:commandLink value="{!$Label.rh2__Select}" onclick="storeSelectedObj('{!item.ObjectName}');navigateToSelectedObj();" rerender="error, table" status="loading">
                               </apex:commandLink>
                             </apex:outputPanel>
                      			</td>
@@ -337,8 +349,8 @@
                         </center>
                     </div>  
                     <div class="slds-modal__footer">
-                        <apex:commandButton status="loading" styleClass="slds-button slds-button_brand" action="{!doSelectMasterObject}" reRender="existingSettingModal" value="Proceed"/>
-                        <apex:commandButton styleClass="slds-button slds-button_neutral" onclick="showModal(false, 'existingSettingModal');" rerender="existingSettingModal" value="Cancel"/>
+                        <apex:commandButton status="loading" styleClass="slds-button slds-button_brand" onclick="navigateToSelectedObj();" reRender="existingSettingModal" value="{!$Label.rh2__Proceed}"/>
+                        <apex:commandButton styleClass="slds-button slds-button_neutral" onclick="showModal(false, 'existingSettingModal');" rerender="existingSettingModal" value="{!$Label.Cancel }"/>
                     </div>
                 </div>
             </div>

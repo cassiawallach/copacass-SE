@@ -1,0 +1,383 @@
+<apex:page id="Breadwinner" tabStyle="Breadwinner__tab" controller="Bread_Winner.BreadwinnerController" sidebar="false" title="Breadwinner" docType="html-5.0">
+
+    <apex:includeScript value="{!URLFOR($Resource.Bread_Winner__Breadwinner_jQuery, 'jquery.min.js')}" />
+
+    <apex:slds />
+    <style>
+        .pageHeaderStyleClass {
+            background: rgb(243, 243, 243) !important;
+            box-shadow: 0 2px 2px 0 rgb(0 0 0 / 10%) !important;
+            border-bottom: 1px solid rgb(201, 201, 201) !important;
+            border: 1px solid rgb(201, 201, 201) !important;
+        }
+        .pageHeaderTextStyleClass {
+            font-weight: 700 !important;
+        }
+        .nohover:hover {
+            background-color: #f4f8fA !important;
+            box-shadow: initial !important
+        }
+
+        .slds-scope .slds-nav-vertical__action {
+            outline: 0;
+            text-decoration: none !important;
+        }
+        .slds-scope .hasFirstChild.slds-nav-vertical__action, .hasFirstChild.slds-nav-vertical__action{
+            color: black;
+            border-color: white;
+            box-shadow:none !important;
+        }
+        .slds-scope .customSpinner .slds-spinner{
+            /* top:30% !important; */
+        }
+        .slds-scope a {
+            text-decoration: underline;
+            color: gray;
+        }
+
+        #cmpDiv{
+            display:none;
+        }
+
+        .msgIcon{
+            display:none;
+        }
+        .message {
+            margin: 3px !important;
+        }
+        .message .messageText {
+            margin: 0px;
+        }
+        .message .messageText h4 {
+            font-weight: inherit;
+            display: initial;
+        }
+    </style>
+
+    <!-- <div id="CustomSpinner" class="customSpinner"  > -->
+        <div id="CustomSpinner" class="slds-spinner_container customSpinner" style="position:fixed;z-index:9999;">
+            <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    <!-- </div> -->
+    <apex:actionStatus id="assign-action-status" layout="block">
+        <apex:facet name="start">
+            <div class="slds-spinner_container" style="position:fixed;z-index:9999;">
+                <div class="slds-spinner_brand slds-spinner slds-spinner_medium" role="alert">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </apex:facet>
+    </apex:actionStatus>
+
+    <apex:outputPanel >
+        <div class="container slds-grid slds-grid_vertical-stretch">
+            <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_3-of-12 slds-large-size_2-of-12 slds-p-horizontal_x-small slds-show_small" style="border-right: 1px solid gray;">
+                <div class="slds-align_absolute-center slds-border_bottom slds-m-right_x-small" style="height: 125px;">
+                    <img alt="Breadwinner Logo" src="{!headerLogoURL}" />
+                </div>
+                <div class="demo-only" >
+                    <apex:outputPanel id="sidePanel">
+                    <nav class="slds-nav-vertical" aria-label="Sub page">
+
+                        <apex:repeat value="{!configResult}" var="config">
+                            <div class="{!config.styleClass}">
+                                <h2 style="{!config.color}" id="entity-header" class="slds-nav-vertical__title">{!config.name}</h2>
+                                <ul aria-describedby="entity-{!config.menuType}">
+
+                                    <apex:repeat value="{!config.menu}" var="item">
+                                        <li class="{!if(item.sub == null || item.sub.size == 0, 'slds-nav-vertical__item', '')}">
+                                            <apex:outputPanel rendered="{!item.sub != null && item.sub.size > 0}">
+                                                <button onclick="toggleChild(this, '{! item.name}');" class="hasFirstChild nohover slds-button slds-button_reset slds-nav-vertical__action slds-nav-vertical__action_overflow slds-button__icon_left" aria-controls="search-results" aria-expanded="false">
+                                                    <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+                                                    </svg>
+                                                    <span title="{!item.name}" id="{!item.name}">{!item.name}
+                                                        <span class="slds-assistive-text">{!config.name}</span>
+                                                </span>
+                                                </button>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!(item.sub == null || item.sub.size == 0)}">
+                                                <a href="javascript:void(0)" id="{!IF(item.name == 'Setup','SetUppp',item.name)}" onclick="renderDynamicVFComp(this,'{!item.navHeader}','{!item.navHeaderImg}','{!item.navHeaderDesc}','{!item.compName}');onTabEnterPushToInteractionLog('{!item.name}');" class="slds-nav-vertical__action" aria-current="true" title="{!item.name}">{!item.name}</a>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!item.sub != null && item.sub.size > 0}">
+                                                <ul id="subMenuItems-{!item.name}" class="slds-p-left_large slds-hide" aria-describedby="entity-{!config.menuType}">
+                                                    <apex:repeat value="{!item.sub}" var="sub">
+                                                        <li class="slds-nav-vertical__item">
+                                                            <a href="javascript:void(0)" id="{!sub.name}Content" onclick="renderDynamicVFComp(this,'{!sub.navHeader}','{!sub.navHeaderImg}','{!sub.navHeaderDesc}','{!sub.compName}');onTabEnterPushToInteractionLog('{!sub.name}');" class="slds-nav-vertical__action" aria-current="true" title="{!sub.name}">{!sub.name}</a>
+                                                        </li>
+                                                    </apex:repeat>
+                                                </ul>
+                                            </apex:outputPanel>
+                                        </li>
+                                    </apex:repeat>
+                                </ul>
+                            </div>
+                        </apex:repeat>
+                    </nav>
+                    </apex:outputPanel>
+                </div>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_9-of-12 slds-large-size_10-of-12">
+                <div id="hdrDivRgt" style="display:none">
+                    <div class="slds-page-header pageHeaderStyleClass">
+                        <div class="slds-page-header__row">
+                            <div class="slds-page-header__col-title">
+                                <div class="slds-media">
+                                    <!-- This is a custom div whose content is populated from wrapper list configResult -->
+                                    <div id="cusImgDiv" class="slds-media__figure">
+                                    </div>
+                                    <div class="slds-media__body">
+                                        <div class="slds-page-header__name">
+                                            <div class="slds-page-header__name-title">
+                                                <h1>
+                                                    <span id="navHdrText" class="slds-page-header__title slds-truncate pageHeaderTextStyleClass" ></span>
+                                                </h1>
+                                            </div>
+                                        </div>
+                                        <p id="navHdrDesc" class="slds-page-header__name-meta"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ----------------------------------- field level help ----------------------------------- -->
+                <div id="help" class="slds-popover slds-popover_tooltip slds-nubbin_bottom-left" role="tooltip" aria-live="polite" style="display:none;position:absolute;top:0px;left:0px;">
+                    <div class="slds-popover__body slds-text-longform">
+                        <p>Help text will come here dynamically</p>
+                    </div>
+                </div>
+
+                <div class="dynamicComponents" id="cmpDiv">
+                    <apex:outputPanel id="dynamicComps">
+                        <!-- <c:BreadwinnerConfig id="Components" compName="{!cmpName}"/> -->
+                        <apex:outputPanel rendered="{!cmpName == 'Setup'}">
+                            <c:ConfigSetup id="ConfigSetup" />
+                        </apex:outputPanel>
+                        <!-- /// Create another VF Page and include all the following components inside that page and then use apex:include and render only when {!compName != 'Setup'} -->
+                        <apex:include pageName="{!pageName}" id="components"/>
+                        <!-- /// -->
+                    </apex:outputPanel>
+                </div>
+            </div>
+        </div>
+
+        <apex:form id="bwConfig">
+            <apex:actionRegion >
+                <apex:actionFunction action="{!setAttributes}" name="setParams" rerender="dynamicComps" status="assign-action-status" oncomplete="message();runPostLoadScript();" >
+                    <apex:param name="param1" assignTo="{!cmpName}" value="" />
+                </apex:actionFunction>
+                <apex:actionFunction name="postReadyTask" action="{!postReadyTask}" reRender="sidePanel" oncomplete="handlePostReadyTaskComplete();" />
+            </apex:actionRegion>
+            <apex:inputHidden value="{!cmpName}" id="theHiddenInput"/>
+        </apex:form>
+    </apex:outputPanel>
+
+    <script type="text/javascript">
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        var troubleshoot = urlParams.get('troubleshooting');
+        if(troubleshoot){
+            const generalContent = document.getElementById("GeneralContent");
+            if(generalContent !== undefined && generalContent !== null){
+                generalContent.click();
+                urlParams.searchParams.set('troubleshooting', false);
+            }
+        }
+    
+        document.onreadystatechange = function () {
+            if (document.readyState === "complete") {
+                /********Click Setup by default on page load*************/
+                const setUpp = document.getElementById("SetUppp");
+                if(setUpp !== undefined && setUpp !== null){
+                    setUpp.click();
+                }
+                hideSpinner();
+                postReadyTask();
+            }
+        }
+
+        function hideSpinner(){
+            let spin = document.getElementById("CustomSpinner");
+            spin.classList.add("slds-hide");
+            spin.classList.remove("slds-show");
+        }
+
+        function showSpinner(){
+            let spin = document.getElementById("CustomSpinner");
+            spin.classList.remove("slds-hide");
+            spin.classList.add("slds-show");
+        }
+
+        function renderDynamicVFComp(elm, nHdr, navHdrImg, nHdrDesc, cName){
+            window.scrollTo(0,0);
+
+            setParams(cName);
+
+            /***Setting header values for the header div on the right hand side***/
+            document.getElementById("hdrDivRgt").style.display= "block";
+            document.getElementById("hdrDivRgt").style.marginBottom = "10px";
+            let imgDiv = document.getElementById("cusImgDiv");
+            imgDiv.innerHTML=navHdrImg;
+            document.getElementById("navHdrText").textContent = nHdr;
+            document.getElementById("navHdrText").title = nHdr;
+            document.getElementById("navHdrDesc").innerHTML = nHdrDesc;
+            document.getElementById("cmpDiv").style.display= "block";
+
+            const x = document.querySelectorAll(".slds-is-active");
+            if(x !== undefined){
+                for(let i=0; i<x.length ;i++ ){
+                    x[i].classList.remove("slds-is-active");
+                }
+            }
+            if( elm.parentNode.classList.contains("slds-nav-vertical__item")){
+                elm.parentNode.classList.add("slds-is-active");
+            }else{
+                elm.parentNode.parentNode.classList.add("slds-is-active");
+            }
+
+        }
+
+        // Show/Hide child menu options
+        function toggleChild(elm, itemName){
+            const subMenuItems = document.getElementById(`subMenuItems-${itemName}`);
+
+            if(subMenuItems.classList.contains('slds-hide')){
+                elm.setAttribute('aria-expanded', 'true');
+                subMenuItems.classList.remove("slds-hide");
+                subMenuItems.classList.add("slds-show");
+            } else {
+                elm.setAttribute('aria-expanded', 'false');
+                subMenuItems.classList.remove("slds-show");
+                subMenuItems.classList.add("slds-hide");
+            }
+        }
+
+        // Allows us to run JS or <apex:actionFunction after the component loads.
+        function runPostLoadScript(){
+            if (typeof initComponent == 'function') {
+                initComponent();
+            }
+        }
+        function onTabEnterPushToInteractionLog(tabName)
+        {
+            Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.BreadwinnerController.pushInteractionLogOnTabEnter}', 
+            tabName, 
+            function(result, event){
+                if (event.status) 
+                {                           
+                } 
+                else if (event.type === 'exception') 
+                {                           
+                } 
+                    else 
+                    {                           
+                    }
+            }, 
+            {escape: true}
+            ); 
+        }
+
+        function handlePostReadyTaskComplete() {
+            makeSetupActive();
+        }
+
+        function makeSetupActive() {
+            const setup = document.getElementById("SetUppp");
+
+            if( setup.parentNode.classList.contains("slds-nav-vertical__item")){
+                setup.parentNode.classList.add("slds-is-active");
+            }else{
+                setup.parentNode.parentNode.classList.add("slds-is-active");
+            }
+        }
+    </script>
+
+    <!-- Any javascript that is common to most components should go here -->
+    <script type="text/javascript">
+        const j$ = jQuery.noConflict();
+
+        function showHideSectionContent(sectionId,imageId){
+            const sectionDiv=document.getElementById(sectionId);
+            const imageDiv=document.getElementById(imageId);
+
+            if(j$(sectionDiv).hasClass("slds-is-open")){
+                j$(sectionDiv).removeClass("slds-is-open");
+                j$(imageDiv).attr("src","{!URLFOR($Resource.Breadwinner_Xero, 'Breadwinner_Xero/Images/SectionClose.png')}");
+                j$(imageDiv).css({"margin-bottom":"3px", "margin-right":"4px", "width":"14px"});
+            }
+            else{
+                j$(sectionDiv).addClass("slds-is-open");
+                j$(imageDiv).attr("src","{!URLFOR($Resource.Breadwinner_Xero, 'Breadwinner_Xero/Images/SectionOpen.png')}");
+                j$(imageDiv).css({"margin-bottom":"0px", "margin-right":"3px", "width":"15px"});
+            }
+        }
+
+        function siblingSelectTab(elmnt){
+            // slds-is-active
+            j$(elmnt).parent("li").siblings(".slds-is-active").removeClass("slds-is-active");
+            j$(elmnt).parent("li").addClass("slds-is-active");
+
+            // tabindex
+            j$(elmnt).parent("li").siblings().children("a").attr("tabindex", -1);
+            j$(elmnt).attr("tabindex", 0);
+
+            // aria-selected
+            j$(elmnt).parent("li").siblings().children("a").attr("aria-selected", false);
+            j$(elmnt).attr("aria-selected", true);
+        }
+
+        function message() {
+            j$(".infoM6, .infoM4, .infoM3, .infoM2, .infoS1").addClass("slds-notify slds-notify_alert slds-theme_inverse-text  slds-text-align_left slds-text-heading_small slds-m-bottom_small").css( {"font-weight":"500","line-height":"1.4","word-spacing":"1px","justify-content":"left", "background":"rgba(84,105,141,.95)"} );
+            j$(".errorM6, .errorM4, .errorM3, .errorM2, .errorS1").addClass("slds-notify slds-notify_alert slds-theme_error  slds-text-align_left slds-text-heading_small slds-m-bottom_small").css({"font-weight":"500","line-height":"1.4","word-spacing":"1px","justify-content":"left"});
+            j$(".warningM6, .warningM4, .warningM3, .warningM2, .warningS1").addClass("slds-notify slds-notify_alert slds-theme_warning  slds-text-align_left slds-text-heading_small slds-m-bottom_small").css( {"font-weight":"500","line-height":"1.4","word-spacing":"1px","justify-content":"left"}) ;
+            j$(".confirmM6, .confirmM4, .confirmM3, .confirmM2, .confirmS1").addClass("slds-notify slds-notify_alert slds-theme_success slds-text-align_left slds-text-heading_small slds-m-bottom_small").css( {"font-weight":"500","line-height":"1.4","word-spacing":"1px","justify-content":"left"} ) ;
+
+            j$("div .messageText h4").css( "color", "white" );
+            j$("div[class*='warning'] div.messageText h4").css( "color", "black" );
+            j$("table.messageTable td").css({"color" : "white"});
+            j$("div[class*='warning'] table.messageTable td").css( "color", "black" );
+            j$(".dateFormat").hide();
+        }
+
+        function helpTextPosition(element, helptext, TopMinusparam,LeftMinusParam) {
+            if(j$(".bPageHeader").outerHeight(true)==null){
+                LeftMinusParam=LeftMinusParam-9;
+                TopMinusparam=TopMinusparam-100;
+            }
+            var x = j$(element).offset();
+            var ToSetleft = x.left - LeftMinusParam;
+            j$("#help p").text(helptext);
+            var ToSetheight = x.top - TopMinusparam;
+            var heptextdiv = document.getElementById("help");
+            j$(heptextdiv).css({
+                top: ToSetheight + 'px',
+                left: ToSetleft + 'px',
+                display: ""
+            })
+        }
+
+        function mouseOutHelp() {
+            const helpTextFiv = document.getElementById("help");
+            j$(helpTextFiv).css({
+                top: "0px",
+                left: "0px",
+                display: "none"
+            });
+        }
+
+        function scrollToTop() {
+            window.scrollTo(0,0);
+        }
+
+    </script>
+
+</apex:page>

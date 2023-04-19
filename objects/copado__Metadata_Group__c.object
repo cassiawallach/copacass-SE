@@ -169,8 +169,6 @@
     <listViews>
         <fullName>All</fullName>
         <columns>NAME</columns>
-        <columns>copado__Description__c</columns>
-        <columns>OBJECT_ID</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

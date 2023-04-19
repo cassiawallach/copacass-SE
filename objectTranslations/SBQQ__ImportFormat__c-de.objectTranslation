@@ -6,24 +6,24 @@
         <value>Importformat</value>
     </caseValues>
     <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value>Importformat</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Importformat</value>
-    </caseValues>
-    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Importformate</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Importformat</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
         <plural>true</plural>
         <value>Importformate</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Importformats</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
@@ -32,27 +32,27 @@
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Importformat</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
         <plural>true</plural>
         <value>Importformaten</value>
     </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value>Importformats</value>
-    </caseValues>
     <fields>
         <help>Aktivieren Sie das Kontrollkästchen, um das Eingabeformat verfügbar zu machen.</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Geben Sie einen aussagekräftigen Namen ein, der das Eingabeformat beschreibt.</help>
-        <label></label>
+        <label><!-- Import Format Name --></label>
         <name>SBQQ__ImportFormatName__c</name>
     </fields>
     <fields>
         <help>Das Zielobjekt, das importiert werden soll.</help>
-        <label></label>
+        <label><!-- Target Object --></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Quote Line</masterLabel>
@@ -61,13 +61,20 @@
     </fields>
     <fields>
         <help>Die Anzahl eindeutiger Schlüssel innerhalb des Importformats.</help>
-        <label></label>
+        <label><!-- # Unique Key --></label>
         <name>SBQQ__UniqueKeyCount__c</name>
     </fields>
     <gender>Neuter</gender>
+    <layouts>
+        <layout>Import Format Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Anzahl Importformate</nameFieldLabel>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- More than 1 unique key defined in Import Column. --></errorMessage>
         <name>SBQQ__Num_Unique_Key_is_not_one</name>
     </validationRules>
 </CustomObjectTranslation>

@@ -72,4 +72,23 @@
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>OpportunityLineItemId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Quantity</fullName>
+    </fields>
+    <fields>
+        <fullName>Revenue</fullName>
+    </fields>
+    <fields>
+        <fullName>ScheduleDate</fullName>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+    </fields>
 </CustomObject>

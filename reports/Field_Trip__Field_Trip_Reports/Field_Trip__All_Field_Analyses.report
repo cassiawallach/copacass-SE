@@ -24,6 +24,7 @@
     <columns>
         <field>Field_Trip__Field_Analysis__c.Field_Trip__isRequired__c</field>
     </columns>
+    <currency>USD</currency>
     <description>Grouped by Field Trip</description>
     <format>Summary</format>
     <groupingsDown>

@@ -9,17 +9,45 @@
         <value>Variables de resumen</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>Partida de presupuesto sobre la que actúa la función agregada.</help>
-        <label></label>
+        <label><!-- Aggregate Field --></label>
         <name>SBQQ__AggregateField__c</name>
+        <picklistValues>
+            <masterLabel>Default_Net_Total__c</masterLabel>
+            <translation><!-- Default_Net_Total__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly_net_total_for_Renewal__c</masterLabel>
+            <translation><!-- Monthly_net_total_for_Renewal__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net_Unit_Price__c</masterLabel>
+            <translation><!-- Net_Unit_Price__c --></translation>
+        </picklistValues>
         <picklistValues>
             <masterLabel>Quantity</masterLabel>
             <translation>Cantidad</translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__ListPrice__c</masterLabel>
+            <translation><!-- SBQQ__ListPrice__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__NetPrice__c</masterLabel>
+            <translation><!-- SBQQ__NetPrice__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__NetTotal__c</masterLabel>
+            <translation><!-- SBQQ__NetTotal__c --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <help>Función agregada empleada para calcular esta variable.</help>
-        <label></label>
+        <label><!-- Aggregate Function --></label>
         <name>SBQQ__AggregateFunction__c</name>
         <picklistValues>
             <masterLabel>Average</masterLabel>
@@ -44,13 +72,13 @@
     </fields>
     <fields>
         <help>Otra variable de resumen para componer con esta variable de resumen si su condición se basa en ambos resultados.</help>
-        <label></label>
+        <label><!-- Variable Element --></label>
         <name>SBQQ__CombineWith__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Composed By --></relationshipLabel>
     </fields>
     <fields>
         <help>Especifique el modo de componer esta variable con Elemento variable o Elemento valor.</help>
-        <label></label>
+        <label><!-- Composite Operator --></label>
         <name>SBQQ__CompositeOperator__c</name>
         <picklistValues>
             <masterLabel>Add</masterLabel>
@@ -71,7 +99,7 @@
     </fields>
     <fields>
         <help>Si desea limitar más los registros en base a un campo de presupuesto, seleccione el campo con el que desea hacer coincidir el mismo campo en el presupuesto.</help>
-        <label></label>
+        <label><!-- Constraint Field --></label>
         <name>SBQQ__ConstraintField__c</name>
         <picklistValues>
             <masterLabel>Status</masterLabel>
@@ -84,8 +112,20 @@
     </fields>
     <fields>
         <help>Seleccione el campo que hay que utilizar cuando se filtran elementos para la inclusión en esta variable de resumen.</help>
-        <label></label>
+        <label><!-- Filter Field --></label>
         <name>SBQQ__FilterField__c</name>
+        <picklistValues>
+            <masterLabel>ACV_Segment_Index__c</masterLabel>
+            <translation><!-- ACV_Segment_Index__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exclude_for_PSup_Product__c</masterLabel>
+            <translation><!-- Exclude_for_PSup_Product__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non_Segmented_or_Non_Subscription__c</masterLabel>
+            <translation><!-- Non_Segmented_or_Non_Subscription__c --></translation>
+        </picklistValues>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
             <translation>Código del producto</translation>
@@ -94,15 +134,27 @@
             <masterLabel>Product Family</masterLabel>
             <translation>Familia de productos</translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__PricingMethod__c</masterLabel>
+            <translation><!-- SBQQ__PricingMethod__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__SegmentIndex__c</masterLabel>
+            <translation><!-- SBQQ__SegmentIndex__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__SubscriptionCategory__c</masterLabel>
+            <translation><!-- SBQQ__SubscriptionCategory__c --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <help>Ingrese el valor de coincidencia en este filtro.</help>
-        <label></label>
+        <label><!-- Filter Value --></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>Seleccione el operador para utilizar en su filtro.</help>
-        <label></label>
+        <label><!-- Operator --></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -143,7 +195,7 @@
     </fields>
     <fields>
         <help>Ingrese el ámbito de su variable de resumen.</help>
-        <label></label>
+        <label><!-- Scope --></label>
         <name>SBQQ__Scope__c</name>
         <picklistValues>
             <masterLabel>Assets</masterLabel>
@@ -156,7 +208,7 @@
     </fields>
     <fields>
         <help>Seleccione el objeto que desea agregar.</help>
-        <label></label>
+        <label><!-- Target Object --></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Asset</masterLabel>
@@ -177,9 +229,24 @@
     </fields>
     <fields>
         <help>Ingrese un valor para utilizar al componer la operación.</help>
-        <label></label>
+        <label><!-- Value Element --></label>
         <name>SBQQ__ValueElement__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Summary Variable Layout</layout>
+        <sections>
+            <label>Información compuesta</label>
+            <section>Composite Information</section>
+        </sections>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Información de filtro</label>
+            <section>Filter Information</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nombre de variable</nameFieldLabel>
 </CustomObjectTranslation>

@@ -5,70 +5,89 @@
         <value>免税証明書</value>
     </caseValues>
     <fields>
-        <label></label>
+        <label><!-- Account --></label>
         <name>SBQQ__Account__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Tax Exemption Certificates --></relationshipLabel>
     </fields>
     <fields>
         <help>有効な証明書の場合、[有効] の [免税?] 項目が true に設定されます</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Certificate Number --></label>
         <name>SBQQ__CertificateNumber__c</name>
     </fields>
     <fields>
         <help>省略可能- 証明書に関連付けられている会社住所を追跡します</help>
-        <label></label>
+        <label><!-- Country --></label>
         <name>SBQQ__Country__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- County --></label>
         <name>SBQQ__County__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Date Issued --></label>
         <name>SBQQ__DateIssued__c</name>
     </fields>
     <fields>
         <help>デフォルトとしてマークできるのは有効な証明書のみです</help>
-        <label></label>
+        <label><!-- Default --></label>
         <name>SBQQ__Default__c</name>
     </fields>
     <fields>
         <help>証明書に関連付けられている会社名または DBA 名</help>
-        <label></label>
+        <label><!-- Exempt Company Name --></label>
         <name>SBQQ__ExemptCompanyName__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Expiration Date --></label>
         <name>SBQQ__ExpirationDate__c</name>
     </fields>
     <fields>
         <help>証明書を発行した機関 (政府機関や国 (欧州の組織) など)</help>
-        <label></label>
+        <label><!-- Issuing Authority --></label>
         <name>SBQQ__IssuingAuthority__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Notes --></label>
         <name>SBQQ__Notes__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Postal Code --></label>
         <name>SBQQ__PostalCode__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- State --></label>
         <name>SBQQ__State__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Street Address_2 --></label>
         <name>SBQQ__StreetAddress_2__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Street Address --></label>
         <name>SBQQ__StreetAddress__c</name>
     </fields>
+    <layouts>
+        <layout>Tax Exemption Certificate Layout</layout>
+        <sections>
+            <label>組織情報</label>
+            <section>Company Information</section>
+        </sections>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>納税証明書</label>
+            <section>Tax Certificate</section>
+        </sections>
+        <sections>
+            <label>納税証明書の詳細</label>
+            <section>Tax Certificate Details</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>免税証明書名</nameFieldLabel>
 </CustomObjectTranslation>

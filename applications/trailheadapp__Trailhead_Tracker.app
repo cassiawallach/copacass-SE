@@ -7,7 +7,6 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Trail Tracker</label>
-    <logo>trailheadapp__Trailhead/trailheadapp__trailheadLogo_png.png</logo>
     <tabs>trailheadapp__User_Badge__c</tabs>
     <tabs>trailheadapp__Badge__c</tabs>
     <tabs>trailheadapp__Trailmix__c</tabs>
@@ -16,4 +15,7 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>trailheadapp__TrailheadSetup</tabs>
     <tabs>trailheadapp__Trailhead_User_Data__c</tabs>
+    <tabs>Action_Plan__c</tabs>
+    <tabs>redwing__ILT_Instructor__c</tabs>
+    <tabs>redwing__ILT_Roster__c</tabs>
 </CustomApplication>

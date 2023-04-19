@@ -142,7 +142,9 @@ function getRunnerConstructor(sequence) {
 		'OptionSequence': require('./PrecacheSequenceRunners/OptionSequenceRunner.js'),
 		'DiscountAndAccountSequence': require('./PrecacheSequenceRunners/DiscountScheduleSequenceRunner.js'),
 		'ProductSequence': require('./PrecacheSequenceRunners/ProductSequenceRunner.js'),
-		'RelatedRecordSequence': require('./PrecacheSequenceRunners/RelatedRecordSequenceRunner.js')
+		'RelatedRecordSequence': require('./PrecacheSequenceRunners/RelatedRecordSequenceRunner.js'),
+		'UbpSequence': require('./PrecacheSequenceRunners/UbpSequenceRunner.js'),
+		'PricingGuidanceSequence': require('./PrecacheSequenceRunners/PricingGuidanceSequenceRunner.js')
 	};
 	return requiredModulesBySequence[sequence] || null;
 }
@@ -167,7 +169,7 @@ function getArgumentList(sequence, apex, data, resultPoster) {
 		case 'MetadataSequence':
 			// In addition to the standard data, the context will include the Referenced Field Map from the inner class
 			// EditorSettings in QuoteEditorModel.cls. This indicates which fields must have their metadata queried.
-			return result.concat([data.referencedFieldMap]);
+			return result.concat([data.referencedFieldMap, data.settings]);
 		case 'DiscountAndAccountSequence':
 			// In addition to the standard data, we must also include the Quote JSON, and the account ID. The former
 			// is swept for schedule IDs, and the latter is used to get asset and subscription summary information.
@@ -182,6 +184,13 @@ function getArgumentList(sequence, apex, data, resultPoster) {
 		case 'OptionSequence':
 			// Both the Option and Product sequences require the Quote JSON, and a list of referenced fields.
 			return result.concat([data.quote, data.referencedFields]);
+		case 'UbpSequence':
+			// The UBP sequence requires the Quote JSON, and the Settings object.
+			return result.concat([data.quote, data.settings]);
+		case 'PricingGuidanceSequence':
+			// In addition to the standard data, we must also include the Quote JSON, and the account ID. The former
+			// is swept for schedule IDs, and the latter is used to get asset and subscription summary information.
+			return result.concat([data.quote, data.accountId, data.settings]);
 		default:
 			return null;
 	}
@@ -224,7 +233,7 @@ function apexFactory(client) {
 		setOptions: setOptions
 	};
 }
-},{"./PrecacheRestClient.js":3,"./PrecacheSequenceRunners/DiscountScheduleSequenceRunner.js":4,"./PrecacheSequenceRunners/MetadataSequenceRunner.js":5,"./PrecacheSequenceRunners/OptionSequenceRunner.js":6,"./PrecacheSequenceRunners/PriceRuleSequenceRunner.js":7,"./PrecacheSequenceRunners/ProductSequenceRunner.js":8,"./PrecacheSequenceRunners/RelatedRecordSequenceRunner.js":9}],3:[function(require,module,exports){
+},{"./PrecacheRestClient.js":3,"./PrecacheSequenceRunners/DiscountScheduleSequenceRunner.js":4,"./PrecacheSequenceRunners/MetadataSequenceRunner.js":5,"./PrecacheSequenceRunners/OptionSequenceRunner.js":6,"./PrecacheSequenceRunners/PriceRuleSequenceRunner.js":7,"./PrecacheSequenceRunners/PricingGuidanceSequenceRunner.js":8,"./PrecacheSequenceRunners/ProductSequenceRunner.js":9,"./PrecacheSequenceRunners/RelatedRecordSequenceRunner.js":10,"./PrecacheSequenceRunners/UbpSequenceRunner.js":11}],3:[function(require,module,exports){
 /**
  * Created by jfeingold on 10/11/16.
  */
@@ -324,7 +333,7 @@ var convertTo18 = require('../IdConverter.js');
 /**
  * Returns an object containing an executeSequence() method.
  * @param {Object} apex Provides access to SFDC data
- * @param {String} prefix The prefix used for callouts. Either 'SBQQ' or an empty string
+ * @param {String} prefix The prefix used for callouts.
  * @param {Function} resultPoster self.postMessage() passed in from the worker thread
  * @param {Object} quote Quote data
  * @param {String} accountId ID of the account on this quote
@@ -352,9 +361,9 @@ function runnerFactory(apex, prefix, resultPoster, quote, accountId) {
 	}
 	
 	function extractScheduleMapFromQuote() {
-		// If the prefix is 'SBQQ', it means we're in a managed install, and all Salesforce CPQ objects will have an 
-		// SBQQ__ prefix.
-		var fieldPrefix = prefix == 'SBQQ' ? 'SBQQ__' : '';
+		// If the prefixed, it means we're in a managed install, and all Salesforce CPQ objects will have a
+		// prefix.
+		var fieldPrefix = prefix ? prefix + '__' : '';
 		var scheduleMap = {};
 		var volumeDiscountField = fieldPrefix + 'DiscountSchedule__c';
 		var termDiscountField = fieldPrefix + 'TermDiscountSchedule__c';
@@ -403,12 +412,13 @@ module.exports = runnerFactory;
 /**
  * Returns an object containing an executeSequence() method.
  * @param {Object} apex Provides access to SFDC data
- * @param {String} prefix The prefix used for callouts. Either 'SBQQ' or an empty string
+ * @param {String} prefix The prefix used for callouts. Either an empty string or the appropriate org prefix.
  * @param {Function} resultPoster self.postMessage() passed in from the worker thread
  * @param {Object} referencedFieldMap Which fields must be queried
+ * @param {Object} settings object
  * @returns {{executeSequence: executeSequence}}
  */
-function runnerFactory(apex, prefix, resultPoster, referencedFieldMap) {
+function runnerFactory(apex, prefix, resultPoster, referencedFieldMap, settings) {
 
 	function executeSequence() {
 		var fullNames = determineMetadataFullNames();
@@ -432,17 +442,24 @@ function runnerFactory(apex, prefix, resultPoster, referencedFieldMap) {
 		if (referencedFieldMap == null) {
 			return [];
 		}
-		// The callout prefix we're given is 'SBQQ', then it means we're on a managed install, so all of the Salesforce CPQ
-		// objects will have an SBQQ__ prefix.
-		var objectPrefix = prefix == 'SBQQ' ? 'SBQQ__' : '';
+		// If the callout prefix we're given is non-null, then it means we're on a managed install, so all of the Salesforce CPQ
+		// objects will have a prefix.
+		var objectPrefix = prefix ? prefix + '__' : '';
 		var fullNames = [];
 		var lineType = objectPrefix + 'QuoteLine__c';
 		var quoteType = objectPrefix + 'Quote__c';
 		var groupType = objectPrefix + 'QuoteLineGroup__c';
+		var linePricingGuidanceType = objectPrefix + "QuoteLinePricingGuidance__c";
 		// For all field sets, create the field's full name by adding the object name to the beginning.
 		for (var key in referencedFieldMap) {
 			var typeName;
-			if (key === 'Quote Line') {
+			if(key === 'Quote Line Pricing Guidance') {
+				if(!settings || !settings.isPricingGuidanceEnabled) {
+					continue;
+				}
+
+				typeName = linePricingGuidanceType;
+			} else if (key === 'Quote Line') {
 				typeName = lineType;
 			} else if (key === 'Group') {
 				typeName = groupType;
@@ -473,14 +490,14 @@ module.exports = runnerFactory;
 /**
  * Returns an object containing an executeSequence() method.
  * @param {Object} apex Provides access to SFDC data
- * @param {String} prefix The prefix used for callouts. Either 'SBQQ' or an empty string
+ * @param {String} prefix The prefix used for callouts. Either an empty string or the appropriate org prefix.
  * @param {Function} resultPoster self.postMessage() passed in from the worker thread
  * @param {Object} quote Quote data
  * @param {Array} referencedFields The Product Option fields that must be queried
  * @returns {{executeSequence: executeSequence}}
  */
 function runnerFactory(apex, prefix, resultPoster, quote, referencedFields) {
-	var fieldPrefix = prefix == '' ? '' : 'SBQQ__';
+	var fieldPrefix = prefix ? prefix + '__' : '';
 	
 	function executeSequence() {
 		var optionIds = getOptionIdsFromLines();
@@ -527,7 +544,7 @@ module.exports = runnerFactory;
 /**
  * Returns an object containing an executeSequence() method.
  * @param {Object} apex Provides access to SFDC data
- * @param {String} prefix The prefix used for callouts. Either 'SBQQ' or an empty string
+ * @param {String} prefix The prefix used for callouts. Either an empty string or the appropriate org prefix.
  * @param {Function} resultPoster self.postMessage() passed in from the worker thread
  * @param {String} accountId ID of the account on this quote
  * @returns {{executeSequence: executeSequence}}
@@ -568,7 +585,7 @@ function runnerFactory(apex, prefix, resultPoster, accountId) {
 	}
 
 	function getSummaryVariableIds(ruleRecords) {
-		var recordPrefix = prefix == '' ? '' : 'SBQQ__';
+		var recordPrefix = prefix ? prefix + '__' : '';
 		var filterVarField = recordPrefix + 'FilterVariable__c';
 		var testedVarField = recordPrefix + 'TestedVariable__c';
 		var sourceVarField = recordPrefix + 'SourceVariable__c';
@@ -606,7 +623,7 @@ function runnerFactory(apex, prefix, resultPoster, accountId) {
 		if (!accountId) {
 			return Promise.resolve([]);
 		}
-		var recordPrefix = prefix == '' ? '' : 'SBQQ__';
+		var recordPrefix = prefix ? prefix + '__' : '';
 		var targetObjectField = recordPrefix + 'TargetObject__c';
 		var filterField = recordPrefix + 'FilterField__c';
 		var constraintField = recordPrefix + 'ConstraintField__c';
@@ -657,6 +674,61 @@ function runnerFactory(apex, prefix, resultPoster, accountId) {
 
 },{}],8:[function(require,module,exports){
 /**
+ *
+ * Exports a factory method to create an object capable of loading pricing guidance and account summaries, and
+ * posting those results back to the main thread.
+ */
+module.exports = runnerFactory;
+/**
+ * Returns an object containing an executeSequence() method.
+ * @param {Object} apex Provides access to SFDC data
+ * @param {String} prefix The prefix used for callouts.
+ * @param {Function} resultPoster self.postMessage() passed in from the worker thread
+ * @param {Object} quote Quote data
+ * @param {String} accountId ID of the account on this quote
+ * @param {Object} settings object
+ * @returns {{executeSequence: executeSequence}}
+ */
+function runnerFactory(apex, prefix, resultPoster, quote, accountId, settings) {
+
+	function executeSequence() {
+		const pricingGuidanceIds = extractPricingGuidanceIds();
+		if (pricingGuidanceIds && pricingGuidanceIds.length != 0) {
+			const context = {
+				'pricingGuidanceIds': pricingGuidanceIds,
+				'accountId': accountId
+			};
+
+			return apex.load(prefix, 'PricingGuidanceServiceProvider', null, context)
+			.then(function(results) {
+				resultPoster({successful: true, provider: 'PricingGuidanceServiceProvider', results: {results: results, account: accountId, settings: settings}});
+			}, function(err) {
+				self.postMessage({err: true, sequence: 'PricingGuidanceSequence', msg: err.message || err});
+			});
+		} else {
+			return Promise.resolve();
+		}
+	}
+
+	function extractPricingGuidanceIds() {
+		let pricingGuidanceIdSet = new Set();
+		if(quote.lineItems) {
+			quote.lineItems.forEach(function (line) {
+				const pgId = line.pricingGuidanceId;
+				if (pgId) {
+					pricingGuidanceIdSet.add(pgId);
+				}
+			});
+		}
+		return Array.from(pricingGuidanceIdSet);
+	}
+
+	return {
+		executeSequence: executeSequence
+	};
+}
+},{}],9:[function(require,module,exports){
+/**
  * Created by jfeingold on 10/14/16.
  */
 module.exports = runnerFactory;
@@ -664,14 +736,14 @@ module.exports = runnerFactory;
 /**
  * Returns an object containing an executeSequence() method.
  * @param {Object} apex Provides access to SFDC data
- * @param {String} prefix The prefix used for callouts. Either 'SBQQ' or an empty string
+ * @param {String} prefix The prefix used for callouts. Either an empty string or the appropriate org prefix.
  * @param {Function} resultPoster self.postMessage() passed in from the worker thread
  * @param {Object} quote Quote data
  * @param {Array} referencedFields The Product fields that must be included
  * @returns {{executeSequence: executeSequence}}
  */
 function runnerFactory(apex, prefix, resultPoster, quote, referencedFields) {
-	var fieldPrefix = prefix == '' ? '' : 'SBQQ__';
+	var fieldPrefix = prefix ? prefix + '__' : '';
 	function executeSequence() {
 		var productIds = getProductIdsFromLines();
 		var pricebookFilter = [];
@@ -720,7 +792,7 @@ function runnerFactory(apex, prefix, resultPoster, quote, referencedFields) {
 		executeSequence: executeSequence
 	};
 }
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /**
  * Created by jfeingold on 10/13/16.
  * 
@@ -733,7 +805,7 @@ var convertTo18 = require('../IdConverter.js');
 /**
  * Returns an object containing an executeSequence() method.
  * @param {Object} apex Provides access to SFDC data
- * @param {String} prefix The prefix used for callouts. Either 'SBQQ' or an empty string
+ * @param {String} prefix The prefix used for callouts. Either an empty string or the appropriate managed package prefix.
  * @param {Function} resultPoster self.postMessage() passed in from the worker thread
  * @param {Object} quote Quote data
  * @param {Object} lookupFieldMap A map from lookup field names to the objects targeted by those fields
@@ -746,9 +818,9 @@ function runnerFactory(apex, prefix, resultPoster, quote, lookupFieldMap, refere
 			'queryInfo': {}
 		};
 		
-		sweepModelsForLookupIds(context, lookupFieldMap.quoteLookups, [quote]);
-		sweepModelsForLookupIds(context, lookupFieldMap.groupLookups, quote.lineItemGroups);
-		sweepModelsForLookupIds(context, lookupFieldMap.lineLookups, quote.lineItems);
+		sweepModelsForLookupIds(context, lookupFieldMap.quoteLookups, [quote], prefix);
+		sweepModelsForLookupIds(context, lookupFieldMap.groupLookups, quote.lineItemGroups, prefix);
+		sweepModelsForLookupIds(context, lookupFieldMap.lineLookups, quote.lineItems, prefix);
 		
 		return apex.load(prefix, 'JSQCLookupFieldServiceProvider.JSQCLookupFieldLoader', 'AllAdditionalLookups', context)
 			.then(function(results) {
@@ -758,7 +830,7 @@ function runnerFactory(apex, prefix, resultPoster, quote, lookupFieldMap, refere
 			});
 	}
 	
-	function sweepModelsForLookupIds(context, lookupFields, models) {
+	function sweepModelsForLookupIds(context, lookupFields, models, prefix) {
 		// If there are lookup relationships to test, and records to test them against...
 		if (lookupFields && models && models.length > 0) {
 			// For every lookup field on this object type...
@@ -766,7 +838,7 @@ function runnerFactory(apex, prefix, resultPoster, quote, lookupFieldMap, refere
 				if (lookupFields.hasOwnProperty(key)) {
 					// Get the SObject type the field points to.
 					var targetType = lookupFields[key];
-					var aliasTargetType = getAliasTargetType(targetType);
+					var aliasTargetType = getAliasTargetType(targetType, prefix);
 					// Check that field on each record to see if it has a value
 					models.forEach(function(model) {
 						var id = model.record[key];
@@ -800,16 +872,16 @@ function runnerFactory(apex, prefix, resultPoster, quote, lookupFieldMap, refere
 	 * @param {String} targetType Represents the name of the custom object lookup
 	 * @returns {*}
 	 */
-	function getAliasTargetType(targetType) {
+	function getAliasTargetType(targetType, prefix) {
+		if(prefix !== ''){
+			prefix = prefix + '__';
+		}
 		switch(targetType) {
-			case 'SBQQ__Quote__c':
-			case 'Quote__c':
+			case prefix + 'Quote__c':
 				return 'Quote';
-			case 'SBQQ__QuoteLineGroup__c':
-			case 'QuoteLineGroup__c':
+			case prefix + 'QuoteLineGroup__c':
 				return 'Group';
-			case 'SBQQ__QuoteLine__c':
-			case 'QuoteLine__c':
+			case prefix + 'QuoteLine__c':
 				return 'Quote Line';
 			default:
 				return targetType;
@@ -820,4 +892,144 @@ function runnerFactory(apex, prefix, resultPoster, quote, lookupFieldMap, refere
 		executeSequence: executeSequence
 	};
 }
-},{"../IdConverter.js":1}]},{},[2]);
+},{"../IdConverter.js":1}],11:[function(require,module,exports){
+/**
+ * Created by jfeingold on 11/6/18.
+ */
+module.exports = runnerFactory;
+
+/**
+ * Returns an object containing an executeSequence() method.
+ * @param {Object} apex - Provides access to SFDC data via an Apex REST callout.
+ * @param {String} prefix - The prefix used for callouts. Either the Namespace used by the installed Salesforce CPQ
+ * package or the hardcoded prefix of the deployed scratch org.
+ * @param {Function} resultPoster
+ * @param {Object} quote - The Quote data.
+ * @param {JSON} settings - A serialized QuoteEditorModel.EditorSettings instance.
+ * @returns {{executeSequence: executeSequence}}
+ */
+function runnerFactory(apex, prefix, resultPoster, quote, settings) {
+	const fieldPrefix = prefix ? `${prefix}__` : '';
+	const lineItemsToLoad = [];
+	const provider = 'ConsumptionServiceProvider.UBPEditorLoader';
+
+	// Every precache sequence runner needs to return an object containing an executeSequence() method that performs the
+	// load and posts the results back to the main thread. So let's define that method.
+	function executeSequence() {
+		const isManualEditEnabled = settings.isManualEditsForUBPEnabled || false;
+		// If the settings don't reference a plugin and manual edit are not enabled, then the Consumption Schedules won't be manipulated during calculation,
+		// and don't need to be loaded. Likewise, if the quote has no lines, then there aren't even any schedules to manipulate.
+		// So if either of those things are true, we can just return a resolved Promise.
+		if (!(settings.jsqcPlugin || isManualEditEnabled) || !quote.lineItems || quote.lineItems.length === 0) {
+			return Promise.resolve();
+		}
+
+		// Create the context for the callout. If no context was created, no callout is needed and we can return a resolved
+		// Promise.
+		let ctx = createCalloutContext();
+		if (!ctx) {
+			return Promise.resolve();
+		}
+
+		return performLoadAndFormatResults(ctx);
+	}
+
+	/**
+	 * Return List of Required Consumption Rate Fields
+	 * @param fieldPrefix - Field Prefix (SBQQ__)
+	 * @return {string[]}
+	 * @private
+	 */
+	function _getRequiredConsumptionRateFields(fieldPrefix) {
+		return [
+			`${fieldPrefix}ProcessingOrder__c`,
+			`${fieldPrefix}LowerBound__c`,
+			`${fieldPrefix}UpperBound__c`,
+			`${fieldPrefix}Price__c`,
+		];
+	}
+
+	/**
+	 * Return List of Required Consumption Schedule Fields
+	 * @param fieldPrefix - Field Prefix (SBQQ__)
+	 * @return {string[]}
+	 * @private
+	 */
+	function _getRequiredConsumptionScheduleFields(fieldPrefix) {
+		return [`${fieldPrefix}Category__c`];
+	}
+
+	function createCalloutContext() {
+		// Pull the consumption rate and consumption schedule fields from the ConsumptionRate and ConsumptionSchedule entries
+		// in the ubpReferencedFieldMap, defaulting to an empty list.
+		const {ConsumptionRate: consumptionRateFields = [], ConsumptionSchedule: consumptionScheduleFields = []} = settings.ubpReferencedFieldMap;
+		const requiredConsumptionRateFieldsSet = new Set([...consumptionRateFields, ..._getRequiredConsumptionRateFields(fieldPrefix)]);
+		const requiredConsumptionScheduleFieldsSet = new Set([...consumptionScheduleFields, ..._getRequiredConsumptionScheduleFields(fieldPrefix)]);
+
+		let hasConsumptionField = fieldPrefix + 'HasConsumptionSchedule__c';
+		let lineIdSet = new Set();
+		quote.lineItems.forEach((line) => {
+			// For each line that has a consumption schedule associated with it
+			if (line.record[hasConsumptionField]) {
+				// The actual UBP DAO consults the Line ID, followed by the Product ID if there's no Line ID. However,
+				// since this will only run on QLE loading, when all lines are guaranteed to exist, we'll just check the
+				// Line IDs. Likewise, we don't have to do a check to see if the line is already cached.
+				lineIdSet.add(line.record['Id']);
+				lineItemsToLoad.push(line);
+			}
+		});
+
+		// If there are no line items to load, then we can return null.
+		if (lineItemsToLoad.length === 0) {
+			return null;
+		}
+
+		let lineIdArray = Array.from(lineIdSet);
+		return {
+			transactionIds: lineIdArray,
+			scheduleFields: [...requiredConsumptionScheduleFieldsSet],
+			fields: [...requiredConsumptionRateFieldsSet],
+		};
+	}
+
+	function performLoadAndFormatResults(ctx) {
+		apex.setOptions({escape: false, timeout: 120000});
+		return apex.load(prefix, provider, null, ctx)
+			.then((results) => {
+				// If we didn't get any results, just resolve.
+				if (!results.transactionIdsToSObjects || !results.transactionIdsToSObjects.ConsumptionSchedules) {
+					return Promise.resolve();
+				}
+
+				// Map each schedule list by the ID of the line that used it so we can send it into the precacher.
+				let resultsToPost = {};
+				lineItemsToLoad.forEach((line) => {
+					let schedules = results.transactionIdsToSObjects.ConsumptionSchedules[line.record.Id];
+					if (!schedules) {
+						return;
+					}
+					if (results.transactionIdsToSObjects.ConsumptionRates) {
+						schedules.forEach((schedule) => {
+							schedule.consumptionRates = results.transactionIdsToSObjects.ConsumptionRates[schedule.Id];
+						});
+					}
+					resultsToPost[line.record.Id] = schedules;
+				});
+				// Post the results to the main thread.
+				resultPoster({
+					successful: true,
+					provider: provider,
+					uid: null,
+					results: resultsToPost
+				});
+			}, (err) => {
+				resultPoster({err: true, sequence: 'UbpSequence', msg: err.message || err});
+			});
+	}
+
+
+	return {
+		executeSequence: executeSequence
+	};
+}
+},{}]},{},[2]);

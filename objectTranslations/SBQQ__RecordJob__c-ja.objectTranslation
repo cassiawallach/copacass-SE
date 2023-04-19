@@ -6,35 +6,35 @@
     </caseValues>
     <fields>
         <help>オンになっている場合、レコードのジョブの [完了] 状況がユーザに通知されています。</help>
-        <label></label>
+        <label><!-- Is Read --></label>
         <name>SBQQ__IsRead__c</name>
     </fields>
     <fields>
         <help>実行されたバックグラウンドジョブの詳細 (ジョブ ID が指定されていない場合)。</help>
-        <label></label>
+        <label><!-- Job Details --></label>
         <name>SBQQ__JobDetails__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Job Id --></label>
         <name>SBQQ__JobId__c</name>
     </fields>
     <fields>
         <help>実行されたバックグラウンドジョブの状況 (ジョブ ID が指定されていない場合)。</help>
-        <label></label>
+        <label><!-- Job Status --></label>
         <name>SBQQ__JobStatus__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Record Id --></label>
         <name>SBQQ__RecordId__c</name>
     </fields>
     <fields>
         <help>ジョブの完了時にリダイレクトされる URL。</help>
-        <label></label>
+        <label><!-- Redirect URL --></label>
         <name>SBQQ__RedirectUrl__c</name>
     </fields>
     <fields>
         <help>実行されたバックグラウンドジョブのスタックトレース (ジョブ ID が指定されていない場合)。</help>
-        <label></label>
+        <label><!-- Stacktrace --></label>
         <name>SBQQ__Stacktrace__c</name>
     </fields>
     <nameFieldLabel>名前</nameFieldLabel>

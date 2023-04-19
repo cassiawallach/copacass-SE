@@ -1,0 +1,72 @@
+<apex:page standardController="amc__Rate_Card__c" extensions="amc.ManageRateCardsExt" tabStyle="amc__Rate_Card__c" standardStylesheets="false" sidebar="false">
+	<apex:includeScript value="{!URLFOR($Resource.amc__js, '/jquery/dist/jquery.min.js')}" />
+	<apex:includeScript value="/support/console/55.0/integration.js" />
+
+	<apex:slds />    
+    <apex:includeLightning />
+
+	<style>
+		html,
+		body {
+			height: 100%;
+		}
+	</style>
+
+	<script>
+		$(document).ready(function (){
+			$(window).resize(function (){
+				setHeight();
+			});
+			setHeight();
+		});
+
+		function isLightning(){
+			return document.referrer.indexOf(".lightning.force.com") > 0;
+		}
+
+		function setHeight(){
+			//window height
+			var winHeight = $('body').height();
+			//footer height
+			var footerHeight = $('div.bPageFooter').outerHeight(true);
+			var headerHeight = $('div.bPageHeader').outerHeight(true);
+			//calculate our window height
+			var plannerHeight = winHeight-footerHeight-headerHeight;
+			$('div#manageRateCard').height(plannerHeight);
+		}
+
+		var rateCardId = '{!amc__Rate_Card__c.Id}';
+		var typeOfAction = '{!actionType}';
+		var isLightning = isLightning();
+		var accountId = '{!accountId}';
+		var loadManageRateCardPg = function(){
+			$Lightning.use("amc:ManageRateCardsApp", function (){
+				$Lightning.createComponent("amc:manageRateCardsWC",
+					{'recordId': rateCardId, 'selectedAccountId' : accountId, 'isLightning': isLightning, 'typeOfAction': typeOfAction},
+					"manageRateCard",
+					function (cmp){
+					
+						var showToast = function (event){
+							sforce.one.showToast({
+								'title': event.detail.title,
+								'message': event.detail.message,
+								'type': event.detail.type //supported types are error, success, info, warning
+							});
+						};
+						var redirect = function (event){
+							if (typeOfAction == 'Edit') sforce.one.back(true);
+							else sforce.one.navigateToSObject(event.detail.recordId);
+						}
+						//Add a listener for the 'showtoast' & 'redirect' event type
+						document.querySelector('amc-manage-rate-cards-w-c').addEventListener('showtoast', showToast);
+						document.querySelector('amc-manage-rate-cards-w-c').addEventListener('redirect', redirect);
+				});
+			});
+		}
+
+		loadManageRateCardPg();
+		
+	</script>
+
+	<div id="manageRateCard" style="width:100%; height:100%;"></div>
+</apex:page>

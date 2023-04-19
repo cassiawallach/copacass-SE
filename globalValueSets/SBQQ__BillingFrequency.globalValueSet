@@ -17,13 +17,18 @@
     </customValue>
     <customValue>
         <fullName>Annual</fullName>
-        <default>false</default>
+        <default>true</default>
         <label>Annual</label>
     </customValue>
     <customValue>
         <fullName>Invoice Plan</fullName>
         <default>false</default>
         <label>Invoice Plan</label>
+    </customValue>
+    <customValue>
+        <fullName>Pre-Paid</fullName>
+        <default>false</default>
+        <label>Pre-Paid</label>
     </customValue>
     <customValue>
         <fullName>One Time</fullName>

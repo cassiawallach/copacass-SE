@@ -2,23 +2,23 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Favorisiertes Produkt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Favorisierte Produkte</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Favorisiertes Produkt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
         <plural>true</plural>
         <value>Favorisierte Produkte</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Favorisiertem Produkt</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>true</plural>
-        <value>Favorisierten Produkten</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
@@ -31,53 +31,60 @@
         <value>Favorisierter Produkte</value>
     </caseValues>
     <caseValues>
-        <caseType>Nominative</caseType>
+        <caseType>Dative</caseType>
         <plural>false</plural>
-        <value>Favorisiertes Produkt</value>
+        <value>Favorisiertem Produkt</value>
     </caseValues>
     <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value>Favorisiertes Produkt</value>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Favorisierten Produkten</value>
     </caseValues>
     <fields>
-        <label></label>
+        <label><!-- Configuration Attributes --></label>
         <name>SBQQ__ConfigurationAttributes__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Discount Schedule --></label>
         <name>SBQQ__DiscountSchedule__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
     </fields>
     <fields>
         <help>Bezeichnet Funktions- und dynamische Optionen für diesen Belegposten.</help>
-        <label></label>
+        <label><!-- Dynamic Option ID --></label>
         <name>SBQQ__DynamicOptionId__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Favorite --></label>
         <name>SBQQ__Favorite__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Product Option --></label>
         <name>SBQQ__ProductOption__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Product --></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Quantity --></label>
         <name>SBQQ__Quantity__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Required By --></label>
         <name>SBQQ__RequiredBy__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
     </fields>
     <gender>Neuter</gender>
+    <layouts>
+        <layout>Favorite Product Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Name des favorisierten Produkts</nameFieldLabel>
 </CustomObjectTranslation>

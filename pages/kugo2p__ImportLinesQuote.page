@@ -1,0 +1,20 @@
+<apex:page standardController="kugo2p__SalesQuote__c"
+    title="Import Lines | Kugamon" 
+    applyBodyTag="false"
+    sidebar="false" 
+    docType="html-5.0">
+
+    <script>
+        // get the id of the quote records
+        var quoteId = "{!JSENCODE(kugo2p__SalesQuote__c.Id)}";
+
+        const appName = 'ImportLinesApp';
+        const cmpName = 'importLinesLwc';
+        const cmpParams = {
+		                    objectName: 'Quote',
+		                    recordId: quoteId
+                        };
+    </script>
+
+    <c:BaseLightningOut />
+</apex:page>

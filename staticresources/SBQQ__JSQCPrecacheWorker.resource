@@ -8,7 +8,7 @@ self.addEventListener('message', function(e) {
 		refreshToken: ''
 	});
 	var orgUrl = e.data.orgUrl;
-	var prefix = (e.data.prefix == null || e.data.prefix == '') ? '' : 'SBQQ';
+	var prefix = (e.data.prefix == null || e.data.prefix == '') ? '' : e.data.prefix;
 	var apexUtils = apexUtilsFactory(conn, orgUrl);
 	var precacheSequence = e.data.precacheSequence;
 	switch(precacheSequence) {
@@ -93,7 +93,7 @@ function addFieldsToContext(context, lookupFields, referencedFieldMap, models) {
 // ================= EVERYTHING IN THIS SECTION RELATES TO PRECACHING PRODUCTS OR OPTIONS ==============================
 
 function loadProducts(apexUtils, prefix, quote, referencedFields) {
-	var recordPrefix = prefix == '' ? '' : 'SBQQ__';
+	var recordPrefix = prefix == '' ? '' : prefix + '__';
 	var productIds = getAttributeFromLines(quote, recordPrefix + 'Product__c');
 	var pricebookFilter = [];
 	if (quote.record[recordPrefix + 'PricebookId__c']) {
@@ -121,7 +121,7 @@ function loadProducts(apexUtils, prefix, quote, referencedFields) {
 }
 
 function loadOptions(apexUtils, prefix, quote, referencedFields) {
-	var recordPrefix = prefix == '' ? '' : 'SBQQ__';
+	var recordPrefix = prefix == '' ? '' : prefix + '__';
 	var optionIds = getAttributeFromLines(quote, recordPrefix + 'ProductOption__c');
 	var context = {
 		'requiredIds': optionIds,
@@ -154,7 +154,7 @@ function getAttributeFromLines(quote, fieldName) {
 
 // ================= EVERYTHING IN THIS SECTION RELATES TO PRECACHING DISCOUNT SCHEDULES AND ACCOUNT MODELS ============
 function loadDiscountSchedulesAndAccounts(apexUtils, prefix, quote, accountId) {
-	var recordPrefix = prefix == 'SBQQ' ? 'SBQQ__' : '';
+	var recordPrefix = prefix == '' ? '' : prefix + '__';
 	var scheduleMap = extractScheduleMapFromQuote(recordPrefix, quote);
 	if (Object.keys(scheduleMap).length != 0) {
 		var context = {
@@ -233,7 +233,7 @@ function determineMetadataFullNames(prefix, referencedFieldMap) {
 	if (referencedFieldMap == null) {
 		return [];
 	}
-	var metadataPrefix = prefix == 'SBQQ' ? 'SBQQ__' : '';
+	var metadataPrefix = prefix == '' ? '' : prefix + '__';
 	var fullNames = [];
 	var lineType = metadataPrefix + 'QuoteLine__c';
 	var quoteType = metadataPrefix + 'Quote__c';
@@ -297,7 +297,7 @@ function loadAssetsAndSubscriptions(apexUtils, prefix, svRecords, accountId) {
 	if (!accountId) {
 		return Promise.resolve([]);
 	}
-	var recordPrefix = prefix == '' ? '' : 'SBQQ__';
+	var recordPrefix = prefix == '' ? '' : prefix + '__';
 	var targetObjectField = recordPrefix + 'TargetObject__c';
 	var filterField = recordPrefix + 'FilterField__c';
 	var constraintField = recordPrefix + 'ConstraintField__c';
@@ -342,7 +342,7 @@ function loadAssetsAndSubscriptions(apexUtils, prefix, svRecords, accountId) {
 }
 
 function getSummaryVariableIds(prefix, ruleRecords) {
-	var recordPrefix = prefix == '' ? '' : 'SBQQ__';
+	var recordPrefix = prefix == '' ? '' : prefix + '__';
 	var filterVarField = recordPrefix + 'FilterVariable__c';
 	var testedVarField = recordPrefix + 'TestedVariable__c';
 	var sourceVarField = recordPrefix + 'SourceVariable__c';

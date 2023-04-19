@@ -9,10 +9,21 @@
         <value>Categorías de descuentos</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>Ingrese el descuento máximo permitido para esta categoría de productos.</help>
-        <label></label>
+        <label><!-- Max Discount (%) --></label>
         <name>SBQQ__MaxDiscountRate__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Discount Category Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nombre de la categoría</nameFieldLabel>
 </CustomObjectTranslation>

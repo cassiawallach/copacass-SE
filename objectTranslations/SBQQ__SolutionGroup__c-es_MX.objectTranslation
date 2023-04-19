@@ -10,9 +10,16 @@
     </caseValues>
     <fields>
         <help>Ingrese una descripción para este SolutionGroup.</help>
-        <label></label>
+        <label><!-- Description --></label>
         <name>SBQQ__Description__c</name>
     </fields>
     <gender>Masculine</gender>
+    <layouts>
+        <layout>SolutionGroup Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nombre del grupo</nameFieldLabel>
 </CustomObjectTranslation>

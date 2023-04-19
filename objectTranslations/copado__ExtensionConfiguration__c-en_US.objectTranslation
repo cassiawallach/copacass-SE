@@ -1,84 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label></label>
+        <label><!-- Acceptance Criteria --></label>
         <name>copado__AcceptanceCriteria__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Active --></label>
         <name>copado__Active__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Details --></label>
         <name>copado__Details__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- Select the type of Application that relates to the extension. --></help>
+        <label><!-- Copado Phase --></label>
         <name>copado__ExtensionApplication__c</name>
         <picklistValues>
             <masterLabel>Test</masterLabel>
-            <translation></translation>
+            <translation><!-- Test --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Extension Tool --></label>
         <name>copado__ExtensionTool__c</name>
         <picklistValues>
-            <masterLabel>Apex Tests</masterLabel>
-            <translation></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>BackPromotionChecker</masterLabel>
-            <translation></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Copado Robotic Testing</masterLabel>
-            <translation></translation>
+            <translation><!-- Copado Robotic Testing --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Manual Tests</masterLabel>
-            <translation></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>PMD</masterLabel>
-            <translation></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>metadata-report-hs</masterLabel>
-            <translation></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>sfdx-scanner</masterLabel>
-            <translation></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>sfdx-scanner-dfa</masterLabel>
-            <translation></translation>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <help><!-- Select the name of the CMDT Extension Record this integration relates to. --></help>
+        <label><!-- Extension Name - Deprecated --></label>
+        <name>copado__Extension_Name__c</name>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status - Deprecated --></label>
         <name>copado__Status__c</name>
         <picklistValues>
             <masterLabel>Active</masterLabel>
-            <translation></translation>
+            <translation><!-- Active --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Inactive</masterLabel>
-            <translation></translation>
+            <translation><!-- Inactive --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Setup Pending</masterLabel>
-            <translation></translation>
+            <translation><!-- Setup Pending --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Test Type --></label>
         <name>copado__TestType__c</name>
     </fields>
-    <validationRules>
-        <errorMessage></errorMessage>
-        <name>copado__PreventUpdatingExtensionTool</name>
-    </validationRules>
+    <fields>
+        <help><!-- Select the type of test you want to execute with the Extension. --></help>
+        <label><!-- Type - deprecated --></label>
+        <name>copado__Type__c</name>
+        <picklistValues>
+            <masterLabel>Compliance</masterLabel>
+            <translation><!-- Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Functional</masterLabel>
+            <translation><!-- Functional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Static Code Analysis</masterLabel>
+            <translation><!-- Static Code Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unit Test</masterLabel>
+            <translation><!-- Unit Test --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Extension Configuration Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Activate - Deprecated --></label>
+        <name>copado__Activate</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Activate --></label>
+        <name>copado__Activation</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Deactivate --></label>
+        <name>copado__Deactivate</name>
+    </quickActions>
 </CustomObjectTranslation>

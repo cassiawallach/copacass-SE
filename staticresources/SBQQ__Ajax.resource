@@ -79194,14 +79194,16 @@ if (typeof window !== 'undefined' && window) {
 var RestClient = require('../data/RestClient.js');
 var RemoteClient = require('../data/RemoteClient.js');
 var RestProxy = require('../data/RestProxy.js');
-var cache = require('../data/Cache.js')();
+var inBrowser = typeof window !== 'undefined';
+var browserCache;
+if (inBrowser) {
+	browserCache = require('../data/Cache.js')();
+}
 
 module.exports = function(conn, orgUrl, forceRest) {
 
-	var inBrowser = typeof window !== 'undefined';
-	if (!inBrowser) {
-		cache = require('../data/Cache.js')();
-	}
+	var cache = inBrowser ? browserCache : require('../data/Cache.js')();
+
 	if (inBrowser && conn === undefined && orgUrl === undefined && forceRest === undefined) {
 		// If all of the arguments are undefined, then we only want to use this ApexUtils to precache values.
 		// So return an object that's only capable of doing that.
@@ -79407,6 +79409,10 @@ module.exports = function(conn, orgUrl, forceRest) {
 		}
 	}
 
+	function setNotifier(n) {
+		cache.setNotifier(n);
+	}
+
 	return {
 		read: read,
 		load: load,
@@ -79416,19 +79422,23 @@ module.exports = function(conn, orgUrl, forceRest) {
 		query: query,
 		queryMore: queryMore,
 		clear: clear,
-		setOptions: setOptions
+		setOptions: setOptions,
+		setNotifier: setNotifier
 	};
 }
-},{"../data/Cache.js":3,"../data/RemoteClient.js":4,"../data/RestClient.js":5,"../data/RestProxy.js":6}],3:[function(require,module,exports){
+},{"../data/Cache.js":3,"../data/RemoteClient.js":5,"../data/RestClient.js":6,"../data/RestProxy.js":7}],3:[function(require,module,exports){
 module.exports = function(conn) {
 
 	var cache = {};
+	var notifier;
 
 	function get(provider, id) {
 		if(!provider || !id)
 			return null;
 
-		return getCache(provider)[id];
+		var obj = getCache(provider)[id];
+		_fireCacheEvent('calculate-cache-get', { cacheHit: obj !== undefined });
+		return obj;
 	}
 
 	function put(provider, id, obj) {
@@ -79452,13 +79462,40 @@ module.exports = function(conn) {
 		return cache[provider];
 	}
 
+	function setNotifier(n) {
+		notifier = n;
+	}
+
+	function _fireCacheEvent(name, detail) {
+		if(notifier && typeof notifier.fireEvent === 'function')
+			notifier.fireEvent(name, detail);
+	}
+
 	return {
 		get: get,
 		put: put,
-		clear: clear
+		clear: clear,
+		setNotifier: setNotifier
 	};
 };
 },{}],4:[function(require,module,exports){
+class JsonParser {
+
+	parse(strObj) {
+		return JSON.parse(strObj, this._reviver);
+	}
+
+	_reviver(key, value) {
+		if(key === 'ui_original_record')
+			return JSON.parse(JSON.stringify(this.record));
+
+		return value;
+	}
+}
+module.exports = JsonParser;
+},{}],5:[function(require,module,exports){
+var JsonParser = require('./JsonParser.js');
+
 module.exports = function(conn) {
 
 	function read(prefix, provider, uid) {
@@ -79545,7 +79582,7 @@ module.exports = function(conn) {
 		if(!options || options.escape !== false)
 			obj = obj.replace(/&quot;/g,'"');
 		try {
-			return JSON.parse(obj);
+			return new JsonParser().parse(obj);
 		} catch(e) {
 			return obj;
 		}
@@ -79560,7 +79597,9 @@ module.exports = function(conn) {
 		setOptions: setOptions
 	};
 };
-},{}],5:[function(require,module,exports){
+},{"./JsonParser.js":4}],6:[function(require,module,exports){
+var JsonParser = require('./JsonParser.js');
+
 module.exports = function(proxy) {
 
 	function read(prefix, provider, uid) {
@@ -79629,7 +79668,7 @@ module.exports = function(proxy) {
 
 	function parse(obj) {
 		try {
-			return JSON.parse(obj);
+			return new JsonParser().parse(obj);
 		} catch (e) {
 			return obj;
 		}
@@ -79644,7 +79683,7 @@ module.exports = function(proxy) {
 		setOptions: setOptions
 	};
 };
-},{}],6:[function(require,module,exports){
+},{"./JsonParser.js":4}],7:[function(require,module,exports){
 module.exports = function(conn) {
 
 	function get(endpoint) {

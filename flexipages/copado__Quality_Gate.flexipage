@@ -83,10 +83,6 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.copado__Compliance_Rule_Group__c</fieldItem>
                 <identifier>RecordCompliance_Rule_Group__cField</identifier>
                 <visibilityRule>
@@ -100,10 +96,6 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.copado__Manual_Task_Owner__c</fieldItem>
                 <identifier>RecordManual_Task_Owner__cField</identifier>
                 <visibilityRule>
@@ -162,10 +154,6 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.copado__Score_Threshold__c</fieldItem>
                 <identifier>RecordScore_Threshold__cField</identifier>
                 <visibilityRule>
@@ -177,33 +165,12 @@
                 </visibilityRule>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.copado__Test__c</fieldItem>
-                <identifier>RecordTest_cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.copado__Type__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Test</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </fieldInstance>
-        </itemInstances>
         <name>Facet-f7fb8187-036c-4140-8d99-c06040cfe2e4</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.copado__Type__c</fieldItem>
                 <identifier>RecordType__cField</identifier>
             </fieldInstance>
@@ -220,10 +187,6 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.copado__Connection_Behavior__c</fieldItem>
                 <identifier>RecordConnection_Behavior__cField</identifier>
             </fieldInstance>

@@ -6,34 +6,34 @@
         <value>Nachschlageabfrage</value>
     </caseValues>
     <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value>Nachschlageabfrage</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value>Nachschlageabfrage</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Nachschlageabfrage</value>
-    </caseValues>
-    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Nachschlageabfragen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Nachschlageabfrage</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
         <plural>true</plural>
         <value>Nachschlageabfragen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Nachschlageabfrage</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
         <plural>true</plural>
         <value>Nachschlageabfragen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Nachschlageabfrage</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
@@ -41,8 +41,12 @@
         <value>Nachschlageabfragen</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>API-Name des benutzerdefinierten Felds, das in der Abfrage verwendet wird.</help>
-        <label></label>
+        <label><!-- Lookup Field --></label>
         <name>SBQQ__LookupField__c</name>
         <picklistValues>
             <masterLabel>SBQQ__Category__c</masterLabel>
@@ -51,7 +55,7 @@
     </fields>
     <fields>
         <help>Bei &quot;Übereinstimmungstyp = Feldwert&quot; wählen Sie ein getestetes Objekt und ein getestetes Feld aus. Ist &quot;Übereinstimmungstyp = Statischer Wert&quot; festgelegt, geben Sie einen Wert in das Feld &quot;Getesteter Wert&quot; ein. Ist &quot;Übereinstimmungstyp = Konfigurationsattribut&quot; festgelegt, geben Sie ein Konfigurationsattribut an.</help>
-        <label></label>
+        <label><!-- Match Type --></label>
         <name>SBQQ__MatchType__c</name>
         <picklistValues>
             <masterLabel>Configuration Attribute Value</masterLabel>
@@ -68,7 +72,7 @@
     </fields>
     <fields>
         <help>Der Operator, der beim Vergleich von &quot;Feld&quot; mit &quot;Wert&quot; verwendet wird.</help>
-        <label></label>
+        <label><!-- Operator --></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>equals</masterLabel>
@@ -96,38 +100,38 @@
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- ParentRuleIsActive --></label>
         <name>SBQQ__ParentRuleIsActive__c</name>
     </fields>
     <fields>
         <help>Preisregel, die mit dieser Nachschlageabfrage verknüpft ist. Ersetzt das alte Master-Detail-Feld.</help>
-        <label></label>
+        <label><!-- Price Rule --></label>
         <name>SBQQ__PriceRule2__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Lookup Queries (Price Rule) --></relationshipLabel>
     </fields>
     <fields>
         <help>Produktregel, die mit dieser Nachschlageabfrage verknüpft ist</help>
-        <label></label>
+        <label><!-- Product Rule --></label>
         <name>SBQQ__ProductRule__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Lookup Queries (Product Rule) --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Parent Rule Lookup Object --></label>
         <name>SBQQ__RuleLookupObject__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- RuleTargetsCalculator --></label>
         <name>SBQQ__RuleTargetsCalculator__c</name>
     </fields>
     <fields>
         <help>Konfigurationsattribut, das mit dieser Abfrage ausgewertet wird. Erforderlich, wenn &quot;Übereinstimmungstyp = Konfigurationsattribut&quot; festgelegt ist und nur, wenn diese Abfrage mit einer Produktregel verknüpft ist.</help>
-        <label></label>
+        <label><!-- Tested Configuration Attribute --></label>
         <name>SBQQ__TestedConfigurationAttribute__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Lookup Queries --></relationshipLabel>
     </fields>
     <fields>
         <help>Feld in Angebots-, Angebotsbelegposten- oder Produktoptions-Objekt, das von dieser Abfrage ausgewertet wird. Erforderlich bei &quot;Übereinstimmungstyp = Feldwert&quot;.</help>
-        <label></label>
+        <label><!-- Tested Field --></label>
         <name>SBQQ__TestedField__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -136,7 +140,7 @@
     </fields>
     <fields>
         <help>Objekt, für das die Abfrage ausgewertet wird. Erforderlich bei &quot;Übereinstimmungstyp = Feldwert&quot;.</help>
-        <label></label>
+        <label><!-- Tested Object --></label>
         <name>SBQQ__TestedObject__c</name>
         <picklistValues>
             <masterLabel>Product Option</masterLabel>
@@ -153,21 +157,32 @@
     </fields>
     <fields>
         <help>Der Wert, mit dem das ausgewählte Feld unter Verwendung des festgelegten Operators verglichen werden soll. Erforderlich bei &quot;Übereinstimmungstyp = Statischer Wert&quot;.</help>
-        <label></label>
+        <label><!-- Tested Value --></label>
         <name>SBQQ__TestedValue__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Lookup Query Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Informationen nachschlagen</label>
+            <section>Lookup Information</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nummer der Nachschlageabfrage</nameFieldLabel>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- Testing Configuration Attributes is only supported for Lookup Queries associated with Product Rules. --></errorMessage>
         <name>SBQQ__Configuration_Attribute_Validation</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- Associate a lookup object on the product rule before creating a Lookup Query. --></errorMessage>
         <name>SBQQ__LookupObjectMustExist</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- Tested Value is required if Match Type = Static Value. Tested Object and Tested Field are required if Match Type = Field Value. Tested Configuration Attribute is required if Match Type = Configuration Attribute. --></errorMessage>
         <name>SBQQ__Match_Type_Validation</name>
     </validationRules>
 </CustomObjectTranslation>

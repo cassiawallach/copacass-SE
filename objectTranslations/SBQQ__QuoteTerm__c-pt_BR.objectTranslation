@@ -9,23 +9,27 @@
         <value>Termos de cotação</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>Indica se o termo da cotação está disponível para uso.</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Pode ser inserida apenas se Condições atendidas for Personalizado. Insira uma combinação dos Números do índice de condição do termo, AND, OR e parênteses (por exemplo, (123 AND 124) AND 125).</help>
-        <label></label>
+        <label><!-- Advanced Condition --></label>
         <name>SBQQ__AdvancedCondition__c</name>
     </fields>
     <fields>
         <help>Conteúdo do texto desse termo.</help>
-        <label></label>
+        <label><!-- Body --></label>
         <name>SBQQ__Body__c</name>
     </fields>
     <fields>
         <help>Escolha o comportamento para suas condições: Tudo é AND, Qualquer é OR e Personalizado é uma combinação de AND/OR.</help>
-        <label></label>
+        <label><!-- Conditions Met --></label>
         <name>SBQQ__ConditionsMet__c</name>
         <picklistValues>
             <masterLabel>All</masterLabel>
@@ -42,35 +46,35 @@
     </fields>
     <fields>
         <help>Controla um Termo da cotação sendo editável por um usuário.</help>
-        <label></label>
+        <label><!-- Locked --></label>
         <name>SBQQ__Locked__c</name>
     </fields>
     <fields>
         <help>Termo pai para este termo.</help>
-        <label></label>
+        <label><!-- Parent Term --></label>
         <name>SBQQ__ParentTerm__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Sub Terms --></relationshipLabel>
     </fields>
     <fields>
         <help>Especifica a ordem em que os termos são impressos no documento de cotação.</help>
-        <label></label>
+        <label><!-- Print Order --></label>
         <name>SBQQ__PrintOrder__c</name>
     </fields>
     <fields>
         <help>Cotação à qual esse termo se aplica. Deixe em branco se esse for um termo padrão.</help>
-        <label></label>
+        <label><!-- Quote --></label>
         <name>SBQQ__Quote__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Quote Terms --></relationshipLabel>
     </fields>
     <fields>
         <help>Especifica o termo padrão que está sendo modificado.</help>
-        <label></label>
+        <label><!-- Standard Term --></label>
         <name>SBQQ__StandardTerm__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Modified Terms --></relationshipLabel>
     </fields>
     <fields>
         <help>Status desse termo da cotação.</help>
-        <label></label>
+        <label><!-- Status --></label>
         <name>SBQQ__Status__c</name>
         <picklistValues>
             <masterLabel>Approved</masterLabel>
@@ -91,19 +95,30 @@
     </fields>
     <fields>
         <help>Conteúdo do modelo ao qual esse termo é aplicado.</help>
-        <label></label>
+        <label><!-- Template Content --></label>
         <name>SBQQ__TemplateContent__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Quote Terms --></relationshipLabel>
     </fields>
     <fields>
         <help>Indica se o termo é padrão, personalizado ou modificado.</help>
-        <label></label>
+        <label><!-- Type --></label>
         <name>SBQQ__Type__c</name>
     </fields>
     <gender>Masculine</gender>
+    <layouts>
+        <layout>Quote Term Layout</layout>
+        <sections>
+            <label>Corpo</label>
+            <section>Body</section>
+        </sections>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nº do termo</nameFieldLabel>
     <webLinks>
-        <label></label>
+        <label><!-- Translate --></label>
         <name>SBQQ__Translate</name>
     </webLinks>
 </CustomObjectTranslation>

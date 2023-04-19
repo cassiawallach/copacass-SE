@@ -103,22 +103,34 @@
         tt.style.wordWrap = 'break-word';
     }
 
+    function showValidationModalOrError(validationErr) {
+        if (validationErr) {
+            overridePageMessages();
+            window.scrollTo(0, 0);
+        } else {
+            showModal(true, 'rollupQueryValidation');
+        }
+    }
+
 </script>
     <apex:slds />
     <apex:form >
-    <apex:actionFunction action="{!doChildObjSearch}" name="searchAllChildObjs" rerender="relationtxt" status="loading">
-        <apex:param name="childObjSearch" value=""/>
+    <apex:actionFunction action="{!doSourceObjSearch}" name="searchAllSourceObjs" rerender="relationtxt, grandchildRelationtxt, bottomWrapper, fieldHeader, field1, field2, source, filter, saveCancelBtns, realtimeEnable" status="loading">
+        <apex:param name="sourceObjSearch" value=""/>
     </apex:actionFunction>
-    <apex:actionFunction action="{!doChildFieldSearch}" name="searchAllChildFields" rerender="firstFieldOptions" status="loading">
-        <apex:param name="childFieldSearch" value=""/>
+    <apex:actionFunction action="{!doIntermediaryObjSearch}" name="searchAllIntermediaryObjs" rerender="intermediaryOptions, bottomWrapper, fieldHeader, field1, field2, source, filter, saveCancelBtns, realtimeEnable, grandchildSelectSection" status="loading">
+        <apex:param name="intermediaryObjSearch" value=""/>
     </apex:actionFunction>
-    <apex:actionFunction action="{!doChildFKFieldSearch}" name="searchAllChildFKFields" rerender="fkFieldOptions" status="loading">
-        <apex:param name="childFKFieldSearch" value=""/>
+    <apex:actionFunction action="{!doSourceFieldSearch}" name="searchAllSourceFields" rerender="firstFieldOptions, firstFieldPagination" status="loading">
+        <apex:param name="sourceFieldSearch" value=""/>
+    </apex:actionFunction>
+    <apex:actionFunction action="{!doSourceFKFieldSearch}" name="searchAllSourceFKFields" rerender="fkFieldOptions, fkFieldPagination" status="loading">
+        <apex:param name="sourceFKFieldSearch" value=""/>
     </apex:actionFunction>
     <apex:actionStatus id="loading" onstart="loading(true)" onstop="loading(false)" />
     <div class="slds-scope" role="main">
     <div class="slds-card grayBackground">
-            <header class="slds-card__header slds-text-heading--small ">
+            <header class="slds-card__header slds-text-heading--medium ">
                 {!$Label.rh2__Step3SelectSourceField}
             </header>
             <header class="slds-card__header ">
@@ -162,67 +174,142 @@
                     <div class="slds-backdrop slds-backdrop_open"></div>
         </div>
             <!-- Start of object selection -->
+        <div class="slds-card grayBackground">
             <div class="slds-card grayBackground">
-             <header class="slds-card__header slds-grid slds-theme_alt-inverse">
-                <h4 class="slds-text-heading--small slds-truncate">{!$Label.WhichObjectForSource} ({! masterObjectLabel } {!$Label.Child})</h4>
-
-             </header>
-             <section class="slds-card__body">
-                <apex:outputPanel id="objectSelectSection">
-                    <apex:outputPanel >
-                        <div class="slds-form-element" style="padding-top:15px;padding-left:15px;width:315px;">    
-                            <input class="slds-input" placeHolder="{!$Label.TypeForChildObjects}" type="text" onkeypress="captureEnterAndBuildList(event, 'childObjSearch', searchAllChildObjs);" id="childObjSearch"/>					
-                        </div>
-                        <script>
-                            searchFromInput("childObjSearch", searchAllChildObjs);
-                        </script>
-                        <br/>
-                        <apex:outputpanel >                  
-                            <apex:outputPanel >
-                                <apex:actionStatus id="statusMessage" startText="({!$Label.rh2__Refreshing})" stopText=" " styleClass="caption" />
-                            </apex:outputPanel>  
-                        </apex:outputpanel>
-                        <apex:outputpanel styleClass="slds-grid slds-container_left slds-container_small" style="padding-left:15px;" id="relationtxt">
-                            <br/>
-                            <apex:outputPanel styleClass="slds-col">
-                            <apex:outputText value="{!$Label.rh2__SelectChildObject}"/><br/> 
-                                <apex:selectList style="width:300px;" size="5" value="{!smHelper.selectedSourceObj}" >
-                                <apex:actionsupport event="onchange"  rerender="relationtxt, bottomWrapper, fieldHeader, field1, field2, source, filter, saveCancelBtns, sourceObjSelect, realtimeEnable, archivedRecordsMessage" status="statusMessage" action="{!clearSourceApi}"/>
-                                <apex:selectOptions value="{!sourceObjectController.PaginatedList}"/>
-                            </apex:selectList>
-                            <apex:outputPanel rendered="{! sourceObjectController.hasMultiplePages }"> 
-                                <div >
-                                    <c:Paginate pageController="{! sourceObjectController }" renderedComponent="objectSelectSection" />
-                                </div>
-                            </apex:outputPanel>
+                <header class="slds-card__header slds-grid slds-theme_alt-inverse">
+                    <apex:outputPanel id="sourceOnRollupTxt">
+                        <apex:outputPanel rendered="{! !smHelper.isGrandchildRollup}">
+                            <h4 class="slds-text-heading--small slds-truncate">{!$Label.rh2__WhichObjectForSource} ({! masterObjectLabel } {!$Label.rh2__Child})</h4>
                         </apex:outputPanel>
-                        <apex:outputPanel rendered="{! AND(NOT(ISBLANK(smHelper.selectedSourceObj)), NOT(sourceObjects.empty)) }" styleClass="slds-col" id="relation" style="padding-left:15px;">
-                                <apex:outputText value="{!$Label.rh2__SelectRelationshipField}"  /><br/>
-                                <apex:selectList size="5" value="{! smHelper.relationshipField }" rendered="{! NOT(ISBLANK(smHelper.selectedSourceObj)) }" >
-                                    <apex:actionSupport event="onchange" action="{! refreshSource1 }" reRender="bottomWrapper, fieldHeader, field1, field2, source,  filter, saveCancelBtns, archivedRecordsMessage" status="statusMessage"/>
-                                    <apex:selectOptions value="{! sourceObjects }" /> 
-                                </apex:selectList>
-                        </apex:outputPanel>   
-                        
-                     
-                            
-                      </apex:outputPanel>
-                      
-                    <br/>
-                    <div style="padding-left:15px;">
-                    <a href="{!URLFOR($Page.PS_helpPage)}" target="_blank" >{!$Label.MySourceObjNotAppearing}</a>  <br/>
-                    <apex:outputLink rendered="{! AND(smHelper.notPaid, !smHelper.lhInstalled) }" target="_blank" value="https://appexchange.salesforce.com/listingDetail?listingId=a0N30000009wj3REAQ">{!$Label.rh2__DontSeeSourceNotInstalled} {!$Label.rh2__InstallLHOr} {!$Label.rh2__CreateARelationshipField}</apex:outputLink>  
-                    <apex:outputLink rendered="{! AND(smHelper.notPaid, smHelper.lhInstalled) }" value="/apex/lh__LH_All_Settings">{!$Label.rh2__DontSeeSourceInstalled} {!$Label.rh2__CreateARelationshipField}</apex:outputLink>
-                    <apex:outputText rendered="{! NOT(smHelper.notPaid) }">{!$Label.rh2__DontSeeSourceNotInstalled} {!$Label.rh2__CreateARelationshipField}</apex:outputText>
-                    &nbsp;&nbsp;
-                    <apex:commandButton styleClass="slds-button slds-button_neutral" value="{!$Label.rh2__CreateRelationshipField}" onClick="showModal(true, 'createRelationshipFieldModal')" rerender="createRelationshipFieldContainer"/> <br/>
-                    </div>    
-                  </apex:outputpanel>
-            
-            </apex:outputPanel>
-            </section>
-            <footer class="slds-card__footer"></footer>
-          </div> 
+                        <apex:outputPanel rendered="{!smHelper.isGrandchildRollup}">
+                            <h4 class="slds-text-heading--small slds-truncate">{!$Label.rh2__WhichObjectForSource} ({! masterObjectLabel } {!$Label.rh2__Grandchild})</h4>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </header>
+                <section class="slds-card__body">
+                    <apex:outputPanel id="grandchildSection" styleClass="slds-grid slds-container_left slds-container_large">
+                        <apex:outputPanel rendered="{!smHelper.isGrandchildRollup}" styleClass="slds-col">
+                            <div class="slds-form-element" style="padding-top:15px;padding-left:15px;width:315px;">    
+                                <input class="slds-input" placeHolder="{!$Label.TypeForIntermediaryObjects}" type="text" onkeypress="captureEnterAndBuildList(event, 'intermediaryObjSearch', searchAllIntermediaryObjs);" id="intermediaryObjSearch"/>					
+                            </div>
+                            <script>
+                                searchFromInput("intermediaryObjSearch", searchAllIntermediaryObjs);
+                            </script>
+                            <br/>
+                            <apex:outputpanel styleClass="slds-grid slds-container_left slds-container_small" style="padding-left:15px;" id="intermediaryOptions">
+                                <br/>
+                                <apex:outputPanel styleClass="slds-col">
+                                    <apex:outputText value="{!$Label.rh2__SelectIntermediaryObject}"/><br/> 
+                                        <apex:selectList style="width:300px;" size="5" value="{!smHelper.selectedIntermediaryObj}" >
+                                            <apex:actionsupport event="onchange"  rerender="intermediaryOptions, bottomWrapper, fieldHeader, field1, field2, source, filter, saveCancelBtns, realtimeEnable, grandchildSelectSection, archivedRecordsMessage" status="loading" action="{!clearSourceFromIntermediaryObj}"/>
+                                            <apex:selectOptions value="{!intermediaryObjController.PaginatedList}"/>
+                                        </apex:selectList>
+                                    <apex:outputPanel rendered="{! intermediaryObjController.hasMultiplePages }"> 
+                                        <div >
+                                            <c:Paginate pageController="{! intermediaryObjController }" renderedComponent="grandchildSection" />
+                                        </div>
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{! NOT(ISBLANK(smHelper.selectedIntermediaryObj)) }" styleClass="slds-col" style="padding-left:15px;">
+                                    <apex:outputText value="{!$Label.rh2__SelectIntermediaryRelationship}"  /><br/>
+                                    <apex:selectList size="5" value="{! smHelper.intermediaryRelationshipField }" rendered="{! NOT(ISBLANK(smHelper.selectedIntermediaryObj)) }" style="min-width:250px;">
+                                        <apex:actionSupport event="onchange" action="{!refreshGrandChild}" reRender="grandchildSelectSection, bottomWrapper, fieldHeader, field1, field2, source,  filter, saveCancelBtns, archivedRecordsMessage" status="loading"/>
+                                        <apex:selectOptions value="{! IntermediaryRelFields }" /> 
+                                    </apex:selectList>
+                                </apex:outputPanel>     
+                            </apex:outputPanel>
+                            <br/>
+                            <div style="padding-left:15px;">
+                                <apex:outputLink rendered="{!$User.UIThemeDisplayed != 'Theme3'}" value="{!LightningHelpLink}" target="_blank">{!$Label.rh2__MySourceObjNotAppearing}</apex:outputLink>
+                                <apex:outputLink rendered="{!$User.UIThemeDisplayed == 'Theme3'}" value="{!ClassicHelpLink}" target="_blank">{!$Label.rh2__MySourceObjNotAppearing}</apex:outputLink>
+                                <br/>
+                                <apex:outputLink rendered="{! AND(smHelper.notPaid, !smHelper.lhInstalled) }" target="_blank" value="https://appexchange.salesforce.com/listingDetail?listingId=a0N30000009wj3REAQ">{!$Label.rh2__DontSeeSourceNotInstalled} {!$Label.rh2__InstallLH}!</apex:outputLink>  
+                                <apex:outputLink rendered="{! AND(smHelper.notPaid, smHelper.lhInstalled) }" value="/apex/lh__LH_All_Settings">{!$Label.rh2__DontSeeSourceInstalled}.</apex:outputLink> 
+                            </div>
+                        </apex:outputpanel>
+                        <apex:outputPanel id="grandchildSelectSection" styleClass="slds-col" style="padding-left:300px;">
+                            <apex:outputPanel rendered="{!AND(smHelper.intermediaryRelationshipField != null, smHelper.selectedIntermediaryObj != null)}">
+                                <div class="slds-form-element" style="padding-top:15px;padding-left:15px;width:315px;">    
+                                    <input class="slds-input" placeHolder="{!$Label.TypeForChildObjects}" type="text" onkeypress="captureEnterAndBuildList(event, 'grandchildSourceObjSearch', searchAllSourceObjs);" id="grandchildSourceObjSearch"/>					
+                                </div>
+                                <script>
+                                    searchFromInput("grandchildSourceObjSearch", searchAllSourceObjs);
+                                </script>
+                                <br/>
+                                <apex:outputpanel styleClass="slds-grid slds-container_left slds-container_small" style="padding-left:15px;" id="grandchildRelationtxt">
+                                    <br/>
+                                    <apex:outputPanel styleClass="slds-col">
+                                        <apex:outputText value="{!$Label.rh2__SelectChildObject}"/><br/> 
+                                            <apex:selectList style="width:300px;" size="5" value="{!smHelper.selectedSourceObj}" >
+                                                <apex:actionsupport event="onchange"  rerender="grandchildRelationtxt, bottomWrapper, fieldHeader, field1, field2, source, filter, saveCancelBtns, realtimeEnable, archivedRecordsMessage, targetFieldMessage" status="loading" action="{!clearSourceApi}"/>
+                                                <apex:selectOptions value="{!sourceObjectController.PaginatedList}"/>
+                                            </apex:selectList>
+                                        <apex:outputPanel rendered="{! sourceObjectController.hasMultiplePages }"> 
+                                            <div >
+                                                <c:Paginate pageController="{! sourceObjectController }" renderedComponent="grandchildSelectSection" />
+                                            </div>
+                                        </apex:outputPanel>
+                                    </apex:outputPanel>
+                                    <apex:outputPanel rendered="{! AND(NOT(ISBLANK(smHelper.selectedSourceObj)), NOT(RelationshipFields.empty)) }" styleClass="slds-col" style="padding-left:15px;">
+                                        <apex:outputText value="{!$Label.rh2__SelectRelationshipField}"  /><br/>
+                                        <apex:selectList size="5" value="{! smHelper.relationshipField }" rendered="{! NOT(ISBLANK(smHelper.selectedSourceObj)) }" >
+                                            <apex:actionSupport event="onchange" reRender="bottomWrapper, fieldHeader, field1, field2, source,  filter, saveCancelBtns, archivedRecordsMessage" status="loading"/>
+                                            <apex:selectOptions value="{! RelationshipFields }" /> 
+                                        </apex:selectList>
+                                    </apex:outputPanel>     
+                                </apex:outputPanel>
+                                <br/>
+                            </apex:outputpanel>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                    <apex:outputPanel id="objectSelectSection">
+                        <apex:outputPanel rendered="{! !smHelper.isGrandchildRollup}">
+                            <div class="slds-form-element" style="padding-top:15px;padding-left:15px;width:315px;">    
+                                <input class="slds-input" placeHolder="{!$Label.TypeForChildObjects}" type="text" onkeypress="captureEnterAndBuildList(event, 'sourceObjSearch', searchAllSourceObjs);" id="sourceObjSearch"/>					
+                            </div>
+                            <script>
+                                searchFromInput("sourceObjSearch", searchAllSourceObjs);
+                            </script>
+                            <br/>
+                            <apex:outputpanel styleClass="slds-grid slds-container_left slds-container_small" style="padding-left:15px;" id="relationtxt">
+                                <br/>
+                                <apex:outputPanel styleClass="slds-col">
+                                    <apex:outputText value="{!$Label.rh2__SelectChildObject}"/><br/> 
+                                        <apex:selectList style="width:300px;" size="5" value="{!smHelper.selectedSourceObj}" >
+                                            <apex:actionsupport event="onchange"  rerender="relationtxt, bottomWrapper, fieldHeader, field1, field2, source, filter, saveCancelBtns, realtimeEnable, archivedRecordsMessage" status="loading" action="{!clearSourceApi}"/>
+                                            <apex:selectOptions value="{!sourceObjectController.PaginatedList}"/>
+                                        </apex:selectList>
+                                    <apex:outputPanel rendered="{! sourceObjectController.hasMultiplePages }"> 
+                                        <div >
+                                            <c:Paginate pageController="{! sourceObjectController }" renderedComponent="objectSelectSection" />
+                                        </div>
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{! AND(NOT(ISBLANK(smHelper.selectedSourceObj)), NOT(RelationshipFields.empty)) }" styleClass="slds-col" id="relation" style="padding-left:15px;">
+                                    <apex:outputText value="{!$Label.rh2__SelectRelationshipField}"  /><br/>
+                                    <apex:selectList size="5" value="{! smHelper.relationshipField }" rendered="{! NOT(ISBLANK(smHelper.selectedSourceObj)) }" >
+                                        <apex:actionSupport event="onchange" reRender="bottomWrapper, fieldHeader, field1, field2, source,  filter, saveCancelBtns, archivedRecordsMessage" status="loading"/>
+                                        <apex:selectOptions value="{! RelationshipFields }" /> 
+                                    </apex:selectList>
+                                </apex:outputPanel>     
+                            </apex:outputPanel>
+                            <br/>
+                            <div style="padding-left:15px;">
+                                <apex:outputLink rendered="{!$User.UIThemeDisplayed != 'Theme3'}" value="{!LightningHelpLink}" target="_blank">{!$Label.rh2__MySourceObjNotAppearing}</apex:outputLink>
+                                <apex:outputLink rendered="{!$User.UIThemeDisplayed == 'Theme3'}" value="{!ClassicHelpLink}" target="_blank">{!$Label.rh2__MySourceObjNotAppearing}</apex:outputLink>
+                                <br/>
+                                <apex:outputLink rendered="{! AND(smHelper.notPaid, !smHelper.lhInstalled) }" target="_blank" value="https://appexchange.salesforce.com/listingDetail?listingId=a0N30000009wj3REAQ">{!$Label.rh2__DontSeeSourceNotInstalled} {!$Label.rh2__InstallLHOr} {!$Label.rh2__CreateARelationshipField}</apex:outputLink>  
+                                <apex:outputLink rendered="{! AND(smHelper.notPaid, smHelper.lhInstalled) }" value="/apex/lh__LH_All_Settings">{!$Label.rh2__DontSeeSourceInstalled} or {!$Label.rh2__CreateARelationshipField}</apex:outputLink>
+                                <apex:outputText rendered="{! NOT(smHelper.notPaid) }">{!$Label.rh2__DontSeeSourceNotInstalled} {!$Label.rh2__CreateARelationshipField}</apex:outputText>
+                                &nbsp;&nbsp;
+                                <apex:commandButton styleClass="slds-button slds-button_neutral" value="{!$Label.rh2__CreateRelationshipField}" onClick="showModal(true, 'createRelationshipFieldModal')" rerender="createRelationshipFieldContainer" action="{!smHelper.displayFieldCreationComponent}" status="loading"/> <br/>
+                                </div>     
+                        </apex:outputpanel>
+                    </apex:outputPanel>
+                </section>
+                <footer class="slds-card__footer"></footer>
+            </div> 
+        </div>
            <!-- Start of field selector -->
            <br/>
            <apex:outputPanel id="bottomWrapper" layout="block" >
@@ -252,7 +339,7 @@
                             <apex:outputText value="{!$Label.rh2__SelectType}" />    
                             <apex:selectRadio value="{!smHelper.logic}" layout="pageDirection">
 
-                                <apex:actionSupport event="onchange" action="{!selectRollupType}" reRender="type, firstField, field2, filterAndPreview, DateField, deduplicate, selectionInfo, preview, saveCancelBtns, createTrigger, cloneModal, rollUpZeroAsNull, useCommaAndOption" status="statusMessage"/>
+                                <apex:actionSupport event="onchange" action="{!selectRollupType}" reRender="type, firstField, field2, filterAndPreview, DateField, deduplicate, selectionInfo, preview, saveCancelBtns, createTrigger, cloneModal, rollUpZeroAsNull, useCommaAndOption, modeTiebreaker, targetFieldMessage" status="loading"/>
                                 <apex:selectOption itemValue="CNT" itemLabel="{!$Label.rh2__Count}" rendered="{! AND(IF(smHelper.targetFieldType != 'REFERENCE', true, false), IF(smHelper.targetFieldType != 'ID', true, false), IF(smHelper.targetFieldType != 'BOOLEAN', true, false), IF(smHelper.targetFieldType != 'DATE', true, false), IF(smHelper.targetFieldType != 'DATETIME', true, false), IF(smHelper.targetFieldType != 'PICKLIST', true, false), IF(smHelper.targetFieldType != 'MULTIPICKLIST', true, false), IF(smHelper.targetFieldType != 'URL', true, false), IF(smHelper.targetFieldType != 'PHONE', true, false))}"/>
                                 <apex:selectOption itemValue="MAX" itemLabel="{!$Label.rh2__Maximum}" rendered="{! AND(IF(smHelper.targetFieldType != 'REFERENCE', true, false), IF(smHelper.targetFieldType != 'ID', true, false), IF(smHelper.targetFieldType != 'BOOLEAN', true, false), IF(smHelper.targetFieldType != 'URL', true, false), IF(smHelper.targetFieldType != 'PHONE', true, false))}"/>
                                 <apex:selectOption itemValue="MIN" itemLabel="{!$Label.rh2__Minimum}" rendered="{! AND(IF(smHelper.targetFieldType != 'REFERENCE', true, false), IF(smHelper.targetFieldType != 'ID', true, false), IF(smHelper.targetFieldType != 'BOOLEAN', true, false), IF(smHelper.targetFieldType != 'URL', true, false), IF(smHelper.targetFieldType != 'PHONE', true, false))}"/>
@@ -265,16 +352,8 @@
                             </apex:selectRadio>
                             <apex:outputPanel id="delim" rendered="{! AND(smHelper.logic =='TXT', OR(IF(smHelper.targetFieldType = 'STRING', true, false),IF(smHelper.targetFieldType = 'REFERENCE', true, false), IF(smHelper.targetFieldType = 'ID', true, false),IF(smHelper.targetFieldType = 'MULTIPICKLIST', true, false)))}">
                             <apex:selectList value="{!smHelper.delim}" size="1" disabled="{!IF(smHelper.targetFieldType = 'MULTIPICKLIST', true, false)}">
-                                <apex:actionsupport event="onchange" action="{! postVariable }" rerender="delim, useCommaAndOption" />
-                                    <apex:selectOption itemValue="SP" itemLabel="{!$Label.rh2__Space}"/>  
-                                    <apex:selectOption itemValue="-" itemLabel="{!$Label.rh2__Hyphen}" />
-                                    <apex:selectOption itemValue="SSP" itemLabel="{!$Label.rh2__Semicolon}"/>
-                                    <apex:selectOption itemValue="CSP" itemLabel="{!$Label.rh2__Comma}"/>
-                                    <apex:selectOption itemValue="/" itemLabel="{!$Label.rh2__Slash}"/>
-                                    <apex:selectOption itemValue="|" itemLabel="{!$Label.rh2__Pipe}"/>
-                                    <apex:selectOption itemValue="CRLF" itemLabel="{!$Label.rh2__NewLine}" rendered="{!smHelper.targetFieldIsTextAreaOrRichText}"/>
-                                    <apex:selectOption itemValue="DBNL" itemLabel="{!$Label.rh2__DoubleNewLine}" rendered="{!smHelper.targetFieldIsTextAreaOrRichText}"/>
-                                    <apex:selectOption itemValue="CUSTOM" itemLabel="{!$Label.rh2__CustomDelimiter}"/>
+                                <apex:actionsupport event="onchange" action="{! postVariable }" rerender="delim, useCommaAndOption, appendTrailingWhitespaceOption" />
+                                    <apex:selectOptions value="{!textDelimiters}"/>
                                 </apex:selectList>
                                 <br/><br/>
                                 <apex:outputPanel id="customDelim" rendered="{!smHelper.delim == 'CUSTOM'}">
@@ -295,24 +374,6 @@
                                 </apex:outputPanel>
                                 
                             </apex:outputPanel>   
-                            <apex:outputPanel id="modeTiebreaker" rendered="{!smHelper.logic == 'MDE'}"><br/>
-                            {!$Label.ModeTieBreaker}
-                                <a id='modeTieBreakerInfo' onmouseover="setShowTooltipFormatting('modeTieBreakerHelp');" onmouseout="document.getElementById('modeTieBreakerHelp').style.display = 'none';"> 
-                                    <img class="slds-icon slds-icon--x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>                 
-                                </a> 
-                                <div style="max-height:0px;overflow:visible;overflow-y:visible;position:absolute;">
-                                    <div class="slds-popover slds-theme--info" id='modeTieBreakerHelp' style="display:none !important;">                       
-                                        <div class="slds-popover__body">
-                                            {!$Label.InTheEventOfATie}
-                                        </div>
-                                    </div>    
-                                </div> 
-                                <br/>
-                                <apex:selectList size="1" value="{!smHelper.modeTiebreaker}">
-                                    <apex:actionSupport action="{!buildFilterString}" event="onchange" reRender="filter_edit, modalPopup, preview"/>   
-                                    <apex:selectOptions value="{! ModeTiebreakerSorts }"/>  
-                                </apex:selectList>
-                            </apex:outputPanel>
                             <apex:outputPanel id="countFieldDisplay" rendered="{!smHelper.logic == 'CNT'}">
                                 <br/>
                                 <apex:inputCheckbox value="{!smHelper.displayCountFields}"><apex:actionSupport event="onchange" action="{!setCountSourceDefaultField}" reRender="firstField, saveCancelBtns"/></apex:inputCheckbox>&nbsp;{!$Label.ChangeSourceField} 
@@ -341,6 +402,28 @@
                                             </div>    
                                         </div> 
                                     </span>
+                                </apex:outputPanel>
+                            </apex:outputPanel>
+
+                            <apex:outputPanel id="appendTrailingWhitespaceOption">
+                                <apex:outputPanel rendered="{!smHelper.isValidDelimForAppendTrailingWhitespace}">
+                                    <div style="width:180px;">
+                                        <apex:inputCheckbox id="appendTrailingWhitespaceCheck" value="{!smHelper.appendTrailingWhitespace}"/>&nbsp;
+                                        <apex:outputLabel value="{!$Label.rh2__AppendTrailingWhitespace}" for="appendTrailingWhitespaceCheck"/>
+
+                                        <span>
+                                            <a id="appendTrailingWhitespaceInfo" onmouseover="setShowTooltipFormatting('appendTrailingWhitespaceHelp');" onmouseout="document.getElementById('appendTrailingWhitespaceHelp').style.display = 'none';">
+                                                <img class="slds-icon slds-icon--x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>
+                                            </a>
+                                            <div style="max-height:0px;overflow:visible;overflow-y:visible;position:absolute;">
+                                                <div class="slds-popover slds-theme--info" id="appendTrailingWhitespaceHelp" style="display:none !important;">
+                                                    <div class="slds-popover__body">
+                                                        {!$Label.IfCheckedAppendTrailingWhitespace}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
                                 </apex:outputPanel>
                             </apex:outputPanel>
 
@@ -375,38 +458,42 @@
                     <apex:outputPanel rendered="{!IF(OR(AND(smHelper.logic != null, smHelper.logic != 'CNT'), AND(smHelper.displayCountFields == true, smHelper.logic == 'CNT')), true, false)}">
                         <apex:outputPanel id="firstFieldOptions">
                             <apex:selectList size="8" value="{!smHelper.sourceField1API}" id="sf1" style="margin-right:15px;width:315px;">
-                                <apex:actionSupport event="onchange" action="{!refreshSource2}" reRender="sf2, field2, selectionInfo, source, saveCancelBtns, filterAndPreview, targetFieldMessage, polyWarning, rollupPreviewContainer, delim, type, archivedRecordsMessage" status="statusMessage"/> 
-                                <apex:selectOptions value="{! pgCon.PaginatedList }"/>
+                                <apex:actionSupport event="onchange" action="{!refreshSource2}" reRender="sf2, field2, selectionInfo, source, saveCancelBtns, filterAndPreview, targetFieldMessage, polyWarning, rollupPreviewContainer, delim, type, archivedRecordsMessage, modeTiebreaker" status="loading"/> 
+                                <apex:selectOptions value="{! sourceFieldController.PaginatedList }"/>
                             </apex:selectList>
                         </apex:outputPanel>
                         <br/><br/>
                         <div class="slds-form-element"> 
-                            <input style="width:315px;" class="slds-input" placeHolder="{!$Label.TypeForFields}" type="text" onkeypress="captureEnterAndBuildList(event, 'childFieldSearch', searchAllChildFields);" id="childFieldSearch"/>					
+                            <input style="width:315px;" class="slds-input" placeHolder="{!$Label.TypeForFields}" type="text" onkeypress="captureEnterAndBuildList(event, 'sourceFieldSearch', searchAllSourceFields);" id="sourceFieldSearch"/>					
                         </div>
                         <script>
-                            searchFromInput("childFieldSearch", searchAllChildFields);
+                            searchFromInput("sourceFieldSearch", searchAllSourceFields);
                         </script>
                         <br/>
-                        <div >
-                            <c:Paginate pageController="{! pgCon }" renderedComponent="field1" rendered="{!IF(smHelper.logic != null, true, false)}"/>
-                        </div>
+                        <apex:outputPanel id="firstFieldPagination">
+                            <c:Paginate pageController="{! sourceFieldController }" renderedComponent="field1" rendered="{!IF(smHelper.logic != null, true, false)}"/>
+                        </apex:outputPanel>
                     </apex:outputPanel>
                     </apex:outputPanel>             
                     <apex:outputPanel id="field2">
                         <apex:outputPanel rendered="{! AND(NOT(ISBLANK(smHelper.sourceField1API)), sourceFields1FK)}">
                             <apex:outputPanel id="fkFieldOptions">
                                 <apex:selectList id="sf2" size="8" value="{!smHelper.sourceField2API}" style="margin-right:15px;width:315px;">
-                                    <apex:actionSupport event="onchange" action="{!selectSourceField}" reRender="uniqueCountOption, source, selectionInfo, saveCancelBtns, filterAndPreview, targetFieldMessage, rollupPreviewContainer, archivedRecordsMessage" status="statusMessage"/>
-                                    <apex:selectOptions value="{! sourceFields2 }"/>
+                                    <apex:actionSupport event="onchange" action="{!selectSourceField}" reRender="uniqueCountOption, source, selectionInfo, saveCancelBtns, filterAndPreview, targetFieldMessage, rollupPreviewContainer, archivedRecordsMessage, modeTiebreaker" status="loading"/>
+                                    <apex:selectOptions value="{! fkSourceFieldController.PaginatedList }"/>
                                 </apex:selectList>
                             </apex:outputPanel>
                             <br/><br/>
                             <div class="slds-form-element">    
-                                <input style="width:315px;" class="slds-input" placeHolder="{!$Label.TypeForFields}" type="text" onkeypress="captureEnterAndBuildList(event, 'childFKFieldSearch', searchAllChildFKFields);" id="childFKFieldSearch"/>					
+                                <input style="width:315px;" class="slds-input" placeHolder="{!$Label.TypeForFields}" type="text" onkeypress="captureEnterAndBuildList(event, 'sourceFKFieldSearch', searchAllSourceFKFields);" id="sourceFKFieldSearch"/>					
                             </div>
                             <script>
-                                searchFromInput("childFKFieldSearch", searchAllChildFKFields);
+                                searchFromInput("sourceFKFieldSearch", searchAllSourceFKFields);
                             </script>
+                            <br/>
+                            <apex:outputPanel id="fkFieldPagination">
+                                <c:Paginate pageController="{! fkSourceFieldController }" renderedComponent="field2" rendered="{!AND(NOT(ISBLANK(smHelper.sourceField1API)), sourceFields1FK)}"/>
+                            </apex:outputPanel>
                         </apex:outputPanel>
                     </apex:outputPanel>
 
@@ -421,11 +508,43 @@
                         <apex:outputText value="{!$Label.Type} {! smHelper.sourceFieldType }"/><br />
                         <apex:outputText value="{!$Label.rh2__ToRollupInto} {!smHelper.targetField}" />
                     </apex:outputPanel>
-                    </apex:outputPanel>                    
+                    </apex:outputPanel>   
+                    <apex:outputPanel id="modeTiebreaker">
+                        <apex:outputPanel rendered="{!AND(smHelper.logic == 'MDE', smHelper.sourceFieldType != null, smHelper.sourceField != null)}">
+                            {!$Label.ModeTieBreaker}
+                            <a id='modeTieBreakerInfo' onmouseover="setShowTooltipFormatting('modeTieBreakerHelp');" onmouseout="document.getElementById('modeTieBreakerHelp').style.display = 'none';"> 
+                                <img class="slds-icon slds-icon--x-small" src="/apexpages/slds/latest/assets/icons/utility/info_60.png"></img>                 
+                            </a> 
+                            <div style="max-height:0px;overflow:visible;overflow-y:visible;position:absolute;">
+                                <div class="slds-popover slds-theme--info" id='modeTieBreakerHelp' style="display:none !important;">                       
+                                    <div class="slds-popover__body">
+                                        {!$Label.InTheEventOfATie}
+                                    </div>
+                                </div>    
+                            </div> 
+                            <br/>
+                            <apex:outputPanel rendered="{! NOT(ISBLANK(smHelper.filterName)) }">
+                                {!ExistingFilterSort}
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{! (ISBLANK(smHelper.filterName)) }">
+                                <apex:outputPanel rendered="{! NOT(AND(NOT(ISBLANK(smHelper.sourceField1API)), sourceFields1FK))}">
+                                    {!smHelper.SourceField1API} {!smHelper.modeTiebreaker} 
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{! AND(NOT(ISBLANK(smHelper.sourceField1API)), sourceFields1FK)}">
+                                    {!smHelper.SourceField2API} {!smHelper.modeTiebreaker} 
+                                </apex:outputPanel>
+                                <br/>
+                                <apex:selectList size="1" value="{!smHelper.modeTiebreaker}" disabled="{! NOT(ISBLANK(smHelper.filterName)) }" style="margin-top:5px;">
+                                <apex:actionSupport action="{!buildFilterString}" event="onchange" reRender="filter_edit, modalPopup, preview, modeTiebreaker"/>   
+                                <apex:selectOptions value="{! ModeTiebreakerSorts }"/>  
+                            </apex:selectList>
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                    </apex:outputPanel>                 
               </div> &nbsp; &nbsp;                
             </apex:outputPanel>            
             </apex:outputPanel>
-            <apex:outputPanel id="targetFieldMessage">
+            <apex:outputPanel id="targetFieldMessage" style="margin-left: 100px;">
                 <apex:outputPanel rendered="{!smHelper.showShortTargetFieldMessage}" styleclass="slds-box targetFieldMessage">
                     {!$Label.rh2__TargetFieldShorterLength}
                 </apex:outputPanel>
@@ -435,10 +554,10 @@
                 <apex:outputPanel rendered="{!smHelper.sourceFieldType == 'BASE64'}" styleClass="slds-box targetFieldMessage">
                     {!$Label.rh2__Base64DataCannotBeRead}
                 </apex:outputPanel>
-                <apex:outputPanel rendered="{!smHelper.targetFieldType == 'URL'}" styleClass="slds-box targetFieldMessage">
+                <apex:outputPanel rendered="{! AND(smHelper.targetFieldType == 'URL', smHelper.logic == 'TXT')}" styleClass="slds-box targetFieldMessage">
                     {!$Label.rh2__URLTargetDefaultSort}
                 </apex:outputPanel>
-                <apex:outputPanel rendered="{!smHelper.targetFieldType == 'PHONE'}" styleClass="slds-box targetFieldMessage">
+                <apex:outputPanel rendered="{! AND(smHelper.targetFieldType == 'PHONE', smHelper.logic == 'TXT')}" styleClass="slds-box targetFieldMessage">
                     {!$Label.rh2__PhoneTargetDefaultSort}
                 </apex:outputPanel>
             </apex:outputPanel>
@@ -474,7 +593,7 @@
                     <div class="slds-text-body_large">
                         <apex:outputText style="padding-left:15px;" value="{!$Label.rh2__SelectFilter}" /> &nbsp; 
                         <apex:selectList size="1" value="{! smHelper.filterName }" >
-                            <apex:actionSupport action="{!buildFilterString}" event="onchange" reRender="filter_edit, modalPopup, preview"/>                                
+                            <apex:actionSupport action="{!buildFilterString}" event="onchange" reRender="filter_edit, modalPopup, preview, modeTiebreaker"/>                                
                             <apex:selectOptions value="{! filterNames }"/>  
                         </apex:selectList>              
                         
@@ -808,6 +927,17 @@
                                 <br />
                             </apex:outputpanel> 
 
+                            <apex:outputPanel rendered="{!isLeadTarget}">
+                                <apex:outputPanel id="convertedLeads">
+                                    <apex:inputCheckbox value="{!smHelper.updateConvertedLeads}" id="convertedCheckbox"/>
+                                    <apex:actionSupport event="onchange" action="{!postVariable}" reRender="convertedLeads"/>
+                                </apex:outputPanel>
+
+                                <apex:outputLabel for="convertedCheckbox" value="{!' ' + $Label.rh2__AttemptToUpdateConvertedLeads}"/>
+                                <p class="slds-text-body_small">{!$Label.rh2__IfCheckedWillUpdateConvertedLeads}</p>
+                                <br/>
+                            </apex:outputPanel>
+
                             <!-- Code for individual realtime checkbox -->
                             <apex:outputpanel id="individualRealtime">
                                 <apex:outputPanel >
@@ -895,7 +1025,7 @@
                     </apex:outputPanel>
                  <center>
                  <apex:commandbutton styleClass="slds-button slds-button_neutral" action="{!cancelSettingConfig}" value="{!$Label.rh2__Cancel}"/>
-                 <apex:commandButton styleClass="slds-button slds-button_neutral" action="{!validateChildCount}" value="{!$Label.rh2__ValidateQuery}" disabled="{!!renderSaveButton}" oncomplete="showModal(true, 'rollupQueryValidation');" reRender="validationTextContainer"/>
+                 <apex:commandButton styleClass="slds-button slds-button_neutral" action="{!validateChildCount}" value="{!$Label.rh2__ValidateQuery}" disabled="{!!renderSaveButton}" oncomplete="showValidationModalOrError({!hasValidationError});" status="loading" reRender="validationTextContainer,topPageMessage"/>
                  <apex:commandbutton styleClass="slds-button slds-button_neutral" disabled="{!!renderSaveButton}" reRender="existingSettingModal" value="{!$Label.rh2__PreviewRollupResults}" onclick="showModal(true, 'existingSettingModal');"/>
                  <apex:commandButton styleClass="slds-button slds-button_neutral" action="{!save}" value="{!$Label.rh2__Save}" disabled="{!!renderSaveButton}" rerender="topPageMessage" rendered="{!OR(!smHelper.showEnableRealTimeModal, $Setup.rh2__PS_Settings__c.rh2__RealtimeEnablementOptOut__c == true)}" status="loading">
                     <apex:param name="saveAndNewParam" value="false" assignTo="{!smHelper.saveAndNewClicked}" />
@@ -904,7 +1034,7 @@
                  <apex:commandButton styleClass="slds-button slds-button_neutral" action="{!save}" value="{!$Label.rh2__SaveAndNew}" disabled="{!!renderSaveButton}" rerender="topPageMessage" status="loading">
                     <apex:param name="saveAndNewParam" value="true" assignTo="{!smHelper.saveAndNewClicked}"/>
                  </apex:commandButton>
-                 <apex:commandButton styleClass="slds-button slds-button_neutral" action="{!runsave}" value="{!$Label.rh2__SaveAndRun}" disabled="{!!renderSaveButton}" rendered="{!not(and(smHelper.activeRollupCount > 2, smHelper.notpaid))}" rerender="topPageMessage" status="loading"/>  
+                 <apex:commandButton styleClass="slds-button slds-button_neutral" action="{!runsave}" value="{!$Label.rh2__SaveAndRun}" disabled="{!!renderSaveButton}" rendered="{!smHelper.ShouldRenderSaveAndRun}" rerender="topPageMessage" status="loading"/>  
                  
                  </center> 
                     </apex:outputPanel>
@@ -991,7 +1121,7 @@
                 </div>
                 <div class="slds-modal__footer">
                     <div class="slds-x-small-buttons_horizontal">
-                        <apex:outputLink value="{! URLFOR('/apex/PS_Job?s=' + settingName)}" styleClass="slds-button slds-button_neutral slds-button_small slds-m-bottom_x-small">{!$Label.rh2__SaveAndSchedule}</apex:outputLink>
+                        <apex:outputLink value="{! URLFOR('/apex/PS_Job?s=' + settingName)}" styleClass="slds-button slds-button_brand slds-button_small slds-m-bottom_x-small">{!$Label.rh2__SaveAndSchedule}</apex:outputLink>
                         <button type="button" onclick='showModal(false, "modalPopup");' class="slds-button slds-button_neutral slds-button_small slds-m-bottom_x-small">{!$Label.rh2__Cancel}</button>
                     </div>
                 </div>
@@ -1081,6 +1211,11 @@
                     <div class="slds-modal__container">
                         <div class="slds-modal__header">
                             <h2 class="slds-text-heading_medium">{!$Label.rh2__CloneFromExistingFilters}</h2>
+                            <button type="button" onclick="showModal(false, 'clonePopup');" class="slds-button slds-button_icon-inverse slds-modal__close">
+                                <svg aria-hidden="true" class="slds-button__icon slds-button__icon_large">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{! URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+                                </svg>
+                            </button>
                         </div>
                         <div class="slds-modal__content slds-p-around_small">   
                             <center>                            
@@ -1092,8 +1227,8 @@
                         </div>              
                         <div class="slds-modal__footer">
                             <apex:outputPanel id="cloneFilterButtons">
-                                <apex:commandButton styleClass="slds-button slds-button_neutral" onclick="showModal(false, 'clonePopup');" rerender="clonePopup" value="{!$Label.rh2__Cancel}"/>                                                       
                                 <apex:commandButton disabled="{!smHelper.selectedCloneFilter == null}" styleClass="slds-button slds-button_brand" action="{!cloneFilter}" value="{!$Label.rh2__Clone}" status="loading"/>
+                                <apex:commandButton styleClass="slds-button slds-button_neutral" onclick="showModal(false, 'clonePopup');" rerender="clonePopup" value="{!$Label.rh2__Cancel}"/>                                                       
                             </apex:outputPanel>
                         </div>
                     </div>
@@ -1116,7 +1251,7 @@
                 </div>
                 <div class="slds-modal__content slds-p-around_small">
                     <apex:outputPanel id="createRelationshipFieldContainer">
-                        <apex:outputPanel id="createRelationshipField">
+                        <apex:outputPanel id="createRelationshipField" rendered="{!smHelper.showFieldCreationComponent}">
                             <c:PS_FieldCreation targetObjAndField="{!smHelper.targetField}" restrictType="Lookup" pageRedirectName="" />
                         </apex:outputPanel>
                     </apex:outputPanel>

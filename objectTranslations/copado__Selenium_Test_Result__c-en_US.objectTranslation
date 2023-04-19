@@ -1,61 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label></label>
+        <label><!-- Batch No. --></label>
         <name>copado__Batch_No__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Elapsed Time (seconds) --></label>
         <name>copado__Elapsed_Time_Seconds__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Message --></label>
         <name>copado__Message__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Platform --></label>
         <name>copado__Platform__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Result URL --></label>
         <name>copado__Result_URL__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Selenium Test Run --></label>
         <name>copado__Selenium_Test_Run__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Selenium Test Results --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Selenium Test Suite --></label>
         <name>copado__Selenium_Test_Suite__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Selenium Test Results --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Status --></label>
         <name>copado__Status__c</name>
         <picklistValues>
             <masterLabel>Completed successfully</masterLabel>
-            <translation></translation>
+            <translation><!-- Completed successfully --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Completed with errors</masterLabel>
-            <translation></translation>
+            <translation><!-- Completed with errors --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>In Progress</masterLabel>
-            <translation></translation>
+            <translation><!-- In Progress --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Provider Failure</masterLabel>
-            <translation></translation>
+            <translation><!-- Provider Failure --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Queued</masterLabel>
-            <translation></translation>
+            <translation><!-- Queued --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Starting</masterLabel>
-            <translation></translation>
+            <translation><!-- Starting --></translation>
         </picklistValues>
     </fields>
+    <layouts>
+        <layout>Selenium Test Result Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
 </CustomObjectTranslation>

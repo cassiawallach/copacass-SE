@@ -165,7 +165,7 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>SBQQ__EndDate__c</field>
+            <field>SBQQ__Description__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -184,16 +184,6 @@
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
-        <availableFields>
-            <field>SBQQ__StartDate__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>SBQQ__TargetCustomerAmount__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
         <description>Used to render group fields on Edit Lines page.</description>
         <displayedFields>
             <field>Name</field>
@@ -206,17 +196,27 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
+            <field>SBQQ__StartDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
             <field>SBQQ__SubscriptionTerm__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>SBQQ__AdditionalDiscountRate__c</field>
+            <field>SBQQ__EndDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>SBQQ__Description__c</field>
+            <field>SBQQ__TargetCustomerAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__AdditionalDiscountRate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -519,5 +519,23 @@
     <pluralLabel>Quote Line Groups</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>SBQQ__Invalid_Subscription_Term</fullName>
+        <active>true</active>
+        <description>Validates that subscription term is positive</description>
+        <errorConditionFormula>IF( AND( NOT(ISNULL(SBQQ__SubscriptionTerm__c)), SBQQ__SubscriptionTerm__c &lt;= 0), TRUE, null)</errorConditionFormula>
+        <errorMessage>The subscription term must be a positive number.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>SBQQ__CalculateQuoteFromQuoteLineGroup</fullName>
+        <availability>online</availability>
+        <description>Calculates and saves the quote.</description>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Calculate Quote</masterLabel>
+        <openType>replace</openType>
+        <page>SBQQ__CalculateQuoteFromQuoteLineGroup</page>
+        <protected>false</protected>
+    </webLinks>
 </CustomObject>

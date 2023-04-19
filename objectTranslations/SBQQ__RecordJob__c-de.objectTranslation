@@ -6,14 +6,19 @@
         <value>Datensatzauftrag</value>
     </caseValues>
     <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Datensatzaufträge</value>
+    </caseValues>
+    <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
         <value>Datensatzauftrag</value>
     </caseValues>
     <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Datensatzauftrag</value>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Datensatzaufträge</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
@@ -21,19 +26,14 @@
         <value>Datensatzauftrags</value>
     </caseValues>
     <caseValues>
-        <caseType>Nominative</caseType>
-        <plural>true</plural>
-        <value>Datensatzaufträge</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>true</plural>
-        <value>Datensatzaufträge</value>
-    </caseValues>
-    <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
         <value>Datensatzaufträge</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Datensatzauftrag</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
@@ -42,35 +42,35 @@
     </caseValues>
     <fields>
         <help>Ist diese Option aktiviert, wurde der Benutzer darüber benachrichtigt, dass der Datensatzauftrag abgeschlossen ist.</help>
-        <label></label>
+        <label><!-- Is Read --></label>
         <name>SBQQ__IsRead__c</name>
     </fields>
     <fields>
         <help>Die Details des ausgeführten Hintergrundauftrags, wenn keine Auftrags-ID angegeben wurde.</help>
-        <label></label>
+        <label><!-- Job Details --></label>
         <name>SBQQ__JobDetails__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Job Id --></label>
         <name>SBQQ__JobId__c</name>
     </fields>
     <fields>
         <help>Der Status des ausgeführten Hintergrundauftrags, wenn keine Auftrags-ID angegeben wurde.</help>
-        <label></label>
+        <label><!-- Job Status --></label>
         <name>SBQQ__JobStatus__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Record Id --></label>
         <name>SBQQ__RecordId__c</name>
     </fields>
     <fields>
         <help>URL zur Umleitung nach Abschluss des Auftrags.</help>
-        <label></label>
+        <label><!-- Redirect URL --></label>
         <name>SBQQ__RedirectUrl__c</name>
     </fields>
     <fields>
         <help>Die Stapelverfolgung des ausgeführten Hintergrundauftrags, wenn keine Auftrags-ID angegeben wurde.</help>
-        <label></label>
+        <label><!-- Stacktrace --></label>
         <name>SBQQ__Stacktrace__c</name>
     </fields>
     <gender>Masculine</gender>

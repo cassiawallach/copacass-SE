@@ -9,27 +9,27 @@
         <value>Datos de búsqueda de consulta</value>
     </caseValues>
     <fields>
-        <label></label>
+        <label><!-- Category --></label>
         <name>SBQQ__Category__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Message --></label>
         <name>SBQQ__Message__c</name>
     </fields>
     <fields>
         <help>Representa el producto al que se aplica la acción de producto con las reglas de selección de productos.</help>
-        <label></label>
+        <label><!-- Product --></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Lookup Data --></relationshipLabel>
     </fields>
     <fields>
         <help>Indica que la acción es obligatoria para las reglas de selección de productos.</help>
-        <label></label>
+        <label><!-- Required --></label>
         <name>SBQQ__Required__c</name>
     </fields>
     <fields>
         <help>Especifica el tipo de acción que hay que realizar sobre el producto en las reglas de selección de productos.</help>
-        <label></label>
+        <label><!-- Type --></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Add</masterLabel>
@@ -81,9 +81,16 @@
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Value --></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <gender>Masculine</gender>
+    <layouts>
+        <layout>Lookup Data Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Datos de búsqueda de consulta</nameFieldLabel>
 </CustomObjectTranslation>

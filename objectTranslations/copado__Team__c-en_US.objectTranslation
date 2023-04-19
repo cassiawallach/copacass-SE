@@ -1,115 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label></label>
+        <label><!-- Active --></label>
         <name>copado__Active__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Department --></label>
         <name>copado__Department__c</name>
         <picklistValues>
             <masterLabel>Analytics</masterLabel>
-            <translation></translation>
+            <translation><!-- Analytics --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Capacity</masterLabel>
-            <translation></translation>
+            <translation><!-- Capacity --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Core</masterLabel>
-            <translation></translation>
+            <translation><!-- Core --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Core Infrastructure</masterLabel>
-            <translation></translation>
+            <translation><!-- Core Infrastructure --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Data Center Automation</masterLabel>
-            <translation></translation>
+            <translation><!-- Data Center Automation --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>IT</masterLabel>
-            <translation></translation>
+            <translation><!-- IT --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Industry</masterLabel>
-            <translation></translation>
+            <translation><!-- Industry --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Marketing</masterLabel>
-            <translation></translation>
+            <translation><!-- Marketing --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Matrix</masterLabel>
-            <translation></translation>
+            <translation><!-- Matrix --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Mobile</masterLabel>
-            <translation></translation>
+            <translation><!-- Mobile --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Network and Systems Platform</masterLabel>
-            <translation></translation>
+            <translation><!-- Network and Systems Platform --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Path-To-Production</masterLabel>
-            <translation></translation>
+            <translation><!-- Path-To-Production --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Platform</masterLabel>
-            <translation></translation>
+            <translation><!-- Platform --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Production Support</masterLabel>
-            <translation></translation>
+            <translation><!-- Production Support --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Productivity</masterLabel>
-            <translation></translation>
+            <translation><!-- Productivity --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Programmatic UI</masterLabel>
-            <translation></translation>
+            <translation><!-- Programmatic UI --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>R&amp;D App Delivery</masterLabel>
-            <translation></translation>
+            <translation><!-- R&amp;D App Delivery --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Reliability</masterLabel>
-            <translation></translation>
+            <translation><!-- Reliability --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Sales</masterLabel>
-            <translation></translation>
+            <translation><!-- Sales --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Security</masterLabel>
-            <translation></translation>
+            <translation><!-- Security --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Service</masterLabel>
-            <translation></translation>
+            <translation><!-- Service --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Shared Services</masterLabel>
-            <translation></translation>
+            <translation><!-- Shared Services --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Trust</masterLabel>
-            <translation></translation>
+            <translation><!-- Trust --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Description --></label>
         <name>copado__Description__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Sprint Wall FieldSet Name --></label>
         <name>copado__Sprint_Wall_FieldSet_Name__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Vision --></label>
         <name>copado__Vision__c</name>
     </fields>
+    <layouts>
+        <layout>Team Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
 </CustomObjectTranslation>

@@ -8,8 +8,8 @@
         <div class="slds-media__figure">
             <apex:image url="{!$Resource.SBQQ__NoAccessSimplified}" />
         </div>
-        <div class="slds-text-heading--large slds-p-bottom--large">{!$Label.sbqq__msg_salesforce_no_access_title}</div>
-        <div class="slds-text-heading--medium">{!$Label.sbqq__msg_salesforce_no_access_body}</div>
+        <div class="slds-text-heading--large slds-p-bottom--large">{!$Label.SBQQ__msg_salesforce_no_access_title}</div>
+        <div class="slds-text-heading--medium">{!$Label.SBQQ__msg_salesforce_no_access_body}</div>
     </div>
     </body>
 

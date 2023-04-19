@@ -5,9 +5,20 @@
         <value>割引カテゴリ</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>この商品カテゴリで許容される最大割引を入力します。</help>
-        <label></label>
+        <label><!-- Max Discount (%) --></label>
         <name>SBQQ__MaxDiscountRate__c</name>
     </fields>
+    <layouts>
+        <layout>Discount Category Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>カテゴリ名</nameFieldLabel>
 </CustomObjectTranslation>

@@ -9,18 +9,22 @@
         <value>Regras de preços</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>Indica se essa regra está ativa ou não.</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Pode ser inserida apenas se a opção Condições atendidas for Personalizada. Insira uma combinação dos Números do índice de condição de preço, AND, OR e parênteses (por exemplo, (123 AND 124) AND 125).</help>
-        <label></label>
+        <label><!-- Advanced Condition --></label>
         <name>SBQQ__AdvancedCondition__c</name>
     </fields>
     <fields>
         <help>Escolha o comportamento para suas condições: Tudo é AND, Qualquer é OR e Personalizado é uma combinação de AND/OR.</help>
-        <label></label>
+        <label><!-- Conditions Met --></label>
         <name>SBQQ__ConditionsMet__c</name>
         <picklistValues>
             <masterLabel>All</masterLabel>
@@ -37,7 +41,7 @@
     </fields>
     <fields>
         <help>Quando as opções Nenhum ou Salvar forem selecionadas, as regras de preço no escopo do Configurador serão acionadas ao salvar. Quando a opção Editar for selecionada, as regras de preço no escopo do Configurador serão acionadas ao editar e salvar.</help>
-        <label></label>
+        <label><!-- Configurator Evaluation Event --></label>
         <name>SBQQ__ConfiguratorEvaluationEvent__c</name>
         <picklistValues>
             <masterLabel>Edit</masterLabel>
@@ -50,7 +54,7 @@
     </fields>
     <fields>
         <help>Especifique quando essa regra deve ser avaliada. Ela deve ser usada apenas ao focar em Linha de cotação e sem suporte na calculadora legada.</help>
-        <label></label>
+        <label><!-- Calculator Evaluation Event --></label>
         <name>SBQQ__EvaluationEvent__c</name>
         <picklistValues>
             <masterLabel>After Calculate</masterLabel>
@@ -71,12 +75,12 @@
     </fields>
     <fields>
         <help>Especifique a ordem de avaliação para essa regra de preços. Regras com classificação superior são avaliadas por último, o que significa que elas &quot;ganham&quot; em caso de conflito.</help>
-        <label></label>
+        <label><!-- Evaluation Order --></label>
         <name>SBQQ__EvaluationOrder__c</name>
     </fields>
     <fields>
         <help>Nome da API do Objeto personalizado que armazena os dados de pesquisa.</help>
-        <label></label>
+        <label><!-- Lookup Object --></label>
         <name>SBQQ__LookupObject__c</name>
         <picklistValues>
             <masterLabel>SBQQ__LookupData__c</masterLabel>
@@ -85,13 +89,13 @@
     </fields>
     <fields>
         <help>Escolha um produto a associar a essa regra.</help>
-        <label></label>
+        <label><!-- Product --></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Price Rules --></relationshipLabel>
     </fields>
     <fields>
         <help>Evento durante o qual essa regra é avaliada.</help>
-        <label></label>
+        <label><!-- Evaluation Scope --></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Calculator</masterLabel>
@@ -103,13 +107,20 @@
         </picklistValues>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Price Rule Layout</layout>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nome da regra de preço</nameFieldLabel>
     <webLinks>
-        <label></label>
+        <label><!-- CloneWithRelated --></label>
         <name>SBQQ__CloneWithRelated</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- CloneWithRelatedClassic --></label>
         <name>SBQQ__CloneWithRelatedClassic</name>
     </webLinks>
 </CustomObjectTranslation>

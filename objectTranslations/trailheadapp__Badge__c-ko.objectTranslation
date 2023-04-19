@@ -5,41 +5,41 @@
         <value>뱃지</value>
     </caseValues>
     <fields>
-        <label></label>
+        <label><!-- API Name --></label>
         <name>trailheadapp__API_Name__c</name>
     </fields>
     <fields>
         <help>이 뱃지는 보관 처리되었고 더 이상 사용할 수 없습니다.</help>
-        <label></label>
+        <label><!-- Archived --></label>
         <name>trailheadapp__Archived__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Badge Icon --></label>
         <name>trailheadapp__Badge_Icon__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Built Date --></label>
         <name>trailheadapp__Built_Date__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Created At --></label>
         <name>trailheadapp__Created_At__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Description --></label>
         <name>trailheadapp__Description__c</name>
     </fields>
     <fields>
         <help>이 필드는 지원이 중단되었고 더 이상 사용되지 않습니다.</help>
-        <label></label>
+        <label><!-- External Id --></label>
         <name>trailheadapp__External_Id__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Icon --></label>
         <name>trailheadapp__Icon__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Level --></label>
         <name>trailheadapp__Level__c</name>
         <picklistValues>
             <masterLabel>Advanced</masterLabel>
@@ -55,31 +55,31 @@
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Namespace --></label>
         <name>trailheadapp__Namespace__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Products --></label>
         <name>trailheadapp__Products__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Roles --></label>
         <name>trailheadapp__Roles__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Tags --></label>
         <name>trailheadapp__Tags__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Total Badges Awarded --></label>
         <name>trailheadapp__Total_Badges_Awarded__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Total Badges In Progress --></label>
         <name>trailheadapp__Total_Badges_In_Progress__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Type --></label>
         <name>trailheadapp__Type__c</name>
         <picklistValues>
             <masterLabel>Module</masterLabel>
@@ -95,8 +95,15 @@
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- URL --></label>
         <name>trailheadapp__URL__c</name>
     </fields>
+    <layouts>
+        <layout>Trailhead Badge Layout</layout>
+        <sections>
+            <label>사용자 정의 링크</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>뱃지 이름</nameFieldLabel>
 </CustomObjectTranslation>

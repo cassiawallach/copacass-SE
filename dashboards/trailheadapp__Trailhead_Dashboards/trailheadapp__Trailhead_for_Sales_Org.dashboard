@@ -23,7 +23,7 @@
                 <indicatorLowColor>#C23934</indicatorLowColor>
                 <indicatorMiddleColor>#E2CE7D</indicatorMiddleColor>
                 <metricLabel>Activities logged on opportunities</metricLabel>
-                <report>trailheadapp__Trailhead_Reports/trailheadapp__Activities_with_Opportunities_all_time_cdR</report>
+                <report>General_Business/trailheadapp__Activities_with_Opportunities_all_time_cdR</report>
                 <showRange>false</showRange>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
@@ -103,7 +103,7 @@
                 <groupingSortProperties/>
                 <header>Activities (by Type)</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>trailheadapp__Trailhead_Reports/trailheadapp__Activities_with_Opportunities_all_time_cdR</report>
+                <report>General_Business/trailheadapp__Activities_with_Opportunities_all_time_cdR</report>
                 <showPercentage>false</showPercentage>
                 <showValues>false</showValues>
                 <sortBy>RowValueDescending</sortBy>
@@ -258,7 +258,7 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <runningUser>copacass1122@copado.com</runningUser>
+    <runningUser>pr@copado.com</runningUser>
     <textColor>#000000</textColor>
     <title>Trailhead for Sales Team</title>
     <titleColor>#000000</titleColor>

@@ -9,6 +9,16 @@
     <columns>
         <field>copado__Test_Script__c.copado__User_Story__c</field>
     </columns>
+    <filter>
+        <criteriaItems>
+            <column>FK_$copado__Sprint__c.copado__Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>In progress</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>

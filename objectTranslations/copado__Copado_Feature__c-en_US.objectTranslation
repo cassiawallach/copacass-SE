@@ -1,95 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label></label>
+        <label><!-- Application --></label>
         <name>copado__Application__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Features --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Architect --></label>
         <name>copado__Architect__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Features (deprecated) (Architect) --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Complexity --></label>
         <name>copado__Complexity__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Description --></label>
         <name>copado__Description__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Epic --></label>
         <name>copado__Epic__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Features --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Estimated Value --></label>
         <name>copado__Estimated_Value__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Feature Title --></label>
         <name>copado__Feature_Title__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Priority --></label>
         <name>copado__Priority__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Product Owner --></label>
         <name>copado__Product_Owner__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Features (deprecated) (Product Owner) --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Status --></label>
         <name>copado__Status__c</name>
         <picklistValues>
             <masterLabel>Accepted</masterLabel>
-            <translation></translation>
+            <translation><!-- Accepted --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Coming Soon</masterLabel>
-            <translation></translation>
+            <translation><!-- Coming Soon --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Delivered</masterLabel>
-            <translation></translation>
+            <translation><!-- Delivered --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Refinement</masterLabel>
-            <translation></translation>
+            <translation><!-- Refinement --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Rejected</masterLabel>
-            <translation></translation>
+            <translation><!-- Rejected --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Requested</masterLabel>
-            <translation></translation>
+            <translation><!-- Requested --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Under Review</masterLabel>
-            <translation></translation>
+            <translation><!-- Under Review --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Technical Assumptions --></label>
         <name>copado__Technical_Assumptions__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- # Users --></label>
         <name>copado__Users__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Value Type --></label>
         <name>copado__Value_Type__c</name>
         <picklistValues>
             <masterLabel>New Revenue</masterLabel>
-            <translation></translation>
+            <translation><!-- New Revenue --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Time Savings</masterLabel>
-            <translation></translation>
+            <translation><!-- Time Savings --></translation>
         </picklistValues>
     </fields>
+    <layouts>
+        <layout>Feature Layout</layout>
+        <sections>
+            <label><!-- Additional Details --></label>
+            <section>Additional Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Owners --></label>
+            <section>Owners</section>
+        </sections>
+    </layouts>
 </CustomObjectTranslation>

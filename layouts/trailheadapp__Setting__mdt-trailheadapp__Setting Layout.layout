@@ -30,10 +30,6 @@
                 <behavior>Required</behavior>
                 <field>trailheadapp__Client_Secret__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>trailheadapp__Public_Namespace__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

@@ -3,10 +3,16 @@
     <head> 
         <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>    
         <apex:includeScript value="{! URLFOR($Resource.PT_Resources_v1, '/js/UI_Utilities.js') }"/>	  
+        <apex:includeScript value="{! URLFOR($Resource.PT_Resources_v1, '/js/hs_breadcrumbs.js')}" />
+        <apex:includeScript value="{! URLFOR($Resource.HS_Jquery, 'jquery-3.6.0.min.js')}" />   
         <apex:stylesheet value="{! URLFOR($Resource.PT_Resources_v1, '/css/grayBackground.css') }" />
     </head> 
     <apex:slds /> 
     <script>
+        $(document).ready(function(){
+            selectBreadcrumb_HS();
+        });
+
         function showRetryModal(){
            document.getElementById('retryJobModal').style.display = 'block';
            document.getElementById('retryJobBackdrop').style.display = 'block';
@@ -16,6 +22,23 @@
             document.getElementById('retryJobModal').style.display = 'none';	
             document.getElementById('retryJobBackdrop').style.display = 'none';		
 		}
+
+        function populateHelpTextAndShowModal(exType) {
+            var helpText = document.getElementById('' + exType.toLowerCase() + 'Help');
+            if (helpText != null) {
+                helpText.style.display = 'block';
+            } else {
+                document.getElementById('generalHelp').style.display = 'block';
+            }
+            document.getElementById('helpModal').style.display = 'block';
+        }
+
+        function closeHelpModal() {
+            document.getElementById('helpModal').style.display = 'none';
+            document.querySelectorAll('.helpText').forEach(function(el) {
+                el.style.display = 'none';
+            });
+        }
 
         function handleErrsAndCloseRetryModal(emptyObjsError){
 			if(!emptyObjsError){
@@ -30,8 +53,18 @@
     <div class="slds-scope" role="main">
     <apex:actionStatus id="loading" onstart="loading(true)" onstop="loading(false)" />
     <div class="slds-card grayBackground">
+        <header class="slds-card__header">
+            <nav role="navigation">
+                <ol class="slds-breadcrumb slds-list_horizontal">
+                    <li class="slds-list__item slds-text-heading_label home-crumb"><a href="{!URLFOR($Page.rh2__PS_landingPage)}">{!$Label.rh2__Home}</a></li>
+                    <li class="slds-list__item slds-text-heading_label setting-crumb"><a href="{!URLFOR($Page.rh2__PS_AllSettings)}">{!$Label.rh2__AllRollupSetting}</a></li>
+                </ol>
+            </nav>
+        </header>
+    </div>
+    <div class="slds-card grayBackground">
         <header class="slds-card__header ">
-            <h4 class="slds-text-heading_small slds-truncate">{!$Label.rh2__RollupHelperExceptions}</h4>
+            <h4 class="slds-text-heading_medium slds-truncate">{!$Label.rh2__RollupHelperExceptions}</h4>
         </header>
         <section class="slds-card__body">
                
@@ -90,8 +123,7 @@
                                         <td style="width:10%; text-align:center;">{!exc.rh2__Number_of_Occurrences__c}</td> 
 
                                         <td style="width:5%; text-align:center;">
-                                            <apex:commandLink action="{!openHelpModal}">
-                                                <apex:param value="{!exc.rh2__Exception_Type__c}" assignTo="{!requestedExpType}" name="seriously"/>
+                                            <apex:commandLink onclick="populateHelpTextAndShowModal('{!exc.rh2__Exception_Type__c}');" rerender="helpModal, validationHelp, fieldformatHelp, reclockHelp, infloopHelp, reqfieldHelp, pbflowHelp, generalHelp">
                                                 <img class="slds-icon slds-icon_x-small" src="/apexpages/slds/latest/assets/icons/utility/question_mark_60.png"/>
                                             </apex:commandLink>
                                         </td>
@@ -124,38 +156,110 @@
     <c:Loading_Spinner opacity="1"/>
     </div> 
     
-    <div class="slds-scope">
-    <apex:outputPanel rendered="{!showExpModal}">
-        <div aria-hidden="false" role="dialog" class="slds-modal slds-fade-in-open">
-            <div class="slds-modal__container" style="width:760px !important;">
-                <div class="slds-modal__header">
-                    <span>
-                        <h2 class="slds-text-heading_medium">{!$Label.ExceptionHelp}</h2>
-                        <apex:actionFunction action="{!closeHelpModal}" name="closeHelpModal"/>
-                        <button type="button" onClick="closeHelpModal()" class="slds-button slds-button_icon-inverse slds-modal__close">
-                            <svg aria-hidden="true" class="slds-button__icon slds-button__icon_large">
-                                <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
-                            </svg>                         
-                        </button>
-                    </span>
-                </div>
-
-                <div class="slds-modal__content" style="padding-left:30px; padding-right:30px; padding-top:15px; padding-bottom:15px;">
-                    <apex:outputText value="{!messageForExceptionType}"/>
-                    <br/>
-                    <apex:outputLink target="_blank" value="{!URLFOR($Page.rh2__PS_helpPage)}">{!$Label.rh2__Help} {!$Label.rh2__AndFAQ}</apex:outputLink>&nbsp; | &nbsp;
-                    <apex:outputLink target="_blank" value="mailto:support@passagetech.com">{!$Label.rh2__ContactSupport}</apex:outputLink>
-                </div>
-
-                <div class="slds-modal__footer">
-                    <div class="slds-x-small-buttons_horizontal">                        
-                        <apex:commandButton action="{! closeHelpModal }" styleClass="slds-button slds-button_neutral slds-button_small slds-m-bottom_x-small" value="{!$Label.rh2__Close}" />                      
+    <div class="slds-scope" id="helpModal" style="display:none;">
+        <apex:outputPanel >
+            <div aria-hidden="false" role="dialog" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container" style="width:760px !important;">
+                    <div class="slds-modal__header">
+                        <span>
+                            <h2 class="slds-text-heading_medium">{!$Label.ExceptionHelp}</h2>
+                            <button type="button" onClick="closeHelpModal();" rerender="helpModal" class="slds-button slds-button_icon-inverse slds-modal__close">
+                                <svg aria-hidden="true" class="slds-button__icon slds-button__icon_large">
+                                    <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+                                </svg>                         
+                            </button>
+                        </span>
                     </div>
-                </div> 
+
+                    <div class="slds-modal__content" style="padding-left:30px; padding-right:30px; padding-top:15px; padding-bottom:15px;">
+                        <div id="validationHelp" class="helpText" style="display:none;">
+                            A "FIELD_CUSTOM_VALIDATION_EXCEPTION" exception indicates that a validation rule may be preventing updates to some records. To enable Rollup Helper updates to be excluded from a validation rule, please enable Validation Helper by executing the following:<br/><br/>
+
+                            - Navigate to the "All Rollups" page by clicking the "All Rollups" tab within the Rollup Helper app or clicking "View Existing Rollups" on the Rollup Helper home page.<br/>
+                            - Click the gear icon in the top right of the page to open the "Configure Rollup Settings" modal.<br/>
+                            - Check the "Enable Validation Rule Helper" checkbox.<br/>
+                            - To allow Validation Helper to run while Rollup Helper is processing asynchronously, check the "Validation Rule Helper For Async Jobs" checkbox.<br/>
+                            - Follow the instructions in the modal to enable Validation Rule Helper for each validation rule that may be affecting Rollup Helper processing by pasting the following into the error condition formula:<br/>
+                            <center>
+                                &amp;&amp; $Setup.rh2__PS_Settings__c.rh2__Run_Validation_Rule__c<br/><br/>
+                            </center>
+
+                            <center>
+                                These settings can also be enabled from the Custom Settings section in Setup.<br/>
+                                For more information, please view our <apex:outputLink value="https://passagetechnology.force.com/KnowledgeBase/s/article/Validation-Helper-to-prevent-field-custom-validation-exceptions-1578080053750" target="_blank"> Knowledge Article</apex:outputLink> on enabling Validation Rule Helper.
+                            </center>
+                        </div>
+                        <div id="fieldformatHelp" class="helpText" style="display:none;">
+                            A "FIELD_INTEGRITY_EXCEPTION" exception indicates that upon record save, at least one field on the record contains data that does not meet the formatting requirements for the field type. This could be a rollup target field or another field on the record. To view the error in action, navigate to one of the records indicated in the exception's Related Record Ids field and perform an edit/save.<br/><br/>
+
+                            This exception may be due to a Workflow or Flow within your org updating corrupted records, which would cause the error to show up on rollup runs. This is considered a Salesforce issue, and we recommend <apex:outputLink value="https://help.salesforce.com/articleView?id=000315525&type=1&mode=1" target="_blank"> contacting Salesforce Support</apex:outputLink> to provide a resolution. Once this error is resolved, Rollup Helper will update your records as expected.<br/><br/>
+
+                            <center>
+                                For more information, please view our <apex:outputLink value="https://passagetechnology.force.com/KnowledgeBase/s/article/FIELD-INTEGRITY-EXCEPTION" target="_blank"> Knowledge Article</apex:outputLink> on field integrity exceptions.
+                            </center>
+                        </div>
+                        <div id="reclockHelp" class="helpText" style="display:none;">
+                            An "UNABLE_TO_LOCK_ROW" exception indicates that while Rollup Helper attempted to update the indicated record(s), another process or rollup was acting on the record, preventing the updating from occurring. This is usually caused by conflicting process updates, but it could also be a user update conflicting with an automated process, or two conflicting user updates.<br/><br/>
+
+                            To process rollups that were not able to update records due to a record lock, a Rollup Retry scheduled job may be created by clicking the "Click here to configure a scheduled job" link above the target object selection on this page. The job will be scheduled to run every night at 11PM by default; however, this time can be configured to your liking from the creation modal.<br/><br/>
+
+                            This job will attempt to update any records that were blocked by record locks. You will still see this exception in your org after the job completes, but as long as no new exceptions were logged during the scheduled run, the retry job was successful. If the job was not successful, it will attempt to update the records again on the next run.<br/><br/>
+
+                            <center>
+                                For more information and best practices to avoid record locks, please view our <apex:outputLink value="https://passagetechnology.force.com/KnowledgeBase/s/article/Record-Locks-UNABLE-TO-LOCK-ROW-Exception-message-1578080057241" target="_blank"> Knowlege Article</apex:outputLink> on record locks.
+                            </center>
+                        </div>
+                        <div id="infloopHelp" class="helpText" style="display:none;">
+                            A "SELF_REFERENCE_FROM_TRIGGER" exception indicates that a logical loop may be present in your environment. A simple example is as follows:<br/>
+                            - Record A is updated, causing a trigger on object A to fire.<br/>
+                            - The trigger on A updates Record B, causing a trigger on object B to fire.<br/>
+                            - The trigger on object B attempts to update Record A.<br/><br/>
+
+                            This logical error is likely present in custom code or processes in your environment. We recommend reviewing the custom solutions in your enviornment relating to the details in this exception in order to identify the source of the error.
+                        </div>
+                        <div id="reqfieldHelp" class="helpText" style="display:none;">
+                            A "REQUIRED_FIELD_MISSING" exception indicates that Rollup Helper attempted to update a record for which a required field is not populated.<br/><br/>
+
+                            This could possibly be occurring due to a recent change in your environment's configuration. To resolve this issue, historical records will need to be updated to populate the required fields.<br/><br/>
+
+                            The need to update historical records can be avoided by using a parent filter to exclude records that do not have the required field populated. Please view our in-app Help section for more information on creating a parent filter.
+                        </div>
+                        <div id="pbflowHelp" class="helpText" style="display:none;">
+                            A "CANNOT_EXECUTE_FLOW_TRIGGER" exception indicates that a Process Builder process or Flow failed to execute correctly when Rollup Helper attempted to update the mentioned records.<br/><br/>
+
+                            This exception can be caused for a number of reasons depending on your environment configuration and data. We recommend reviewing active processes in your environment and the records mentioned in the exception's Related Record Ids field to identify possible logical issues or missing/invalid field values.
+                        </div>
+                        <div id="import_errHelp" class="helpText" style="display:none;">
+                            An "IMPORT ERROR" exception indicates that Rollup Helper was unable to import one or more rollup(s). This is likely occurring because the rollup data is missing a required field or references a field that does not exist in the target environment.<br/><br/>
+
+                            To resolve this issue, please visit the Rollup Helper Health Check page and locate the "Rollup Could Not Be Imported" issue. Under the "Action" column, click "Retry Import" to re-import all failed records.<br/><br/>
+
+                            If this job also fails, please review the import data to ensure the target field and target object are populated, and ensure all fields referenced by the import data exist in the target environment.
+                        </div>
+                        <div id="generalHelp" class="helpText" style="display:none;">
+                            Please review the exception details and related records to identify possible issues with the rollup configuration, related records, or custom processes. For troubleshooting tips, please view our Help and FAQ section or contact our Support Team.<br/><br/>
+
+                            <center>
+                                For more information regarding common Rollup Helper issues and questions, please visit our <apex:outputLink value="https://passagetechnology.force.com/KnowledgeBase/s/" target="_blank"> Knowledge Base</apex:outputLink>.
+                            </center>
+                        </div>
+                        <apex:outputPanel >
+                            <center>
+                                <apex:outputLink target="_blank" value="{!URLFOR($Page.rh2__PS_helpPage)}">{!$Label.rh2__Help} {!$Label.rh2__AndFAQ}</apex:outputLink>&nbsp; | &nbsp;
+                                <apex:outputLink target="_blank" value="mailto:support@passagetech.com">{!$Label.rh2__ContactSupport}</apex:outputLink>
+                            </center>
+                        </apex:outputPanel>
+                    </div>
+
+                    <div class="slds-modal__footer">
+                        <div class="slds-x-small-buttons_horizontal">                        
+                            <apex:commandButton onclick="closeHelpModal();" rerender="helpModal" styleClass="slds-button slds-button_neutral slds-button_small slds-m-bottom_x-small" value="{!$Label.rh2__Close}" />                      
+                        </div>
+                    </div> 
+                </div>
             </div>
-        </div>
-        <div class="slds-backdrop slds-backdrop_open"></div>
-    </apex:outputPanel> 
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </apex:outputPanel> 
     </div>
 
     <div class="slds-scope" id="exceptionLifespanModal" style="display:none;">
@@ -185,11 +289,8 @@
 
                     <div class="slds-modal__footer">
                         <div class="slds-x-small-buttons_horizontal">
-                            <center>
-                                <apex:commandButton styleClass="slds-button slds-button_neutral slds-button_small slds-m-button_x-small" value="{!$Label.rh2__Cancel}" action="{!cancelExceptionLifespanChange}" onclick="showModal(false, 'exceptionLifespanModal');" rerender="exceptionLifespanModal,exceptionLifespanInput" status="loading"/>
-                                
-                                <apex:commandButton styleClass="slds-button slds-button_brand slds-button_small slds-m-button_x-small" value="{!$Label.rh2__Update}" action="{!updateExceptionLifespan}" onclick="showModal(false, 'exceptionLifespanModal');" rerender="exceptionLifespanModal,exceptionLifespanInput" status="loading"/>
-                            </center>
+                            <apex:commandButton styleClass="slds-button slds-button_brand slds-button_small slds-m-button_x-small" value="{!$Label.rh2__Update}" action="{!updateExceptionLifespan}" onclick="showModal(false, 'exceptionLifespanModal');" rerender="exceptionLifespanModal,exceptionLifespanInput" status="loading"/>
+                            <apex:commandButton styleClass="slds-button slds-button_neutral slds-button_small slds-m-button_x-small" value="{!$Label.rh2__Cancel}" action="{!cancelExceptionLifespanChange}" onclick="showModal(false, 'exceptionLifespanModal');" rerender="exceptionLifespanModal,exceptionLifespanInput" status="loading"/>
                         </div>
                     </div>
                 </div>
@@ -253,11 +354,8 @@
 
                     <div class="slds-modal__footer">
                         <div class="slds-x-small-buttons_horizontal">
-                            <center>
-                                <apex:commandButton styleClass="slds-button slds-button_neutral slds-button_small slds-m-button_x-small" value="{!$Label.rh2__Close}" action="{!closePreviewRecordsModal}" onclick="showModal(false, 'previewModal');" rerender="previewModal" status="loading"/>
-
-                                <apex:outputLink id="viewExceptionBtn" value="/{!previewedExceptionId}" target="_blank" styleClass="slds-button slds-button_brand slds-button_small slds-m-button_x-small">{!$Label.rh2__ViewRecordDetails}</apex:outputLink>
-                            </center>
+                            <apex:outputLink id="viewExceptionBtn" value="/{!previewedExceptionId}" target="_blank" styleClass="slds-button slds-button_brand slds-button_small slds-m-button_x-small">{!$Label.rh2__ViewRecordDetails}</apex:outputLink>
+                            <apex:commandButton styleClass="slds-button slds-button_neutral slds-button_small slds-m-button_x-small" value="{!$Label.rh2__Close}" action="{!closePreviewRecordsModal}" onclick="showModal(false, 'previewModal');" rerender="previewModal" status="loading"/>
                         </div>
                     </div>
                 </div>

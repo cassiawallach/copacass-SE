@@ -11,6 +11,10 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Required</behavior>
+                <field>trailheadapp__Namespace__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
@@ -40,10 +44,6 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>trailheadapp__Total_Badges_In_Progress__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>trailheadapp__Namespace__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -111,6 +111,9 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
+    <miniLayout>
+        <fields>trailheadapp__Namespace__c</fields>
+    </miniLayout>
     <relatedLists>
         <fields>trailheadapp__User__c</fields>
         <fields>trailheadapp__Status__c</fields>

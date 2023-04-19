@@ -41,33 +41,33 @@
         <value>Trailhead-Benutzerdaten</value>
     </caseValues>
     <fields>
-        <label></label>
+        <label><!-- Avatar --></label>
         <name>trailheadapp__Avatar__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- External_Id --></label>
         <name>trailheadapp__External_Id__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Profile_URL --></label>
         <name>trailheadapp__Profile_URL__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Profile_Visibility --></label>
         <name>trailheadapp__Profile_Visibility__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Rank --></label>
         <name>trailheadapp__Rank__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Total_Points --></label>
         <name>trailheadapp__Total_Points__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- User --></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Trailhead Users Data --></relationshipLabel>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>Trailhead-Benutzerdatenname</nameFieldLabel>

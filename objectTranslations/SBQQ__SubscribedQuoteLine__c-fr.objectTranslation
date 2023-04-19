@@ -10,41 +10,41 @@
     </caseValues>
     <fields>
         <help>Indique si l&apos;enregistrement de la ressource abonnée est actif.</help>
-        <label></label>
+        <label><!-- Active --></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Quantité saisie à la ligne de devis de ressource.</help>
-        <label></label>
+        <label><!-- Asset Quote Line Quantity --></label>
         <name>SBQQ__AssetQuoteLineQuantity__c</name>
     </fields>
     <fields>
         <help>Ligne de devis de ressource couverte par une ligne de devis de souscription.</help>
-        <label></label>
+        <label><!-- Asset Quote Line --></label>
         <name>SBQQ__AssetQuoteLine__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Asset Quote Lines --></relationshipLabel>
     </fields>
     <fields>
         <help>Identifie le devis des quoteLines.</help>
-        <label></label>
+        <label><!-- Quote --></label>
         <name>SBQQ__Quote__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Quote --></relationshipLabel>
     </fields>
     <fields>
         <help>Prix unitaire utilisé dans le pourcentage du calcul total.</help>
-        <label></label>
+        <label><!-- Subscription Base Price --></label>
         <name>SBQQ__SubscriptionBasePrice__c</name>
     </fields>
     <fields>
         <help>Total net de la ligne de devis de souscription.</help>
-        <label></label>
+        <label><!-- Subscription Net Total --></label>
         <name>SBQQ__SubscriptionNetTotal__c</name>
     </fields>
     <fields>
         <help>Ligne de devis de souscription qui couvre la ligne de devis de ressource.</help>
-        <label></label>
+        <label><!-- Subscription Quote Line --></label>
         <name>SBQQ__SubscriptionQuoteLine__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Subscribed Quote Lines (Subscription Quote Line) --></relationshipLabel>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>N° de ligne de devis de souscription</nameFieldLabel>

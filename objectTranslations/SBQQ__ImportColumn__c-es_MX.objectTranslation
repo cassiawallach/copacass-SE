@@ -10,12 +10,12 @@
     </caseValues>
     <fields>
         <help>Ingrese un valor numérico de índice que representa la ubicación de la columna. El índice de la columna debe comenzar en 1.</help>
-        <label></label>
+        <label><!-- Column Index --></label>
         <name>SBQQ__ColumnIndex__c</name>
     </fields>
     <fields>
         <help>Ingrese el nombre de API.</help>
-        <label></label>
+        <label><!-- Field Name --></label>
         <name>SBQQ__FieldName__c</name>
         <picklistValues>
             <masterLabel>Discount (%)</masterLabel>
@@ -44,19 +44,26 @@
     </fields>
     <fields>
         <help>Seleccione el formato en el que se importarán sus registros.</help>
-        <label></label>
+        <label><!-- Import Format --></label>
         <name>SBQQ__ImportFormat__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Import Columns --></relationshipLabel>
     </fields>
     <fields>
         <help>Seleccione si esta columna debe ser una columna de clave única.</help>
-        <label></label>
+        <label><!-- Key --></label>
         <name>SBQQ__Key__c</name>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Import Column Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>Nombre de columna</nameFieldLabel>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage><!-- Column Index must start from 1. --></errorMessage>
         <name>SBQQ__Column_index_must_start_from_1</name>
     </validationRules>
 </CustomObjectTranslation>

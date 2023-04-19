@@ -218,11 +218,6 @@
         <fullName>TimeZone</fullName>
         <trackHistory>false</trackHistory>
     </fields>
-    <fields>
-        <fullName>VisitorAddressId</fullName>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
-    </fields>
     <searchLayouts>
         <customTabListAdditionalFields>LocationType</customTabListAdditionalFields>
         <lookupDialogsAdditionalFields>LocationType</lookupDialogsAdditionalFields>

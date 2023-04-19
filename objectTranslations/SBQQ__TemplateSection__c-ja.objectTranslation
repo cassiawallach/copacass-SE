@@ -5,23 +5,27 @@
         <value>テンプレートセクション</value>
     </caseValues>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <help>16 進値で表される表の境界線の色。</help>
-        <label></label>
+        <label><!-- Border Color --></label>
         <name>SBQQ__BorderColor__c</name>
     </fields>
     <fields>
         <help>このセクションの下余白。</help>
-        <label></label>
+        <label><!-- Bottom Margin --></label>
         <name>SBQQ__BottomMargin__c</name>
     </fields>
     <fields>
         <help>列ヘッダーを非表示にする場合は、チェックボックスをオンにします。タイプが [品目] のテンプレートコンテンツを指し示すセクションにのみ適用されます。</help>
-        <label></label>
+        <label><!-- Hide Column Header --></label>
         <name>SBQQ__ColumnHeaderHidden__c</name>
     </fields>
     <fields>
         <help>生成される PDF ドキュメントにこのセクションが出力されるかどうかを制御する見積オブジェクトの項目。</help>
-        <label></label>
+        <label><!-- Conditional Print Field --></label>
         <name>SBQQ__ConditionalPrintField__c</name>
         <picklistValues>
             <masterLabel>Group Line Items</masterLabel>
@@ -34,27 +38,35 @@
     </fields>
     <fields>
         <help>このテンプレートセクションに表示するテンプレートコンテンツを選択します。</help>
-        <label></label>
+        <label><!-- Content --></label>
         <name>SBQQ__Content__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Template Sections --></relationshipLabel>
     </fields>
     <fields>
         <help>テンプレートの他のセクションに対するこのセクションの表示順序 (上から下) を指定します。</help>
-        <label></label>
+        <label><!-- Display Order --></label>
         <name>SBQQ__DisplayOrder__c</name>
     </fields>
     <fields>
         <help>このセクションで表示されるレコードを絞り込むために使用される項目。</help>
-        <label></label>
+        <label><!-- Filter Field --></label>
         <name>SBQQ__FilterField__c</name>
         <picklistValues>
             <masterLabel>Optional</masterLabel>
             <translation>省略可能</translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__ProductFamily__c</masterLabel>
+            <translation><!-- SBQQ__ProductFamily__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__ProductName__c</masterLabel>
+            <translation><!-- SBQQ__ProductName__c --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <help>このセクションで表示されるレコードを絞り込むために使用される演算子。</help>
-        <label></label>
+        <label><!-- Filter Operator --></label>
         <name>SBQQ__FilterOperator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -95,12 +107,12 @@
     </fields>
     <fields>
         <help>このセクションで表示されるレコードを絞り込むために使用される値。</help>
-        <label></label>
+        <label><!-- Filter Value --></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>このセクションで表示されるグルーピング品目で使用される項目を指定します。[品目] セクションにのみ適用されます。</help>
-        <label></label>
+        <label><!-- Group Field --></label>
         <name>SBQQ__GroupField__c</name>
         <picklistValues>
             <masterLabel>Product Family</masterLabel>
@@ -113,7 +125,7 @@
     </fields>
     <fields>
         <help>コンテンツが同じページに表示されるようにするかどうかを指定します。</help>
-        <label></label>
+        <label><!-- Keep Together --></label>
         <name>SBQQ__KeepTogether__c</name>
         <picklistValues>
             <masterLabel>Always</masterLabel>
@@ -126,7 +138,7 @@
     </fields>
     <fields>
         <help>コンテンツと次のコンテンツブロックが同じページに表示されるようにするかどうかを指定します。</help>
-        <label></label>
+        <label><!-- Keep With Next --></label>
         <name>SBQQ__KeepWithNext__c</name>
         <picklistValues>
             <masterLabel>Always</masterLabel>
@@ -139,7 +151,7 @@
     </fields>
     <fields>
         <help>コンテンツと前のコンテンツブロックが同じページに表示されるようにするかどうかを指定します。</help>
-        <label></label>
+        <label><!-- Keep With Previous --></label>
         <name>SBQQ__KeepWithPrevious__c</name>
         <picklistValues>
             <masterLabel>Always</masterLabel>
@@ -152,7 +164,7 @@
     </fields>
     <fields>
         <help>このコンテンツの前、後または前後に改ページを挿入するかどうかを指定します。</help>
-        <label></label>
+        <label><!-- Page Break --></label>
         <name>SBQQ__PageBreak__c</name>
         <picklistValues>
             <masterLabel>After</masterLabel>
@@ -169,12 +181,12 @@
     </fields>
     <fields>
         <help>このセクションの後に見積合計を出力する場合は、チェックボックスをオンにします。[品目] セクションにのみ適用されます。</help>
-        <label></label>
+        <label><!-- Print Quote Totals --></label>
         <name>SBQQ__QuoteTotalsPrinted__c</name>
     </fields>
     <fields>
         <help>積み上げに使用される見積品目項目。この項目で同じ値が返されるすべての品目は、その値が発生した最初の品目に積み上げられます。</help>
-        <label></label>
+        <label><!-- Roll-Up Field --></label>
         <name>SBQQ__RollUpField__c</name>
         <picklistValues>
             <masterLabel>Product</masterLabel>
@@ -183,7 +195,7 @@
     </fields>
     <fields>
         <help>他の設定に関係なく小計、割引および総計を表示する場合は、[常に] を選択します。他の設定に関係なく表示しない場合は、[表示しない] を選択します。この項目を空白のままにすると、テンプレート項目で定義されたようにサマリーが表示されます。</help>
-        <label></label>
+        <label><!-- Summary Display --></label>
         <name>SBQQ__SummaryDisplay__c</name>
         <picklistValues>
             <masterLabel>Always</masterLabel>
@@ -191,23 +203,38 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Never</masterLabel>
-            <translation>表示しない</translation>
+            <translation>なし</translation>
         </picklistValues>
     </fields>
     <fields>
         <help>このテンプレートセクションを使用する見積テンプレート。</help>
-        <label></label>
+        <label><!-- Template --></label>
         <name>SBQQ__Template__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Sections --></relationshipLabel>
     </fields>
     <fields>
         <help>このセクションの上余白。</help>
-        <label></label>
+        <label><!-- Top Margin --></label>
         <name>SBQQ__TopMargin__c</name>
     </fields>
+    <layouts>
+        <layout>Template Section Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>絞り込み情報</label>
+            <section>Filtering Information</section>
+        </sections>
+        <sections>
+            <label>改ページ</label>
+            <section>Page Breaks</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>セクション名</nameFieldLabel>
     <webLinks>
-        <label></label>
+        <label><!-- IncludeDocument --></label>
         <name>SBQQ__IncludeDocument</name>
     </webLinks>
 </CustomObjectTranslation>
