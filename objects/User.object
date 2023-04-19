@@ -464,6 +464,15 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Corporate_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Corporate Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>DefaultGroupNotificationFrequency</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -512,6 +521,14 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Has_Mappings_Record__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Has Mappings Record</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>IndividualId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
@@ -527,6 +544,16 @@
     <fields>
         <fullName>LanguageLocaleKey</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>License_Info__c</fullName>
+        <externalId>false</externalId>
+        <formula>Profile.UserLicense.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>License Info</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>LocaleSidKey</fullName>
@@ -704,6 +731,41 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Team_Function__c</fullName>
+        <externalId>false</externalId>
+        <label>Team Function</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>AE</fullName>
+                    <default>false</default>
+                    <label>AE</label>
+                </value>
+                <value>
+                    <fullName>SE</fullName>
+                    <default>false</default>
+                    <label>SE</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Team__c</fullName>
+        <description>team id of the current user</description>
+        <externalId>false</externalId>
+        <label>Team</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>TimeZoneSidKey</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -722,6 +784,16 @@
     <fields>
         <fullName>Username</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Vertical__c</fullName>
+        <externalId>false</externalId>
+        <label>Vertical</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>WorkspaceId</fullName>
@@ -1026,6 +1098,18 @@ The Whole Enchilada: All notifications (Default)</inlineHelpText>
         <searchResultsAdditionalFields>CORE.USERS.EMAIL</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Read</sharingModel>
+    <webLinks>
+        <fullName>New_AE_Mapping</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>New AE Mapping</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>https://copado--se.lightning.force.com/lightning/o/Mapping__c/new?count=1&amp;nooverride=1&amp;useRecordTypeCheck=1&amp;navigationLocation=LIST_VIEW&amp;uid={!User.Id}</url>
+    </webLinks>
     <webLinks>
         <fullName>SBQQ__Select_Theme</fullName>
         <availability>online</availability>
