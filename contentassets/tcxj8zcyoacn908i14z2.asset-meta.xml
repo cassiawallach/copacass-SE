@@ -3,21 +3,10 @@
     <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
     <language>en_US</language>
     <masterLabel>tcxj8zcyoacn908i14z2</masterLabel>
-    <originNetwork>customerportal</originNetwork>
     <relationships>
-        <network>
+        <organization>
             <access>VIEWER</access>
-            <name>customerportal</name>
-        </network>
-        <network>
-            <access>VIEWER</access>
-            <name>Default Help Center</name>
-        </network>
-        <workspace>
-            <access>INFERRED</access>
-            <isManagingWorkspace>true</isManagingWorkspace>
-            <name>sfdc_asset_company_assets</name>
-        </workspace>
+        </organization>
     </relationships>
     <versions>
         <version>
