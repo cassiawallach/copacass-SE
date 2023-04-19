@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
-        <plural>false</plural>
-        <value>Condición de error</value>
-    </caseValues>
-    <caseValues>
         <plural>true</plural>
         <value>Condiciones de error</value>
     </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <value>Condición de error</value>
+    </caseValues>
     <fields>
         <help>Seleccione Variable para evaluar esta regla con una Variable de resumen; en caso contrario, seleccione Valor.</help>
-        <label><!-- Filter Type --></label>
+        <label></label>
         <name>SBQQ__FilterType__c</name>
         <picklistValues>
             <masterLabel>Value</masterLabel>
@@ -23,23 +23,23 @@
     </fields>
     <fields>
         <help>Ingrese el valor con el que desea que se evalúe la variable probada. El valor de fecha debe utilizar este formato: AAAA-MM-DD 00:00:00</help>
-        <label><!-- Filter Value --></label>
+        <label></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>Seleccione la variable de resumen que desea que evalúe esta regla.</help>
-        <label><!-- Filter Variable --></label>
+        <label></label>
         <name>SBQQ__FilterVariable__c</name>
-        <relationshipLabel><!-- Error Conditions (Filter Variable) --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Asigne un número exclusivo a esta condición para hacer referencia a ella en la condición avanzada de la regla de productos.</help>
-        <label><!-- Index --></label>
+        <label></label>
         <name>SBQQ__Index__c</name>
     </fields>
     <fields>
         <help>Seleccione el operador que hay que utilizar al evaluar su selección probada.</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -79,28 +79,28 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- ParentRuleIsActive --></label>
+        <label></label>
         <name>SBQQ__ParentRuleIsActive__c</name>
     </fields>
     <fields>
-        <label><!-- RuleTargetsQuote --></label>
+        <label></label>
         <name>SBQQ__RuleTargetsQuote__c</name>
     </fields>
     <fields>
         <help>Regla principal para esta condición (que ejecuta esta condición).</help>
-        <label><!-- Rule --></label>
+        <label></label>
         <name>SBQQ__Rule__c</name>
-        <relationshipLabel><!-- Error Conditions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Se utiliza para identificar el atributo específico si Campo probado es un campo de Atributo de configuración global.</help>
-        <label><!-- Tested Attribute --></label>
+        <label></label>
         <name>SBQQ__TestedAttribute__c</name>
-        <relationshipLabel><!-- Error Conditions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Campo en el objeto Presupuesto que debe utilizarse al probar esta condición.</help>
-        <label><!-- Tested Field --></label>
+        <label></label>
         <name>SBQQ__TestedField__c</name>
         <picklistValues>
             <masterLabel>Group Line Items</masterLabel>
@@ -113,7 +113,7 @@
     </fields>
     <fields>
         <help>Especifique el objeto que contiene el campo probado.</help>
-        <label><!-- Tested Object --></label>
+        <label></label>
         <name>SBQQ__TestedObject__c</name>
         <picklistValues>
             <masterLabel>Configuration Attributes</masterLabel>
@@ -142,26 +142,26 @@
     </fields>
     <fields>
         <help>Seleccione la variable que desea que evalúe esta regla.</help>
-        <label><!-- Tested Variable --></label>
+        <label></label>
         <name>SBQQ__TestedVariable__c</name>
-        <relationshipLabel><!-- Error Conditions (Tested Variable) --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>Nº de condición</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- A Filter Type of &apos;Variable&apos; must have a Filter Variable. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__FilterCombinationValidation</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- This combination of ProductRule.Scope and ErrorCondition.TestedObject is not valid. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__ScopeAndErrorConditionTestedObject</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Tested Attribute required since the Tested Field is a global Configuration Attribute field. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Tested_attr_required_if_global_field</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- You must specify either Tested Field or Tested Variable. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Tested_field_or_variable_required</name>
     </validationRules>
 </CustomObjectTranslation>

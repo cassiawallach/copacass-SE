@@ -10,28 +10,28 @@
     </caseValues>
     <fields>
         <help>Indique si l&apos;enregistrement de la ressource abonnée est actif.</help>
-        <label><!-- Active --></label>
+        <label></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Ressource couverte par un abonnement.</help>
-        <label><!-- Asset --></label>
+        <label></label>
         <name>SBQQ__Asset__c</name>
-        <relationshipLabel><!-- Subscriptions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Identifie le contrat de l&apos;abonnement.</help>
-        <label><!-- Contract Id --></label>
+        <label></label>
         <name>SBQQ__ContractId__c</name>
     </fields>
     <fields>
         <help>Abonnement qui couvre la ressource.</help>
-        <label><!-- Subscription --></label>
+        <label></label>
         <name>SBQQ__Subscription__c</name>
-        <relationshipLabel><!-- Subscribed Assets --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Asset Usage End Date --></label>
+        <label></label>
         <name>SBQQ__UsageEndDate__c</name>
     </fields>
     <gender>Feminine</gender>

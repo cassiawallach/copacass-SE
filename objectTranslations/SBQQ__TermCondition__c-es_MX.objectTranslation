@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
-        <plural>false</plural>
-        <value>Condición</value>
-    </caseValues>
-    <caseValues>
         <plural>true</plural>
         <value>Condiciones</value>
     </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <value>Condición</value>
+    </caseValues>
     <fields>
         <help>Asigne un número exclusivo a esta condición para hacer referencia a ella en la condición avanzada del plazo de presupuesto.</help>
-        <label><!-- Index --></label>
+        <label></label>
         <name>SBQQ__Index__c</name>
     </fields>
     <fields>
         <help>Seleccione el operador para el campo.</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -56,13 +56,13 @@
     </fields>
     <fields>
         <help>El plazo principal para este plazo.</help>
-        <label><!-- Quote Term --></label>
+        <label></label>
         <name>SBQQ__QuoteTerm__c</name>
-        <relationshipLabel><!-- Term Conditions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Campo en el objeto Presupuesto que se utiliza para probar esta condición.</help>
-        <label><!-- Tested Field --></label>
+        <label></label>
         <name>SBQQ__TestedField__c</name>
         <picklistValues>
             <masterLabel>Customer Amount</masterLabel>
@@ -83,23 +83,23 @@
     </fields>
     <fields>
         <help>Variable de resumen empleada en la prueba de esta condición.</help>
-        <label><!-- Tested Variable --></label>
+        <label></label>
         <name>SBQQ__TestedVariable__c</name>
-        <relationshipLabel><!-- Term Conditions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Valor con el que realizar la prueba.</help>
-        <label><!-- Value --></label>
+        <label></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>Nº de condición</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- You may not select both field and variable to test. Create separate conditions to test against field and variable. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Field_and_Variable</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- You must select either field or variable to test. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Field_or_Variable</name>
     </validationRules>
 </CustomObjectTranslation>

@@ -10,35 +10,35 @@
     </caseValues>
     <fields>
         <help>Si la opción está marcada se alertó al usuario del estado finalizado del trabajo de registro.</help>
-        <label><!-- Is Read --></label>
+        <label></label>
         <name>SBQQ__IsRead__c</name>
     </fields>
     <fields>
         <help>Los detalles del trabajo en segundo plano realizado si no se especificó ningún identificador de trabajo.</help>
-        <label><!-- Job Details --></label>
+        <label></label>
         <name>SBQQ__JobDetails__c</name>
     </fields>
     <fields>
-        <label><!-- Job Id --></label>
+        <label></label>
         <name>SBQQ__JobId__c</name>
     </fields>
     <fields>
         <help>El estado del trabajo en segundo plano realizado si no se especificó ningún identificador de trabajo.</help>
-        <label><!-- Job Status --></label>
+        <label></label>
         <name>SBQQ__JobStatus__c</name>
     </fields>
     <fields>
-        <label><!-- Record Id --></label>
+        <label></label>
         <name>SBQQ__RecordId__c</name>
     </fields>
     <fields>
         <help>URL a la que se redirige una vez termina el trabajo.</help>
-        <label><!-- Redirect URL --></label>
+        <label></label>
         <name>SBQQ__RedirectUrl__c</name>
     </fields>
     <fields>
         <help>El seguimiento de pila del trabajo en segundo plano que se realiza si no se especificó ningún Id. de trabajo.</help>
-        <label><!-- Stacktrace --></label>
+        <label></label>
         <name>SBQQ__Stacktrace__c</name>
     </fields>
     <gender>Masculine</gender>

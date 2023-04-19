@@ -6,78 +6,78 @@
         <value>Rabattklasse</value>
     </caseValues>
     <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Rabattklasse</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Rabattklasse</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Rabattklasse</value>
+    </caseValues>
+    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Rabattklassen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value><!-- Rabattklasse --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Rabattklassen --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value><!-- Rabattklasse --></value>
+        <value>Rabattklassen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Rabattklassen --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value><!-- Rabattklasse --></value>
+        <value>Rabattklassen</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Rabattklassen --></value>
+        <value>Rabattklassen</value>
     </caseValues>
     <fieldSets>
-        <label><!-- Discount Schedule Modal --></label>
+        <label></label>
         <name>SBQQ__DiscountScheduleModal</name>
     </fieldSets>
     <fields>
         <help>Rabattbetrag, der zur Anwendung kommt, wenn die Menge in diese Rabattklasse fällt.</help>
-        <label><!-- Discount ({0}) --></label>
+        <label></label>
         <name>SBQQ__DiscountAmount__c</name>
     </fields>
     <fields>
         <help>Rabattprozentsatz, der zur Anwendung kommt, wenn die Menge in diese Rabattklasse fällt.</help>
-        <label><!-- Discount (%) --></label>
+        <label></label>
         <name>SBQQ__Discount__c</name>
     </fields>
     <fields>
         <help>Untere Grenze des Mengenbereichs für diese Rabattklasse.</help>
-        <label><!-- Lower Bound --></label>
+        <label></label>
         <name>SBQQ__LowerBound__c</name>
     </fields>
     <fields>
         <help>Nummer, die die Position dieser Rabattklasse innerhalb der Rabattregelung angibt.</help>
-        <label><!-- Number --></label>
+        <label></label>
         <name>SBQQ__Number__c</name>
     </fields>
     <fields>
         <help>Der tatsächliche Preis dieser Rabattklasse. Dieses Feld wird beim Erstellen einer neuen Gruppe von Rabattregelungen für einen neuen Auftragsdatensatz ausgefüllt.</help>
-        <label><!-- Price --></label>
+        <label></label>
         <name>SBQQ__Price__c</name>
     </fields>
     <fields>
         <help>Rabattregelung, zu der diese Klasse gehört.</help>
-        <label><!-- Schedule --></label>
+        <label></label>
         <name>SBQQ__Schedule__c</name>
-        <relationshipLabel><!-- Discount Tiers --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Obere Grenze des Mengenbereichs für diese Rabattklasse.</help>
-        <label><!-- Upper Bound --></label>
+        <label></label>
         <name>SBQQ__UpperBound__c</name>
     </fields>
     <gender>Feminine</gender>

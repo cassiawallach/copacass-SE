@@ -10,22 +10,22 @@
     </caseValues>
     <fields>
         <help>Cor das bordas da tabela expressas como um valor hexadecimal.</help>
-        <label><!-- Border Color --></label>
+        <label></label>
         <name>SBQQ__BorderColor__c</name>
     </fields>
     <fields>
         <help>Margem esquerda na parte inferior dessa seção.</help>
-        <label><!-- Bottom Margin --></label>
+        <label></label>
         <name>SBQQ__BottomMargin__c</name>
     </fields>
     <fields>
         <help>Selecione a caixa de seleção para ocultar o cabeçalho da coluna. Aplica-se apenas a seções que apontam para o conteúdo do tipo &quot;Itens de linha&quot;.</help>
-        <label><!-- Hide Column Header --></label>
+        <label></label>
         <name>SBQQ__ColumnHeaderHidden__c</name>
     </fields>
     <fields>
         <help>Campo no objeto de cotação que controla se essa seção é impressa nos documentos PDF gerados.</help>
-        <label><!-- Conditional Print Field --></label>
+        <label></label>
         <name>SBQQ__ConditionalPrintField__c</name>
         <picklistValues>
             <masterLabel>Group Line Items</masterLabel>
@@ -38,18 +38,18 @@
     </fields>
     <fields>
         <help>Selecione o modelo de conteúdo a ser exibido nessa seção do modelo.</help>
-        <label><!-- Content --></label>
+        <label></label>
         <name>SBQQ__Content__c</name>
-        <relationshipLabel><!-- Template Sections --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Especifique a ordem (de cima para baixo) em que essa seção é renderizada com relação a outras seções no modelo.</help>
-        <label><!-- Display Order --></label>
+        <label></label>
         <name>SBQQ__DisplayOrder__c</name>
     </fields>
     <fields>
         <help>Campo usado para filtrar registros renderizados por essa seção.</help>
-        <label><!-- Filter Field --></label>
+        <label></label>
         <name>SBQQ__FilterField__c</name>
         <picklistValues>
             <masterLabel>Optional</masterLabel>
@@ -58,7 +58,7 @@
     </fields>
     <fields>
         <help>Operador usado para filtrar registros renderizados por essa seção.</help>
-        <label><!-- Filter Operator --></label>
+        <label></label>
         <name>SBQQ__FilterOperator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -99,12 +99,12 @@
     </fields>
     <fields>
         <help>Valor usado ao filtrar registros renderizados por essa seção.</help>
-        <label><!-- Filter Value --></label>
+        <label></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>Especifique o valor usado ao agrupar linhas renderizadas por essa seção. Aplica-se apenas à seção Itens de linha.</help>
-        <label><!-- Group Field --></label>
+        <label></label>
         <name>SBQQ__GroupField__c</name>
         <picklistValues>
             <masterLabel>Product Family</masterLabel>
@@ -117,7 +117,7 @@
     </fields>
     <fields>
         <help>Especifica se uma tentativa deve ser feita para manter os conteúdos juntos na mesma página.</help>
-        <label><!-- Keep Together --></label>
+        <label></label>
         <name>SBQQ__KeepTogether__c</name>
         <picklistValues>
             <masterLabel>Always</masterLabel>
@@ -130,7 +130,7 @@
     </fields>
     <fields>
         <help>Especifica se uma tentativa deve ser feita para manter os conteúdos juntos na mesma página com o próximo bloco de conteúdo.</help>
-        <label><!-- Keep With Next --></label>
+        <label></label>
         <name>SBQQ__KeepWithNext__c</name>
         <picklistValues>
             <masterLabel>Always</masterLabel>
@@ -143,7 +143,7 @@
     </fields>
     <fields>
         <help>Especifica se uma tentativa deve ser feita para manter os conteúdos juntos na mesma página com o bloco de conteúdo anterior.</help>
-        <label><!-- Keep With Previous --></label>
+        <label></label>
         <name>SBQQ__KeepWithPrevious__c</name>
         <picklistValues>
             <masterLabel>Always</masterLabel>
@@ -156,7 +156,7 @@
     </fields>
     <fields>
         <help>Especifica se a quebra de página deve ser inserida antes, depois ou tanto antes quanto depois desse conteúdo.</help>
-        <label><!-- Page Break --></label>
+        <label></label>
         <name>SBQQ__PageBreak__c</name>
         <picklistValues>
             <masterLabel>After</masterLabel>
@@ -173,12 +173,12 @@
     </fields>
     <fields>
         <help>Selecione a caixa de seleção para imprimir os totais da cotação após essa seção. Aplica-se apenas a seções de Itens de linha.</help>
-        <label><!-- Print Quote Totals --></label>
+        <label></label>
         <name>SBQQ__QuoteTotalsPrinted__c</name>
     </fields>
     <fields>
         <help>Campo de linha de cotação usado para acúmulo. Todas as linhas em que esse campo retorna o mesmo valor serão acumuladas para a primeira linha em que o valor ocorre.</help>
-        <label><!-- Roll-Up Field --></label>
+        <label></label>
         <name>SBQQ__RollUpField__c</name>
         <picklistValues>
             <masterLabel>Product</masterLabel>
@@ -187,7 +187,7 @@
     </fields>
     <fields>
         <help>Escolha &quot;Sempre&quot; para exibir o subtotal, os descontos e o total geral independentemente de quaisquer outras configurações. Escolha a opção &quot;Nunca&quot; para nunca exibir, independentemente de outras configurações. Deixar esse campo em branco renderizará o resumo como definido por campos de modelo.</help>
-        <label><!-- Summary Display --></label>
+        <label></label>
         <name>SBQQ__SummaryDisplay__c</name>
         <picklistValues>
             <masterLabel>Always</masterLabel>
@@ -200,19 +200,19 @@
     </fields>
     <fields>
         <help>Modelo de cotação que usa essa seção do modelo.</help>
-        <label><!-- Template --></label>
+        <label></label>
         <name>SBQQ__Template__c</name>
-        <relationshipLabel><!-- Sections --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Margem esquerda na parte superior dessa seção.</help>
-        <label><!-- Top Margin --></label>
+        <label></label>
         <name>SBQQ__TopMargin__c</name>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>Nome da seção</nameFieldLabel>
     <webLinks>
-        <label><!-- IncludeDocument --></label>
+        <label></label>
         <name>SBQQ__IncludeDocument</name>
     </webLinks>
 </CustomObjectTranslation>

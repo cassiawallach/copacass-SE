@@ -1,77 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldSets>
-        <label><!-- Copado Header Fields --></label>
+        <label></label>
         <name>copado__Copado_Header_Fields</name>
     </fieldSets>
     <fields>
-        <label><!-- Destination Git Commit --></label>
+        <label></label>
         <name>copado__Destination_Git_Commit__c</name>
-        <relationshipLabel><!-- Snapshot Differences (Destination Git Commit) --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Destination Option --></label>
+        <label></label>
         <name>copado__Destination_Option__c</name>
         <picklistValues>
             <masterLabel>Git Commit</masterLabel>
-            <translation><!-- Git Commit --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Salesforce Org</masterLabel>
-            <translation><!-- Salesforce Org --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Destination Credential --></label>
+        <label></label>
         <name>copado__Destination_Org_Credential__c</name>
-        <relationshipLabel><!-- Snapshot Differences (Destination Credential) --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <help><!-- Salesforce configuration files are in the XML format. You can change it to a different format for a faster comparison time and better readability of the differences. --></help>
-        <label><!-- Format --></label>
+        <help></help>
+        <label></label>
         <name>copado__Format__c</name>
         <picklistValues>
             <masterLabel>JSON</masterLabel>
-            <translation><!-- JSON --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>XML</masterLabel>
-            <translation><!-- XML --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>YAML</masterLabel>
-            <translation><!-- YAML --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Last Run --></label>
+        <label></label>
         <name>copado__Last_Run__c</name>
     </fields>
     <fields>
-        <help><!-- To calculate the differences only of selected files, select this checkbox. --></help>
-        <label><!-- Partial Selection --></label>
+        <help></help>
+        <label></label>
         <name>copado__Partial_Selection__c</name>
     </fields>
     <fields>
-        <label><!-- Source Git Commit --></label>
+        <label></label>
         <name>copado__Source_Git_Commit__c</name>
-        <relationshipLabel><!-- Snapshot Differences --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Source Option --></label>
+        <label></label>
         <name>copado__Source_Option__c</name>
         <picklistValues>
             <masterLabel>Git Commit</masterLabel>
-            <translation><!-- Git Commit --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Salesforce Org</masterLabel>
-            <translation><!-- Salesforce Org --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Source Credential --></label>
+        <label></label>
         <name>copado__Source_Org_Credential__c</name>
-        <relationshipLabel><!-- Snapshot Differences --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
 </CustomObjectTranslation>

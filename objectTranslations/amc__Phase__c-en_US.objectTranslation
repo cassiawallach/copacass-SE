@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Phase Gantt Chart Tooltip Fields --></label>
+        <name>amc__Phase_Gantt_Chart_Tooltip_Fields</name>
+    </fieldSets>
+    <fields>
+        <help><!-- Counts all Actions relating to Milestones within this Phase where the Action Status = Complete --></help>
+        <label><!-- Complete Actions --></label>
+        <name>amc__Complete_Actions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the latest End Date of Actions within Milestones relating to this Phase --></help>
+        <label><!-- End Date --></label>
+        <name>amc__End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the number of Billable Hours Completed on all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Hours Completed - Billable --></label>
+        <name>amc__Hours_Completed_Billable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the number of Non Billable Hours Completed on all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Hours Completed - Non Billable --></label>
+        <name>amc__Hours_Completed_Non_Billable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the Completed Billable Value of all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Hours Completed Value (Billable) --></label>
+        <name>amc__Hours_Completed_Value_Billable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the Completed Cost Value of all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Hours Completed Value (Cost) --></label>
+        <name>amc__Hours_Completed_Value_Cost__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the number of Billable Hours Remaining on all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Hours Remaining - Billable --></label>
+        <name>amc__Hours_Remaining_Billable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the number of Non Billable Hours Remaining on all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Hours Remaining - Non Billable --></label>
+        <name>amc__Hours_Remaining_Non_Billable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the Remaining Billable Value of all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Hours Remaining Value (Billable) --></label>
+        <name>amc__Hours_Remaining_Value_Billable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the Remaining Cost Value of all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Hours Remaining Value (Cost) --></label>
+        <name>amc__Hours_Remaining_Value_Cost__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the number of Billable Hours Scheduled on all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Hours Scheduled - Billable --></label>
+        <name>amc__Hours_Scheduled_Billable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the number of Non Billable Hours Scheduled on all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Hours Scheduled - Non Billable --></label>
+        <name>amc__Hours_Scheduled_Non_Billable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the Scheduled Billable Value of all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Hours Scheduled Value (Billable) --></label>
+        <name>amc__Hours_Scheduled_Value_Billable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the Scheduled Cost Value of all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Hours Scheduled Value (Cost) --></label>
+        <name>amc__Hours_Scheduled_Value_Cost__c</name>
+    </fields>
+    <fields>
+        <help><!-- If Status = Complete, will display 100%. If Total Hours Scheduled or Total Hours Completed = 0 will be Completed Actions / Total Actions, otherwise Total Hours Completed / (Total Hours Completed + Total Projected Hours Remaining) --></help>
+        <label><!-- Phase Completion Status --></label>
+        <name>amc__Phase_Completion_Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the Project this Phase relates to --></help>
+        <label><!-- Project --></label>
+        <name>amc__Project__c</name>
+        <relationshipLabel><!-- Phases --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Identifies the projected number of Billable Hours Remaining on all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Projected Hours Remaining - Billable --></label>
+        <name>amc__Projected_Hours_Remaining_Billable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the projected number of Non Billable Hours Remaining on all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Projected Hours Remaining - Non Billable --></label>
+        <name>amc__Projected_Hours_Remaining_Non_Billable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the total projected number of Billable Hours on all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Projected Total Hours - Billable --></label>
+        <name>amc__Projected_Total_Hours_Billable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the total projected number of Non Billable Hours on all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Projected Total Hours - Non Billable --></label>
+        <name>amc__Projected_Total_Hours_Non_Billable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Formula: Sum of ‘Projected Total Hours - Billable’ + &apos;Projected Total Hours - Non Billable&apos; --></help>
+        <label><!-- Projected Total Hours --></label>
+        <name>amc__Projected_Total_Hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the earliest Start Date of Actions within Milestones relating to this Phase --></help>
+        <label><!-- Start Date --></label>
+        <name>amc__Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the Status of the Phase --></help>
+        <label><!-- Status --></label>
+        <name>amc__Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation><!-- On Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Planned</masterLabel>
+            <translation><!-- Planned --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Counts all Actions relating to Milestones within this Phase --></help>
+        <label><!-- Total Actions --></label>
+        <name>amc__Total_Actions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Formula: Sum of ‘Hours Completed - Billable’ + &apos;Hours Completed - Non Billable&apos; --></help>
+        <label><!-- Total Hours Completed --></label>
+        <name>amc__Total_Hours_Completed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Formula: Sum of ‘Hours Remaining - Billable’ + &apos;Hours Remaining - Non Billable&apos; --></help>
+        <label><!-- Total Hours Remaining --></label>
+        <name>amc__Total_Hours_Remaining__c</name>
+    </fields>
+    <fields>
+        <help><!-- Formula: Sum of ‘Hours Scheduled - Billable’ + &apos;Hours Scheduled - Non Billable&apos; --></help>
+        <label><!-- Total Hours Scheduled --></label>
+        <name>amc__Total_Hours_Scheduled__c</name>
+    </fields>
+    <fields>
+        <help><!-- Formula: Sum of ‘Projected Hours Remaining - Billable’ + &apos;Projected Hours Remaining - Non Billable&apos; --></help>
+        <label><!-- Total Projected Hours Remaining --></label>
+        <name>amc__Total_Projected_Hours_Remaining__c</name>
+    </fields>
+    <layouts>
+        <layout>Phase Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Financials --></label>
+            <section>Financials</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label><!-- Environment --></label>
+        <label></label>
         <name>copado__Environment__c</name>
-        <relationshipLabel><!-- Installed Package Versions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Package Version --></label>
+        <label></label>
         <name>copado__Package_Version__c</name>
-        <relationshipLabel><!-- Installed Package Versions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Status --></label>
+        <label></label>
         <name>copado__Status__c</name>
         <picklistValues>
             <masterLabel>Active</masterLabel>
-            <translation><!-- Active --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Uninstalled</masterLabel>
-            <translation><!-- Uninstalled --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Upgraded</masterLabel>
-            <translation><!-- Upgraded --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
 </CustomObjectTranslation>

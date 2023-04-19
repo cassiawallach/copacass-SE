@@ -10,25 +10,25 @@
     </caseValues>
     <fields>
         <help>Sélectionnez l&apos;entrée du processus à laquelle l&apos;objet appartient.</help>
-        <label><!-- Process Input ID --></label>
+        <label></label>
         <name>SBQQ__ProcessInputID__c</name>
-        <relationshipLabel><!-- Process Input Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>L&apos;ID du devis auquel cette valeur d&apos;entrée de processus appartient.</help>
-        <label><!-- Quote ID --></label>
+        <label></label>
         <name>SBQQ__QuoteId__c</name>
-        <relationshipLabel><!-- Process Input Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>La valeur Entrée de processus appartient à cet utilisateur.</help>
-        <label><!-- UserID --></label>
+        <label></label>
         <name>SBQQ__UserID__c</name>
-        <relationshipLabel><!-- Process Input Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Réponse à la valeur d&apos;entrée de processus.</help>
-        <label><!-- Value --></label>
+        <label></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <gender>Feminine</gender>

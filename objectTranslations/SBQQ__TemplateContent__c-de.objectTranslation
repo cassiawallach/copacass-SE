@@ -6,48 +6,48 @@
         <value>Vorlageninhalt</value>
     </caseValues>
     <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Vorlageninhalt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Vorlageninhalt</value>
+    </caseValues>
+    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Vorlageninhalte</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value><!-- Vorlageninhalt --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Vorlageninhalte --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value><!-- Vorlageninhalt --></value>
+        <value>Vorlageninhalte</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Vorlageninhalte --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value><!-- Vorlageninhalt --></value>
+        <value>Vorlageninhalte</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Vorlageninhalte --></value>
+        <value>Vorlageninhalten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Vorlageninhalts</value>
     </caseValues>
     <fields>
         <help>URL zu einer VisualForce-Seite, die Inhalt generiert, wenn der Typ auf &quot;Benutzerdefiniert&quot; eingestellt ist.</help>
-        <label><!-- Custom Source --></label>
+        <label></label>
         <name>SBQQ__CustomSource__c</name>
     </fields>
     <fields>
         <help>Schriftartfamilie, die bei der Darstellung dieses Inhalts im erstellten PDF-Angebotsdokument verwendet werden soll.</help>
-        <label><!-- Font Family --></label>
+        <label></label>
         <name>SBQQ__FontFamily__c</name>
         <picklistValues>
             <masterLabel>Courier</masterLabel>
@@ -132,22 +132,22 @@
     </fields>
     <fields>
         <help>Schriftgröße, die bei der Darstellung dieses Inhalts im erstellten PDF-Angebotsdokument verwendet werden soll.</help>
-        <label><!-- Font Size --></label>
+        <label></label>
         <name>SBQQ__FontSize__c</name>
     </fields>
     <fields>
         <help>Enthält das Markup, falls es sich um Inhalt vom Typ &quot;Markup&quot; handelt.</help>
-        <label><!-- Markup --></label>
+        <label></label>
         <name>SBQQ__Markup__c</name>
     </fields>
     <fields>
         <help>Ursprüngliche HTML-Version des Inhalts im Markup-Feld.</help>
-        <label><!-- Raw Markup --></label>
+        <label></label>
         <name>SBQQ__RawMarkup__c</name>
     </fields>
     <fields>
         <help>Tabellenformat, das für Belegposten verwendet wird. Im Standardformat &quot;Standard&quot; werden benutzerdefinierte Felder als Spalten mit vertikal aufgelisteten Belegposten angezeigt.</help>
-        <label><!-- Table Style --></label>
+        <label></label>
         <name>SBQQ__TableStyle__c</name>
         <picklistValues>
             <masterLabel>Price Dimensions as Columns</masterLabel>
@@ -164,12 +164,12 @@
     </fields>
     <fields>
         <help>Standardfarbe (in HEX), die auf den von diesem Inhalt dargestellten Text angewandt wird.</help>
-        <label><!-- Text Color --></label>
+        <label></label>
         <name>SBQQ__TextColor__c</name>
     </fields>
     <fields>
         <help>Typ dieses Inhalts.</help>
-        <label><!-- Type --></label>
+        <label></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Custom</masterLabel>
@@ -191,7 +191,7 @@
     <gender>Masculine</gender>
     <nameFieldLabel>Inhaltsname</nameFieldLabel>
     <webLinks>
-        <label><!-- Translate --></label>
+        <label></label>
         <name>SBQQ__Translate</name>
     </webLinks>
 </CustomObjectTranslation>

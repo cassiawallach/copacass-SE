@@ -6,43 +6,43 @@
         <value>Produktaktion</value>
     </caseValues>
     <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Produktaktion</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Produktaktion</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Produktaktion</value>
+    </caseValues>
+    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Produktaktionen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value><!-- Produktaktion --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Produktaktionen --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value><!-- Produktaktion --></value>
+        <value>Produktaktionen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Produktaktionen --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value><!-- Produktaktion --></value>
+        <value>Produktaktionen</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Produktaktionen --></value>
+        <value>Produktaktionen</value>
     </caseValues>
     <fields>
         <help>Wählen Sie das Feld aus, das aktualisiert werden soll, wenn die Regel ausgelöst wird.</help>
-        <label><!-- Filter Field --></label>
+        <label></label>
         <name>SBQQ__FilterField__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -55,12 +55,12 @@
     </fields>
     <fields>
         <help>Geben Sie den Wert ein, der im ausgewählten Filterfeld aktualisiert werden soll.</help>
-        <label><!-- Filter Value --></label>
+        <label></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>Wählen Sie den Operator aus, der bestimmt, wie das Filterfeld auf den Filterwert angewandt wird.</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -80,29 +80,29 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- ParentRuleIsActive --></label>
+        <label></label>
         <name>SBQQ__ParentRuleIsActive__c</name>
     </fields>
     <fields>
         <help>Wählen Sie das Produkt, das im Angebot automatisch ausgewählt sein soll. Hinweis: Der Produktregeltyp muss auf &quot;Auswahl&quot; eingestellt sein.</help>
-        <label><!-- Product --></label>
+        <label></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel><!-- Product Actions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Aktivieren Sie das Kontrollkästchen, wenn das Produkt im Feld &quot;Produkt nachschlagen&quot; im Angebot ausgewählt sein soll.</help>
-        <label><!-- Required --></label>
+        <label></label>
         <name>SBQQ__Required__c</name>
     </fields>
     <fields>
         <help>Regel, die diese Produktaktion ausführt.</help>
-        <label><!-- Rule --></label>
+        <label></label>
         <name>SBQQ__Rule__c</name>
-        <relationshipLabel><!-- Actions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Geben Sie den Aktionstyp an.</help>
-        <label><!-- Type --></label>
+        <label></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Add</masterLabel>
@@ -155,13 +155,13 @@
     </fields>
     <fields>
         <help>Wird verwendet, um das spezifische Attribut anzugeben, wenn das &quot;Wertfeld&quot; ein globales Konfigurationsattributfeld ist.</help>
-        <label><!-- Value Attribute --></label>
+        <label></label>
         <name>SBQQ__ValueAttribute__c</name>
-        <relationshipLabel><!-- Product Actions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Vergleicht das Filterfeld mit diesem Feld, anstatt mit dem Filterwert.</help>
-        <label><!-- Value Field --></label>
+        <label></label>
         <name>SBQQ__ValueField__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -170,7 +170,7 @@
     </fields>
     <fields>
         <help>Wählen Sie das Salesforce-Objekt aus, in dem das Wertfeld definiert ist.</help>
-        <label><!-- Value Object --></label>
+        <label></label>
         <name>SBQQ__ValueObject__c</name>
         <picklistValues>
             <masterLabel>Configuration Attributes</masterLabel>
@@ -188,7 +188,7 @@
     <gender>Feminine</gender>
     <nameFieldLabel>Produktaktionsnummer</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- Value Attribute required since the Value Field is a global Configuration Attribute field. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Value_attr_required_if_global_field</name>
     </validationRules>
 </CustomObjectTranslation>

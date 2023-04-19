@@ -2,12 +2,12 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <help>この商品のバンドルからの商談商品の ID。</help>
-        <label><!-- Parent ID --></label>
+        <label></label>
         <name>SBQQ__ParentID__c</name>
     </fields>
     <fields>
-        <label><!-- Quote Line --></label>
+        <label></label>
         <name>SBQQ__QuoteLine__c</name>
-        <relationshipLabel><!-- Opportunity Product --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
 </CustomObjectTranslation>

@@ -10,27 +10,27 @@
     </caseValues>
     <fields>
         <help>Escolha a entrada do processo à qual o objeto pertence.</help>
-        <label><!-- Process Input ID --></label>
+        <label></label>
         <name>SBQQ__ProcessInputID__c</name>
-        <relationshipLabel><!-- Process Input Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>O ID da cotação ao qual esse valor de entrada do processo pertence.</help>
-        <label><!-- Quote ID --></label>
+        <label></label>
         <name>SBQQ__QuoteId__c</name>
-        <relationshipLabel><!-- Process Input Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Esse valor de Entrada do processo pertence ao usuário.</help>
-        <label><!-- UserID --></label>
+        <label></label>
         <name>SBQQ__UserID__c</name>
-        <relationshipLabel><!-- Process Input Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Essa é a resposta ao valor do processo de entrada.</help>
-        <label><!-- Value --></label>
+        <label></label>
         <name>SBQQ__Value__c</name>
     </fields>
-    <gender>Masculine</gender>
+    <gender>Feminine</gender>
     <nameFieldLabel>Nome do valor do processo de cotação</nameFieldLabel>
 </CustomObjectTranslation>

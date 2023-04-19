@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
-        <plural>false</plural>
-        <value>Condición de acción personalizada</value>
-    </caseValues>
-    <caseValues>
         <plural>true</plural>
         <value>Condiciones de acción personalizada</value>
     </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <value>Condición de acción personalizada</value>
+    </caseValues>
     <fields>
         <help>Acción personalizada que está ejecutando esta condición.</help>
-        <label><!-- Custom Action --></label>
+        <label></label>
         <name>SBQQ__CustomAction__c</name>
-        <relationshipLabel><!-- Custom Action Conditions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Seleccione el campo que debe contener el valor que ingrese en el campo Valor.</help>
-        <label><!-- Field --></label>
+        <label></label>
         <name>SBQQ__Field__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -25,12 +25,12 @@
     </fields>
     <fields>
         <help>Ingrese el valor que desea que coincida en el campo que seleccionó utilizando el operador elegido.</help>
-        <label><!-- Filter Value --></label>
+        <label></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>Seleccione el operador que hay que aplicar cuando se compara el campo con el valor.</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -70,12 +70,12 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- ParentConditionIsActive --></label>
+        <label></label>
         <name>SBQQ__ParentActionIsActive__c</name>
     </fields>
     <fields>
         <help>Objeto en el que se evalúa la condición.</help>
-        <label><!-- Target Object --></label>
+        <label></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Product</masterLabel>

@@ -2,17 +2,17 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <help>Opción para combinar las cantidades de múltiples activos para el mismo producto en una partida cuando se genera el presupuesto de renovación.</help>
-        <label><!-- Combine Asset Quantities --></label>
+        <label></label>
         <name>SBQQ__AssetQuantitiesCombined__c</name>
     </fields>
     <fields>
         <help>Active esta opción para combinar activos y suscripciones de múltiples contratos con plazos compartidos. Cada contrato con plazos compartidos genera de forma predeterminada un grupo separado en el presupuesto de renovación.</help>
-        <label><!-- Combine Co-Termed Contracts --></label>
+        <label></label>
         <name>SBQQ__CoTermedContractsCombined__c</name>
     </fields>
     <fields>
         <help>Determina el momento en que los contratos terminan de forma compartida</help>
-        <label><!-- Co-Termination Event --></label>
+        <label></label>
         <name>SBQQ__CoTerminationEvent__c</name>
         <picklistValues>
             <masterLabel>Add-on</masterLabel>
@@ -25,7 +25,7 @@
     </fields>
     <fields>
         <help>Determina el modo en que los contratos de servicios y suscripciones terminan de forma compartida para este cliente.</help>
-        <label><!-- Contract Co-Termination --></label>
+        <label></label>
         <name>SBQQ__ContractCoTermination__c</name>
         <picklistValues>
             <masterLabel>Always</masterLabel>
@@ -42,28 +42,28 @@
     </fields>
     <fields>
         <help>Oportunidad predeterminada para esta cuenta empleada en un módulo de comercio electrónico para obtener la lista de precios del cliente y asociarla con presupuestos de &quot;carrito de la compra&quot;.</help>
-        <label><!-- Default Opportunity --></label>
+        <label></label>
         <name>SBQQ__DefaultOpportunity__c</name>
-        <relationshipLabel><!-- Accounts --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Seleccione esta opción si no se deben heredar los precios contratados desde la cuenta principal.</help>
-        <label><!-- Ignore Parent Contracted Prices --></label>
+        <label></label>
         <name>SBQQ__IgnoreParentContractedPrices__c</name>
     </fields>
     <fields>
         <help>Seleccione la casilla de verificación para mantener la jerarquía del paquete en presupuestos de renovación y correcciones.</help>
-        <label><!-- Preserve Bundle Structure --></label>
+        <label></label>
         <name>SBQQ__PreserveBundle__c</name>
     </fields>
     <fields>
         <help>Ingrese la fecha hasta la que se deben mantener los precios.</help>
-        <label><!-- Price Hold End --></label>
+        <label></label>
         <name>SBQQ__PriceHoldEnd__c</name>
     </fields>
     <fields>
         <help>Seleccione Basado en activos para hacer que las renovaciones se basen en los activos de una cuenta o seleccione Basado en suscripciones para hacer que las renovaciones se basen en las suscripciones creadas desde un presupuesto.</help>
-        <label><!-- Renewal Model --></label>
+        <label></label>
         <name>SBQQ__RenewalModel__c</name>
         <picklistValues>
             <masterLabel>Asset Based</masterLabel>
@@ -76,7 +76,7 @@
     </fields>
     <fields>
         <help>Utilice &quot;Igual&quot; para mantener el mismo precio pagado la última vez. Utilice &quot;Lista&quot; para utilizar el precio de lista actual. Utilice &quot;Incremento&quot; para utilizar el precio pagado la última vez más un incremento.</help>
-        <label><!-- Renewal Pricing Method --></label>
+        <label></label>
         <name>SBQQ__RenewalPricingMethod__c</name>
         <picklistValues>
             <masterLabel>List</masterLabel>
@@ -93,7 +93,7 @@
     </fields>
     <fields>
         <help>Se selecciona si esta cuenta tiene certificados activos</help>
-        <label><!-- Tax-Exempt --></label>
+        <label></label>
         <name>SBQQ__TaxExempt__c</name>
         <picklistValues>
             <masterLabel>No</masterLabel>
@@ -105,55 +105,103 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Currency Test --></label>
+        <label></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed Lost</masterLabel>
+            <translation></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Won</masterLabel>
+            <translation></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discovery</masterLabel>
+            <translation></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Formal Proposal</masterLabel>
+            <translation></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fully Paid</masterLabel>
+            <translation></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Qualification</masterLabel>
+            <translation></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Negotiation</masterLabel>
+            <translation></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Signed Contract Received</masterLabel>
+            <translation></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution Alignment</masterLabel>
+            <translation></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution Validation</masterLabel>
+            <translation></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label></label>
+        <name>Vertical__c</name>
+    </fields>
+    <fields>
+        <label></label>
         <name>rh2__testCurrency__c</name>
     </fields>
     <recordTypes>
-        <label><!-- Account --></label>
+        <label></label>
         <name>Account</name>
     </recordTypes>
     <recordTypes>
-        <label><!-- Customer Account --></label>
+        <label></label>
         <name>Customer_Account</name>
     </recordTypes>
     <webLinks>
-        <label><!-- AltavistaNews --></label>
+        <label></label>
         <name>AltavistaNews</name>
     </webLinks>
     <webLinks>
-        <label><!-- GoogleMaps --></label>
+        <label></label>
         <name>GoogleMaps</name>
     </webLinks>
     <webLinks>
-        <label><!-- GoogleNews --></label>
+        <label></label>
         <name>GoogleNews</name>
     </webLinks>
     <webLinks>
-        <label><!-- GoogleSearch --></label>
+        <label></label>
         <name>GoogleSearch</name>
     </webLinks>
     <webLinks>
-        <label><!-- HooversProfile --></label>
+        <label></label>
         <name>HooversProfile</name>
     </webLinks>
     <webLinks>
-        <label><!-- Amend_Assets --></label>
+        <label></label>
         <name>SBQQ__Amend_Assets</name>
     </webLinks>
     <webLinks>
-        <label><!-- Renew_Assets --></label>
+        <label></label>
         <name>SBQQ__Renew_Assets</name>
     </webLinks>
     <webLinks>
-        <label><!-- YahooMaps --></label>
+        <label></label>
         <name>YahooMaps</name>
     </webLinks>
     <webLinks>
-        <label><!-- Send_to_Slack --></label>
+        <label></label>
         <name>slackv2__Send_to_Slack</name>
     </webLinks>
     <webLinks>
-        <label><!-- Slack_Alerts --></label>
+        <label></label>
         <name>slackv2__Slack_Alerts</name>
     </webLinks>
 </CustomObjectTranslation>

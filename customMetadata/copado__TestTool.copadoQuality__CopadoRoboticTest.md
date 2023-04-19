@@ -3,19 +3,11 @@
     <label>Copado Robotic Testing</label>
     <protected>false</protected>
     <values>
-        <field>copado__Automate_Test_Readiness__c</field>
-        <value xsi:type="xsd:boolean">false</value>
-    </values>
-    <values>
         <field>copado__JobTemplate__c</field>
         <value xsi:type="xsd:string">RunCrtTests</value>
     </values>
     <values>
         <field>copado__TestType__c</field>
         <value xsi:type="xsd:string">Functional Test</value>
-    </values>
-    <values>
-        <field>copado__Test_Readiness_Logic__c</field>
-        <value xsi:nil="true"/>
     </values>
 </CustomMetadata>

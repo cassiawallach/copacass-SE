@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>CICD</label>
+            <name>CICD</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Essentials</label>
+            <name>Essentials</name>
+        </dataCategory>
+        <dataCategory>
+            <label>CRT</label>
+            <name>CRT</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Releases</label>
+            <name>Releases</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Competitors</label>
+            <name>Competitors</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Product</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

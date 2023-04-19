@@ -10,26 +10,26 @@
     </caseValues>
     <fields>
         <help>Code qui peut être exécuté par une ressource externe.</help>
-        <label><!-- Code --></label>
+        <label></label>
         <name>SBQQ__Code__c</name>
     </fields>
     <fields>
         <help>Saisissez les noms d&apos;API de tous les champs Groupe de ligne de devis référencés par ce plug-in, un par ligne.</help>
-        <label><!-- Quote Line Group Fields --></label>
+        <label></label>
         <name>SBQQ__GroupFields__c</name>
     </fields>
     <fields>
         <help>Saisissez les noms d&apos;API de tous les champs Devis référencés par ce plug-in, un par ligne.</help>
-        <label><!-- Quote Fields --></label>
+        <label></label>
         <name>SBQQ__QuoteFields__c</name>
     </fields>
     <fields>
         <help>Saisissez les noms d&apos;API de tous les champs Ligne de devis référencés par ce plug-in, un par ligne.</help>
-        <label><!-- Quote Line Fields --></label>
+        <label></label>
         <name>SBQQ__QuoteLineFields__c</name>
     </fields>
     <fields>
-        <label><!-- Transpiled Code --></label>
+        <label></label>
         <name>SBQQ__TranspiledCode__c</name>
     </fields>
     <gender>Masculine</gender>

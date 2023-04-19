@@ -6,12 +6,12 @@
     </caseValues>
     <fields>
         <help>列の位置を表す数値のインデックス値を入力します。列インデックスは 1 から開始する必要があります。</help>
-        <label><!-- Column Index --></label>
+        <label></label>
         <name>SBQQ__ColumnIndex__c</name>
     </fields>
     <fields>
         <help>API 参照名を入力します。</help>
-        <label><!-- Field Name --></label>
+        <label></label>
         <name>SBQQ__FieldName__c</name>
         <picklistValues>
             <masterLabel>Discount (%)</masterLabel>
@@ -40,18 +40,18 @@
     </fields>
     <fields>
         <help>レコードをインポートする形式を選択します。</help>
-        <label><!-- Import Format --></label>
+        <label></label>
         <name>SBQQ__ImportFormat__c</name>
-        <relationshipLabel><!-- Import Columns --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>この列が一意のキー列である場合はオンにします。</help>
-        <label><!-- Key --></label>
+        <label></label>
         <name>SBQQ__Key__c</name>
     </fields>
     <nameFieldLabel>列の名前</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- Column Index must start from 1. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Column_index_must_start_from_1</name>
     </validationRules>
 </CustomObjectTranslation>

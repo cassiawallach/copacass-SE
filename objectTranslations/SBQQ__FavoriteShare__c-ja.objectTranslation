@@ -5,14 +5,14 @@
         <value>お気に入り共有</value>
     </caseValues>
     <fields>
-        <label><!-- Favorite --></label>
+        <label></label>
         <name>SBQQ__Favorite__c</name>
-        <relationshipLabel><!-- Favorite Shares --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- User --></label>
+        <label></label>
         <name>SBQQ__User__c</name>
-        <relationshipLabel><!-- Favorite Shares --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <nameFieldLabel>お気に入りの共有名</nameFieldLabel>
 </CustomObjectTranslation>

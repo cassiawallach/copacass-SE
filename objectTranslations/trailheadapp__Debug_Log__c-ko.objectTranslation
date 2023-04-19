@@ -5,28 +5,28 @@
         <value>디버그 로그</value>
     </caseValues>
     <fields>
-        <label><!-- Class --></label>
+        <label></label>
         <name>trailheadapp__Class__c</name>
     </fields>
     <fields>
         <help>로그 메시지의 날짜/시간입니다.</help>
-        <label><!-- Datetime --></label>
+        <label></label>
         <name>trailheadapp__Datetime__c</name>
     </fields>
     <fields>
-        <label><!-- Message --></label>
+        <label></label>
         <name>trailheadapp__Message__c</name>
     </fields>
     <fields>
-        <label><!-- Method --></label>
+        <label></label>
         <name>trailheadapp__Method__c</name>
     </fields>
     <fields>
-        <label><!-- Severity --></label>
+        <label></label>
         <name>trailheadapp__Severity__c</name>
     </fields>
     <fields>
-        <label><!-- Transaction --></label>
+        <label></label>
         <name>trailheadapp__Transaction__c</name>
     </fields>
     <nameFieldLabel>디버그 로그 이름</nameFieldLabel>

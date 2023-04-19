@@ -10,17 +10,17 @@
     </caseValues>
     <fields>
         <help>Indique si cette règle est active ou non.</help>
-        <label><!-- Active --></label>
+        <label></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Peut être saisi uniquement si Conditions remplies est Personnalisé. Saisissez une combinaison de numéros d&apos;index de condition de prix, AND, OR, et des parenthèses (ex.: (123 AND 124) AND 125).</help>
-        <label><!-- Advanced Condition --></label>
+        <label></label>
         <name>SBQQ__AdvancedCondition__c</name>
     </fields>
     <fields>
         <help>Sélectionnez le comportement de vos conditions : Toutes correspond à AND, N&apos;importe correspond à OR, Personnalisé combine AND et OR.</help>
-        <label><!-- Conditions Met --></label>
+        <label></label>
         <name>SBQQ__ConditionsMet__c</name>
         <picklistValues>
             <masterLabel>All</masterLabel>
@@ -37,7 +37,7 @@
     </fields>
     <fields>
         <help>Lorsque l&apos;option Aucun ou Enregistrer est sélectionnée, les règles de prix de l&apos;étendue du configurateur sont déclenchées lors de l&apos;enregistrement. Lorsque l&apos;option Modifier est sélectionnée, les règles de prix de l&apos;étendue du configurateur sont déclenchées lors de la modification et l&apos;enregistrement.</help>
-        <label><!-- Configurator Evaluation Event --></label>
+        <label></label>
         <name>SBQQ__ConfiguratorEvaluationEvent__c</name>
         <picklistValues>
             <masterLabel>Edit</masterLabel>
@@ -50,7 +50,7 @@
     </fields>
     <fields>
         <help>Spécifiez quand cette règle doit être évaluée. Utilisé uniquement pour cibler une ligne de devis et lorsque le champ de l&apos;événement d&apos;évaluation n&apos;est pas pris en charge dans le calculateur hérité.</help>
-        <label><!-- Calculator Evaluation Event --></label>
+        <label></label>
         <name>SBQQ__EvaluationEvent__c</name>
         <picklistValues>
             <masterLabel>After Calculate</masterLabel>
@@ -71,12 +71,12 @@
     </fields>
     <fields>
         <help>Spécifiez l&apos;ordre d&apos;évaluation de cette règle de prix. Les règles de niveau supérieur sont évaluées en dernier, ce qui signifie qu&apos;elles « gagnent » en cas de conflit.</help>
-        <label><!-- Evaluation Order --></label>
+        <label></label>
         <name>SBQQ__EvaluationOrder__c</name>
     </fields>
     <fields>
         <help>Nom d&apos;API de l&apos;objet personnalisé qui stocke les données de référence.</help>
-        <label><!-- Lookup Object --></label>
+        <label></label>
         <name>SBQQ__LookupObject__c</name>
         <picklistValues>
             <masterLabel>SBQQ__LookupData__c</masterLabel>
@@ -85,13 +85,13 @@
     </fields>
     <fields>
         <help>Sélectionnez un produit auquel associer cette règle.</help>
-        <label><!-- Product --></label>
+        <label></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel><!-- Price Rules --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Événement pendant lequel cette règle est évaluée.</help>
-        <label><!-- Evaluation Scope --></label>
+        <label></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Calculator</masterLabel>
@@ -106,11 +106,11 @@
     <nameFieldLabel>Nom de la règle de prix</nameFieldLabel>
     <startsWith>Consonant</startsWith>
     <webLinks>
-        <label><!-- CloneWithRelated --></label>
+        <label></label>
         <name>SBQQ__CloneWithRelated</name>
     </webLinks>
     <webLinks>
-        <label><!-- CloneWithRelatedClassic --></label>
+        <label></label>
         <name>SBQQ__CloneWithRelatedClassic</name>
     </webLinks>
 </CustomObjectTranslation>

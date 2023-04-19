@@ -10,87 +10,87 @@
     </caseValues>
     <fields>
         <help>Sélectionnez la case si tous les produits de package doivent être imprimés dans les documents de devis. Sinon, seuls les documents non vides sont imprimés.</help>
-        <label><!-- Show All Package Product --></label>
+        <label></label>
         <name>SBQQ__AllPackageProductsShown__c</name>
     </fields>
     <fields>
         <help>Titre utilisé pour la section de facturation. La valeur défaut est « Facturation ».</help>
-        <label><!-- Bill To Title --></label>
+        <label></label>
         <name>SBQQ__BillToTitle__c</name>
     </fields>
     <fields>
         <help>Couleur des bordures du tableau exprimée en valeur hexadécimale.</help>
-        <label><!-- Border Color --></label>
+        <label></label>
         <name>SBQQ__BorderColor__c</name>
     </fields>
     <fields>
         <help>Marge inférieure de la page.</help>
-        <label><!-- Bottom Margin --></label>
+        <label></label>
         <name>SBQQ__BottomMargin__c</name>
     </fields>
     <fields>
         <help>Sélectionnez la case si des éléments de ligne de devis avec l&apos;option Offre groupée activée sont affichés dans les documents de devis générés à partir de ce modèle.</help>
-        <label><!-- Show Bundled Products --></label>
+        <label></label>
         <name>SBQQ__BundledProductsShown__c</name>
     </fields>
     <fields>
         <help>Partie Ville dans l&apos;adresse de la société affichée dans les documents de devis.</help>
-        <label><!-- Company City --></label>
+        <label></label>
         <name>SBQQ__CompanyCity__c</name>
     </fields>
     <fields>
         <help>Partie Pays dans l&apos;adresse de la société affichée dans les documents de devis.</help>
-        <label><!-- Company Country --></label>
+        <label></label>
         <name>SBQQ__CompanyCountry__c</name>
     </fields>
     <fields>
         <help>E-mail de la société affiché dans les documents de devis, par exemple ventes@masociete.com</help>
-        <label><!-- Company Email --></label>
+        <label></label>
         <name>SBQQ__CompanyEmail__c</name>
     </fields>
     <fields>
         <help>Télécopie de la société affichée dans les documents de devis.</help>
-        <label><!-- Company Fax --></label>
+        <label></label>
         <name>SBQQ__CompanyFax__c</name>
     </fields>
     <fields>
         <help>Nom de la société affiché dans les documents de devis.</help>
-        <label><!-- Company Name --></label>
+        <label></label>
         <name>SBQQ__CompanyName__c</name>
     </fields>
     <fields>
         <help>Téléphone de la société affiché dans les documents de devis.</help>
-        <label><!-- Company Phone --></label>
+        <label></label>
         <name>SBQQ__CompanyPhone__c</name>
     </fields>
     <fields>
         <help>Partie Code postal dans l&apos;adresse de la société affichée dans les documents de devis.</help>
-        <label><!-- Company Postal Code --></label>
+        <label></label>
         <name>SBQQ__CompanyPostalCode__c</name>
     </fields>
     <fields>
         <help>Slogan de la société affiché dans les documents de devis.</help>
-        <label><!-- Company Slogan --></label>
+        <label></label>
         <name>SBQQ__CompanySlogan__c</name>
     </fields>
     <fields>
         <help>Partie Région/province dans l&apos;adresse de la société affichée dans les documents de devis.</help>
-        <label><!-- Company State --></label>
+        <label></label>
         <name>SBQQ__CompanyState__c</name>
     </fields>
     <fields>
         <help>Partie Rue dans l&apos;adresse de la société affichée dans les documents de devis.</help>
-        <label><!-- Company Street --></label>
+        <label></label>
         <name>SBQQ__CompanyStreet__c</name>
     </fields>
     <fields>
         <help>Sélectionnez cette case si les produits des composants dans lesquels Composant est activé doivent être imprimés dans les documents de devis.</help>
-        <label><!-- Hide Component Products --></label>
+        <label></label>
         <name>SBQQ__ComponentProductsHidden__c</name>
     </fields>
     <fields>
         <help>Champ de l&apos;objet Devis qui calcule la remise client.</help>
-        <label><!-- Customer Discount Field --></label>
+        <label></label>
         <name>SBQQ__CustomerDiscountField__c</name>
         <picklistValues>
             <masterLabel>Total Discount (Amt)</masterLabel>
@@ -99,22 +99,22 @@
     </fields>
     <fields>
         <help>Étiquette utilisée pour la remise client dans les sections de sous-total et de total.</help>
-        <label><!-- Customer Discount Label --></label>
+        <label></label>
         <name>SBQQ__CustomerDiscountLabel__c</name>
     </fields>
     <fields>
         <help>Sélectionnez la case pour afficher la remise client au niveau du devis dans le total du devis.</help>
-        <label><!-- Show Customer Discount --></label>
+        <label></label>
         <name>SBQQ__CustomerDiscountShown__c</name>
     </fields>
     <fields>
         <help>Sélectionnez cette case pour marquer ce modèle par défaut.</help>
-        <label><!-- Default --></label>
+        <label></label>
         <name>SBQQ__Default__c</name>
     </fields>
     <fields>
         <help>Statut de déploiement de ce modèle. Changez ce statut en « Déployé » pour rendre ce modèle visible par les utilisateurs non-administrateurs.</help>
-        <label><!-- Deployment Status --></label>
+        <label></label>
         <name>SBQQ__DeploymentStatus__c</name>
         <picklistValues>
             <masterLabel>Deployed</masterLabel>
@@ -127,7 +127,7 @@
     </fields>
     <fields>
         <help>Sélectionnez comment afficher les barèmes de remise dans le document du devis. Par ligne de devis affiche le barème de remise et le Niveau aligné à droite sous chaque ligne de devis.</help>
-        <label><!-- Show Discount Schedule --></label>
+        <label></label>
         <name>SBQQ__DiscountScheduleShown__c</name>
         <picklistValues>
             <masterLabel>Per Quote Line</masterLabel>
@@ -136,7 +136,7 @@
     </fields>
     <fields>
         <help>Exclut l&apos;en-tête et le pied page du modèle sur la première page, la dernière page ou les deux.</help>
-        <label><!-- Exclude Header &amp; Footer --></label>
+        <label></label>
         <name>SBQQ__ExcludeHeaderFooter__c</name>
         <picklistValues>
             <masterLabel>First Page</masterLabel>
@@ -153,7 +153,7 @@
     </fields>
     <fields>
         <help>Exclut la numérotation de page dans Toutes les pages, Première page, Deuxième page et/ou Première et deuxième pages.</help>
-        <label><!-- Exclude Page Numbers --></label>
+        <label></label>
         <name>SBQQ__ExcludedPages__c</name>
         <picklistValues>
             <masterLabel>All Pages</masterLabel>
@@ -174,7 +174,7 @@
     </fields>
     <fields>
         <help>Famille de polices qui doit être appliquée au texte de ce modèle.</help>
-        <label><!-- Font Family --></label>
+        <label></label>
         <name>SBQQ__FontFamily__c</name>
         <picklistValues>
             <masterLabel>Courier</masterLabel>
@@ -259,33 +259,33 @@
     </fields>
     <fields>
         <help>Taille de police par défaut du texte de ce modèle de devis.</help>
-        <label><!-- Font Size --></label>
+        <label></label>
         <name>SBQQ__FontSize__c</name>
     </fields>
     <fields>
         <help>Contenu du modèle qui doit être restitué dans le pied de page.</help>
-        <label><!-- Footer Content --></label>
+        <label></label>
         <name>SBQQ__FooterContent__c</name>
-        <relationshipLabel><!-- Quote Templates (Footer) --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Hauteur du pied de page dans les documents générés à partir de ce modèle.</help>
-        <label><!-- Footer Height --></label>
+        <label></label>
         <name>SBQQ__FooterHeight__c</name>
     </fields>
     <fields>
         <help>Nom de la page Visualforce qui doit être utilisée par ce modèle pour générer l&apos;arborescence FO XSL.</help>
-        <label><!-- Generator Name --></label>
+        <label></label>
         <name>SBQQ__GeneratorName__c</name>
     </fields>
     <fields>
         <help>Préfixe des étiquettes de sous-total et de total dans les totaux généraux.</help>
-        <label><!-- Grand Total Prefix --></label>
+        <label></label>
         <name>SBQQ__GrandTotalPrefix__c</name>
     </fields>
     <fields>
         <help>Sélectionnez le champ contenant les valeurs que vous souhaitez utiliser lors du regroupement et dans le sous-total des éléments de ligne.</help>
-        <label><!-- Group Field --></label>
+        <label></label>
         <name>SBQQ__GroupField__c</name>
         <picklistValues>
             <masterLabel>Product Family</masterLabel>
@@ -294,7 +294,7 @@
     </fields>
     <fields>
         <help>Famille de polices qui doit être appliquée au texte du titre du Groupe de ce modèle.</help>
-        <label><!-- Group Font Family --></label>
+        <label></label>
         <name>SBQQ__GroupFontFamily__c</name>
         <picklistValues>
             <masterLabel>Courier</masterLabel>
@@ -379,12 +379,12 @@
     </fields>
     <fields>
         <help>Taille de police par défaut des titres de Groupe</help>
-        <label><!-- Group Font Size --></label>
+        <label></label>
         <name>SBQQ__GroupFontSize__c</name>
     </fields>
     <fields>
         <help>Style de police des titres de Groupe. Si elle est laissée vide, la valeur par défaut est Normal.</help>
-        <label><!-- Group Font Style --></label>
+        <label></label>
         <name>SBQQ__GroupFontStyle__c</name>
         <picklistValues>
             <masterLabel>Bold</masterLabel>
@@ -405,17 +405,17 @@
     </fields>
     <fields>
         <help>Écart entre les groupes en pixels.</help>
-        <label><!-- Group Gap (px) --></label>
+        <label></label>
         <name>SBQQ__GroupGap__c</name>
     </fields>
     <fields>
         <help>Couleur de la trame des cellules du tableau qui contiennent le titre et la description du groupe.</help>
-        <label><!-- Group Shading Color --></label>
+        <label></label>
         <name>SBQQ__GroupShadingColor__c</name>
     </fields>
     <fields>
         <help>Spécifie l&apos;alignement du titre du groupe et de la description du groupe. Si elle est laissée vide, la valeur par défaut est Gauche.</help>
-        <label><!-- Group Text Alignment --></label>
+        <label></label>
         <name>SBQQ__GroupTextAlignment__c</name>
         <picklistValues>
             <masterLabel>Center</masterLabel>
@@ -432,38 +432,38 @@
     </fields>
     <fields>
         <help>Couleur du texte du titre et de la description du groupe.</help>
-        <label><!-- Group Text Color --></label>
+        <label></label>
         <name>SBQQ__GroupTextColor__c</name>
     </fields>
     <fields>
         <help>Référence le contenu du modèle qui doit être restitué dans l&apos;en-tête.</help>
-        <label><!-- Header Content --></label>
+        <label></label>
         <name>SBQQ__HeaderContent__c</name>
-        <relationshipLabel><!-- Quote Templates (Header) --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Hauteur de l&apos;en-tête dans les documents générés à partir de ce modèle.</help>
-        <label><!-- Header Height --></label>
+        <label></label>
         <name>SBQQ__HeaderHeight__c</name>
     </fields>
     <fields>
         <help>Sélectionnez cette case si vous souhaitez masquer les sous-totaux de groupe dans les documents générés à partir de ce modèle.</help>
-        <label><!-- Hide Group Subtotals --></label>
+        <label></label>
         <name>SBQQ__HideGroupSubtotals__c</name>
     </fields>
     <fields>
         <help>Titre de la section affichée dans le champ Introduction. Pour ne pas afficher de titre, laissez ce champ vide.</help>
-        <label><!-- Introduction Title --></label>
+        <label></label>
         <name>SBQQ__IntroductionTitle__c</name>
     </fields>
     <fields>
         <help>Marge à gauche de la page.</help>
-        <label><!-- Left Margin --></label>
+        <label></label>
         <name>SBQQ__LeftMargin__c</name>
     </fields>
     <fields>
         <help>Spécifiez la méthode de numérotation des éléments de ligne dans les documents générés. « Commencer dans le devis » numérote toutes les lignes de façon séquentielle à travers tous les groupes (le cas échéant). « Commencer dans le groupe » réinitialise les numéros dans chaque groupe.</help>
-        <label><!-- Line Numbering --></label>
+        <label></label>
         <name>SBQQ__LineNumbering__c</name>
         <picklistValues>
             <masterLabel>Start at group</masterLabel>
@@ -476,7 +476,7 @@
     </fields>
     <fields>
         <help>Spécifiez le champ utilisé pour trier les éléments de ligne du document.</help>
-        <label><!-- Line Sort Field --></label>
+        <label></label>
         <name>SBQQ__LineSortField__c</name>
         <picklistValues>
             <masterLabel>Number</masterLabel>
@@ -485,22 +485,22 @@
     </fields>
     <fields>
         <help>ID Salesforce du document contenant l&apos;image du logo utilisé dans le devis PDF.</help>
-        <label><!-- Logo Document Id --></label>
+        <label></label>
         <name>SBQQ__LogoDocumentId__c</name>
     </fields>
     <fields>
         <help>Titre de la section qui affiche le champ Notes. Pour ne pas afficher de titres, laissez ce champ vide.</help>
-        <label><!-- Notes Title --></label>
+        <label></label>
         <name>SBQQ__NotesTitle__c</name>
     </fields>
     <fields>
         <help>Hauteur de la page en pouces.</help>
-        <label><!-- Page Height --></label>
+        <label></label>
         <name>SBQQ__PageHeight__c</name>
     </fields>
     <fields>
         <help>Spécifiez l&apos;alignement des numéros de page du document. Si ce champ est vide, l&apos;alignement par défaut est Centre.</help>
-        <label><!-- Page Number Alignment --></label>
+        <label></label>
         <name>SBQQ__PageNumberAlignment__c</name>
         <picklistValues>
             <masterLabel>Center</masterLabel>
@@ -517,7 +517,7 @@
     </fields>
     <fields>
         <help>Spécifiez l&apos;emplacement d&apos;affichage des numéros de page dans le document. Si ce champ est vide, l&apos;emplacement par défaut est Pied de page.</help>
-        <label><!-- Page Number Position --></label>
+        <label></label>
         <name>SBQQ__PageNumberPosition__c</name>
         <picklistValues>
             <masterLabel>Footer</masterLabel>
@@ -530,12 +530,12 @@
     </fields>
     <fields>
         <help>Déclarez la description de texte du numéro de page. « {0} » représente la page actuelle seule. « {1} » dépend de « {0} » et représente le total des pages numérotées. Si ce champ est vide, le texte par défaut est « Page {0} sur {1} ».</help>
-        <label><!-- Page Number Text --></label>
+        <label></label>
         <name>SBQQ__PageNumberText__c</name>
     </fields>
     <fields>
         <help>Orientation de la page dans les documents PDF générés avec ce modèle.</help>
-        <label><!-- Page Orientation --></label>
+        <label></label>
         <name>SBQQ__PageOrientation__c</name>
         <picklistValues>
             <masterLabel>Landscape</masterLabel>
@@ -548,32 +548,32 @@
     </fields>
     <fields>
         <help>Largeur de la page en pouces.</help>
-        <label><!-- Page Width --></label>
+        <label></label>
         <name>SBQQ__PageWidth__c</name>
     </fields>
     <fields>
         <help>Étiquette utilisée pour la remise partenaire dans les sections de sous-total et de total.</help>
-        <label><!-- Partner Discount Label --></label>
+        <label></label>
         <name>SBQQ__PartnerDiscountLabel__c</name>
     </fields>
     <fields>
         <help>Sélectionnez la case pour afficher la remise partenaire au niveau du devis dans le total du devis.</help>
-        <label><!-- Show Partner Discount --></label>
+        <label></label>
         <name>SBQQ__PartnerDiscountShown__c</name>
     </fields>
     <fields>
         <help>Sélectionnez cette case si les produits renouvelés doivent être affichés dans les devis de renouvellement générés à partir de ce modèle.</help>
-        <label><!-- Show Renewed Products --></label>
+        <label></label>
         <name>SBQQ__RenewedProductsShown__c</name>
     </fields>
     <fields>
         <help>Marge à droite de la page.</help>
-        <label><!-- Right Margin --></label>
+        <label></label>
         <name>SBQQ__RightMargin__c</name>
     </fields>
     <fields>
         <help>Champ d&apos;élément de ligne utilisé pour le cumul. Toutes les lignes dans lesquelles ce champ renvoie la même valeur sont cumulées sur la première ligne de la valeur.</help>
-        <label><!-- Roll-Up Field --></label>
+        <label></label>
         <name>SBQQ__RollUpField__c</name>
         <picklistValues>
             <masterLabel>Product</masterLabel>
@@ -582,17 +582,17 @@
     </fields>
     <fields>
         <help>Couleur de la trame des en-têtes de colonne exprimée en valeur hexadécimale.</help>
-        <label><!-- Shading Color --></label>
+        <label></label>
         <name>SBQQ__ShadingColor__c</name>
     </fields>
     <fields>
         <help>Étiquette utilisée pour la section « Livraison ». La valeur par défaut est « Livraison ».</help>
-        <label><!-- Ship To Title --></label>
+        <label></label>
         <name>SBQQ__ShipToTitle__c</name>
     </fields>
     <fields>
         <help>Champ utilisé pour les éléments de ligne de sous-groupe.</help>
-        <label><!-- Sub Group Field --></label>
+        <label></label>
         <name>SBQQ__SubGroupField__c</name>
         <picklistValues>
             <masterLabel>Product Family</masterLabel>
@@ -601,7 +601,7 @@
     </fields>
     <fields>
         <help>Sélectionnez un champ utilisé pour calculer et afficher le sous-total du groupe/devis.</help>
-        <label><!-- Subtotal Field --></label>
+        <label></label>
         <name>SBQQ__SubtotalField__c</name>
         <picklistValues>
             <masterLabel>Customer Total</masterLabel>
@@ -622,42 +622,42 @@
     </fields>
     <fields>
         <help>Saisissez l&apos;étiquette du champ du sous-total.</help>
-        <label><!-- Subtotal Label --></label>
+        <label></label>
         <name>SBQQ__SubtotalLabel__c</name>
     </fields>
     <fields>
         <help>Retrait en pixels du corps de la clause du devis par rapport au numéro de clause.</help>
-        <label><!-- Term Body Indent (px) --></label>
+        <label></label>
         <name>SBQQ__TermBodyIndent__c</name>
     </fields>
     <fields>
         <help>Titre de la section qui affiche les Conditions générales.</help>
-        <label><!-- Terms &amp; Conditions Title --></label>
+        <label></label>
         <name>SBQQ__TermsConditionsTitle__c</name>
     </fields>
     <fields>
         <help>Conditions générales ajoutées à chaque document généré avec ce modèle.</help>
-        <label><!-- Terms &amp; Conditions --></label>
+        <label></label>
         <name>SBQQ__TermsConditions__c</name>
     </fields>
     <fields>
         <help>Sélectionnez cette case si vous souhaitez numéroter les clauses du devis générées par ce modèle.</help>
-        <label><!-- Number Terms --></label>
+        <label></label>
         <name>SBQQ__TermsNumbered__c</name>
     </fields>
     <fields>
         <help>Couleur par défaut (en valeur hexadécimale) appliquée au texte de ce modèle.</help>
-        <label><!-- Text Color --></label>
+        <label></label>
         <name>SBQQ__TextColor__c</name>
     </fields>
     <fields>
         <help>Marge supérieure de la page.</help>
-        <label><!-- Top Margin --></label>
+        <label></label>
         <name>SBQQ__TopMargin__c</name>
     </fields>
     <fields>
         <help>Sélectionnez le champ utilisé pour calculer et afficher le total du groupe/devis.</help>
-        <label><!-- Total Field --></label>
+        <label></label>
         <name>SBQQ__TotalField__c</name>
         <picklistValues>
             <masterLabel>Customer Total</masterLabel>
@@ -674,40 +674,40 @@
     </fields>
     <fields>
         <help>Saisissez l&apos;étiquette du champ défini dans Champ de total.</help>
-        <label><!-- Total Label --></label>
+        <label></label>
         <name>SBQQ__TotalLabel__c</name>
     </fields>
     <fields>
         <help>Sélectionnez cette case pour masquer les totaux dans le document de devis.</help>
-        <label><!-- Hide Totals --></label>
+        <label></label>
         <name>SBQQ__TotalsHidden__c</name>
     </fields>
     <fields>
         <help>ID Salesforce du document qui contient l&apos;image de filigrane utilisée dans le devis PDF.</help>
-        <label><!-- Watermark ID --></label>
+        <label></label>
         <name>SBQQ__WatermarkId__c</name>
     </fields>
     <gender>Masculine</gender>
     <nameFieldLabel>Nom du modèle</nameFieldLabel>
     <startsWith>Consonant</startsWith>
     <validationRules>
-        <errorMessage><!-- Footer Height can not be blank if Page Number Position is set to Footer. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Blank_Footer_Height</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Header Height can not be blank if Page Number Position is set to Header. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Blank_Header_Height</name>
     </validationRules>
     <webLinks>
-        <label><!-- CloneWithRelated --></label>
+        <label></label>
         <name>SBQQ__CloneWithRelated</name>
     </webLinks>
     <webLinks>
-        <label><!-- CloneWithRelatedClassic --></label>
+        <label></label>
         <name>SBQQ__CloneWithRelatedClassic</name>
     </webLinks>
     <webLinks>
-        <label><!-- Translate --></label>
+        <label></label>
         <name>SBQQ__Translate</name>
     </webLinks>
 </CustomObjectTranslation>

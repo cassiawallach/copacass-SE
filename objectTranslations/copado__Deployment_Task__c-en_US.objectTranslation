@@ -1,120 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label><!-- Apply to --></label>
+        <label></label>
         <name>copado__Apply_to__c</name>
         <picklistValues>
             <masterLabel>All Environments in Pipeline</masterLabel>
-            <translation><!-- All Environments in Pipeline --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Specific Environments in Pipeline</masterLabel>
-            <translation><!-- Specific Environments in Pipeline --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Disable Task for Back-Promotions --></label>
+        <label></label>
         <name>copado__Disable_Task_for_Back_Promotions__c</name>
     </fields>
     <fields>
-        <label><!-- Notify Task Owner --></label>
+        <label></label>
         <name>copado__Notify_Task_Owner__c</name>
     </fields>
     <fields>
-        <label><!-- Order --></label>
+        <label></label>
         <name>copado__Order__c</name>
     </fields>
     <fields>
-        <label><!-- Perform Deployment Task --></label>
+        <label></label>
         <name>copado__Perform_Manual_Task__c</name>
         <picklistValues>
             <masterLabel>After Deployment</masterLabel>
-            <translation><!-- After Deployment --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Before Deployment</masterLabel>
-            <translation><!-- Before Deployment --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Perform in Destination Credential(s) --></label>
+        <label></label>
         <name>copado__Perform_in_Destination_Orgs__c</name>
     </fields>
     <fields>
-        <label><!-- Perform in Source Credential --></label>
+        <label></label>
         <name>copado__Perform_in_Source_Org__c</name>
     </fields>
     <fields>
-        <label><!-- Status --></label>
+        <label></label>
         <name>copado__Status__c</name>
         <picklistValues>
             <masterLabel>Completed</masterLabel>
-            <translation><!-- Completed --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Draft</masterLabel>
-            <translation><!-- Draft --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Pending</masterLabel>
-            <translation><!-- Pending --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Task Description --></label>
+        <label></label>
         <name>copado__Task_Description__c</name>
     </fields>
     <fields>
-        <label><!-- Type --></label>
+        <label></label>
         <name>copado__Type__c</name>
         <picklistValues>
             <masterLabel>Apex</masterLabel>
-            <translation><!-- Apex --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Bulk Data</masterLabel>
-            <translation><!-- Bulk Data --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Custom Settings</masterLabel>
-            <translation><!-- Custom Settings --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Data</masterLabel>
-            <translation><!-- Data --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Data Template</masterLabel>
-            <translation><!-- Data Template --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Delete MetaData</masterLabel>
-            <translation><!-- Delete MetaData --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Function</masterLabel>
-            <translation><!-- Function --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Manual Task</masterLabel>
-            <translation><!-- Manual Task --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Salesforce Flow</masterLabel>
-            <translation><!-- Salesforce Flow --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>URL Callout</masterLabel>
-            <translation><!-- URL Callout --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- User Story --></label>
+        <label></label>
         <name>copado__User_Story__c</name>
-        <relationshipLabel><!-- Deployment Tasks --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- dataJSON --></label>
+        <label></label>
         <name>copado__dataJSON__c</name>
     </fields>
 </CustomObjectTranslation>

@@ -6,50 +6,50 @@
         <value>Favorit</value>
     </caseValues>
     <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Favorit</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Favorit</value>
+    </caseValues>
+    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Favoriten</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value><!-- Favorit --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Favoriten --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value><!-- Favorit --></value>
+        <value>Favoriten</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Favoriten --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value><!-- Favorit --></value>
+        <value>Favoriten</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Favoriten --></value>
+        <value>Favoriten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Favorits</value>
     </caseValues>
     <fieldSets>
-        <label><!-- FavoritesManager --></label>
+        <label></label>
         <name>SBQQ__FavoritesManager</name>
     </fieldSets>
     <fields>
-        <label><!-- Description --></label>
+        <label></label>
         <name>SBQQ__Description__c</name>
     </fields>
     <fields>
-        <label><!-- Owner Name --></label>
+        <label></label>
         <name>SBQQ__OwnerName__c</name>
     </fields>
     <gender>Masculine</gender>

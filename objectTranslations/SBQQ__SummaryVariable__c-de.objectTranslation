@@ -6,43 +6,43 @@
         <value>Zusammenfassungsvariable</value>
     </caseValues>
     <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Zusammenfassungsvariable</value>
+    </caseValues>
+    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Zusammenfassungsvariablen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value><!-- Zusammenfassungsvariable --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Zusammenfassungsvariablen --></value>
+        <value>Zusammenfassungsvariablen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
-        <value><!-- Zusammenfassungsvariable --></value>
+        <value>Zusammenfassungsvariablen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Zusammenfassungsvariablen --></value>
+        <value>Zusammenfassungsvariablen</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>false</plural>
-        <value><!-- Zusammenfassungsvariable --></value>
+        <value>Zusammenfassungsvariablen</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Zusammenfassungsvariablen --></value>
+        <value>Zusammenfassungsvariablen</value>
     </caseValues>
     <fields>
         <help>Feld eines Angebotsbelegpostens, für das die Aggregatfunktion ausgeführt wird.</help>
-        <label><!-- Aggregate Field --></label>
+        <label></label>
         <name>SBQQ__AggregateField__c</name>
         <picklistValues>
             <masterLabel>Quantity</masterLabel>
@@ -51,7 +51,7 @@
     </fields>
     <fields>
         <help>Aggregatfunktion, die zum Berechnen dieser Variable verwendet wird.</help>
-        <label><!-- Aggregate Function --></label>
+        <label></label>
         <name>SBQQ__AggregateFunction__c</name>
         <picklistValues>
             <masterLabel>Average</masterLabel>
@@ -76,13 +76,13 @@
     </fields>
     <fields>
         <help>Eine weitere Zusammenfassungsvariable, die mit dieser Zusammenfassungsvariablen zusammengesetzt werden soll, wenn Ihre Bedingung auf beiden Ergebnissen basiert.</help>
-        <label><!-- Variable Element --></label>
+        <label></label>
         <name>SBQQ__CombineWith__c</name>
-        <relationshipLabel><!-- Composed By --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Geben Sie an, wie diese Variable mit &quot;Variablenelement&quot; oder &quot;Wertelement&quot; zusammengesetzt werden soll.</help>
-        <label><!-- Composite Operator --></label>
+        <label></label>
         <name>SBQQ__CompositeOperator__c</name>
         <picklistValues>
             <masterLabel>Add</masterLabel>
@@ -103,7 +103,7 @@
     </fields>
     <fields>
         <help>Wenn Sie Datensätze auf der Grundlage eines Angebotsfelds weiter eingrenzen möchten, wählen Sie das Feld aus, das mit dem gleichen Feld im Angebot verglichen werden soll.</help>
-        <label><!-- Constraint Field --></label>
+        <label></label>
         <name>SBQQ__ConstraintField__c</name>
         <picklistValues>
             <masterLabel>Status</masterLabel>
@@ -116,7 +116,7 @@
     </fields>
     <fields>
         <help>Wählen Sie das Feld aus, das beim Filtern von Elementen verwendet werden soll, die in diese Zusammenfassungsvariable einbezogen werden sollen.</help>
-        <label><!-- Filter Field --></label>
+        <label></label>
         <name>SBQQ__FilterField__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -129,12 +129,12 @@
     </fields>
     <fields>
         <help>Geben Sie den Wert ein, dem bei diesem Filter entsprochen werden muss.</help>
-        <label><!-- Filter Value --></label>
+        <label></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>Wählen Sie den Operator aus, den Sie in Ihrem Filter verwenden möchten.</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -175,7 +175,7 @@
     </fields>
     <fields>
         <help>Geben Sie den Umfang Ihrer Zusammenfassungsvariablen ein.</help>
-        <label><!-- Scope --></label>
+        <label></label>
         <name>SBQQ__Scope__c</name>
         <picklistValues>
             <masterLabel>Assets</masterLabel>
@@ -188,7 +188,7 @@
     </fields>
     <fields>
         <help>Wählen Sie das Objekt aus, das aggregiert werden soll.</help>
-        <label><!-- Target Object --></label>
+        <label></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Asset</masterLabel>
@@ -209,7 +209,7 @@
     </fields>
     <fields>
         <help>Geben Sie den Wert ein, der beim Zusammensetzen verwendet werden soll.</help>
-        <label><!-- Value Element --></label>
+        <label></label>
         <name>SBQQ__ValueElement__c</name>
     </fields>
     <gender>Feminine</gender>

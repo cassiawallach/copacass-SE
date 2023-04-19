@@ -10,11 +10,11 @@
     </caseValues>
     <fields>
         <help>Seleccione la casilla de verificación para entrada de proceso.</help>
-        <label><!-- Active --></label>
+        <label></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
-        <label><!-- Binary Choice --></label>
+        <label></label>
         <name>SBQQ__BinaryChoice__c</name>
         <picklistValues>
             <masterLabel>No</masterLabel>
@@ -27,7 +27,7 @@
     </fields>
     <fields>
         <help>Indica qué condiciones de entrada de proceso deben cumplirse.</help>
-        <label><!-- Conditions Met --></label>
+        <label></label>
         <name>SBQQ__ConditionsMet__c</name>
         <picklistValues>
             <masterLabel>All</masterLabel>
@@ -40,7 +40,7 @@
     </fields>
     <fields>
         <help>Campo de presupuesto que origina el valor predeterminado para esta entrada.</help>
-        <label><!-- Default Field --></label>
+        <label></label>
         <name>SBQQ__DefaultField__c</name>
         <picklistValues>
             <masterLabel>Bill To Country</masterLabel>
@@ -53,12 +53,12 @@
     </fields>
     <fields>
         <help>Ingrese el orden en el que se debe mostrar la entrada de proceso.</help>
-        <label><!-- Display Order --></label>
+        <label></label>
         <name>SBQQ__DisplayOrder__c</name>
     </fields>
     <fields>
         <help>Seleccione el nombre de API para el campo que acepta el ingreso de usuario.</help>
-        <label><!-- Input Field --></label>
+        <label></label>
         <name>SBQQ__InputField__c</name>
         <picklistValues>
             <masterLabel>BinaryChoice__c</masterLabel>
@@ -71,17 +71,17 @@
     </fields>
     <fields>
         <help>Ingrese un valor numérico.</help>
-        <label><!-- Integer Input --></label>
+        <label></label>
         <name>SBQQ__IntegerInput__c</name>
     </fields>
     <fields>
         <help>El texto que desea que se muestre al usuario en la solicitud.</help>
-        <label><!-- Label --></label>
+        <label></label>
         <name>SBQQ__Label__c</name>
     </fields>
     <fields>
         <help>Seleccione el operador que hay que utilizar cuando se compara la entrada de Campo de entrada con el Campo de producto.</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -121,13 +121,13 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Process Input Condition --></label>
+        <label></label>
         <name>SBQQ__ProcessInputCondition__c</name>
-        <relationshipLabel><!-- Process Inputs --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Campo en el objeto Producto empleado para filtrar productos que coinciden con esta entrada.</help>
-        <label><!-- Product Field --></label>
+        <label></label>
         <name>SBQQ__ProductField__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -144,14 +144,14 @@
     </fields>
     <fields>
         <help>Proceso de presupuesto que es propietario de la entrada.</help>
-        <label><!-- Quote Process --></label>
+        <label></label>
         <name>SBQQ__QuoteProcess__c</name>
-        <relationshipLabel><!-- Process Inputs --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>Nombre de entrada</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- Both Product Field and Operator must be set if either are set. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__ProductFieldAndOperatorSet</name>
     </validationRules>
 </CustomObjectTranslation>

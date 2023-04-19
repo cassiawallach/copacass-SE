@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldSets>
-        <label><!-- Promoted User Story Datatable --></label>
+        <label></label>
         <name>copado__Promoted_User_Story_Datatable</name>
     </fieldSets>
     <fields>
-        <label><!-- Promotion --></label>
+        <label></label>
         <name>copado__Promotion__c</name>
-        <relationshipLabel><!-- Promoted User Stories --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Active / Outdated --></label>
+        <label></label>
         <name>copado__Status__c</name>
         <picklistValues>
             <masterLabel>Active</masterLabel>
-            <translation><!-- Active --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Outdated</masterLabel>
-            <translation><!-- Outdated --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- User Story --></label>
+        <label></label>
         <name>copado__User_Story__c</name>
-        <relationshipLabel><!-- User Story Promotions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
 </CustomObjectTranslation>

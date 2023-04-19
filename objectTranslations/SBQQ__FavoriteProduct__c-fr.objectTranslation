@@ -9,42 +9,42 @@
         <value>Produits favoris</value>
     </caseValues>
     <fields>
-        <label><!-- Configuration Attributes --></label>
+        <label></label>
         <name>SBQQ__ConfigurationAttributes__c</name>
     </fields>
     <fields>
-        <label><!-- Discount Schedule --></label>
+        <label></label>
         <name>SBQQ__DiscountSchedule__c</name>
-        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Identifier la fonctionnalité et l&apos;option dynamique de cette ligne.</help>
-        <label><!-- Dynamic Option ID --></label>
+        <label></label>
         <name>SBQQ__DynamicOptionId__c</name>
     </fields>
     <fields>
-        <label><!-- Favorite --></label>
+        <label></label>
         <name>SBQQ__Favorite__c</name>
-        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Product Option --></label>
+        <label></label>
         <name>SBQQ__ProductOption__c</name>
-        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Product --></label>
+        <label></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Quantity --></label>
+        <label></label>
         <name>SBQQ__Quantity__c</name>
     </fields>
     <fields>
-        <label><!-- Required By --></label>
+        <label></label>
         <name>SBQQ__RequiredBy__c</name>
-        <relationshipLabel><!-- Favorite Product --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <gender>Masculine</gender>
     <nameFieldLabel>Nom du produit favori</nameFieldLabel>

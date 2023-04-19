@@ -9,14 +9,14 @@
         <value>Recursos compartidos favoritos</value>
     </caseValues>
     <fields>
-        <label><!-- Favorite --></label>
+        <label></label>
         <name>SBQQ__Favorite__c</name>
-        <relationshipLabel><!-- Favorite Shares --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- User --></label>
+        <label></label>
         <name>SBQQ__User__c</name>
-        <relationshipLabel><!-- Favorite Shares --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <gender>Masculine</gender>
     <nameFieldLabel>Nombre de recurso compartido favorito</nameFieldLabel>

@@ -10,7 +10,7 @@
     </caseValues>
     <fields>
         <help>Saisissez une description pour ce groupe de solutions.</help>
-        <label><!-- Description --></label>
+        <label></label>
         <name>SBQQ__Description__c</name>
     </fields>
     <gender>Masculine</gender>

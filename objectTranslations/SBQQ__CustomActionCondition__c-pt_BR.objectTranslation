@@ -6,17 +6,17 @@
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value>Condições de ações personalizadas</value>
+        <value>Condições de ação personalizada</value>
     </caseValues>
     <fields>
         <help>Ação personalizada que está executando essa Condição.</help>
-        <label><!-- Custom Action --></label>
+        <label></label>
         <name>SBQQ__CustomAction__c</name>
-        <relationshipLabel><!-- Custom Action Conditions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Escolha o campo que deve conter o valor inserido no campo Valor.</help>
-        <label><!-- Field --></label>
+        <label></label>
         <name>SBQQ__Field__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -25,12 +25,12 @@
     </fields>
     <fields>
         <help>Insira o valor que você deseja combinar no campo selecionado usando o operador escolhido.</help>
-        <label><!-- Filter Value --></label>
+        <label></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>Selecione o operador a ser aplicado ao comparar o Campo ao Valor.</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -70,12 +70,12 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- ParentConditionIsActive --></label>
+        <label></label>
         <name>SBQQ__ParentActionIsActive__c</name>
     </fields>
     <fields>
         <help>Objeto com relação ao qual a condição é avaliada.</help>
-        <label><!-- Target Object --></label>
+        <label></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Product</masterLabel>

@@ -5,44 +5,44 @@
         <value>ユーザ Trailmix</value>
     </caseValues>
     <fields>
-        <label><!-- Assigned --></label>
+        <label></label>
         <name>trailheadapp__Assigned_At__c</name>
     </fields>
     <fields>
-        <label><!-- Completed --></label>
+        <label></label>
         <name>trailheadapp__Completed_At__c</name>
     </fields>
     <fields>
         <help>割り当て者とユーザのタイムゾーンが異なる場合、この期日の表示は異なることがあります。</help>
-        <label><!-- Due --></label>
+        <label></label>
         <name>trailheadapp__Due_At__c</name>
     </fields>
     <fields>
-        <label><!-- External Id --></label>
+        <label></label>
         <name>trailheadapp__External_Id__c</name>
     </fields>
     <fields>
-        <label><!-- First Attempted --></label>
+        <label></label>
         <name>trailheadapp__First_Attempted_At__c</name>
     </fields>
     <fields>
-        <label><!-- Last Attempted --></label>
+        <label></label>
         <name>trailheadapp__Last_Attempted_At__c</name>
     </fields>
     <fields>
         <help>ユーザの Trailmix のステータスは、「進行中」または「完了」という 2 つステータスで表示できます。</help>
-        <label><!-- Status --></label>
+        <label></label>
         <name>trailheadapp__Status__c</name>
     </fields>
     <fields>
-        <label><!-- Trailmix --></label>
+        <label></label>
         <name>trailheadapp__Trailmix__c</name>
-        <relationshipLabel><!-- User Trailmixes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- User --></label>
+        <label></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel><!-- User Trailmixes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <nameFieldLabel>ユーザ Traimix ID</nameFieldLabel>
 </CustomObjectTranslation>

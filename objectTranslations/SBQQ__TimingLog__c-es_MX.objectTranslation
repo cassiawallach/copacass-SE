@@ -9,29 +9,29 @@
         <value>Registros de temporización</value>
     </caseValues>
     <fields>
-        <label><!-- Element --></label>
+        <label></label>
         <name>SBQQ__Element__c</name>
     </fields>
     <fields>
-        <label><!-- Finish --></label>
+        <label></label>
         <name>SBQQ__Finish__c</name>
     </fields>
     <fields>
         <help>Entrada de registro</help>
-        <label><!-- Log --></label>
+        <label></label>
         <name>SBQQ__Log__c</name>
     </fields>
     <fields>
         <help>Tiempo de CPU de inicio</help>
-        <label><!-- Start --></label>
+        <label></label>
         <name>SBQQ__Start__c</name>
     </fields>
     <fields>
-        <label><!-- Total CPU Time --></label>
+        <label></label>
         <name>SBQQ__Total__c</name>
     </fields>
     <fields>
-        <label><!-- URL --></label>
+        <label></label>
         <name>SBQQ__URL__c</name>
     </fields>
     <gender>Masculine</gender>

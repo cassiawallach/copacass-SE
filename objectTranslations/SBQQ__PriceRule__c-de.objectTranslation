@@ -6,53 +6,53 @@
         <value>Preisregel</value>
     </caseValues>
     <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Preisregel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Preisregel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Preisregel</value>
+    </caseValues>
+    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Preisregeln</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value><!-- Preisregel --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Preisregeln --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value><!-- Preisregel --></value>
+        <value>Preisregeln</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Preisregeln --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value><!-- Preisregel --></value>
+        <value>Preisregeln</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Preisregeln --></value>
+        <value>Preisregeln</value>
     </caseValues>
     <fields>
         <help>Gibt an, ob diese Regel aktiv oder inaktiv ist.</help>
-        <label><!-- Active --></label>
+        <label></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Kann nur eingegeben werden, wenn &quot;Erfüllte Bedingungen&quot; auf &quot;Benutzerdefiniert&quot; eingestellt ist. Geben Sie eine Kombination aus den Indexnummern der Preisbedingung, AND, OR und Klammern ein (e.g. (123 AND 124) AND 125).</help>
-        <label><!-- Advanced Condition --></label>
+        <label></label>
         <name>SBQQ__AdvancedCondition__c</name>
     </fields>
     <fields>
         <help>Wählen Sie das Verhalten für Ihre Bedingungen: &quot;Alle&quot; entspricht AND, &quot;Beliebige&quot; entspricht OR. &quot;Benutzerdefiniert&quot; ist eine Kombination aus AND und OR.</help>
-        <label><!-- Conditions Met --></label>
+        <label></label>
         <name>SBQQ__ConditionsMet__c</name>
         <picklistValues>
             <masterLabel>All</masterLabel>
@@ -69,7 +69,7 @@
     </fields>
     <fields>
         <help>Bei Auswahl von &quot;Kein&quot; oder &quot;Speichern&quot; werden die Preisregeln mit dem Evaluierungsumfang &quot;Konfigurator&quot; beim Speichern ausgelöst. Ist &quot;Bearbeiten&quot; festgelegt, werden die Preisregeln mit dem Evaluierungsumfang &quot;Konfigurator&quot; beim Bearbeiten und Speichern ausgelöst.</help>
-        <label><!-- Configurator Evaluation Event --></label>
+        <label></label>
         <name>SBQQ__ConfiguratorEvaluationEvent__c</name>
         <picklistValues>
             <masterLabel>Edit</masterLabel>
@@ -82,7 +82,7 @@
     </fields>
     <fields>
         <help>Legen Sie fest, wann diese Regel ausgewertet werden soll. Wird nur für Angebotsbelegposten verwendet; wird beim alten Rechner nicht unterstützt.</help>
-        <label><!-- Calculator Evaluation Event --></label>
+        <label></label>
         <name>SBQQ__EvaluationEvent__c</name>
         <picklistValues>
             <masterLabel>After Calculate</masterLabel>
@@ -103,12 +103,12 @@
     </fields>
     <fields>
         <help>Geben Sie die Reihenfolge der Evaluierung für diese Preisregel ein. Regeln mit einer höheren Position in der Reihenfolge werden zuletzt ausgewertet, was bedeutet, dass sie im Fall eines Konflikts &quot;gewinnen&quot;.</help>
-        <label><!-- Evaluation Order --></label>
+        <label></label>
         <name>SBQQ__EvaluationOrder__c</name>
     </fields>
     <fields>
         <help>API-Name des benutzerdefinierten Objekts, in dem die Nachschlagedaten gespeichert sind.</help>
-        <label><!-- Lookup Object --></label>
+        <label></label>
         <name>SBQQ__LookupObject__c</name>
         <picklistValues>
             <masterLabel>SBQQ__LookupData__c</masterLabel>
@@ -117,13 +117,13 @@
     </fields>
     <fields>
         <help>Wählen Sie ein Produkt aus, mit das mit dieser Regel verknüpft werden soll.</help>
-        <label><!-- Product --></label>
+        <label></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel><!-- Price Rules --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Ereignis, bei dem diese Regel ausgewertet wird.</help>
-        <label><!-- Evaluation Scope --></label>
+        <label></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Calculator</masterLabel>
@@ -137,11 +137,11 @@
     <gender>Feminine</gender>
     <nameFieldLabel>Name der Preisregel</nameFieldLabel>
     <webLinks>
-        <label><!-- CloneWithRelated --></label>
+        <label></label>
         <name>SBQQ__CloneWithRelated</name>
     </webLinks>
     <webLinks>
-        <label><!-- CloneWithRelatedClassic --></label>
+        <label></label>
         <name>SBQQ__CloneWithRelatedClassic</name>
     </webLinks>
 </CustomObjectTranslation>

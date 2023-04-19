@@ -6,43 +6,43 @@
         <value>Rabattkategorie</value>
     </caseValues>
     <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Rabattkategorie</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Rabattkategorie</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Rabattkategorie</value>
+    </caseValues>
+    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Rabattkategorien</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value><!-- Rabattkategorie --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Rabattkategorien --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value><!-- Rabattkategorie --></value>
+        <value>Rabattkategorien</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Rabattkategorien --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value><!-- Rabattkategorie --></value>
+        <value>Rabattkategorien</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Rabattkategorien --></value>
+        <value>Rabattkategorien</value>
     </caseValues>
     <fields>
         <help>Geben Sie den maximal zulässigen Rabatt für diese Produktkategorie ein.</help>
-        <label><!-- Max Discount (%) --></label>
+        <label></label>
         <name>SBQQ__MaxDiscountRate__c</name>
     </fields>
     <gender>Feminine</gender>

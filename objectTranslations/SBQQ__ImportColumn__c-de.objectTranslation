@@ -6,48 +6,48 @@
         <value>Importspalte</value>
     </caseValues>
     <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Importspalte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Importspalte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Importspalte</value>
+    </caseValues>
+    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Importspalten</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value><!-- Importspalte --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Importspalten --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value><!-- Importspalte --></value>
+        <value>Importspalten</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Importspalten --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value><!-- Importspalte --></value>
+        <value>Importspalten</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Importspalten --></value>
+        <value>Importspalten</value>
     </caseValues>
     <fields>
         <help>Geben Sie einen numerischen Indexwert ein, der die Position der Spalte darstellt. Der Spaltenindex muss mit 1 beginnen.</help>
-        <label><!-- Column Index --></label>
+        <label></label>
         <name>SBQQ__ColumnIndex__c</name>
     </fields>
     <fields>
         <help>Geben Sie den API-Namen ein.</help>
-        <label><!-- Field Name --></label>
+        <label></label>
         <name>SBQQ__FieldName__c</name>
         <picklistValues>
             <masterLabel>Discount (%)</masterLabel>
@@ -76,19 +76,19 @@
     </fields>
     <fields>
         <help>Wählen Sie das Format aus, in dem Ihre Datensätze importiert werden.</help>
-        <label><!-- Import Format --></label>
+        <label></label>
         <name>SBQQ__ImportFormat__c</name>
-        <relationshipLabel><!-- Import Columns --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Legen Sie fest, ob diese Spalte eine eindeutige Schlüsselspalte sein soll.</help>
-        <label><!-- Key --></label>
+        <label></label>
         <name>SBQQ__Key__c</name>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>Spaltenname</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- Column Index must start from 1. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Column_index_must_start_from_1</name>
     </validationRules>
 </CustomObjectTranslation>

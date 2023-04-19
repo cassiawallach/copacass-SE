@@ -9,49 +9,49 @@
         <value>Valeurs d&apos;attribut</value>
     </caseValues>
     <fields>
-        <label><!-- Asset --></label>
+        <label></label>
         <name>SBQQ__Asset__c</name>
-        <relationshipLabel><!-- Attribute Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Attribute --></label>
+        <label></label>
         <name>SBQQ__Attribute__c</name>
-        <relationshipLabel><!-- Attribute Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Favorite Product --></label>
+        <label></label>
         <name>SBQQ__FavoriteProduct__c</name>
-        <relationshipLabel><!-- Attribute Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Order Product --></label>
+        <label></label>
         <name>SBQQ__OrderItem__c</name>
-        <relationshipLabel><!-- Attribute Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Quote Line --></label>
+        <label></label>
         <name>SBQQ__QuoteLine__c</name>
-        <relationshipLabel><!-- Attribute Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Subscription --></label>
+        <label></label>
         <name>SBQQ__Subscription__c</name>
-        <relationshipLabel><!-- Attribute Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Value (Date Time) --></label>
+        <label></label>
         <name>SBQQ__ValueDateTime__c</name>
     </fields>
     <fields>
-        <label><!-- Value (Date) --></label>
+        <label></label>
         <name>SBQQ__ValueDate__c</name>
     </fields>
     <fields>
-        <label><!-- Value (Number) --></label>
+        <label></label>
         <name>SBQQ__ValueNumber__c</name>
     </fields>
     <fields>
-        <label><!-- Value (Text) --></label>
+        <label></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <gender>Feminine</gender>

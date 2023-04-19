@@ -6,14 +6,19 @@
         <value>Benutzer-Trailmix</value>
     </caseValues>
     <caseValues>
-        <caseType>Nominative</caseType>
-        <plural>true</plural>
-        <value>Benutzer-Trailmixes</value>
-    </caseValues>
-    <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
         <value>Benutzer-Trailmix</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Benutzer-Trailmix</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Benutzer-Trailmixes</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
@@ -23,6 +28,11 @@
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
+        <value>Benutzer-Trailmixes</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
         <value>Benutzer-Trailmixes</value>
     </caseValues>
     <caseValues>
@@ -30,55 +40,45 @@
         <plural>true</plural>
         <value>Benutzer-Trailmixs</value>
     </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Benutzer-Trailmix</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>true</plural>
-        <value>Benutzer-Trailmixes</value>
-    </caseValues>
     <fields>
-        <label><!-- Assigned --></label>
+        <label></label>
         <name>trailheadapp__Assigned_At__c</name>
     </fields>
     <fields>
-        <label><!-- Completed --></label>
+        <label></label>
         <name>trailheadapp__Completed_At__c</name>
     </fields>
     <fields>
         <help>Dieses Fälligkeitsdatum kann für Benutzer, die sich nicht in der Zeitzone des Zuweisenden befinden, unterschiedlich angezeigt werden.</help>
-        <label><!-- Due --></label>
+        <label></label>
         <name>trailheadapp__Due_At__c</name>
     </fields>
     <fields>
-        <label><!-- External Id --></label>
+        <label></label>
         <name>trailheadapp__External_Id__c</name>
     </fields>
     <fields>
-        <label><!-- First Attempted --></label>
+        <label></label>
         <name>trailheadapp__First_Attempted_At__c</name>
     </fields>
     <fields>
-        <label><!-- Last Attempted --></label>
+        <label></label>
         <name>trailheadapp__Last_Attempted_At__c</name>
     </fields>
     <fields>
         <help>Zwei Arten von Status, &quot;In Bearbeitung&quot; oder &quot;Abgeschlossen&quot;, stehen zur Darstellung des Status des Badges eines Benutzers zur Verfügung.</help>
-        <label><!-- Status --></label>
+        <label></label>
         <name>trailheadapp__Status__c</name>
     </fields>
     <fields>
-        <label><!-- Trailmix --></label>
+        <label></label>
         <name>trailheadapp__Trailmix__c</name>
-        <relationshipLabel><!-- User Trailmixes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- User --></label>
+        <label></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel><!-- User Trailmixes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <gender>Masculine</gender>
     <nameFieldLabel>Benutzer-Trailmix-ID</nameFieldLabel>

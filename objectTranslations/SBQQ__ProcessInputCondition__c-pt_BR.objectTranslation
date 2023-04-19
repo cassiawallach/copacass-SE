@@ -10,18 +10,18 @@
     </caseValues>
     <fields>
         <help>Sinalizador que indica se essa regra está ativa ou inativa.</help>
-        <label><!-- Active --></label>
+        <label></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Os valores dessa entrada de processo determinarão a visibilidade da entrada atual.</help>
-        <label><!-- Master Process Input --></label>
+        <label></label>
         <name>SBQQ__MasterProcessInput__c</name>
-        <relationshipLabel><!-- Process Inputs Regulated --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Selecione o operador a ser usado ao comparar os valores de entrada do processo.</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -62,13 +62,13 @@
     </fields>
     <fields>
         <help>Entrada do processo que detém a condição.</help>
-        <label><!-- Process Input --></label>
+        <label></label>
         <name>SBQQ__ProcessInput__c</name>
-        <relationshipLabel><!-- Process Input Conditions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>O valor usado para comparar a entrada do processo controladora.</help>
-        <label><!-- Value --></label>
+        <label></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <gender>Feminine</gender>

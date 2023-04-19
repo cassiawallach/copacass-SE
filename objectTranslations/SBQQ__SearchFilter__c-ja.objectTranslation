@@ -6,18 +6,18 @@
     </caseValues>
     <fields>
         <help>この条件を適用するアクション。値を空白にすると、条件がグローバルになります。</help>
-        <label><!-- Action --></label>
+        <label></label>
         <name>SBQQ__Action__c</name>
-        <relationshipLabel><!-- Search Filters --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>この条件が UI に表示される順序。</help>
-        <label><!-- Display Order --></label>
+        <label></label>
         <name>SBQQ__DisplayOrder__c</name>
     </fields>
     <fields>
         <help>絞り込みで使用する値のソース項目。</help>
-        <label><!-- Filter Source Field --></label>
+        <label></label>
         <name>SBQQ__FilterSourceField__c</name>
         <picklistValues>
             <masterLabel>Status</masterLabel>
@@ -30,7 +30,7 @@
     </fields>
     <fields>
         <help>絞り込みで使用する値のソースオブジェクト。</help>
-        <label><!-- Filter Source Object --></label>
+        <label></label>
         <name>SBQQ__FilterSourceObject__c</name>
         <picklistValues>
             <masterLabel>Quote</masterLabel>
@@ -39,12 +39,12 @@
     </fields>
     <fields>
         <help>絞り込みで使用される静的値。</help>
-        <label><!-- Filter Value --></label>
+        <label></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>条件を非表示にするかどうかを決定するために使用する値のソース項目を指定します。</help>
-        <label><!-- Hidden Source Field --></label>
+        <label></label>
         <name>SBQQ__HiddenSourceField__c</name>
         <picklistValues>
             <masterLabel>Primary</masterLabel>
@@ -53,7 +53,7 @@
     </fields>
     <fields>
         <help>条件を非表示にするかどうかを決定するために使用する値のソースオブジェクトを指定します。</help>
-        <label><!-- Hidden Source Object --></label>
+        <label></label>
         <name>SBQQ__HiddenSourceObject__c</name>
         <picklistValues>
             <masterLabel>Quote</masterLabel>
@@ -62,12 +62,12 @@
     </fields>
     <fields>
         <help>この条件を非表示としてマークする場合は、チェックボックスをオンにします。非表示条件は UI には表示されませんが、検索クエリには影響します。</help>
-        <label><!-- Hidden --></label>
+        <label></label>
         <name>SBQQ__Hidden__c</name>
     </fields>
     <fields>
         <help>この条件で使用する演算子を指定します。</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>between</masterLabel>
@@ -112,7 +112,7 @@
     </fields>
     <fields>
         <help>検索する項目を指定します。</help>
-        <label><!-- Target Field --></label>
+        <label></label>
         <name>SBQQ__TargetField__c</name>
         <picklistValues>
             <masterLabel>Name</masterLabel>
@@ -141,7 +141,7 @@
     </fields>
     <fields>
         <help>検索するオブジェクトを指定します。</help>
-        <label><!-- Target Object --></label>
+        <label></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Asset</masterLabel>
@@ -158,11 +158,11 @@
     </fields>
     <nameFieldLabel>検索条件名</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- You must select Filter Source Object when Filter Source Field is selected. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Require_filter_object_for_filter_field</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- You must select Hidden Source Object when Hidden Source Field is selected. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Require_hidden_object_for_hidden_field</name>
     </validationRules>
 </CustomObjectTranslation>

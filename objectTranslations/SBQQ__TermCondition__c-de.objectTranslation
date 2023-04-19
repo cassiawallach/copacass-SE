@@ -6,48 +6,48 @@
         <value>Klauselbedingung</value>
     </caseValues>
     <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Klauselbedingung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Klauselbedingung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Klauselbedingung</value>
+    </caseValues>
+    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Klauselbedingungen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value><!-- Klauselbedingung --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Klauselbedingungen --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value><!-- Klauselbedingung --></value>
+        <value>Klauselbedingungen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Klauselbedingungen --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value><!-- Klauselbedingung --></value>
+        <value>Klauselbedingungen</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Klauselbedingungen --></value>
+        <value>Klauselbedingungen</value>
     </caseValues>
     <fields>
         <help>Weisen Sie dieser Bedingung eine eindeutige Nummer zu, um sie in der erweiterten Bedingung der Angebotsklausel zu referenzieren.</help>
-        <label><!-- Index --></label>
+        <label></label>
         <name>SBQQ__Index__c</name>
     </fields>
     <fields>
         <help>Wählen Sie den Operator für das Feld.</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -88,13 +88,13 @@
     </fields>
     <fields>
         <help>Übergeordnete Klausel für diese Klausel.</help>
-        <label><!-- Quote Term --></label>
+        <label></label>
         <name>SBQQ__QuoteTerm__c</name>
-        <relationshipLabel><!-- Term Conditions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Feld im Angebotsobjekt, das zum Testen dieser Bedingung verwendet wird.</help>
-        <label><!-- Tested Field --></label>
+        <label></label>
         <name>SBQQ__TestedField__c</name>
         <picklistValues>
             <masterLabel>Customer Amount</masterLabel>
@@ -115,23 +115,23 @@
     </fields>
     <fields>
         <help>Zusammenfassungsvariable, die zum Testen dieser Bedingung verwendet wird.</help>
-        <label><!-- Tested Variable --></label>
+        <label></label>
         <name>SBQQ__TestedVariable__c</name>
-        <relationshipLabel><!-- Term Conditions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Wert, auf den getestet wird.</help>
-        <label><!-- Value --></label>
+        <label></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>Bedingungsnummer</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- You may not select both field and variable to test. Create separate conditions to test against field and variable. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Field_and_Variable</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- You must select either field or variable to test. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Field_or_Variable</name>
     </validationRules>
 </CustomObjectTranslation>

@@ -10,7 +10,7 @@
     </caseValues>
     <fields>
         <help>Ingrese una descripción para este SolutionGroup.</help>
-        <label><!-- Description --></label>
+        <label></label>
         <name>SBQQ__Description__c</name>
     </fields>
     <gender>Masculine</gender>

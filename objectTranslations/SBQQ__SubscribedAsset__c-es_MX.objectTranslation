@@ -10,28 +10,28 @@
     </caseValues>
     <fields>
         <help>Indica si el registro del activo suscrito está activo.</help>
-        <label><!-- Active --></label>
+        <label></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Activo cubierto por una suscripción.</help>
-        <label><!-- Asset --></label>
+        <label></label>
         <name>SBQQ__Asset__c</name>
-        <relationshipLabel><!-- Subscriptions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Identifica el contrato para la suscripción.</help>
-        <label><!-- Contract Id --></label>
+        <label></label>
         <name>SBQQ__ContractId__c</name>
     </fields>
     <fields>
         <help>Suscripción que cubre el activo.</help>
-        <label><!-- Subscription --></label>
+        <label></label>
         <name>SBQQ__Subscription__c</name>
-        <relationshipLabel><!-- Subscribed Assets --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Asset Usage End Date --></label>
+        <label></label>
         <name>SBQQ__UsageEndDate__c</name>
     </fields>
     <gender>Masculine</gender>

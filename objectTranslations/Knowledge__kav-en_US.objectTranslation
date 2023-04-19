@@ -9,24 +9,31 @@
         <value>Knowledge</value>
     </caseValues>
     <fields>
-        <help><!-- Indicate what information is provided in basic articles. You can create additional fields to further structure article content. --></help>
-        <label><!-- Content --></label>
+        <help></help>
+        <label></label>
         <name>Content__c</name>
     </fields>
     <fields>
-        <help><!-- Provide a short response for digital engagement channels like Chat, Messaging, Social, and Bots. --></help>
-        <label><!-- Digital Engagement Response --></label>
+        <help></help>
+        <label></label>
         <name>DigitalEngagementResponse__c</name>
     </fields>
     <fields>
-        <help><!-- Provide any internal notes.  Notes are only visible to specific internal user profiles and aren’t shared with external user profiles when the article is shared externally. --></help>
-        <label><!-- Internal Notes --></label>
+        <help></help>
+        <label></label>
         <name>InternalNotes__c</name>
     </fields>
     <fields>
-        <help><!-- Describe the question or issue that this article answers. --></help>
-        <label><!-- Question --></label>
+        <help></help>
+        <label></label>
         <name>Question__c</name>
     </fields>
+    <layouts>
+        <layout>Knowledge Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

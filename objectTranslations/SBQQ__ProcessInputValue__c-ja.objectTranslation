@@ -6,25 +6,25 @@
     </caseValues>
     <fields>
         <help>オブジェクトが属するプロセス入力を選択します。</help>
-        <label><!-- Process Input ID --></label>
+        <label></label>
         <name>SBQQ__ProcessInputID__c</name>
-        <relationshipLabel><!-- Process Input Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>このプロセス入力値が属する見積の ID。</help>
-        <label><!-- Quote ID --></label>
+        <label></label>
         <name>SBQQ__QuoteId__c</name>
-        <relationshipLabel><!-- Process Input Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>ユーザに属するプロセス入力値。</help>
-        <label><!-- UserID --></label>
+        <label></label>
         <name>SBQQ__UserID__c</name>
-        <relationshipLabel><!-- Process Input Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>これは入力プロセス値への回答です。</help>
-        <label><!-- Value --></label>
+        <label></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <nameFieldLabel>見積プロセス値名</nameFieldLabel>

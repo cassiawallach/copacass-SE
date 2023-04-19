@@ -10,27 +10,27 @@
     </caseValues>
     <fields>
         <help>A data máxima em que a trailmix precisa ser concluída.</help>
-        <label><!-- Due Date --></label>
+        <label></label>
         <name>trailheadapp__Due_At__c</name>
     </fields>
     <fields>
         <help>A data e hora máximas em que a trailmix precisa ser concluída.</help>
-        <label><!-- Due Datetime --></label>
+        <label></label>
         <name>trailheadapp__Due_Datetime__c</name>
     </fields>
     <fields>
-        <label><!-- Status --></label>
+        <label></label>
         <name>trailheadapp__Status__c</name>
     </fields>
     <fields>
-        <label><!-- Trailmix --></label>
+        <label></label>
         <name>trailheadapp__Trailmix__c</name>
-        <relationshipLabel><!-- Trailmix Assignments --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- User --></label>
+        <label></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel><!-- Trailmix Assignments --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>ID de atribuição de trailmix</nameFieldLabel>

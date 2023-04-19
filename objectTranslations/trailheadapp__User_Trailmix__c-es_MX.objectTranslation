@@ -9,44 +9,44 @@
         <value>Trailmixes de usuario</value>
     </caseValues>
     <fields>
-        <label><!-- Assigned --></label>
+        <label></label>
         <name>trailheadapp__Assigned_At__c</name>
     </fields>
     <fields>
-        <label><!-- Completed --></label>
+        <label></label>
         <name>trailheadapp__Completed_At__c</name>
     </fields>
     <fields>
         <help>Esta fecha de vencimiento puede mostrarse de manera diferente para usuarios que no estén en la misma zona horaria del asignador.</help>
-        <label><!-- Due --></label>
+        <label></label>
         <name>trailheadapp__Due_At__c</name>
     </fields>
     <fields>
-        <label><!-- External Id --></label>
+        <label></label>
         <name>trailheadapp__External_Id__c</name>
     </fields>
     <fields>
-        <label><!-- First Attempted --></label>
+        <label></label>
         <name>trailheadapp__First_Attempted_At__c</name>
     </fields>
     <fields>
-        <label><!-- Last Attempted --></label>
+        <label></label>
         <name>trailheadapp__Last_Attempted_At__c</name>
     </fields>
     <fields>
         <help>Dos tipos de estado, &quot;En curso&quot; o &quot;Completado&quot; están disponibles para representar el estado del trailmix de un usuario.</help>
-        <label><!-- Status --></label>
+        <label></label>
         <name>trailheadapp__Status__c</name>
     </fields>
     <fields>
-        <label><!-- Trailmix --></label>
+        <label></label>
         <name>trailheadapp__Trailmix__c</name>
-        <relationshipLabel><!-- User Trailmixes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- User --></label>
+        <label></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel><!-- User Trailmixes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <gender>Masculine</gender>
     <nameFieldLabel>Id. de Trailmix de usuario</nameFieldLabel>

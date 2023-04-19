@@ -6,17 +6,17 @@
     </caseValues>
     <fields>
         <help>入力形式を使用できるようにするにはチェックボックスをオンにします。</help>
-        <label><!-- Active --></label>
+        <label></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>入力形式を説明するわかりやすい名前を入力します。</help>
-        <label><!-- Import Format Name --></label>
+        <label></label>
         <name>SBQQ__ImportFormatName__c</name>
     </fields>
     <fields>
         <help>インポートする対象オブジェクト。</help>
-        <label><!-- Target Object --></label>
+        <label></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Quote Line</masterLabel>
@@ -25,12 +25,12 @@
     </fields>
     <fields>
         <help>インポート形式内の一意のキーの件数。</help>
-        <label><!-- # Unique Key --></label>
+        <label></label>
         <name>SBQQ__UniqueKeyCount__c</name>
     </fields>
     <nameFieldLabel>インポート形式番号</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- More than 1 unique key defined in Import Column. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Num_Unique_Key_is_not_one</name>
     </validationRules>
 </CustomObjectTranslation>

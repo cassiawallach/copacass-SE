@@ -9,55 +9,55 @@
         <value>Trailmixes</value>
     </caseValues>
     <fields>
-        <label><!-- Is Deleted --></label>
+        <label></label>
         <name>trailheadapp__Archived__c</name>
     </fields>
     <fields>
-        <label><!-- Created At --></label>
+        <label></label>
         <name>trailheadapp__Created_At__c</name>
     </fields>
     <fields>
-        <label><!-- Created By Profile --></label>
+        <label></label>
         <name>trailheadapp__Created_By_Profile__c</name>
     </fields>
     <fields>
         <help>CE CHAMP N&apos;EST PLUS NÉCESSAIRE. MODIFIEZ LES PROPRIÉTÉS DE CE CHAMP SUR LA PRÉSENTATION DE PAGE ET DÉCOCHEZ LA CASE CORRESPONDANTE.</help>
-        <label><!-- Created By --></label>
+        <label></label>
         <name>trailheadapp__Creator_TH_SFID__c</name>
     </fields>
     <fields>
-        <label><!-- Description --></label>
+        <label></label>
         <name>trailheadapp__Description__c</name>
     </fields>
     <fields>
-        <label><!-- External Id --></label>
+        <label></label>
         <name>trailheadapp__External_Id__c</name>
     </fields>
     <fields>
-        <label><!-- Is Featured --></label>
+        <label></label>
         <name>trailheadapp__Featured__c</name>
     </fields>
     <fields>
-        <label><!-- API Name --></label>
+        <label></label>
         <name>trailheadapp__Slug__c</name>
     </fields>
     <fields>
-        <label><!-- URL --></label>
+        <label></label>
         <name>trailheadapp__URL__c</name>
     </fields>
     <fields>
-        <label><!-- Updated At --></label>
+        <label></label>
         <name>trailheadapp__Updated_At__c</name>
     </fields>
     <gender>Masculine</gender>
     <nameFieldLabel>Nom du Trailmix</nameFieldLabel>
     <startsWith>Consonant</startsWith>
     <webLinks>
-        <label><!-- Assign_Users --></label>
+        <label></label>
         <name>trailheadapp__Assign_Users</name>
     </webLinks>
     <webLinks>
-        <label><!-- Unassign_Users --></label>
+        <label></label>
         <name>trailheadapp__Unassign_Users</name>
     </webLinks>
 </CustomObjectTranslation>

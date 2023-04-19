@@ -6,17 +6,32 @@
         <value>Debug-Protokoll</value>
     </caseValues>
     <caseValues>
-        <caseType>Nominative</caseType>
-        <plural>true</plural>
-        <value>Debug-Protokolle</value>
-    </caseValues>
-    <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
         <value>Debug-Protokoll</value>
     </caseValues>
     <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Debug-Protokoll</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Debug-Protokolle</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Debug-Protokolle</value>
+    </caseValues>
+    <caseValues>
         <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Debug-Protokollen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
         <plural>true</plural>
         <value>Debug-Protokollen</value>
     </caseValues>
@@ -25,44 +40,29 @@
         <plural>false</plural>
         <value>Debug-Protokolls</value>
     </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>true</plural>
-        <value>Debug-Protokolle</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Debug-Protokoll</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>true</plural>
-        <value>Debug-Protokollen</value>
-    </caseValues>
     <fields>
-        <label><!-- Class --></label>
+        <label></label>
         <name>trailheadapp__Class__c</name>
     </fields>
     <fields>
         <help>Datum/Uhrzeit der Protokollmeldung.</help>
-        <label><!-- Datetime --></label>
+        <label></label>
         <name>trailheadapp__Datetime__c</name>
     </fields>
     <fields>
-        <label><!-- Message --></label>
+        <label></label>
         <name>trailheadapp__Message__c</name>
     </fields>
     <fields>
-        <label><!-- Method --></label>
+        <label></label>
         <name>trailheadapp__Method__c</name>
     </fields>
     <fields>
-        <label><!-- Severity --></label>
+        <label></label>
         <name>trailheadapp__Severity__c</name>
     </fields>
     <fields>
-        <label><!-- Transaction --></label>
+        <label></label>
         <name>trailheadapp__Transaction__c</name>
     </fields>
     <gender>Neuter</gender>

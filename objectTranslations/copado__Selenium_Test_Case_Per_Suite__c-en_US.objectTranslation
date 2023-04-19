@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label><!-- Order --></label>
+        <label></label>
         <name>copado__Order__c</name>
     </fields>
     <fields>
-        <label><!-- Selenium Test Case --></label>
+        <label></label>
         <name>copado__Selenium_Test_Case__c</name>
-        <relationshipLabel><!-- Selenium Test Cases per Suite --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Selenium Test Suite --></label>
+        <label></label>
         <name>copado__Selenium_Test_Suite__c</name>
-        <relationshipLabel><!-- Test Cases --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Test Dataset Name --></label>
+        <label></label>
         <name>copado__Test_Dataset_Name__c</name>
     </fields>
 </CustomObjectTranslation>

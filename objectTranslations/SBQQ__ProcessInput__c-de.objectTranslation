@@ -6,47 +6,47 @@
         <value>Prozesseingabe</value>
     </caseValues>
     <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Prozesseingabe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Prozesseingabe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Prozesseingabe</value>
+    </caseValues>
+    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Prozesseingaben</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value><!-- Prozesseingabe --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Prozesseingaben --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value><!-- Prozesseingabe --></value>
+        <value>Prozesseingaben</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Prozesseingaben --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value><!-- Prozesseingabe --></value>
+        <value>Prozesseingaben</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Prozesseingaben --></value>
+        <value>Prozesseingaben</value>
     </caseValues>
     <fields>
         <help>Aktivieren Sie dieses Kontrollkästchen, um diese Prozesseingabe zu aktivieren.</help>
-        <label><!-- Active --></label>
+        <label></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
-        <label><!-- Binary Choice --></label>
+        <label></label>
         <name>SBQQ__BinaryChoice__c</name>
         <picklistValues>
             <masterLabel>No</masterLabel>
@@ -59,7 +59,7 @@
     </fields>
     <fields>
         <help>Geben Sie an, welche Prozesseingabebedingungen erfüllt sein müssen.</help>
-        <label><!-- Conditions Met --></label>
+        <label></label>
         <name>SBQQ__ConditionsMet__c</name>
         <picklistValues>
             <masterLabel>All</masterLabel>
@@ -72,7 +72,7 @@
     </fields>
     <fields>
         <help>Angebotsfeld, aus dem der Standardwert für diese Eingabe stammt.</help>
-        <label><!-- Default Field --></label>
+        <label></label>
         <name>SBQQ__DefaultField__c</name>
         <picklistValues>
             <masterLabel>Bill To Country</masterLabel>
@@ -85,12 +85,12 @@
     </fields>
     <fields>
         <help>Geben Sie die Reihenfolge an, in der die Prozesseingabe angezeigt werden soll.</help>
-        <label><!-- Display Order --></label>
+        <label></label>
         <name>SBQQ__DisplayOrder__c</name>
     </fields>
     <fields>
         <help>Wählen Sie den API-Namen für das Feld aus, in das die Benutzereingabe eingegeben wird.</help>
-        <label><!-- Input Field --></label>
+        <label></label>
         <name>SBQQ__InputField__c</name>
         <picklistValues>
             <masterLabel>BinaryChoice__c</masterLabel>
@@ -103,17 +103,17 @@
     </fields>
     <fields>
         <help>Geben Sie einen numerischen Wert ein.</help>
-        <label><!-- Integer Input --></label>
+        <label></label>
         <name>SBQQ__IntegerInput__c</name>
     </fields>
     <fields>
         <help>Der Text, der dem Benutzer in der Eingabeaufforderung angezeigt werden soll.</help>
-        <label><!-- Label --></label>
+        <label></label>
         <name>SBQQ__Label__c</name>
     </fields>
     <fields>
         <help>Wählen Sie den Operator aus, der beim Vergleich der Angabe im &quot;Eingabefeld&quot; mit dem Produktfeld verwendet werden soll.</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -153,13 +153,13 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Process Input Condition --></label>
+        <label></label>
         <name>SBQQ__ProcessInputCondition__c</name>
-        <relationshipLabel><!-- Process Inputs --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Feld im Produktobjekt, das zum Filtern von Produkten verwendet wird, die mit dieser Eingabe übereinstimmen.</help>
-        <label><!-- Product Field --></label>
+        <label></label>
         <name>SBQQ__ProductField__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -176,14 +176,14 @@
     </fields>
     <fields>
         <help>Angebotsprozess, der Inhaber der Eingabe ist.</help>
-        <label><!-- Quote Process --></label>
+        <label></label>
         <name>SBQQ__QuoteProcess__c</name>
-        <relationshipLabel><!-- Process Inputs --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>Eingabename</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- Both Product Field and Operator must be set if either are set. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__ProductFieldAndOperatorSet</name>
     </validationRules>
 </CustomObjectTranslation>

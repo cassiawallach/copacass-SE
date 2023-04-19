@@ -10,18 +10,18 @@
     </caseValues>
     <fields>
         <help>Ação à qual esse filtro se aplica. O Valor em branco significa que o filtro é global.</help>
-        <label><!-- Action --></label>
+        <label></label>
         <name>SBQQ__Action__c</name>
-        <relationshipLabel><!-- Search Filters --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Ordem em que esse filtro é exibido na UI.</help>
-        <label><!-- Display Order --></label>
+        <label></label>
         <name>SBQQ__DisplayOrder__c</name>
     </fields>
     <fields>
         <help>Campo que adquire o valor para uso na filtragem.</help>
-        <label><!-- Filter Source Field --></label>
+        <label></label>
         <name>SBQQ__FilterSourceField__c</name>
         <picklistValues>
             <masterLabel>Status</masterLabel>
@@ -34,7 +34,7 @@
     </fields>
     <fields>
         <help>Objeto que adquire o valor para uso na filtragem.</help>
-        <label><!-- Filter Source Object --></label>
+        <label></label>
         <name>SBQQ__FilterSourceObject__c</name>
         <picklistValues>
             <masterLabel>Quote</masterLabel>
@@ -43,12 +43,12 @@
     </fields>
     <fields>
         <help>Valor estático usado na filtragem.</help>
-        <label><!-- Filter Value --></label>
+        <label></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>Especifique o campo que adquire o valor a ser usado ao determinar se o campo é oculto.</help>
-        <label><!-- Hidden Source Field --></label>
+        <label></label>
         <name>SBQQ__HiddenSourceField__c</name>
         <picklistValues>
             <masterLabel>Primary</masterLabel>
@@ -57,7 +57,7 @@
     </fields>
     <fields>
         <help>Especifique o objeto que adquire o valor a ser usado ao determinar se o campo é oculto.</help>
-        <label><!-- Hidden Source Object --></label>
+        <label></label>
         <name>SBQQ__HiddenSourceObject__c</name>
         <picklistValues>
             <masterLabel>Quote</masterLabel>
@@ -66,12 +66,12 @@
     </fields>
     <fields>
         <help>Selecione a caixa de seleção para definir esse filtro como oculto. Filtros ocultos não são exibidos na UI, mas contribuem para consultas de pesquisa.</help>
-        <label><!-- Hidden --></label>
+        <label></label>
         <name>SBQQ__Hidden__c</name>
     </fields>
     <fields>
         <help>Especifique o operador a ser usado com esse filtro.</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>between</masterLabel>
@@ -116,7 +116,7 @@
     </fields>
     <fields>
         <help>Especifique o campo a ser pesquisado.</help>
-        <label><!-- Target Field --></label>
+        <label></label>
         <name>SBQQ__TargetField__c</name>
         <picklistValues>
             <masterLabel>Name</masterLabel>
@@ -145,7 +145,7 @@
     </fields>
     <fields>
         <help>Especifique o objeto a ser pesquisado.</help>
-        <label><!-- Target Object --></label>
+        <label></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Asset</masterLabel>
@@ -163,11 +163,11 @@
     <gender>Masculine</gender>
     <nameFieldLabel>Nome do filtro</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- You must select Filter Source Object when Filter Source Field is selected. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Require_filter_object_for_filter_field</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- You must select Hidden Source Object when Hidden Source Field is selected. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Require_hidden_object_for_hidden_field</name>
     </validationRules>
 </CustomObjectTranslation>

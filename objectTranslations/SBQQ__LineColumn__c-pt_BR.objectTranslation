@@ -6,11 +6,11 @@
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value>Colunas de linhas</value>
+        <value>Colunas de linha</value>
     </caseValues>
     <fields>
         <help>Determina como o rótulo e os valores da coluna são alinhados.</help>
-        <label><!-- Alignment --></label>
+        <label></label>
         <name>SBQQ__Alignment__c</name>
         <picklistValues>
             <masterLabel>Center</masterLabel>
@@ -27,12 +27,12 @@
     </fields>
     <fields>
         <help>A quantidade de espaço em pixels entre a borda inferior e o conteúdo.</help>
-        <label><!-- Bottom Margin (px) --></label>
+        <label></label>
         <name>SBQQ__BottomMargin__c</name>
     </fields>
     <fields>
         <help>O campo que adquire o cabeçalho dinâmico para essa coluna.</help>
-        <label><!-- Column Heading Field --></label>
+        <label></label>
         <name>SBQQ__ColumnHeadingField__c</name>
         <picklistValues>
             <masterLabel>Type</masterLabel>
@@ -41,7 +41,7 @@
     </fields>
     <fields>
         <help>Campo no objeto de cotação que controla se essa coluna é impressa no documento PDF gerado.</help>
-        <label><!-- Conditional Print Field --></label>
+        <label></label>
         <name>SBQQ__ConditionalPrintField__c</name>
         <picklistValues>
             <masterLabel>Group Line Items</masterLabel>
@@ -50,22 +50,22 @@
     </fields>
     <fields>
         <help>Ordem em que a coluna que hospeda esse campo é exibida.</help>
-        <label><!-- Display Order --></label>
+        <label></label>
         <name>SBQQ__DisplayOrder__c</name>
     </fields>
     <fields>
         <help>A escala decimal para números na coluna é definida com base na maior precisão na coluna.</help>
-        <label><!-- Dynamic Number Scale --></label>
+        <label></label>
         <name>SBQQ__DynamicNumberScale__c</name>
     </fields>
     <fields>
         <help>Nome da API para o campo no objeto Linha de cotação que você deseja que seja exibido nessa coluna.</help>
-        <label><!-- Field Name --></label>
+        <label></label>
         <name>SBQQ__FieldName__c</name>
     </fields>
     <fields>
         <help>Selecione a família de fonte a ser aplicada a essa coluna. Deixar em branco herda do modelo.</help>
-        <label><!-- Font Family --></label>
+        <label></label>
         <name>SBQQ__FontFamily__c</name>
         <picklistValues>
             <masterLabel>Courier</masterLabel>
@@ -150,12 +150,12 @@
     </fields>
     <fields>
         <help>Especifique o tamanho da fonte (em pontos) para o texto nessa coluna. Deixar em branco herda do modelo.</help>
-        <label><!-- Font Size (pt) --></label>
+        <label></label>
         <name>SBQQ__FontSize__c</name>
     </fields>
     <fields>
         <help>Especifique o peso da fonte para o texto nessa coluna. Ao deixar em branco, &quot;Normal&quot; será assumido como padrão.</help>
-        <label><!-- Font Weight --></label>
+        <label></label>
         <name>SBQQ__FontWeight__c</name>
         <picklistValues>
             <masterLabel>Bold</masterLabel>
@@ -168,48 +168,48 @@
     </fields>
     <fields>
         <help>Especifique a cor (em Hex) para o texto no cabeçalho dessa coluna. Deixar em branco herda da cor do texto para essa coluna.</help>
-        <label><!-- Heading Text Color --></label>
+        <label></label>
         <name>SBQQ__HeadingTextColor__c</name>
     </fields>
     <fields>
         <help>Oculta o valor nessa coluna se o item de linha for uma Opção do produto.</help>
-        <label><!-- Hide On Product Options --></label>
+        <label></label>
         <name>SBQQ__HideOnComponents__c</name>
     </fields>
     <fields>
         <help>Quantidade de espaço em pixels entre a borda esquerda e o conteúdo.</help>
-        <label><!-- Left Margin (px) --></label>
+        <label></label>
         <name>SBQQ__LeftMargin__c</name>
     </fields>
     <fields>
         <help>Quantidade de espaço em pixels entre a borda direita e o conteúdo.</help>
-        <label><!-- Right Margin (px) --></label>
+        <label></label>
         <name>SBQQ__RightMargin__c</name>
     </fields>
     <fields>
         <help>Indica se esse campo deve ser acumulado na linha mestre. Aplica-se apenas se Acumular campo estiver especificado no modelo.</help>
-        <label><!-- Roll Up --></label>
+        <label></label>
         <name>SBQQ__RollUp__c</name>
     </fields>
     <fields>
         <help>Seção à qual essa coluna da linha se aplica. Nenhuma seção significa que a coluna aplica-se a todas as seções.</help>
-        <label><!-- Section --></label>
+        <label></label>
         <name>SBQQ__Section__c</name>
-        <relationshipLabel><!-- Line Columns --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Selecione a caixa de seleção para esse campo ser impresso na própria linha. Use isso para campos de texto longo, como a descrição do produto.</help>
-        <label><!-- Separate Line --></label>
+        <label></label>
         <name>SBQQ__SeparateLine__c</name>
     </fields>
     <fields>
         <help>Rótulo de resumo para o nível do subgrupo.</help>
-        <label><!-- Sub Group Summary Label --></label>
+        <label></label>
         <name>SBQQ__SubGroupSummaryLabel__c</name>
     </fields>
     <fields>
         <help>Especifique o peso da fonte para texto na linha de resumo para essa coluna. Ao deixar em branco, o peso da fonte será assumido como padrão para a coluna em geral.</help>
-        <label><!-- Summary Font Weight --></label>
+        <label></label>
         <name>SBQQ__SummaryFontWeight__c</name>
         <picklistValues>
             <masterLabel>Bold</masterLabel>
@@ -222,7 +222,7 @@
     </fields>
     <fields>
         <help>Função usada para resumir valores nessa coluna.</help>
-        <label><!-- Summary Function --></label>
+        <label></label>
         <name>SBQQ__SummaryFunction__c</name>
         <picklistValues>
             <masterLabel>SUM</masterLabel>
@@ -231,12 +231,12 @@
     </fields>
     <fields>
         <help>Saída de rótulo para essa coluna na linha de resumo.</help>
-        <label><!-- Summary Label --></label>
+        <label></label>
         <name>SBQQ__SummaryLabel__c</name>
     </fields>
     <fields>
         <help>Define o nível em que essa coluna deve ser resumida.</help>
-        <label><!-- Summary Level --></label>
+        <label></label>
         <name>SBQQ__SummaryLevel__c</name>
         <picklistValues>
             <masterLabel>All</masterLabel>
@@ -249,44 +249,44 @@
     </fields>
     <fields>
         <help>Especifique a cor (em Hex) para o segundo plano da célula na linha de resumo dessa coluna. Deixar em branco herda da cor de sombreamento para o modelo.</help>
-        <label><!-- Summary Shading Color --></label>
+        <label></label>
         <name>SBQQ__SummaryShadingColor__c</name>
     </fields>
     <fields>
         <help>Especifique a cor (em Hex) para o texto na linha de resumo dessa coluna. Deixar em branco herda da cor do texto para essa coluna.</help>
-        <label><!-- Summary Text Color --></label>
+        <label></label>
         <name>SBQQ__SummaryTextColor__c</name>
     </fields>
     <fields>
         <help>Modelo em que esse campo deve ser exibido.</help>
-        <label><!-- Template --></label>
+        <label></label>
         <name>SBQQ__Template__c</name>
-        <relationshipLabel><!-- Line Columns --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Especifique a cor (em Hex) para o texto nessa coluna. Deixar em branco herda do modelo.</help>
-        <label><!-- Text Color --></label>
+        <label></label>
         <name>SBQQ__TextColor__c</name>
     </fields>
     <fields>
         <help>Quantidade de espaço em pixels entre a borda superior e o conteúdo.</help>
-        <label><!-- Top Margin (px) --></label>
+        <label></label>
         <name>SBQQ__TopMargin__c</name>
     </fields>
     <fields>
         <help>Selecione a caixa de seleção para a coluna exibida condicionalmente a fim de substituir outra coluna. Ao deixar essa caixa desmarcada, a largura dessa coluna será realocada quando ela for oculta para outra coluna, mantendo, assim, a largura da tabela inalterada.</help>
-        <label><!-- Discard Width When Hidden --></label>
+        <label></label>
         <name>SBQQ__WidthDiscardedWhenHidden__c</name>
     </fields>
     <fields>
         <help>Largura (percentual) da coluna assumida por esse campo.</help>
-        <label><!-- Width --></label>
+        <label></label>
         <name>SBQQ__Width__c</name>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>Cabeçalho da coluna</nameFieldLabel>
     <webLinks>
-        <label><!-- Translate --></label>
+        <label></label>
         <name>SBQQ__Translate</name>
     </webLinks>
 </CustomObjectTranslation>

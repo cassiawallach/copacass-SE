@@ -10,18 +10,18 @@
     </caseValues>
     <fields>
         <help>Acción a la que se aplica este filtro. Un valor en blanco significa que el filtro es global.</help>
-        <label><!-- Action --></label>
+        <label></label>
         <name>SBQQ__Action__c</name>
-        <relationshipLabel><!-- Search Filters --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>El orden en el que este filtro se muestra en la interfaz de usuario.</help>
-        <label><!-- Display Order --></label>
+        <label></label>
         <name>SBQQ__DisplayOrder__c</name>
     </fields>
     <fields>
         <help>Campo que origina el valor para utilizar en el filtrado.</help>
-        <label><!-- Filter Source Field --></label>
+        <label></label>
         <name>SBQQ__FilterSourceField__c</name>
         <picklistValues>
             <masterLabel>Status</masterLabel>
@@ -34,7 +34,7 @@
     </fields>
     <fields>
         <help>Objeto que origina el valor para utilizar en el filtrado.</help>
-        <label><!-- Filter Source Object --></label>
+        <label></label>
         <name>SBQQ__FilterSourceObject__c</name>
         <picklistValues>
             <masterLabel>Quote</masterLabel>
@@ -43,12 +43,12 @@
     </fields>
     <fields>
         <help>Valor estático empleado en el filtrado.</help>
-        <label><!-- Filter Value --></label>
+        <label></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>Especifique el campo que origina el valor para utilizar al determinar si el filtro está oculto.</help>
-        <label><!-- Hidden Source Field --></label>
+        <label></label>
         <name>SBQQ__HiddenSourceField__c</name>
         <picklistValues>
             <masterLabel>Primary</masterLabel>
@@ -57,7 +57,7 @@
     </fields>
     <fields>
         <help>Especifique el objeto que origina el valor para utilizar al determinar si el filtro está oculto.</help>
-        <label><!-- Hidden Source Object --></label>
+        <label></label>
         <name>SBQQ__HiddenSourceObject__c</name>
         <picklistValues>
             <masterLabel>Quote</masterLabel>
@@ -66,12 +66,12 @@
     </fields>
     <fields>
         <help>Seleccione la casilla de verificación para marcar este filtro como oculto. Los filtros ocultos no se muestran en la interfaz de usuario pero contribuyen en las consultas de búsqueda.</help>
-        <label><!-- Hidden --></label>
+        <label></label>
         <name>SBQQ__Hidden__c</name>
     </fields>
     <fields>
         <help>Seleccione el operador para utilizar con este filtro.</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>between</masterLabel>
@@ -116,7 +116,7 @@
     </fields>
     <fields>
         <help>Especifique el campo para buscar.</help>
-        <label><!-- Target Field --></label>
+        <label></label>
         <name>SBQQ__TargetField__c</name>
         <picklistValues>
             <masterLabel>Name</masterLabel>
@@ -145,7 +145,7 @@
     </fields>
     <fields>
         <help>Especifique el objeto para buscar.</help>
-        <label><!-- Target Object --></label>
+        <label></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Asset</masterLabel>
@@ -163,11 +163,11 @@
     <gender>Masculine</gender>
     <nameFieldLabel>Nombre de filtro</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- You must select Filter Source Object when Filter Source Field is selected. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Require_filter_object_for_filter_field</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- You must select Hidden Source Object when Hidden Source Field is selected. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Require_hidden_object_for_hidden_field</name>
     </validationRules>
 </CustomObjectTranslation>

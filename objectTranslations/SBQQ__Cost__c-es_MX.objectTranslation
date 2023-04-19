@@ -10,18 +10,18 @@
     </caseValues>
     <fields>
         <help>Seleccione la casilla de verificación para activar el costo.</help>
-        <label><!-- Active --></label>
+        <label></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Producto asociado con este costo.</help>
-        <label><!-- Product --></label>
+        <label></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel><!-- Costs --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Ingrese el costo unitario</help>
-        <label><!-- Unit Cost --></label>
+        <label></label>
         <name>SBQQ__UnitCost__c</name>
     </fields>
     <gender>Masculine</gender>

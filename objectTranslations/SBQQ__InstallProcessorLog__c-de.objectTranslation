@@ -6,53 +6,53 @@
         <value>Protokoll des Installationsverarbeitungsprogramms</value>
     </caseValues>
     <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Protokoll des Installationsverarbeitungsprogramms</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Protokoll des Installationsverarbeitungsprogramms</value>
+    </caseValues>
+    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Protokolle des Installationsverarbeitungsprogramms</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value><!-- Protokoll des Installationsverarbeitungsprogramms --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Protokolle des Installationsverarbeitungsprogramms --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value><!-- Protokoll des Installationsverarbeitungsprogramms --></value>
+        <value>Protokolle des Installationsverarbeitungsprogramms</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Protokolle des Installationsverarbeitungsprogramms --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value><!-- Protokoll des Installationsverarbeitungsprogramms --></value>
+        <value>Protokolle des Installationsverarbeitungsprogramms</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Protokolle des Installationsverarbeitungsprogramms --></value>
+        <value>Protokollen des Installationsverarbeitungsprogramms</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Protokolls des Installationsverarbeitungsprogramms</value>
     </caseValues>
     <fields>
         <help>Name der Methode, die innerhalb des Installationsskripts ausgeführt wird</help>
-        <label><!-- Method Name --></label>
+        <label></label>
         <name>SBQQ__MethodName__c</name>
     </fields>
     <fields>
         <help>Zeitstempel für die Ausführung der Methode</help>
-        <label><!-- Time --></label>
+        <label></label>
         <name>SBQQ__Time__c</name>
     </fields>
     <fields>
         <help>Paketversion zum Zeitpunkt der Methodenausführung</help>
-        <label><!-- Version --></label>
+        <label></label>
         <name>SBQQ__Version__c</name>
     </fields>
     <gender>Neuter</gender>

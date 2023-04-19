@@ -9,19 +9,19 @@
         <value>Bicycles</value>
     </caseValues>
     <fields>
-        <label><!-- Type --></label>
+        <label></label>
         <name>Type__c</name>
         <picklistValues>
             <masterLabel>Dirt</masterLabel>
-            <translation><!-- Dirt --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Motor</masterLabel>
-            <translation><!-- Motor --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Road</masterLabel>
-            <translation><!-- Road --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
     <startsWith>Consonant</startsWith>

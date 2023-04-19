@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label><!-- Action --></label>
+        <label></label>
         <name>copado__Action__c</name>
     </fields>
     <fields>
-        <label><!-- DeployAPIName --></label>
+        <label></label>
         <name>copado__DeployAPIName__c</name>
     </fields>
     <fields>
-        <label><!-- Job Template API Name --></label>
+        <label></label>
         <name>copado__Job_Template__c</name>
     </fields>
     <fields>
-        <label><!-- PackageCreateApiName --></label>
+        <label></label>
         <name>copado__PackageCreateApiName__c</name>
     </fields>
     <fields>
-        <label><!-- PackageImportAPIName --></label>
+        <label></label>
         <name>copado__PackageImportAPIName__c</name>
     </fields>
     <fields>
-        <label><!-- PackageVersionCreateApiName --></label>
+        <label></label>
         <name>copado__PackageVersionCreateApiName__c</name>
     </fields>
     <fields>
-        <label><!-- PackageVersionPublishAPIName --></label>
+        <label></label>
         <name>copado__PackageVersionPublishAPIName__c</name>
     </fields>
     <fields>
-        <label><!-- PlatformName --></label>
+        <label></label>
         <name>copado__PlatformName__c</name>
     </fields>
     <fields>
-        <label><!-- Platform Configuration --></label>
+        <label></label>
         <name>copado__Platform_Configuration__c</name>
-        <relationshipLabel><!-- MultiCloudAutomations --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- PromoteAPIName --></label>
+        <label></label>
         <name>copado__PromoteAPIName__c</name>
     </fields>
 </CustomObjectTranslation>

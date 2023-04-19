@@ -10,22 +10,22 @@
     </caseValues>
     <fields>
         <help>Indique que cette clause de devis peut être utilisée.</help>
-        <label><!-- Active --></label>
+        <label></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Peut être saisie uniquement si Conditions remplies est Personnalisé. Saisissez une combinaison de numéros d&apos;index de condition de clause, AND, OR et des parenthèses (ex.: (123 AND 124) AND 125).</help>
-        <label><!-- Advanced Condition --></label>
+        <label></label>
         <name>SBQQ__AdvancedCondition__c</name>
     </fields>
     <fields>
         <help>Contenu du texte de cette clause.</help>
-        <label><!-- Body --></label>
+        <label></label>
         <name>SBQQ__Body__c</name>
     </fields>
     <fields>
         <help>Sélectionnez le comportement de vos conditions : Toutes correspond à AND, N&apos;importe correspond à OR, Personnalisé combine AND et OR.</help>
-        <label><!-- Conditions Met --></label>
+        <label></label>
         <name>SBQQ__ConditionsMet__c</name>
         <picklistValues>
             <masterLabel>All</masterLabel>
@@ -42,35 +42,35 @@
     </fields>
     <fields>
         <help>Détermine si les clauses du devis peuvent être modifiées par un utilisateur.</help>
-        <label><!-- Locked --></label>
+        <label></label>
         <name>SBQQ__Locked__c</name>
     </fields>
     <fields>
         <help>Clause parente de cette clause.</help>
-        <label><!-- Parent Term --></label>
+        <label></label>
         <name>SBQQ__ParentTerm__c</name>
-        <relationshipLabel><!-- Sub Terms --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Spécifie l&apos;ordre dans lequel les clauses sont imprimées dans le document du devis.</help>
-        <label><!-- Print Order --></label>
+        <label></label>
         <name>SBQQ__PrintOrder__c</name>
     </fields>
     <fields>
         <help>Devis auquel cette clause s&apos;applique. Si la clause est standard, laissez ce champ vide.</help>
-        <label><!-- Quote --></label>
+        <label></label>
         <name>SBQQ__Quote__c</name>
-        <relationshipLabel><!-- Quote Terms --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Spécifie la clause standard qui est modifiée.</help>
-        <label><!-- Standard Term --></label>
+        <label></label>
         <name>SBQQ__StandardTerm__c</name>
-        <relationshipLabel><!-- Modified Terms --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Statut de la clause du devis.</help>
-        <label><!-- Status --></label>
+        <label></label>
         <name>SBQQ__Status__c</name>
         <picklistValues>
             <masterLabel>Approved</masterLabel>
@@ -91,20 +91,20 @@
     </fields>
     <fields>
         <help>Contenu du modèle auquel cette clause s&apos;applique.</help>
-        <label><!-- Template Content --></label>
+        <label></label>
         <name>SBQQ__TemplateContent__c</name>
-        <relationshipLabel><!-- Quote Terms --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Indique si la clause est standard, personnalisée ou modifiée.</help>
-        <label><!-- Type --></label>
+        <label></label>
         <name>SBQQ__Type__c</name>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>N° de clause</nameFieldLabel>
     <startsWith>Consonant</startsWith>
     <webLinks>
-        <label><!-- Translate --></label>
+        <label></label>
         <name>SBQQ__Translate</name>
     </webLinks>
 </CustomObjectTranslation>

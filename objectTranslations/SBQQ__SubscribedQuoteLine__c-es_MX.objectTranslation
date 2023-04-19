@@ -10,41 +10,41 @@
     </caseValues>
     <fields>
         <help>Indica si el registro del activo suscrito está activo.</help>
-        <label><!-- Active --></label>
+        <label></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Cantidad presupuestada en la partida de activo de presupuesto.</help>
-        <label><!-- Asset Quote Line Quantity --></label>
+        <label></label>
         <name>SBQQ__AssetQuoteLineQuantity__c</name>
     </fields>
     <fields>
         <help>Partida de presupuesto de activo cubierta por una partida de presupuesto de suscripción.</help>
-        <label><!-- Asset Quote Line --></label>
+        <label></label>
         <name>SBQQ__AssetQuoteLine__c</name>
-        <relationshipLabel><!-- Asset Quote Lines --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Identifica el presupuesto para las partidas de presupuesto.</help>
-        <label><!-- Quote --></label>
+        <label></label>
         <name>SBQQ__Quote__c</name>
-        <relationshipLabel><!-- Quote --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Precio unitario empleado en el cálculo de Porcentaje del total.</help>
-        <label><!-- Subscription Base Price --></label>
+        <label></label>
         <name>SBQQ__SubscriptionBasePrice__c</name>
     </fields>
     <fields>
         <help>Total de neto de la Partida de presupuesto de suscripción.</help>
-        <label><!-- Subscription Net Total --></label>
+        <label></label>
         <name>SBQQ__SubscriptionNetTotal__c</name>
     </fields>
     <fields>
         <help>Partida de presupuesto de suscripción que cubre la partida de presupuesto de activo.</help>
-        <label><!-- Subscription Quote Line --></label>
+        <label></label>
         <name>SBQQ__SubscriptionQuoteLine__c</name>
-        <relationshipLabel><!-- Subscribed Quote Lines (Subscription Quote Line) --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>Nº de Partida de presupuesto suscrita</nameFieldLabel>

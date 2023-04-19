@@ -6,7 +6,7 @@
     </caseValues>
     <fields>
         <help>この SolutionGroup の説明を入力します。</help>
-        <label><!-- Description --></label>
+        <label></label>
         <name>SBQQ__Description__c</name>
     </fields>
     <nameFieldLabel>グループ名</nameFieldLabel>

@@ -6,13 +6,13 @@
     </caseValues>
     <fields>
         <help>この条件を実行するカスタムアクション。</help>
-        <label><!-- Custom Action --></label>
+        <label></label>
         <name>SBQQ__CustomAction__c</name>
-        <relationshipLabel><!-- Custom Action Conditions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>[値] 項目に入力した値が含まれる項目を選択します。</help>
-        <label><!-- Field --></label>
+        <label></label>
         <name>SBQQ__Field__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -21,12 +21,12 @@
     </fields>
     <fields>
         <help>選択した演算子を使用して選択した項目で照合する値を入力します。</help>
-        <label><!-- Filter Value --></label>
+        <label></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>項目を値と比較するときに適用する演算子を選択します。</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -66,12 +66,12 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- ParentConditionIsActive --></label>
+        <label></label>
         <name>SBQQ__ParentActionIsActive__c</name>
     </fields>
     <fields>
         <help>条件の評価対象となるオブジェクト。</help>
-        <label><!-- Target Object --></label>
+        <label></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Product</masterLabel>

@@ -10,7 +10,7 @@
     </caseValues>
     <fields>
         <help>Ingrese el descuento máximo permitido para esta categoría de productos.</help>
-        <label><!-- Max Discount (%) --></label>
+        <label></label>
         <name>SBQQ__MaxDiscountRate__c</name>
     </fields>
     <gender>Feminine</gender>

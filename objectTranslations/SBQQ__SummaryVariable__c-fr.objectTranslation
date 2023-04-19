@@ -10,7 +10,7 @@
     </caseValues>
     <fields>
         <help>Champ Ligne de devis auquel la fonction d&apos;agrégation s&apos;applique.</help>
-        <label><!-- Aggregate Field --></label>
+        <label></label>
         <name>SBQQ__AggregateField__c</name>
         <picklistValues>
             <masterLabel>Quantity</masterLabel>
@@ -19,7 +19,7 @@
     </fields>
     <fields>
         <help>Fonction d&apos;agrégation utilisée pour calculer cette variable.</help>
-        <label><!-- Aggregate Function --></label>
+        <label></label>
         <name>SBQQ__AggregateFunction__c</name>
         <picklistValues>
             <masterLabel>Average</masterLabel>
@@ -44,13 +44,13 @@
     </fields>
     <fields>
         <help>Une autre variable de synthèse à composer avec cette variable de synthèse si votre condition est basée sur les deux résultats.</help>
-        <label><!-- Variable Element --></label>
+        <label></label>
         <name>SBQQ__CombineWith__c</name>
-        <relationshipLabel><!-- Composed By --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Spécifiez comment cette variable doit être composée avec l&apos;Élément de variable ou l&apos;Élément de valeur.</help>
-        <label><!-- Composite Operator --></label>
+        <label></label>
         <name>SBQQ__CompositeOperator__c</name>
         <picklistValues>
             <masterLabel>Add</masterLabel>
@@ -71,7 +71,7 @@
     </fields>
     <fields>
         <help>Si vous souhaitez limiter davantage les enregistrements en fonction d&apos;un champ de devis, sélectionnez le champ que vous souhaitez comparer au champ équivalent dans le devis.</help>
-        <label><!-- Constraint Field --></label>
+        <label></label>
         <name>SBQQ__ConstraintField__c</name>
         <picklistValues>
             <masterLabel>Status</masterLabel>
@@ -84,7 +84,7 @@
     </fields>
     <fields>
         <help>Sélectionnez le champ à utiliser lors du filtrage des éléments à inclure dans cette variable de synthèse.</help>
-        <label><!-- Filter Field --></label>
+        <label></label>
         <name>SBQQ__FilterField__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -97,12 +97,12 @@
     </fields>
     <fields>
         <help>Saisissez la valeur qui doit correspondre dans ce filtre.</help>
-        <label><!-- Filter Value --></label>
+        <label></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>Sélectionnez l&apos;opérateur à utiliser dans votre filtre.</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -143,7 +143,7 @@
     </fields>
     <fields>
         <help>Saisissez l&apos;étendue de votre variable de synthèse.</help>
-        <label><!-- Scope --></label>
+        <label></label>
         <name>SBQQ__Scope__c</name>
         <picklistValues>
             <masterLabel>Assets</masterLabel>
@@ -156,7 +156,7 @@
     </fields>
     <fields>
         <help>Sélectionnez l&apos;objet que vous souhaitez agréger.</help>
-        <label><!-- Target Object --></label>
+        <label></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Asset</masterLabel>
@@ -177,7 +177,7 @@
     </fields>
     <fields>
         <help>Saisissez la valeur à utiliser dans l&apos;opération de composition.</help>
-        <label><!-- Value Element --></label>
+        <label></label>
         <name>SBQQ__ValueElement__c</name>
     </fields>
     <gender>Feminine</gender>

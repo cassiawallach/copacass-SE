@@ -10,84 +10,84 @@
     </caseValues>
     <fields>
         <help>La cuenta del cliente para este presupuesto. Toma como valor predeterminado la cuenta para la oportunidad al crear un presupuesto.</help>
-        <label><!-- Account --></label>
+        <label></label>
         <name>SBQQ__Account__c</name>
-        <relationshipLabel><!-- Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Importe descontado adicionalmente en este presupuesto de forma manual.</help>
-        <label><!-- Addl. Disc. Amount --></label>
+        <label></label>
         <name>SBQQ__AdditionalDiscountAmount__c</name>
     </fields>
     <fields>
         <help>Descuento de cliente medio (en porcentaje) para este presupuesto.</help>
-        <label><!-- Avg. Customer Disc. (%) --></label>
+        <label></label>
         <name>SBQQ__AverageCustomerDiscount__c</name>
     </fields>
     <fields>
         <help>Descuento de socio medio (en porcentaje) para este presupuesto.</help>
-        <label><!-- Avg. Partner Disc. (%) --></label>
+        <label></label>
         <name>SBQQ__AveragePartnerDiscount__c</name>
     </fields>
     <fields>
         <help>Indica la cantidad en cada lote si los productos se venden por lotes.</help>
-        <label><!-- Batch Quantity --></label>
+        <label></label>
         <name>SBQQ__BatchQuantity__c</name>
     </fields>
     <fields>
         <help>Ciudad de la dirección de Facturar a para este presupuesto.</help>
-        <label><!-- Bill To City --></label>
+        <label></label>
         <name>SBQQ__BillingCity__c</name>
     </fields>
     <fields>
         <help>País de la dirección de Facturar a para este presupuesto.</help>
-        <label><!-- Bill To Country --></label>
+        <label></label>
         <name>SBQQ__BillingCountry__c</name>
     </fields>
     <fields>
         <help>Nombre de la dirección de Facturar a.</help>
-        <label><!-- Bill To Name --></label>
+        <label></label>
         <name>SBQQ__BillingName__c</name>
     </fields>
     <fields>
         <help>Código postal de la dirección de Facturar a para este presupuesto.</help>
-        <label><!-- Bill To Postal Code --></label>
+        <label></label>
         <name>SBQQ__BillingPostalCode__c</name>
     </fields>
     <fields>
         <help>Estado/provincia de la dirección de Facturar a para este presupuesto.</help>
-        <label><!-- Bill To State --></label>
+        <label></label>
         <name>SBQQ__BillingState__c</name>
     </fields>
     <fields>
         <help>Parte de la calle de la dirección de Facturar a para este presupuesto.</help>
-        <label><!-- Bill To Street --></label>
+        <label></label>
         <name>SBQQ__BillingStreet__c</name>
     </fields>
     <fields>
         <help>Resumen del importe del cliente.</help>
-        <label><!-- Customer Amount --></label>
+        <label></label>
         <name>SBQQ__CustomerAmount__c</name>
     </fields>
     <fields>
         <help>Descuento de cliente adicional ampliado al cliente en este presupuesto. Podrá invalidar este valor en el nivel de partida individual. Cualquier partida que no tenga descuentos adicionales especificados explícitamente tomarán este valor como predeterminado.</help>
-        <label><!-- Additional  Disc. (%) --></label>
+        <label></label>
         <name>SBQQ__CustomerDiscount__c</name>
     </fields>
     <fields>
         <help>Número de días que el presupuesto estuvo abierto.</help>
-        <label><!-- Days Quote Open --></label>
+        <label></label>
         <name>SBQQ__DaysQuoteOpen__c</name>
     </fields>
     <fields>
         <help>Plantilla que debe utilizarse con este presupuesto. Salesforce CPQ utilizará este valor como predeterminado de la selección de plantilla en la pantalla &quot;Generar documento&quot;.</help>
-        <label><!-- Default Template --></label>
+        <label></label>
         <name>SBQQ__DefaultTemplate__c</name>
-        <relationshipLabel><!-- Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Método empleado para entregar productos en este presupuesto.</help>
-        <label><!-- Delivery Method --></label>
+        <label></label>
         <name>SBQQ__DeliveryMethod__c</name>
         <picklistValues>
             <masterLabel>Download</masterLabel>
@@ -100,90 +100,90 @@
     </fields>
     <fields>
         <help>Descuento de distribuidor que se aplica a este presupuesto a no ser que se invalide en el nivel de la partida.</help>
-        <label><!-- Distributor Discount --></label>
+        <label></label>
         <name>SBQQ__DistributorDiscount__c</name>
     </fields>
     <fields>
         <help>Id. del registro Documento que contiene el documento generado.</help>
-        <label><!-- Document Id --></label>
+        <label></label>
         <name>SBQQ__DocumentId__c</name>
     </fields>
     <fields>
         <help>Si tiene una plantilla de email específica para utilizar con documentos generados y enviados por email desde este presupuesto, ingrese aquí el Id. de la plantilla de email.</help>
-        <label><!-- Email Template Id --></label>
+        <label></label>
         <name>SBQQ__EmailTemplateId__c</name>
     </fields>
     <fields>
         <help>Fecha de finalización de las suscripciones en este grupo.</help>
-        <label><!-- End Date --></label>
+        <label></label>
         <name>SBQQ__EndDate__c</name>
     </fields>
     <fields>
         <help>Fecha tras la que el presupuesto ya no es válido.</help>
-        <label><!-- Expires On --></label>
+        <label></label>
         <name>SBQQ__ExpirationDate__c</name>
     </fields>
     <fields>
         <help>Se emplea en productos con segmentos múltiples para prorratear el primer segmento.</help>
-        <label><!-- First Segment Term End Date --></label>
+        <label></label>
         <name>SBQQ__FirstSegmentTermEndDate__c</name>
     </fields>
     <fields>
         <help>Introducción que puede imprimirse en el documento PDF generado.</help>
-        <label><!-- Introduction --></label>
+        <label></label>
         <name>SBQQ__Introduction__c</name>
     </fields>
     <fields>
         <help>Número de partidas de este presupuesto.</help>
-        <label><!-- Line Item Count --></label>
+        <label></label>
         <name>SBQQ__LineItemCount__c</name>
     </fields>
     <fields>
         <help>Importe de lista total para cada partida no opcional de este presupuesto.</help>
-        <label><!-- List Amount --></label>
+        <label></label>
         <name>SBQQ__ListAmount__c</name>
     </fields>
     <fields>
         <help>Tasa de sobreprecio predeterminada aplicada a partidas de este presupuesto. Podrá invalidar este valor en el nivel de grupos y partidas.</help>
-        <label><!-- Markup (%) --></label>
+        <label></label>
         <name>SBQQ__MarkupRate__c</name>
     </fields>
     <fields>
         <help>Contrato principal con productos de suscripción de este presupuesto que tienen una terminación compartida.</help>
-        <label><!-- Master Contract --></label>
+        <label></label>
         <name>SBQQ__MasterContract__c</name>
-        <relationshipLabel><!-- Co-Terminated Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Importe neto total para cada partida no opcional de este presupuesto.</help>
-        <label><!-- Net Amount --></label>
+        <label></label>
         <name>SBQQ__NetAmount__c</name>
     </fields>
     <fields>
         <help>Notas impresas en el documento PDF generado.</help>
-        <label><!-- Notes --></label>
+        <label></label>
         <name>SBQQ__Notes__c</name>
     </fields>
     <fields>
         <help>Oportunidad que se está presupuestando.</help>
-        <label><!-- Opportunity --></label>
+        <label></label>
         <name>SBQQ__Opportunity__c</name>
-        <relationshipLabel><!-- Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Si este registro Presupuesto representa una acción Corrección: Presupuesto repetido, utilice este campo para vincular con el presupuesto original.</help>
-        <label><!-- Original Quote --></label>
+        <label></label>
         <name>SBQQ__OriginalQuote__c</name>
-        <relationshipLabel><!-- WebAmend: Re-Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Descuento ampliado al socio en esta oportunidad.</help>
-        <label><!-- Partner Discount --></label>
+        <label></label>
         <name>SBQQ__PartnerDiscount__c</name>
     </fields>
     <fields>
         <help>Condiciones que rigen el pago de las partidas de este presupuesto.</help>
-        <label><!-- Payment Terms --></label>
+        <label></label>
         <name>SBQQ__PaymentTerms__c</name>
         <picklistValues>
             <masterLabel>Due on receipt</masterLabel>
@@ -212,80 +212,80 @@
     </fields>
     <fields>
         <help>La lista de precios asociada con este presupuesto web.</help>
-        <label><!-- Price Book --></label>
+        <label></label>
         <name>SBQQ__PriceBook__c</name>
-        <relationshipLabel><!-- Web Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Si este presupuesto no está vinculado a una oportunidad con una lista de precios, este campo almacena el Id. de la lista de precios para el presupuesto.</help>
-        <label><!-- Pricebook Id --></label>
+        <label></label>
         <name>SBQQ__PricebookId__c</name>
     </fields>
     <fields>
         <help>Contacto principal para el presupuesto. El nombre de esta persona aparecerá en el documento de presupuesto generado.</help>
-        <label><!-- Primary Contact --></label>
+        <label></label>
         <name>SBQQ__PrimaryContact__c</name>
-        <relationshipLabel><!-- Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Id. del proceso de venta guiado para utilizar con este presupuesto, si lo hubiera.</help>
-        <label><!-- Quote Process Id --></label>
+        <label></label>
         <name>SBQQ__QuoteProcessId__c</name>
     </fields>
     <fields>
         <help>Almacena un Id. de plantilla de presupuesto si se especifica una para utilizar al generar los documentos PDF de presupuestos.</help>
-        <label><!-- Quote Template Id --></label>
+        <label></label>
         <name>SBQQ__QuoteTemplateId__c</name>
     </fields>
     <fields>
         <help>Importe total de partidas no opcionales antes de aplicar descuentos adicionales.</help>
-        <label><!-- Regular Amount --></label>
+        <label></label>
         <name>SBQQ__RegularAmount__c</name>
     </fields>
     <fields>
         <help>Representante de ventas responsable de este presupuesto si es diferente del usuario que es propietario del registro Presupuesto.</help>
-        <label><!-- Sales Rep --></label>
+        <label></label>
         <name>SBQQ__SalesRep__c</name>
-        <relationshipLabel><!-- Web Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Indica si este presupuesto web es de autoservicio.</help>
-        <label><!-- Self Serviced --></label>
+        <label></label>
         <name>SBQQ__SelfServiced__c</name>
     </fields>
     <fields>
         <help>Ciudad de la dirección de Enviar a para este presupuesto.</help>
-        <label><!-- Ship To City --></label>
+        <label></label>
         <name>SBQQ__ShippingCity__c</name>
     </fields>
     <fields>
         <help>País de la dirección de Enviar a para este presupuesto.</help>
-        <label><!-- Ship To Country --></label>
+        <label></label>
         <name>SBQQ__ShippingCountry__c</name>
     </fields>
     <fields>
         <help>Nombre de la dirección de Enviar a para este presupuesto.</help>
-        <label><!-- Ship To Name --></label>
+        <label></label>
         <name>SBQQ__ShippingName__c</name>
     </fields>
     <fields>
         <help>Código postal de la dirección de Enviar a para este presupuesto.</help>
-        <label><!-- Ship To Postal Code --></label>
+        <label></label>
         <name>SBQQ__ShippingPostalCode__c</name>
     </fields>
     <fields>
         <help>Estado/provincia de la dirección de Enviar a para este presupuesto.</help>
-        <label><!-- Ship To State --></label>
+        <label></label>
         <name>SBQQ__ShippingState__c</name>
     </fields>
     <fields>
         <help>Calle de la dirección de Enviar a para este presupuesto.</help>
-        <label><!-- Ship To Street --></label>
+        <label></label>
         <name>SBQQ__ShippingStreet__c</name>
     </fields>
     <fields>
         <help>Estado de la firma electrónica.</help>
-        <label><!-- Signature Status --></label>
+        <label></label>
         <name>SBQQ__SignatureStatus__c</name>
         <picklistValues>
             <masterLabel>Expired</masterLabel>
@@ -310,12 +310,12 @@
     </fields>
     <fields>
         <help>Fecha de inicio de la suscripción en este presupuesto.</help>
-        <label><!-- Start Date --></label>
+        <label></label>
         <name>SBQQ__StartDate__c</name>
     </fields>
     <fields>
         <help>Estado que indica el punto en el que se encuentra el presupuesto en su ciclo de vida.</help>
-        <label><!-- Status --></label>
+        <label></label>
         <name>SBQQ__Status__c</name>
         <picklistValues>
             <masterLabel>Accepted</masterLabel>
@@ -348,22 +348,22 @@
     </fields>
     <fields>
         <help>Plazo de suscripción empleado para prorratear productos aptos.</help>
-        <label><!-- Subscription Term --></label>
+        <label></label>
         <name>SBQQ__SubscriptionTerm__c</name>
     </fields>
     <fields>
         <help>Ingrese el importe de cliente que desee para calcular automáticamente descuentos adicionales en partidas aptas para recibir descuentos.</help>
-        <label><!-- Target Customer Amount --></label>
+        <label></label>
         <name>SBQQ__TargetCustomerAmount__c</name>
     </fields>
     <fields>
         <help>Importe total de descuentos de cliente. Incluye cualquier tasa contratada, por volumen o compuesta y descuentos adicionales.</help>
-        <label><!-- Total Customer Disc. Amount --></label>
+        <label></label>
         <name>SBQQ__TotalCustomerDiscountAmount__c</name>
     </fields>
     <fields>
         <help>Tipo de presupuesto.</help>
-        <label><!-- Type --></label>
+        <label></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Amendment</masterLabel>
@@ -384,29 +384,29 @@
     </fields>
     <fields>
         <help>Seleccione la casilla de verificación para mostrar la marca de agua en el documento del presupuesto.</help>
-        <label><!-- Watermark Shown --></label>
+        <label></label>
         <name>SBQQ__WatermarkShown__c</name>
     </fields>
     <gender>Masculine</gender>
     <nameFieldLabel>Nº de presupuesto</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- First Segment Term End Date must fall between Quote Start Date and Quote End Date --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Invalid_First_Segment_Term_End_Date_WQ</name>
     </validationRules>
     <webLinks>
-        <label><!-- Edit_Lines --></label>
+        <label></label>
         <name>SBQQ__Edit_Lines</name>
     </webLinks>
     <webLinks>
-        <label><!-- GenerateDocument --></label>
+        <label></label>
         <name>SBQQ__GenerateDocument</name>
     </webLinks>
     <webLinks>
-        <label><!-- RefreshMultiplePrices --></label>
+        <label></label>
         <name>SBQQ__RefreshMultiplePrices</name>
     </webLinks>
     <webLinks>
-        <label><!-- RefreshPrices --></label>
+        <label></label>
         <name>SBQQ__RefreshPrices</name>
     </webLinks>
 </CustomObjectTranslation>

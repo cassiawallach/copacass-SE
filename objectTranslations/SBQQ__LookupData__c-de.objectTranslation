@@ -13,55 +13,55 @@
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
-        <value><!-- Nachschlagedaten --></value>
+        <value>Nachschlagedaten</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Nachschlagedaten --></value>
+        <value>Nachschlagedaten</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
-        <value><!-- Nachschlagedaten --></value>
+        <value>Nachschlagedaten</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Nachschlagedaten --></value>
+        <value>Nachschlagedaten</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>false</plural>
-        <value><!-- Nachschlagedaten --></value>
+        <value>Nachschlagedaten</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Nachschlagedaten --></value>
+        <value>Nachschlagedaten</value>
     </caseValues>
     <fields>
-        <label><!-- Category --></label>
+        <label></label>
         <name>SBQQ__Category__c</name>
     </fields>
     <fields>
-        <label><!-- Message --></label>
+        <label></label>
         <name>SBQQ__Message__c</name>
     </fields>
     <fields>
         <help>Für die Verwendung von Produktauswahlregeln; gibt das Produkt an, für das die Produktaktion erfolgt.</help>
-        <label><!-- Product --></label>
+        <label></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel><!-- Lookup Data --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Für Produktauswahlregeln; gibt an, dass die Aktion erforderlich ist.</help>
-        <label><!-- Required --></label>
+        <label></label>
         <name>SBQQ__Required__c</name>
     </fields>
     <fields>
         <help>Für die Verwendung von Produktauswahlregeln; gibt die Art der Aktion an, die für das Produkt ausgeführt wird.</help>
-        <label><!-- Type --></label>
+        <label></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Add</masterLabel>
@@ -113,7 +113,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Value --></label>
+        <label></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <gender>Feminine</gender>

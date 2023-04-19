@@ -6,17 +6,22 @@
         <value>Trail</value>
     </caseValues>
     <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Trail</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Trail</value>
+    </caseValues>
+    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Trails</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value>Trail</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
         <plural>true</plural>
         <value>Trails</value>
     </caseValues>
@@ -29,11 +34,6 @@
         <caseType>Genitive</caseType>
         <plural>true</plural>
         <value>Trails</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Trail</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
@@ -41,36 +41,36 @@
         <value>Trails</value>
     </caseValues>
     <fields>
-        <label><!-- API Name --></label>
+        <label></label>
         <name>trailheadapp__API_Name__c</name>
     </fields>
     <fields>
-        <label><!-- Archived --></label>
+        <label></label>
         <name>trailheadapp__Archived__c</name>
     </fields>
     <fields>
-        <label><!-- Trail Icon --></label>
+        <label></label>
         <name>trailheadapp__Badge_Icon__c</name>
     </fields>
     <fields>
-        <label><!-- Created At --></label>
+        <label></label>
         <name>trailheadapp__Created_At__c</name>
     </fields>
     <fields>
-        <label><!-- Description --></label>
+        <label></label>
         <name>trailheadapp__Description__c</name>
     </fields>
     <fields>
         <help>Dieses Feld ist veraltet und wird nicht mehr verwendet.</help>
-        <label><!-- External Id --></label>
+        <label></label>
         <name>trailheadapp__External_Id__c</name>
     </fields>
     <fields>
-        <label><!-- Icon --></label>
+        <label></label>
         <name>trailheadapp__Icon__c</name>
     </fields>
     <fields>
-        <label><!-- Level --></label>
+        <label></label>
         <name>trailheadapp__Level__c</name>
         <picklistValues>
             <masterLabel>Advanced</masterLabel>
@@ -86,23 +86,23 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Namespace --></label>
+        <label></label>
         <name>trailheadapp__Namespace__c</name>
     </fields>
     <fields>
-        <label><!-- Products --></label>
+        <label></label>
         <name>trailheadapp__Products__c</name>
     </fields>
     <fields>
-        <label><!-- Roles --></label>
+        <label></label>
         <name>trailheadapp__Roles__c</name>
     </fields>
     <fields>
-        <label><!-- Tags --></label>
+        <label></label>
         <name>trailheadapp__Tags__c</name>
     </fields>
     <fields>
-        <label><!-- URL --></label>
+        <label></label>
         <name>trailheadapp__URL__c</name>
     </fields>
     <gender>Masculine</gender>

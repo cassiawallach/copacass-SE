@@ -8,6 +8,6 @@
     </values>
     <values>
         <field>copadometrics__Site_Dashboard_URL__c</field>
-        <value xsi:nil="true"/>
+        <value xsi:type="xsd:string">https://tableau.backend.copado.com/t/Copado_APO/views/DevOps360/Overview?:showAppBanner=false&amp;:display_count=n&amp;:showVizHome=n&amp;:origin=viz_share_link&amp;:embed=y</value>
     </values>
 </CustomMetadata>

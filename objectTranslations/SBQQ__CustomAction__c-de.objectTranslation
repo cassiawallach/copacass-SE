@@ -6,43 +6,43 @@
         <value>Benutzerdefinierte Aktion</value>
     </caseValues>
     <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Benutzerdefinierte Aktion</value>
+    </caseValues>
+    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Benutzerdefinierte Aktionen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value><!-- Benutzerdefinierte Aktion --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Benutzerdefinierte Aktionen --></value>
+        <value>Benutzerdefinierte Aktionen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
-        <value><!-- Benutzerdefinierte Aktion --></value>
+        <value>Benutzerdefinierten Aktion</value>
     </caseValues>
     <caseValues>
-        <caseType>Genitive</caseType>
+        <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Benutzerdefinierte Aktionen --></value>
+        <value>Benutzerdefinierten Aktionen</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>false</plural>
-        <value><!-- Benutzerdefinierte Aktion --></value>
+        <value>Benutzerdefinierter Aktion</value>
     </caseValues>
     <caseValues>
-        <caseType>Dative</caseType>
+        <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Benutzerdefinierte Aktionen --></value>
+        <value>Benutzerdefinierter Aktionen</value>
     </caseValues>
     <fields>
         <help>Aktion, die diese benutzerdefinierte Aktion durchführt.</help>
-        <label><!-- Action --></label>
+        <label></label>
         <name>SBQQ__Action__c</name>
         <picklistValues>
             <masterLabel>Add Favorites</masterLabel>
@@ -223,22 +223,22 @@
     </fields>
     <fields>
         <help>Aktivieren Sie das Kontrollkästchen, um diese Aktion verfügbar zu machen.</help>
-        <label><!-- Active --></label>
+        <label></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
         <help>Gibt an, dass diese benutzerdefinierte Aktion eine Branding-Schaltfläche ist. Wirkt sich nur auf den Stil nicht verschachtelter Aktionen aus.</help>
-        <label><!-- Brand Button --></label>
+        <label></label>
         <name>SBQQ__BrandButton__c</name>
     </fields>
     <fields>
         <help>CSS-Klasse der benutzerdefinierten Aktion zur einfachen Identifikation in HTML.</help>
-        <label><!-- Class --></label>
+        <label></label>
         <name>SBQQ__Class__c</name>
     </fields>
     <fields>
         <help>Wählen Sie das Verhalten für Ihre Bedingungen: &quot;Alle&quot; entspricht AND, &quot;Beliebige&quot; entspricht OR.</help>
-        <label><!-- Conditions Met --></label>
+        <label></label>
         <name>SBQQ__ConditionsMet__c</name>
         <picklistValues>
             <masterLabel>All</masterLabel>
@@ -251,32 +251,32 @@
     </fields>
     <fields>
         <help>Aktivieren Sie das Kontrollkästchen, um die Aktion als die standardmäßige Überschreibaktion festzulegen.</help>
-        <label><!-- Default --></label>
+        <label></label>
         <name>SBQQ__Default__c</name>
     </fields>
     <fields>
         <help>Geben Sie den Wert ein, der angezeigt werden soll, wenn der Benutzer den Mauszeiger auf die Schaltfläche &quot;Benutzerdefinierte Aktion&quot; bewegt.</help>
-        <label><!-- Description --></label>
+        <label></label>
         <name>SBQQ__Description__c</name>
     </fields>
     <fields>
         <help>Die Reihenfolge, in der diese Aktionen in der Benutzeroberfläche angezeigt werden.</help>
-        <label><!-- Display Order --></label>
+        <label></label>
         <name>SBQQ__DisplayOrder__c</name>
     </fields>
     <fields>
         <help>Methodenname für den Klickhandler dieser benutzerdefinierten Aktion.</help>
-        <label><!-- Event Handler Name --></label>
+        <label></label>
         <name>SBQQ__EventHandlerName__c</name>
     </fields>
     <fields>
         <help>CSS-Klassenname für das Symbol dieser benutzerdefinierten Aktion.</help>
-        <label><!-- Icon Class --></label>
+        <label></label>
         <name>SBQQ__IconClass__c</name>
     </fields>
     <fields>
         <help>Symbol für diese benutzerdefinierte Aktion</help>
-        <label><!-- Icon --></label>
+        <label></label>
         <name>SBQQ__Icon__c</name>
         <picklistValues>
             <masterLabel>3dots</masterLabel>
@@ -961,7 +961,7 @@
     </fields>
     <fields>
         <help>Bezeichnung, die für diese Aktion in der Benutzeroberfläche angezeigt wird.</help>
-        <label><!-- Label --></label>
+        <label></label>
         <name>SBQQ__Label__c</name>
         <picklistValues>
             <masterLabel>Add Favorites</masterLabel>
@@ -1134,7 +1134,7 @@
     </fields>
     <fields>
         <help>Position dieser Aktion auf der Seite.</help>
-        <label><!-- Location --></label>
+        <label></label>
         <name>SBQQ__Location__c</name>
         <picklistValues>
             <masterLabel>Account Panel</masterLabel>
@@ -1183,12 +1183,12 @@
     </fields>
     <fields>
         <help>Seitenname für diese benutzerdefinierte Aktion.</help>
-        <label><!-- Page Handler Name --></label>
+        <label></label>
         <name>SBQQ__PageHandlerName__c</name>
     </fields>
     <fields>
         <help>Die Seite, zu der die benutzerdefinierte Aktion hinzugefügt werden soll.</help>
-        <label><!-- Page --></label>
+        <label></label>
         <name>SBQQ__Page__c</name>
         <picklistValues>
             <masterLabel>Account Detail</masterLabel>
@@ -1225,18 +1225,18 @@
     </fields>
     <fields>
         <help>Verweis auf die übergeordnete benutzerdefinierte Aktion, unter der diese Aktion gruppiert ist.</help>
-        <label><!-- Parent Custom Action --></label>
+        <label></label>
         <name>SBQQ__ParentCustomAction__c</name>
-        <relationshipLabel><!-- Custom Actions --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>URL, zu dem der Benutzer nach der erfolgreichen Ausführung zurückgeleitet wird. Gilt nicht für alle Aktionen.</help>
-        <label><!-- Return URL --></label>
+        <label></label>
         <name>SBQQ__ReturnURL__c</name>
     </fields>
     <fields>
         <help>Objekt, das Ziel dieser Aktion ist.</help>
-        <label><!-- Target Object --></label>
+        <label></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Asset</masterLabel>
@@ -1257,7 +1257,7 @@
     </fields>
     <fields>
         <help>Benutzeroberflächenelement, als das diese benutzerdefinierte Aktion dargestellt wird.</help>
-        <label><!-- Type --></label>
+        <label></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Button</masterLabel>
@@ -1274,7 +1274,7 @@
     </fields>
     <fields>
         <help>Methode der Navigation zum URL.</help>
-        <label><!-- URL Target --></label>
+        <label></label>
         <name>SBQQ__URLTarget__c</name>
         <picklistValues>
             <masterLabel>Popup</masterLabel>
@@ -1287,17 +1287,17 @@
     </fields>
     <fields>
         <help>Geben Sie den URL an, zu dem navigiert werden soll. Abhängig von der ausgewählten Position haben Sie Zugriff auf Felder von Belegposten-, Gruppen- und Angebotsdatensätzen. Beispiele: http://www.salesforce.com, http://www.yoursite.com/{!Id} oder /{!SBQQ__Quote__c.Name}/{!SBQQ__YourCustomVar__c}</help>
-        <label><!-- URL --></label>
+        <label></label>
         <name>SBQQ__URL__c</name>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>Name</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- URL can&apos;t be empty for Custom Action &quot;Save and Navigate&quot; --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Non_empty_URL_for_Save_and_Navigate</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- URL target needs to be Replace Page for Custom Action &quot;Save and Navigate&quot; --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__URLTarget_for_Save_and_Navigate</name>
     </validationRules>
 </CustomObjectTranslation>

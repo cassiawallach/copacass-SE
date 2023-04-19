@@ -10,17 +10,17 @@
     </caseValues>
     <fields>
         <help>Nombre del método que se ejecuta dentro de la secuencia de comandos de instalación</help>
-        <label><!-- Method Name --></label>
+        <label></label>
         <name>SBQQ__MethodName__c</name>
     </fields>
     <fields>
         <help>Marca de hora para ejecutar el método</help>
-        <label><!-- Time --></label>
+        <label></label>
         <name>SBQQ__Time__c</name>
     </fields>
     <fields>
         <help>Versión del paquete en el momento de ejecutar el método</help>
-        <label><!-- Version --></label>
+        <label></label>
         <name>SBQQ__Version__c</name>
     </fields>
     <gender>Masculine</gender>

@@ -10,84 +10,84 @@
     </caseValues>
     <fields>
         <help>Compte client de ce devis. Applique par défaut le compte de l&apos;opportunité lors de la création d&apos;un devis.</help>
-        <label><!-- Account --></label>
+        <label></label>
         <name>SBQQ__Account__c</name>
-        <relationshipLabel><!-- Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Montant après remise supplémentaire manuelle sur ce devis.</help>
-        <label><!-- Addl. Disc. Amount --></label>
+        <label></label>
         <name>SBQQ__AdditionalDiscountAmount__c</name>
     </fields>
     <fields>
         <help>Moyenne de remise client (en pourcentage) de ce devis.</help>
-        <label><!-- Avg. Customer Disc. (%) --></label>
+        <label></label>
         <name>SBQQ__AverageCustomerDiscount__c</name>
     </fields>
     <fields>
         <help>Moyenne de la remise partenaire (en pourcentage) de ce devis.</help>
-        <label><!-- Avg. Partner Disc. (%) --></label>
+        <label></label>
         <name>SBQQ__AveragePartnerDiscount__c</name>
     </fields>
     <fields>
         <help>Indique la quantité dans chaque lot si les produits sont vendus par lots.</help>
-        <label><!-- Batch Quantity --></label>
+        <label></label>
         <name>SBQQ__BatchQuantity__c</name>
     </fields>
     <fields>
         <help>Ville de l&apos;adresse de facturation de ce devis.</help>
-        <label><!-- Bill To City --></label>
+        <label></label>
         <name>SBQQ__BillingCity__c</name>
     </fields>
     <fields>
         <help>Pays de l&apos;adresse de facturation de ce devis.</help>
-        <label><!-- Bill To Country --></label>
+        <label></label>
         <name>SBQQ__BillingCountry__c</name>
     </fields>
     <fields>
         <help>Nom de l&apos;adresse de facturation.</help>
-        <label><!-- Bill To Name --></label>
+        <label></label>
         <name>SBQQ__BillingName__c</name>
     </fields>
     <fields>
         <help>Code postal de l&apos;adresse de facturation de ce devis.</help>
-        <label><!-- Bill To Postal Code --></label>
+        <label></label>
         <name>SBQQ__BillingPostalCode__c</name>
     </fields>
     <fields>
         <help>Région/province de l&apos;adresse de facturation de ce devis.</help>
-        <label><!-- Bill To State --></label>
+        <label></label>
         <name>SBQQ__BillingState__c</name>
     </fields>
     <fields>
         <help>Partie Ville de l&apos;adresse de facturation de ce devis.</help>
-        <label><!-- Bill To Street --></label>
+        <label></label>
         <name>SBQQ__BillingStreet__c</name>
     </fields>
     <fields>
         <help>Récapitulatif de cumul du montant client.</help>
-        <label><!-- Customer Amount --></label>
+        <label></label>
         <name>SBQQ__CustomerAmount__c</name>
     </fields>
     <fields>
         <help>Remise supplémentaire étendue au client dans ce devis. Vous pouvez remplacer cette valeur au niveau de l&apos;élément de ligne individuel. Tout élément de ligne dans lequel aucune remise supplémentaire explicite n&apos;est spécifiée utilise par défaut cette valeur.</help>
-        <label><!-- Additional  Disc. (%) --></label>
+        <label></label>
         <name>SBQQ__CustomerDiscount__c</name>
     </fields>
     <fields>
         <help>Nombre de jours pendant lequel le devis a été ouvert.</help>
-        <label><!-- Days Quote Open --></label>
+        <label></label>
         <name>SBQQ__DaysQuoteOpen__c</name>
     </fields>
     <fields>
         <help>Modèle qui doit être utilisé avec ce devis. Salesforce CPQ utilise cette valeur pour appliquer par défaut la sélection du modèle sur l&apos;écran « Générer le document ».</help>
-        <label><!-- Default Template --></label>
+        <label></label>
         <name>SBQQ__DefaultTemplate__c</name>
-        <relationshipLabel><!-- Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Méthode utilisée pour livrer les produits de ce devis.</help>
-        <label><!-- Delivery Method --></label>
+        <label></label>
         <name>SBQQ__DeliveryMethod__c</name>
         <picklistValues>
             <masterLabel>Download</masterLabel>
@@ -100,90 +100,90 @@
     </fields>
     <fields>
         <help>Remise distributeur qui s&apos;applique à ce devis, sauf si elle est remplacée au niveau de l&apos;élément de ligne.</help>
-        <label><!-- Distributor Discount --></label>
+        <label></label>
         <name>SBQQ__DistributorDiscount__c</name>
     </fields>
     <fields>
         <help>ID de l&apos;enregistrement du document qui contient le document généré.</help>
-        <label><!-- Document Id --></label>
+        <label></label>
         <name>SBQQ__DocumentId__c</name>
     </fields>
     <fields>
         <help>Si vous avez un modèle d&apos;e-mail spécifique à utiliser pour les documents générés et envoyés par e-mail depuis ce devis, saisissez l&apos;ID de ce modèle ici.</help>
-        <label><!-- Email Template Id --></label>
+        <label></label>
         <name>SBQQ__EmailTemplateId__c</name>
     </fields>
     <fields>
         <help>Date de fin des abonnements dans ce groupe.</help>
-        <label><!-- End Date --></label>
+        <label></label>
         <name>SBQQ__EndDate__c</name>
     </fields>
     <fields>
         <help>Date à laquelle le devis n&apos;est plus valide.</help>
-        <label><!-- Expires On --></label>
+        <label></label>
         <name>SBQQ__ExpirationDate__c</name>
     </fields>
     <fields>
         <help>Utilisée avec des produits à segments multiples pour calculer au prorata le premier segment.</help>
-        <label><!-- First Segment Term End Date --></label>
+        <label></label>
         <name>SBQQ__FirstSegmentTermEndDate__c</name>
     </fields>
     <fields>
         <help>Introduction qui peut être imprimée sur le document PDF généré.</help>
-        <label><!-- Introduction --></label>
+        <label></label>
         <name>SBQQ__Introduction__c</name>
     </fields>
     <fields>
         <help>Nombre d&apos;éléments de ligne dans ce devis.</help>
-        <label><!-- Line Item Count --></label>
+        <label></label>
         <name>SBQQ__LineItemCount__c</name>
     </fields>
     <fields>
         <help>Montant catalogue total de chaque élément de ligne non facultatif de ce devis.</help>
-        <label><!-- List Amount --></label>
+        <label></label>
         <name>SBQQ__ListAmount__c</name>
     </fields>
     <fields>
         <help>Taux de marge par défaut appliqué aux éléments de ligne de ce devis. Vous pouvez remplacer cette valeur au niveau du groupe et de l&apos;élément de ligne.</help>
-        <label><!-- Markup (%) --></label>
+        <label></label>
         <name>SBQQ__MarkupRate__c</name>
     </fields>
     <fields>
         <help>Contrat principal avec lequel les produits d&apos;abonnement de ce devis ont des durées identiques</help>
-        <label><!-- Master Contract --></label>
+        <label></label>
         <name>SBQQ__MasterContract__c</name>
-        <relationshipLabel><!-- Co-Terminated Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Montant total net de chaque élément de ligne non facultatif dans ce devis.</help>
-        <label><!-- Net Amount --></label>
+        <label></label>
         <name>SBQQ__NetAmount__c</name>
     </fields>
     <fields>
         <help>Notes imprimées dans le document PDF généré.</help>
-        <label><!-- Notes --></label>
+        <label></label>
         <name>SBQQ__Notes__c</name>
     </fields>
     <fields>
         <help>Opportunité pour laquelle le devis est généré.</help>
-        <label><!-- Opportunity --></label>
+        <label></label>
         <name>SBQQ__Opportunity__c</name>
-        <relationshipLabel><!-- Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Si cet enregistrement Devis représente un nouveau devis d’amendement, utilisez ce champ pour le réassocier au devis d&apos;origine.</help>
-        <label><!-- Original Quote --></label>
+        <label></label>
         <name>SBQQ__OriginalQuote__c</name>
-        <relationshipLabel><!-- WebAmend: Re-Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Remise étendue au partenaire de cette opportunité.</help>
-        <label><!-- Partner Discount --></label>
+        <label></label>
         <name>SBQQ__PartnerDiscount__c</name>
     </fields>
     <fields>
         <help>Durée qui régit le paiement des éléments de ce devis.</help>
-        <label><!-- Payment Terms --></label>
+        <label></label>
         <name>SBQQ__PaymentTerms__c</name>
         <picklistValues>
             <masterLabel>Due on receipt</masterLabel>
@@ -212,80 +212,80 @@
     </fields>
     <fields>
         <help>Le catalogue de prix associé à ce devis Web.</help>
-        <label><!-- Price Book --></label>
+        <label></label>
         <name>SBQQ__PriceBook__c</name>
-        <relationshipLabel><!-- Web Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Si ce devis n&apos;est pas associé à une opportunité avec un catalogue de prix, ce champ stocke l&apos;ID du catalogue de prix du devis.</help>
-        <label><!-- Pricebook Id --></label>
+        <label></label>
         <name>SBQQ__PricebookId__c</name>
     </fields>
     <fields>
         <help>Contact principal du devis. Le nom de cette personne est affiché dans le document de devis généré.</help>
-        <label><!-- Primary Contact --></label>
+        <label></label>
         <name>SBQQ__PrimaryContact__c</name>
-        <relationshipLabel><!-- Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>ID du processus de vente guidée à utiliser avec ce devis, le cas échéant.</help>
-        <label><!-- Quote Process Id --></label>
+        <label></label>
         <name>SBQQ__QuoteProcessId__c</name>
     </fields>
     <fields>
         <help>Stocke un ID de modèle de devis, si un ID doit être spécifié lors de la génération de documents PDF de devis.</help>
-        <label><!-- Quote Template Id --></label>
+        <label></label>
         <name>SBQQ__QuoteTemplateId__c</name>
     </fields>
     <fields>
         <help>Montant total des éléments de ligne non facultatifs avant l&apos;application de remises supplémentaires.</help>
-        <label><!-- Regular Amount --></label>
+        <label></label>
         <name>SBQQ__RegularAmount__c</name>
     </fields>
     <fields>
         <help>Commercial responsable de ce devis, s&apos;il est différent de l&apos;utilisateur propriétaire de l&apos;enregistrement du devis.</help>
-        <label><!-- Sales Rep --></label>
+        <label></label>
         <name>SBQQ__SalesRep__c</name>
-        <relationshipLabel><!-- Web Quotes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Indique que ce devis Web est en libre-service.</help>
-        <label><!-- Self Serviced --></label>
+        <label></label>
         <name>SBQQ__SelfServiced__c</name>
     </fields>
     <fields>
         <help>Ville de l&apos;adresse de livraison de ce devis.</help>
-        <label><!-- Ship To City --></label>
+        <label></label>
         <name>SBQQ__ShippingCity__c</name>
     </fields>
     <fields>
         <help>Pays de l&apos;adresse de livraison de ce devis.</help>
-        <label><!-- Ship To Country --></label>
+        <label></label>
         <name>SBQQ__ShippingCountry__c</name>
     </fields>
     <fields>
         <help>Nom de l&apos;adresse de livraison de ce devis.</help>
-        <label><!-- Ship To Name --></label>
+        <label></label>
         <name>SBQQ__ShippingName__c</name>
     </fields>
     <fields>
         <help>Code postal de l&apos;adresse de livraison de ce devis.</help>
-        <label><!-- Ship To Postal Code --></label>
+        <label></label>
         <name>SBQQ__ShippingPostalCode__c</name>
     </fields>
     <fields>
         <help>Région/province de l&apos;adresse de livraison de ce devis.</help>
-        <label><!-- Ship To State --></label>
+        <label></label>
         <name>SBQQ__ShippingState__c</name>
     </fields>
     <fields>
         <help>Ville de l&apos;adresse de livraison de ce devis.</help>
-        <label><!-- Ship To Street --></label>
+        <label></label>
         <name>SBQQ__ShippingStreet__c</name>
     </fields>
     <fields>
         <help>Statut de la signature électronique.</help>
-        <label><!-- Signature Status --></label>
+        <label></label>
         <name>SBQQ__SignatureStatus__c</name>
         <picklistValues>
             <masterLabel>Expired</masterLabel>
@@ -310,12 +310,12 @@
     </fields>
     <fields>
         <help>Date de début des abonnements de ce devis.</help>
-        <label><!-- Start Date --></label>
+        <label></label>
         <name>SBQQ__StartDate__c</name>
     </fields>
     <fields>
         <help>Statut indiquant la position du devis dans son cycle de vie.</help>
-        <label><!-- Status --></label>
+        <label></label>
         <name>SBQQ__Status__c</name>
         <picklistValues>
             <masterLabel>Accepted</masterLabel>
@@ -348,22 +348,22 @@
     </fields>
     <fields>
         <help>Durée d&apos;abonnement utilisée pour calculer au prorata les produits éligibles.</help>
-        <label><!-- Subscription Term --></label>
+        <label></label>
         <name>SBQQ__SubscriptionTerm__c</name>
     </fields>
     <fields>
         <help>Saisissez le montant souhaité par le client pour calculer automatiquement une remise supplémentaire sur les éléments de ligne qui peuvent faire l&apos;objet d&apos;une remise.</help>
-        <label><!-- Target Customer Amount --></label>
+        <label></label>
         <name>SBQQ__TargetCustomerAmount__c</name>
     </fields>
     <fields>
         <help>Montant total de la remise client. Elle comprend toute remise contractée, sur volume, à taux composé et supplémentaire.</help>
-        <label><!-- Total Customer Disc. Amount --></label>
+        <label></label>
         <name>SBQQ__TotalCustomerDiscountAmount__c</name>
     </fields>
     <fields>
         <help>Le type du devis.</help>
-        <label><!-- Type --></label>
+        <label></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Amendment</masterLabel>
@@ -384,30 +384,30 @@
     </fields>
     <fields>
         <help>Sélectionnez cette case pour afficher le filigrane dans le document de devis.</help>
-        <label><!-- Watermark Shown --></label>
+        <label></label>
         <name>SBQQ__WatermarkShown__c</name>
     </fields>
     <gender>Masculine</gender>
     <nameFieldLabel>N° de devis</nameFieldLabel>
     <startsWith>Consonant</startsWith>
     <validationRules>
-        <errorMessage><!-- First Segment Term End Date must fall between Quote Start Date and Quote End Date --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Invalid_First_Segment_Term_End_Date_WQ</name>
     </validationRules>
     <webLinks>
-        <label><!-- Edit_Lines --></label>
+        <label></label>
         <name>SBQQ__Edit_Lines</name>
     </webLinks>
     <webLinks>
-        <label><!-- GenerateDocument --></label>
+        <label></label>
         <name>SBQQ__GenerateDocument</name>
     </webLinks>
     <webLinks>
-        <label><!-- RefreshMultiplePrices --></label>
+        <label></label>
         <name>SBQQ__RefreshMultiplePrices</name>
     </webLinks>
     <webLinks>
-        <label><!-- RefreshPrices --></label>
+        <label></label>
         <name>SBQQ__RefreshPrices</name>
     </webLinks>
 </CustomObjectTranslation>

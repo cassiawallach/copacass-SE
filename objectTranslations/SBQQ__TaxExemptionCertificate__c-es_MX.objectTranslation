@@ -9,69 +9,69 @@
         <value>Certificados de exención fiscal</value>
     </caseValues>
     <fields>
-        <label><!-- Account --></label>
+        <label></label>
         <name>SBQQ__Account__c</name>
-        <relationshipLabel><!-- Tax Exemption Certificates --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Un certificado activo establecerá el campo &quot;¿Exención fiscal?&quot; en el Activo a verdadero</help>
-        <label><!-- Active --></label>
+        <label></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
-        <label><!-- Certificate Number --></label>
+        <label></label>
         <name>SBQQ__CertificateNumber__c</name>
     </fields>
     <fields>
         <help>Opcional: para realizar un seguimiento de la dirección de la compañía asociada a este certificado</help>
-        <label><!-- Country --></label>
+        <label></label>
         <name>SBQQ__Country__c</name>
     </fields>
     <fields>
-        <label><!-- County --></label>
+        <label></label>
         <name>SBQQ__County__c</name>
     </fields>
     <fields>
-        <label><!-- Date Issued --></label>
+        <label></label>
         <name>SBQQ__DateIssued__c</name>
     </fields>
     <fields>
         <help>Solo se puede marcar un certificado como predeterminado si está activo</help>
-        <label><!-- Default --></label>
+        <label></label>
         <name>SBQQ__Default__c</name>
     </fields>
     <fields>
         <help>El nombre de compañía o nombre DBA asociado con el certificado</help>
-        <label><!-- Exempt Company Name --></label>
+        <label></label>
         <name>SBQQ__ExemptCompanyName__c</name>
     </fields>
     <fields>
-        <label><!-- Expiration Date --></label>
+        <label></label>
         <name>SBQQ__ExpirationDate__c</name>
     </fields>
     <fields>
         <help>La autoridad, como una agencia estatal o país (para organizaciones europeas), que emitió el certificado</help>
-        <label><!-- Issuing Authority --></label>
+        <label></label>
         <name>SBQQ__IssuingAuthority__c</name>
     </fields>
     <fields>
-        <label><!-- Notes --></label>
+        <label></label>
         <name>SBQQ__Notes__c</name>
     </fields>
     <fields>
-        <label><!-- Postal Code --></label>
+        <label></label>
         <name>SBQQ__PostalCode__c</name>
     </fields>
     <fields>
-        <label><!-- State --></label>
+        <label></label>
         <name>SBQQ__State__c</name>
     </fields>
     <fields>
-        <label><!-- Street Address_2 --></label>
+        <label></label>
         <name>SBQQ__StreetAddress_2__c</name>
     </fields>
     <fields>
-        <label><!-- Street Address --></label>
+        <label></label>
         <name>SBQQ__StreetAddress__c</name>
     </fields>
     <gender>Masculine</gender>

@@ -6,64 +6,64 @@
         <value>Zeiteinteilungsprotokoll</value>
     </caseValues>
     <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Zeiteinteilungsprotokoll</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Zeiteinteilungsprotokoll</value>
+    </caseValues>
+    <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <value>Zeiteinteilungsprotokolle</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value><!-- Zeiteinteilungsprotokoll --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Zeiteinteilungsprotokolle --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value><!-- Zeiteinteilungsprotokoll --></value>
+        <value>Zeiteinteilungsprotokolle</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Zeiteinteilungsprotokolle --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value><!-- Zeiteinteilungsprotokoll --></value>
+        <value>Zeiteinteilungsprotokolle</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Zeiteinteilungsprotokolle --></value>
+        <value>Zeiteinteilungsprotokollen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Zeiteinteilungsprotokolls</value>
     </caseValues>
     <fields>
-        <label><!-- Element --></label>
+        <label></label>
         <name>SBQQ__Element__c</name>
     </fields>
     <fields>
-        <label><!-- Finish --></label>
+        <label></label>
         <name>SBQQ__Finish__c</name>
     </fields>
     <fields>
         <help>Protokolleintrag</help>
-        <label><!-- Log --></label>
+        <label></label>
         <name>SBQQ__Log__c</name>
     </fields>
     <fields>
         <help>CPU-Zeit zu Anfang</help>
-        <label><!-- Start --></label>
+        <label></label>
         <name>SBQQ__Start__c</name>
     </fields>
     <fields>
-        <label><!-- Total CPU Time --></label>
+        <label></label>
         <name>SBQQ__Total__c</name>
     </fields>
     <fields>
-        <label><!-- URL --></label>
+        <label></label>
         <name>SBQQ__URL__c</name>
     </fields>
     <gender>Neuter</gender>

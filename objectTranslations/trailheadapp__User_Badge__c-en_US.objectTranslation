@@ -10,71 +10,71 @@
     </caseValues>
     <fields>
         <help>The record has been archived and is no longer available</help>
-        <label><!-- Archived --></label>
+        <label></label>
         <name>trailheadapp__Archived__c</name>
     </fields>
     <fields>
         <help>Represents the date the badge is assigned for the purposes of tracking a user&apos;s activity before they start working on it</help>
-        <label><!-- Assigned On Date --></label>
+        <label></label>
         <name>trailheadapp__Assigned_Date__c</name>
     </fields>
     <fields>
         <help>How long it took to complete from when it was first assigned or first attempted if not assigned.</help>
-        <label><!-- Duration to Complete (Days) --></label>
+        <label></label>
         <name>trailheadapp__Assigned_to_Complete__c</name>
     </fields>
     <fields>
-        <label><!-- Badge Icon --></label>
+        <label></label>
         <name>trailheadapp__Badge_Icon__c</name>
     </fields>
     <fields>
-        <label><!-- Badge --></label>
+        <label></label>
         <name>trailheadapp__Badge__c</name>
-        <relationshipLabel><!-- User Badge --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Represents the date the badge is due for the purposes of tracking the time left for a user to complete the badge.</help>
-        <label><!-- Due Date --></label>
+        <label></label>
         <name>trailheadapp__Due_Date__c</name>
     </fields>
     <fields>
-        <label><!-- External ID --></label>
+        <label></label>
         <name>trailheadapp__External_ID__c</name>
     </fields>
     <fields>
-        <label><!-- Finished Date --></label>
+        <label></label>
         <name>trailheadapp__Finished_Date__c</name>
     </fields>
     <fields>
-        <label><!-- First Attempted Date --></label>
+        <label></label>
         <name>trailheadapp__First_Attempted_Date__c</name>
     </fields>
     <fields>
-        <label><!-- Last Attempted Date --></label>
+        <label></label>
         <name>trailheadapp__Last_Attempted_Date__c</name>
     </fields>
     <fields>
         <help>Three types of status, &quot;Assigned&quot;, &quot;In Progress&quot;, or &quot;Completed&quot; are available to represent the status of a user&apos;s badge</help>
-        <label><!-- Status --></label>
+        <label></label>
         <name>trailheadapp__Status__c</name>
     </fields>
     <fields>
-        <label><!-- URL --></label>
+        <label></label>
         <name>trailheadapp__URL__c</name>
     </fields>
     <fields>
-        <label><!-- User --></label>
+        <label></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel><!-- User Badges --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <nameFieldLabel>User Badge ID</nameFieldLabel>
     <startsWith>Consonant</startsWith>
     <validationRules>
-        <errorMessage><!-- A user must exist. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>trailheadapp__User_Is_Required</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Not a valid status. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>trailheadapp__Validate_Status</name>
     </validationRules>
 </CustomObjectTranslation>

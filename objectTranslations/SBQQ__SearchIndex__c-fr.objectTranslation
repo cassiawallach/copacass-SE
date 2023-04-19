@@ -9,12 +9,12 @@
         <value>Index de recherche</value>
     </caseValues>
     <fields>
-        <label><!-- Localization --></label>
+        <label></label>
         <name>SBQQ__Localization__c</name>
-        <relationshipLabel><!-- Search Index --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Value --></label>
+        <label></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <gender>Masculine</gender>

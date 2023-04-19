@@ -5,33 +5,33 @@
         <value>Trailhead ユーザデータ</value>
     </caseValues>
     <fields>
-        <label><!-- Avatar --></label>
+        <label></label>
         <name>trailheadapp__Avatar__c</name>
     </fields>
     <fields>
-        <label><!-- External_Id --></label>
+        <label></label>
         <name>trailheadapp__External_Id__c</name>
     </fields>
     <fields>
-        <label><!-- Profile_URL --></label>
+        <label></label>
         <name>trailheadapp__Profile_URL__c</name>
     </fields>
     <fields>
-        <label><!-- Profile_Visibility --></label>
+        <label></label>
         <name>trailheadapp__Profile_Visibility__c</name>
     </fields>
     <fields>
-        <label><!-- Rank --></label>
+        <label></label>
         <name>trailheadapp__Rank__c</name>
     </fields>
     <fields>
-        <label><!-- Total_Points --></label>
+        <label></label>
         <name>trailheadapp__Total_Points__c</name>
     </fields>
     <fields>
-        <label><!-- User --></label>
+        <label></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel><!-- Trailhead Users Data --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <nameFieldLabel>Trailhead ユーザデータ名</nameFieldLabel>
 </CustomObjectTranslation>

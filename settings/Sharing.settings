@@ -2,11 +2,11 @@
 <SharingSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <deferGroupMembership>false</deferGroupMembership>
     <deferSharingRules>false</deferSharingRules>
-    <enableAccountRoleOptimization>true</enableAccountRoleOptimization>
-    <enableAssetSharing>true</enableAssetSharing>
+    <enableAccountRoleOptimization>false</enableAccountRoleOptimization>
+    <enableAssetSharing>false</enableAssetSharing>
     <enableCommunityUserVisibility>true</enableCommunityUserVisibility>
     <enableExternalSharingModel>true</enableExternalSharingModel>
-    <enableManagerGroups>false</enableManagerGroups>
+    <enableManagerGroups>true</enableManagerGroups>
     <enableManualUserRecordSharing>false</enableManualUserRecordSharing>
     <enablePartnerSuperUserAccess>false</enablePartnerSuperUserAccess>
     <enablePortalUserCaseSharing>true</enablePortalUserCaseSharing>

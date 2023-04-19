@@ -6,70 +6,70 @@
     </caseValues>
     <fields>
         <help>该记录已归档，不再可用。</help>
-        <label><!-- Archived --></label>
+        <label></label>
         <name>trailheadapp__Archived__c</name>
     </fields>
     <fields>
         <help>表示在用户开始处理徽章之前，为跟踪用户活动而分配徽章的日期。</help>
-        <label><!-- Assigned On Date --></label>
+        <label></label>
         <name>trailheadapp__Assigned_Date__c</name>
     </fields>
     <fields>
         <help>从第一次分配或第一次尝试（如果未分配）开始，需要多长时间才能完成。</help>
-        <label><!-- Duration to Complete (Days) --></label>
+        <label></label>
         <name>trailheadapp__Assigned_to_Complete__c</name>
     </fields>
     <fields>
-        <label><!-- Badge Icon --></label>
+        <label></label>
         <name>trailheadapp__Badge_Icon__c</name>
     </fields>
     <fields>
-        <label><!-- Badge --></label>
+        <label></label>
         <name>trailheadapp__Badge__c</name>
-        <relationshipLabel><!-- User Badge --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>表示徽章的到期日期，用于跟踪用户完成徽章的剩余时间。</help>
-        <label><!-- Due Date --></label>
+        <label></label>
         <name>trailheadapp__Due_Date__c</name>
     </fields>
     <fields>
-        <label><!-- External ID --></label>
+        <label></label>
         <name>trailheadapp__External_ID__c</name>
     </fields>
     <fields>
-        <label><!-- Finished Date --></label>
+        <label></label>
         <name>trailheadapp__Finished_Date__c</name>
     </fields>
     <fields>
-        <label><!-- First Attempted Date --></label>
+        <label></label>
         <name>trailheadapp__First_Attempted_Date__c</name>
     </fields>
     <fields>
-        <label><!-- Last Attempted Date --></label>
+        <label></label>
         <name>trailheadapp__Last_Attempted_Date__c</name>
     </fields>
     <fields>
         <help>“Assigned”、“In Progress”或“Completed”三种状态可用于表示用户徽章的状态。</help>
-        <label><!-- Status --></label>
+        <label></label>
         <name>trailheadapp__Status__c</name>
     </fields>
     <fields>
-        <label><!-- URL --></label>
+        <label></label>
         <name>trailheadapp__URL__c</name>
     </fields>
     <fields>
-        <label><!-- User --></label>
+        <label></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel><!-- User Badges --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <nameFieldLabel>用户徽章 ID</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- A user must exist. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>trailheadapp__User_Is_Required</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Not a valid status. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>trailheadapp__Validate_Status</name>
     </validationRules>
 </CustomObjectTranslation>

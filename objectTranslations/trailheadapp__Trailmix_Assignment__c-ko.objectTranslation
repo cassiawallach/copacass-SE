@@ -6,27 +6,27 @@
     </caseValues>
     <fields>
         <help>Trailmix를 완료해야 하는 날짜입니다.</help>
-        <label><!-- Due Date --></label>
+        <label></label>
         <name>trailheadapp__Due_At__c</name>
     </fields>
     <fields>
         <help>Trailmix를 완료해야 하는 날짜 및 시간입니다.</help>
-        <label><!-- Due Datetime --></label>
+        <label></label>
         <name>trailheadapp__Due_Datetime__c</name>
     </fields>
     <fields>
-        <label><!-- Status --></label>
+        <label></label>
         <name>trailheadapp__Status__c</name>
     </fields>
     <fields>
-        <label><!-- Trailmix --></label>
+        <label></label>
         <name>trailheadapp__Trailmix__c</name>
-        <relationshipLabel><!-- Trailmix Assignments --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- User --></label>
+        <label></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel><!-- Trailmix Assignments --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <nameFieldLabel>Trailmix 할당 ID</nameFieldLabel>
 </CustomObjectTranslation>

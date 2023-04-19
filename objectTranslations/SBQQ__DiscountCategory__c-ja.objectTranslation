@@ -6,7 +6,7 @@
     </caseValues>
     <fields>
         <help>この商品カテゴリで許容される最大割引を入力します。</help>
-        <label><!-- Max Discount (%) --></label>
+        <label></label>
         <name>SBQQ__MaxDiscountRate__c</name>
     </fields>
     <nameFieldLabel>カテゴリ名</nameFieldLabel>

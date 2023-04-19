@@ -2,73 +2,187 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <help>修正対象契約へのルックアップ。</help>
-        <label><!-- Amended Contract --></label>
+        <label></label>
         <name>SBQQ__AmendedContract__c</name>
-        <relationshipLabel><!-- Amendment Opportunities --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Salesforce CPQ では、この項目を使用して納入商品とサブスクリプションを自動的に変換します。</help>
-        <label><!-- Contracted --></label>
+        <label></label>
         <name>SBQQ__Contracted__c</name>
     </fields>
     <fields>
         <help>契約を作成せずに契約価格を作成する場合は、このチェックボックスをオンにします。</help>
-        <label><!-- Create Contracted Prices --></label>
+        <label></label>
         <name>SBQQ__CreateContractedPrices__c</name>
     </fields>
     <fields>
         <help>修正: 再見積トランザクションの一意の ID であり、元の主見積の ID です。</help>
-        <label><!-- Order Group ID --></label>
+        <label></label>
         <name>SBQQ__OrderGroupID__c</name>
     </fields>
     <fields>
         <help>主見積から注文を自動的に作成するには、このチェックボックスをオンにします。</help>
-        <label><!-- Ordered --></label>
+        <label></label>
         <name>SBQQ__Ordered__c</name>
     </fields>
     <fields>
         <help>Salesforce CPQ では、これを使用してこの商談の主見積を指し示します。</help>
-        <label><!-- Primary Quote --></label>
+        <label></label>
         <name>SBQQ__PrimaryQuote__c</name>
-        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Quote Pricebook Id --></label>
+        <label></label>
         <name>SBQQ__QuotePricebookId__c</name>
     </fields>
     <fields>
         <help>この商談が更新商談であることを示します。</help>
-        <label><!-- Renewal --></label>
+        <label></label>
         <name>SBQQ__Renewal__c</name>
     </fields>
     <fields>
         <help>この更新商談によって更新される契約。複数の契約がこの商談に積み上げ集計されている場合、これは主契約を指し示します。</help>
-        <label><!-- Renewed Contract --></label>
+        <label></label>
         <name>SBQQ__RenewedContract__c</name>
-        <relationshipLabel><!-- Renewal Opportunities --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
+    <layouts>
+        <layout>Opportunity Details Compact</layout>
+        <sections>
+            <label></label>
+            <section>ACV Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>CPQ/Contract Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>ClickDeploy</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Competitor Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Ebsta</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Financial Summary</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Lead Generation</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Lead Qualification</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mission Control Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Trial &amp; PoC Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sales Process Layout 2019</layout>
+        <sections>
+            <label></label>
+            <section>ACV Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>CPQ/Contract Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>ClickDeploy</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Competitor Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Ebsta</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Financial Summary</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Lead Generation</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Lead Qualification</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mission Control Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Trial &amp; PoC Information</section>
+        </sections>
+    </layouts>
     <webLinks>
-        <label><!-- Amend_Assets --></label>
+        <label></label>
         <name>SBQQ__Amend_Assets</name>
     </webLinks>
     <webLinks>
-        <label><!-- Amend_Contract --></label>
+        <label></label>
         <name>SBQQ__Amend_Contract</name>
     </webLinks>
     <webLinks>
-        <label><!-- CreateOrder --></label>
+        <label></label>
         <name>SBQQ__CreateOrder</name>
     </webLinks>
     <webLinks>
-        <label><!-- Include_Document --></label>
+        <label></label>
         <name>SBQQ__Include_Document</name>
     </webLinks>
     <webLinks>
-        <label><!-- Send_to_Slack --></label>
+        <label></label>
         <name>slackv2__Send_to_Slack</name>
     </webLinks>
     <webLinks>
-        <label><!-- Slack_Alerts --></label>
+        <label></label>
         <name>slackv2__Slack_Alerts</name>
     </webLinks>
 </CustomObjectTranslation>

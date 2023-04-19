@@ -10,25 +10,25 @@
     </caseValues>
     <fields>
         <help>Seleccione la entrada de proceso a la que pertenece el objeto.</help>
-        <label><!-- Process Input ID --></label>
+        <label></label>
         <name>SBQQ__ProcessInputID__c</name>
-        <relationshipLabel><!-- Process Input Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>El Id. del presupuesto al que pertenece este valor de entrada de proceso.</help>
-        <label><!-- Quote ID --></label>
+        <label></label>
         <name>SBQQ__QuoteId__c</name>
-        <relationshipLabel><!-- Process Input Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Este valor de entrada de proceso pertenece al usuario.</help>
-        <label><!-- UserID --></label>
+        <label></label>
         <name>SBQQ__UserID__c</name>
-        <relationshipLabel><!-- Process Input Values --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Esta es la respuesta al valor de la entrada de proceso.</help>
-        <label><!-- Value --></label>
+        <label></label>
         <name>SBQQ__Value__c</name>
     </fields>
     <gender>Masculine</gender>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Manage Rate Card Page --></label>
+        <name>amc__Manage_Rate_Card_Page</name>
+    </fieldSets>
+    <fields>
+        <help><!-- Identifies the Account this Rate Card relates to --></help>
+        <label><!-- Account --></label>
+        <name>amc__Account__c</name>
+        <relationshipLabel><!-- Rate Cards --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Rate Card Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label><!-- Manage_Rates --></label>
+        <name>amc__Manage_Rates</name>
+    </webLinks>
+</CustomObjectTranslation>

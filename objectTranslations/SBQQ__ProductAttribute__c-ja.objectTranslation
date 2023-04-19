@@ -6,7 +6,7 @@
     </caseValues>
     <fields>
         <help>サポートされていない項目</help>
-        <label><!-- Apply Immediately --></label>
+        <label></label>
         <name>SBQQ__AppliedImmediately__c</name>
         <picklistValues>
             <masterLabel>False</masterLabel>
@@ -19,7 +19,7 @@
     </fields>
     <fields>
         <help>サポートされていない項目</help>
-        <label><!-- Apply To Product Options --></label>
+        <label></label>
         <name>SBQQ__ApplyToProductOptions__c</name>
         <picklistValues>
             <masterLabel>False</masterLabel>
@@ -31,22 +31,22 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Attribute Set --></label>
+        <label></label>
         <name>SBQQ__AttributeSet__c</name>
-        <relationshipLabel><!-- Attribute Items --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>この商品属性が継承する設定属性。</help>
-        <label><!-- Configuration Attribute --></label>
+        <label></label>
         <lookupFilter>
-            <errorMessage><!-- The related configuration attribute must be global --></errorMessage>
+            <errorMessage></errorMessage>
         </lookupFilter>
         <name>SBQQ__Attribute__c</name>
-        <relationshipLabel><!-- Attribute Items --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>サポートされていない項目</help>
-        <label><!-- Auto-Select --></label>
+        <label></label>
         <name>SBQQ__AutoSelect__c</name>
         <picklistValues>
             <masterLabel>False</masterLabel>
@@ -59,12 +59,12 @@
     </fields>
     <fields>
         <help>サポートされていない項目</help>
-        <label><!-- Hidden Values --></label>
+        <label></label>
         <name>SBQQ__HiddenValues__c</name>
     </fields>
     <fields>
         <help>サポートされていない項目</help>
-        <label><!-- Hidden --></label>
+        <label></label>
         <name>SBQQ__Hidden__c</name>
         <picklistValues>
             <masterLabel>False</masterLabel>
@@ -77,7 +77,7 @@
     </fields>
     <fields>
         <help>サポートされていない項目</help>
-        <label><!-- Required --></label>
+        <label></label>
         <name>SBQQ__Required__c</name>
         <picklistValues>
             <masterLabel>False</masterLabel>
@@ -89,16 +89,16 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Sequence --></label>
+        <label></label>
         <name>SBQQ__Sequence__c</name>
     </fields>
     <fields>
         <help>サポートされていない項目</help>
-        <label><!-- Shown Values --></label>
+        <label></label>
         <name>SBQQ__ShownValues__c</name>
     </fields>
     <fields>
-        <label><!-- Target Field --></label>
+        <label></label>
         <name>SBQQ__TargetField__c</name>
     </fields>
     <nameFieldLabel>項目番号</nameFieldLabel>

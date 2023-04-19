@@ -10,12 +10,12 @@
     </caseValues>
     <fields>
         <help>URL vers une page VisualForce qui génère un contenu lorsque le type défini sur « Personnalisé ».</help>
-        <label><!-- Custom Source --></label>
+        <label></label>
         <name>SBQQ__CustomSource__c</name>
     </fields>
     <fields>
         <help>Famille de polices à utiliser lors de la restitution de ce contenu dans le document de devis PDF généré.</help>
-        <label><!-- Font Family --></label>
+        <label></label>
         <name>SBQQ__FontFamily__c</name>
         <picklistValues>
             <masterLabel>Courier</masterLabel>
@@ -100,22 +100,22 @@
     </fields>
     <fields>
         <help>Taille de police à utiliser lors de la restitution de ce contenu dans le document de devis PDF généré.</help>
-        <label><!-- Font Size --></label>
+        <label></label>
         <name>SBQQ__FontSize__c</name>
     </fields>
     <fields>
         <help>Contient le balisage si ce document est de type « Balisage ».</help>
-        <label><!-- Markup --></label>
+        <label></label>
         <name>SBQQ__Markup__c</name>
     </fields>
     <fields>
         <help>Version HTML d&apos;origine du contenu dans le champ Balisage.</help>
-        <label><!-- Raw Markup --></label>
+        <label></label>
         <name>SBQQ__RawMarkup__c</name>
     </fields>
     <fields>
         <help>Style du tableau utilisé pour les éléments de ligne. Standard (par défaut) = champs définis par l&apos;utilisateur sous la forme de colonnes avec les éléments de ligne répertoriés verticalement.</help>
-        <label><!-- Table Style --></label>
+        <label></label>
         <name>SBQQ__TableStyle__c</name>
         <picklistValues>
             <masterLabel>Price Dimensions as Columns</masterLabel>
@@ -132,12 +132,12 @@
     </fields>
     <fields>
         <help>Couleur par défaut (en valeur hexadécimale) appliquée au texte rendu dans ce contenu.</help>
-        <label><!-- Text Color --></label>
+        <label></label>
         <name>SBQQ__TextColor__c</name>
     </fields>
     <fields>
         <help>Type de ce contenu.</help>
-        <label><!-- Type --></label>
+        <label></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Custom</masterLabel>
@@ -160,7 +160,7 @@
     <nameFieldLabel>Nom du contenu</nameFieldLabel>
     <startsWith>Consonant</startsWith>
     <webLinks>
-        <label><!-- Translate --></label>
+        <label></label>
         <name>SBQQ__Translate</name>
     </webLinks>
 </CustomObjectTranslation>

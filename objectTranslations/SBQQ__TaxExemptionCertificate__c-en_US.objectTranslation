@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label><!-- Account --></label>
+        <label></label>
         <name>SBQQ__Account__c</name>
-        <relationshipLabel><!-- Tax Exemption Certificates --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <help><!-- An Active Certificate will make set the ‘Tax Exempt?’ field on the Active to true --></help>
-        <label><!-- Active --></label>
+        <help></help>
+        <label></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
-        <label><!-- Certificate Number --></label>
+        <label></label>
         <name>SBQQ__CertificateNumber__c</name>
     </fields>
     <fields>
-        <help><!-- ptional - to track the company address associated to the certificate --></help>
-        <label><!-- Country --></label>
+        <help></help>
+        <label></label>
         <name>SBQQ__Country__c</name>
     </fields>
     <fields>
-        <label><!-- County --></label>
+        <label></label>
         <name>SBQQ__County__c</name>
     </fields>
     <fields>
-        <label><!-- Date Issued --></label>
+        <label></label>
         <name>SBQQ__DateIssued__c</name>
     </fields>
     <fields>
-        <help><!-- A certificate can be marked as default only if it is active --></help>
-        <label><!-- Default --></label>
+        <help></help>
+        <label></label>
         <name>SBQQ__Default__c</name>
     </fields>
     <fields>
-        <help><!-- The company name or DBA name associated to the certificate --></help>
-        <label><!-- Exempt Company Name --></label>
+        <help></help>
+        <label></label>
         <name>SBQQ__ExemptCompanyName__c</name>
     </fields>
     <fields>
-        <label><!-- Expiration Date --></label>
+        <label></label>
         <name>SBQQ__ExpirationDate__c</name>
     </fields>
     <fields>
-        <help><!-- The authority, such as a government agency or country (for European organizations), that issued the certificate --></help>
-        <label><!-- Issuing Authority --></label>
+        <help></help>
+        <label></label>
         <name>SBQQ__IssuingAuthority__c</name>
     </fields>
     <fields>
-        <label><!-- Notes --></label>
+        <label></label>
         <name>SBQQ__Notes__c</name>
     </fields>
     <fields>
-        <label><!-- Postal Code --></label>
+        <label></label>
         <name>SBQQ__PostalCode__c</name>
     </fields>
     <fields>
-        <label><!-- State --></label>
+        <label></label>
         <name>SBQQ__State__c</name>
     </fields>
     <fields>
-        <label><!-- Street Address_2 --></label>
+        <label></label>
         <name>SBQQ__StreetAddress_2__c</name>
     </fields>
     <fields>
-        <label><!-- Street Address --></label>
+        <label></label>
         <name>SBQQ__StreetAddress__c</name>
     </fields>
 </CustomObjectTranslation>

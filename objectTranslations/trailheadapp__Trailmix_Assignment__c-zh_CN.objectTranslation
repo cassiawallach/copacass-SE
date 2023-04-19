@@ -6,27 +6,27 @@
     </caseValues>
     <fields>
         <help>Trailmix 的完成日期。</help>
-        <label><!-- Due Date --></label>
+        <label></label>
         <name>trailheadapp__Due_At__c</name>
     </fields>
     <fields>
         <help>Trailmix 的完成日期时间。</help>
-        <label><!-- Due Datetime --></label>
+        <label></label>
         <name>trailheadapp__Due_Datetime__c</name>
     </fields>
     <fields>
-        <label><!-- Status --></label>
+        <label></label>
         <name>trailheadapp__Status__c</name>
     </fields>
     <fields>
-        <label><!-- Trailmix --></label>
+        <label></label>
         <name>trailheadapp__Trailmix__c</name>
-        <relationshipLabel><!-- Trailmix Assignments --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- User --></label>
+        <label></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel><!-- Trailmix Assignments --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <nameFieldLabel>Trailmix 分配 ID</nameFieldLabel>
 </CustomObjectTranslation>

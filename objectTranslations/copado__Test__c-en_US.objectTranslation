@@ -1,119 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label><!-- Acceptance Criteria --></label>
+        <label></label>
         <name>copado__AcceptanceCriteria__c</name>
     </fields>
     <fields>
-        <label><!-- Application --></label>
+        <label></label>
         <name>copado__Application__c</name>
-        <relationshipLabel><!-- Tests --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Configuration --></label>
+        <label></label>
         <name>copado__Configuration__c</name>
     </fields>
     <fields>
-        <help><!-- The displayed values are based on the active Extension Configuration records available in your org. --></help>
-        <label><!-- Tool Configuration --></label>
+        <help></help>
+        <label></label>
         <name>copado__ExtensionConfiguration__c</name>
-        <relationshipLabel><!-- Tests --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Feature --></label>
+        <label></label>
         <name>copado__Feature__c</name>
-        <relationshipLabel><!-- Tests --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Has Extra Configuration --></label>
+        <label></label>
         <name>copado__HasExtraConfiguration__c</name>
     </fields>
     <fields>
-        <label><!-- Latest Job Execution --></label>
+        <label></label>
         <name>copado__LatestJobExecution__c</name>
-        <relationshipLabel><!-- Tests --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Parent Id --></label>
+        <label></label>
         <name>copado__Parent_Id__c</name>
     </fields>
     <fields>
-        <label><!-- Parent --></label>
+        <label></label>
         <name>copado__Parent__c</name>
     </fields>
     <fields>
-        <label><!-- Priority --></label>
+        <label></label>
         <name>copado__Priority__c</name>
         <picklistValues>
             <masterLabel>Critical</masterLabel>
-            <translation><!-- Critical --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>High</masterLabel>
-            <translation><!-- High --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Low</masterLabel>
-            <translation><!-- Low --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Medium</masterLabel>
-            <translation><!-- Medium --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Promotion --></label>
+        <label></label>
         <name>copado__Promotion__c</name>
-        <relationshipLabel><!-- Tests --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <help><!-- By checking this field, you are indicating that the test is ready to be executed and the &apos;Run&apos; button will display. --></help>
-        <label><!-- Ready to Run --></label>
+        <help></help>
+        <label></label>
         <name>copado__ReadyToRun__c</name>
     </fields>
     <fields>
-        <label><!-- Reference --></label>
+        <label></label>
         <name>copado__Reference__c</name>
     </fields>
     <fields>
-        <label><!-- Status --></label>
+        <label></label>
         <name>copado__Status__c</name>
         <picklistValues>
             <masterLabel>Draft</masterLabel>
-            <translation><!-- Draft --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>New</masterLabel>
-            <translation><!-- New --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Ready for Test</masterLabel>
-            <translation><!-- Ready for Test --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Testing Completed</masterLabel>
-            <translation><!-- Testing Completed --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Testing in Progress</masterLabel>
-            <translation><!-- Testing in Progress --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Test Tool --></label>
+        <label></label>
         <name>copado__Test_Tool__c</name>
     </fields>
     <fields>
-        <label><!-- Type --></label>
+        <label></label>
         <name>copado__Type__c</name>
     </fields>
     <fields>
-        <label><!-- User Story --></label>
+        <label></label>
         <name>copado__User_Story__c</name>
-        <relationshipLabel><!-- Tests --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <validationRules>
-        <errorMessage><!-- This Tool Configuration cannot be modified. Please create a new Test and select the Tool Configuration needed. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>copado__PreventUpdatingToolConfiguration</name>
     </validationRules>
 </CustomObjectTranslation>

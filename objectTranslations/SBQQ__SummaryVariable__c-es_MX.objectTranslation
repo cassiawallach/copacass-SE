@@ -10,7 +10,7 @@
     </caseValues>
     <fields>
         <help>Partida de presupuesto sobre la que actúa la función agregada.</help>
-        <label><!-- Aggregate Field --></label>
+        <label></label>
         <name>SBQQ__AggregateField__c</name>
         <picklistValues>
             <masterLabel>Quantity</masterLabel>
@@ -19,7 +19,7 @@
     </fields>
     <fields>
         <help>Función agregada empleada para calcular esta variable.</help>
-        <label><!-- Aggregate Function --></label>
+        <label></label>
         <name>SBQQ__AggregateFunction__c</name>
         <picklistValues>
             <masterLabel>Average</masterLabel>
@@ -44,13 +44,13 @@
     </fields>
     <fields>
         <help>Otra variable de resumen para componer con esta variable de resumen si su condición se basa en ambos resultados.</help>
-        <label><!-- Variable Element --></label>
+        <label></label>
         <name>SBQQ__CombineWith__c</name>
-        <relationshipLabel><!-- Composed By --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Especifique el modo de componer esta variable con Elemento variable o Elemento valor.</help>
-        <label><!-- Composite Operator --></label>
+        <label></label>
         <name>SBQQ__CompositeOperator__c</name>
         <picklistValues>
             <masterLabel>Add</masterLabel>
@@ -71,7 +71,7 @@
     </fields>
     <fields>
         <help>Si desea limitar más los registros en base a un campo de presupuesto, seleccione el campo con el que desea hacer coincidir el mismo campo en el presupuesto.</help>
-        <label><!-- Constraint Field --></label>
+        <label></label>
         <name>SBQQ__ConstraintField__c</name>
         <picklistValues>
             <masterLabel>Status</masterLabel>
@@ -84,7 +84,7 @@
     </fields>
     <fields>
         <help>Seleccione el campo que hay que utilizar cuando se filtran elementos para la inclusión en esta variable de resumen.</help>
-        <label><!-- Filter Field --></label>
+        <label></label>
         <name>SBQQ__FilterField__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -97,12 +97,12 @@
     </fields>
     <fields>
         <help>Ingrese el valor de coincidencia en este filtro.</help>
-        <label><!-- Filter Value --></label>
+        <label></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>Seleccione el operador para utilizar en su filtro.</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -143,7 +143,7 @@
     </fields>
     <fields>
         <help>Ingrese el ámbito de su variable de resumen.</help>
-        <label><!-- Scope --></label>
+        <label></label>
         <name>SBQQ__Scope__c</name>
         <picklistValues>
             <masterLabel>Assets</masterLabel>
@@ -156,7 +156,7 @@
     </fields>
     <fields>
         <help>Seleccione el objeto que desea agregar.</help>
-        <label><!-- Target Object --></label>
+        <label></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Asset</masterLabel>
@@ -177,7 +177,7 @@
     </fields>
     <fields>
         <help>Ingrese un valor para utilizar al componer la operación.</help>
-        <label><!-- Value Element --></label>
+        <label></label>
         <name>SBQQ__ValueElement__c</name>
     </fields>
     <gender>Feminine</gender>

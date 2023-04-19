@@ -10,26 +10,26 @@
     </caseValues>
     <fields>
         <help>Código que pode ser executado por um recurso externo.</help>
-        <label><!-- Code --></label>
+        <label></label>
         <name>SBQQ__Code__c</name>
     </fields>
     <fields>
         <help>Insira os nomes de API de quaisquer campos do Grupo de linhas de cotação mencionados por esse plug-in, um por linha.</help>
-        <label><!-- Quote Line Group Fields --></label>
+        <label></label>
         <name>SBQQ__GroupFields__c</name>
     </fields>
     <fields>
         <help>Insira os nomes de API de quaisquer campos de Cotação mencionados por esse plug-in, um por linha.</help>
-        <label><!-- Quote Fields --></label>
+        <label></label>
         <name>SBQQ__QuoteFields__c</name>
     </fields>
     <fields>
         <help>Insira os nomes de API de todos os campos de Linha de cotação mencionados por esse plug-in, um por linha.</help>
-        <label><!-- Quote Line Fields --></label>
+        <label></label>
         <name>SBQQ__QuoteLineFields__c</name>
     </fields>
     <fields>
-        <label><!-- Transpiled Code --></label>
+        <label></label>
         <name>SBQQ__TranspiledCode__c</name>
     </fields>
     <gender>Masculine</gender>

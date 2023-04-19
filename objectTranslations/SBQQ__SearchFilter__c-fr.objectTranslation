@@ -10,18 +10,18 @@
     </caseValues>
     <fields>
         <help>Action à laquelle ce filtre s&apos;applique. Une valeur vide signifie que le filtre est global.</help>
-        <label><!-- Action --></label>
+        <label></label>
         <name>SBQQ__Action__c</name>
-        <relationshipLabel><!-- Search Filters --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Ordre d&apos;affichage de ce filtre dans l&apos;interface utilisateur.</help>
-        <label><!-- Display Order --></label>
+        <label></label>
         <name>SBQQ__DisplayOrder__c</name>
     </fields>
     <fields>
         <help>Champ source de la valeur à utiliser dans le filtrage.</help>
-        <label><!-- Filter Source Field --></label>
+        <label></label>
         <name>SBQQ__FilterSourceField__c</name>
         <picklistValues>
             <masterLabel>Status</masterLabel>
@@ -34,7 +34,7 @@
     </fields>
     <fields>
         <help>Objet source de la valeur à utiliser dans le filtrage.</help>
-        <label><!-- Filter Source Object --></label>
+        <label></label>
         <name>SBQQ__FilterSourceObject__c</name>
         <picklistValues>
             <masterLabel>Quote</masterLabel>
@@ -43,12 +43,12 @@
     </fields>
     <fields>
         <help>Valeur statique utilisée dans le filtrage.</help>
-        <label><!-- Filter Value --></label>
+        <label></label>
         <name>SBQQ__FilterValue__c</name>
     </fields>
     <fields>
         <help>Spécifiez le champ de la valeur source à utiliser pour déterminer si le filtre très masqué.</help>
-        <label><!-- Hidden Source Field --></label>
+        <label></label>
         <name>SBQQ__HiddenSourceField__c</name>
         <picklistValues>
             <masterLabel>Primary</masterLabel>
@@ -57,7 +57,7 @@
     </fields>
     <fields>
         <help>Spécifiez l&apos;objet source de la valeur à utiliser pour déterminer si le filtre est masqué.</help>
-        <label><!-- Hidden Source Object --></label>
+        <label></label>
         <name>SBQQ__HiddenSourceObject__c</name>
         <picklistValues>
             <masterLabel>Quote</masterLabel>
@@ -66,12 +66,12 @@
     </fields>
     <fields>
         <help>Sélectionnez cette case pour marquer ce filtre comme masqué. Les filtres masqués ne sont pas affichés dans l&apos;interface utilisateur, mais contribuent aux requêtes de recherche.</help>
-        <label><!-- Hidden --></label>
+        <label></label>
         <name>SBQQ__Hidden__c</name>
     </fields>
     <fields>
         <help>Spécifiez l&apos;opérateur à utiliser avec ce filtre.</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>between</masterLabel>
@@ -116,7 +116,7 @@
     </fields>
     <fields>
         <help>Spécifiez le champ à rechercher.</help>
-        <label><!-- Target Field --></label>
+        <label></label>
         <name>SBQQ__TargetField__c</name>
         <picklistValues>
             <masterLabel>Name</masterLabel>
@@ -145,7 +145,7 @@
     </fields>
     <fields>
         <help>Spécifiez l&apos;objet à rechercher.</help>
-        <label><!-- Target Object --></label>
+        <label></label>
         <name>SBQQ__TargetObject__c</name>
         <picklistValues>
             <masterLabel>Asset</masterLabel>
@@ -164,11 +164,11 @@
     <nameFieldLabel>Nom du filtre</nameFieldLabel>
     <startsWith>Consonant</startsWith>
     <validationRules>
-        <errorMessage><!-- You must select Filter Source Object when Filter Source Field is selected. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Require_filter_object_for_filter_field</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- You must select Hidden Source Object when Hidden Source Field is selected. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Require_hidden_object_for_hidden_field</name>
     </validationRules>
 </CustomObjectTranslation>

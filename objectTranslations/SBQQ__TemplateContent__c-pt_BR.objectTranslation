@@ -10,12 +10,12 @@
     </caseValues>
     <fields>
         <help>URL para uma página do Visualforce que gera conteúdo quando o tipo é definido como &quot;Personalizado&quot;.</help>
-        <label><!-- Custom Source --></label>
+        <label></label>
         <name>SBQQ__CustomSource__c</name>
     </fields>
     <fields>
         <help>Família de fonte a ser usada na renderização desse conteúdo no documento de cotação PDF gerado.</help>
-        <label><!-- Font Family --></label>
+        <label></label>
         <name>SBQQ__FontFamily__c</name>
         <picklistValues>
             <masterLabel>Courier</masterLabel>
@@ -100,22 +100,22 @@
     </fields>
     <fields>
         <help>Tamanho de fonte a ser usada na renderização desse conteúdo no documento de cotação PDF gerado.</help>
-        <label><!-- Font Size --></label>
+        <label></label>
         <name>SBQQ__FontSize__c</name>
     </fields>
     <fields>
         <help>Conterá o aumento se esse conteúdo for do tipo &quot;Aumento&quot;.</help>
-        <label><!-- Markup --></label>
+        <label></label>
         <name>SBQQ__Markup__c</name>
     </fields>
     <fields>
         <help>Versão HTML original do conteúdo no campo Aumento.</help>
-        <label><!-- Raw Markup --></label>
+        <label></label>
         <name>SBQQ__RawMarkup__c</name>
     </fields>
     <fields>
         <help>Estilo de lista usado para itens de linha. Padrão = campos definidos pelo usuário, como colunas com itens de linha listados verticalmente.</help>
-        <label><!-- Table Style --></label>
+        <label></label>
         <name>SBQQ__TableStyle__c</name>
         <picklistValues>
             <masterLabel>Price Dimensions as Columns</masterLabel>
@@ -132,12 +132,12 @@
     </fields>
     <fields>
         <help>Cor padrão (em HEX) aplicada ao texto renderizado por esse conteúdo.</help>
-        <label><!-- Text Color --></label>
+        <label></label>
         <name>SBQQ__TextColor__c</name>
     </fields>
     <fields>
         <help>Tipo desse conteúdo.</help>
-        <label><!-- Type --></label>
+        <label></label>
         <name>SBQQ__Type__c</name>
         <picklistValues>
             <masterLabel>Custom</masterLabel>
@@ -159,7 +159,7 @@
     <gender>Masculine</gender>
     <nameFieldLabel>Nome do conteúdo</nameFieldLabel>
     <webLinks>
-        <label><!-- Translate --></label>
+        <label></label>
         <name>SBQQ__Translate</name>
     </webLinks>
 </CustomObjectTranslation>

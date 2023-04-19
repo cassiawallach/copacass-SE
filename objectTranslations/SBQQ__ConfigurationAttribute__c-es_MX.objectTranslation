@@ -10,22 +10,22 @@
     </caseValues>
     <fields>
         <help>Seleccione esta casilla de verificación para aplicar inmediatamente los cambios a esta opción. Utilícese con moderación para evitar la ralentización de la experiencia de los usuarios.</help>
-        <label><!-- Apply Immediately --></label>
+        <label></label>
         <name>SBQQ__AppliedImmediately__c</name>
     </fields>
     <fields>
         <help>Seleccione la casilla de verificación para aplicar la selección de atributos de configuración a opciones de productos.</help>
-        <label><!-- Apply To Product Options --></label>
+        <label></label>
         <name>SBQQ__ApplyToProductOptions__c</name>
     </fields>
     <fields>
         <help>Establezca el valor de este atributo cuando se agregue un producto desde una función dinámica empleando el valor del campo coincidente del producto.</help>
-        <label><!-- Auto-Select --></label>
+        <label></label>
         <name>SBQQ__AutoSelect__c</name>
     </fields>
     <fields>
         <help>Las columnas constan de una lista de selección (de 1, 2 o 3) para cada atributo de configuración. Se permite un máximo de 3 columnas.</help>
-        <label><!-- Column Order --></label>
+        <label></label>
         <name>SBQQ__ColumnOrder__c</name>
         <picklistValues>
             <masterLabel>1</masterLabel>
@@ -42,12 +42,12 @@
     </fields>
     <fields>
         <help>La API del campo de destino en el objeto predeterminado para el valor predeterminado del atributo.</help>
-        <label><!-- Default Field --></label>
+        <label></label>
         <name>SBQQ__DefaultField__c</name>
     </fields>
     <fields>
         <help>Objeto de destino para el valor predeterminado del atributo.</help>
-        <label><!-- Default Object --></label>
+        <label></label>
         <name>SBQQ__DefaultObject__c</name>
         <picklistValues>
             <masterLabel>Quote</masterLabel>
@@ -60,33 +60,33 @@
     </fields>
     <fields>
         <help>Si no hay orden de visualización asociado con un atributo de configuración, el orden viene determinado por el nombre del contenido relacionado.</help>
-        <label><!-- Row Order --></label>
+        <label></label>
         <name>SBQQ__DisplayOrder__c</name>
     </fields>
     <fields>
         <help>Especifique la función en el que se debe ingresar este atributo.</help>
-        <label><!-- Feature --></label>
+        <label></label>
         <name>SBQQ__Feature__c</name>
-        <relationshipLabel><!-- Configuration Attributes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Indica si este atributo tiene un campo de destino global.</help>
-        <label><!-- Global --></label>
+        <label></label>
         <name>SBQQ__Global__c</name>
     </fields>
     <fields>
         <help>Ingrese valores desde el campo de lista de selección correspondiente en el objeto Opción de producto que desee que se oculte en este paquete.</help>
-        <label><!-- Hidden Values --></label>
+        <label></label>
         <name>SBQQ__HiddenValues__c</name>
     </fields>
     <fields>
         <help>Si está marcado como oculto, el atributo de configuración no aparecerá en la página del configurador de productos.</help>
-        <label><!-- Hidden --></label>
+        <label></label>
         <name>SBQQ__Hidden__c</name>
     </fields>
     <fields>
         <help>Especifique la posición de este atributo. Superior aparece por encima de las opciones. Inferior lo hace por debajo.</help>
-        <label><!-- Position --></label>
+        <label></label>
         <name>SBQQ__Position__c</name>
         <picklistValues>
             <masterLabel>Bottom</masterLabel>
@@ -99,23 +99,23 @@
     </fields>
     <fields>
         <help>Especifique el producto en el que está creando el atributo.</help>
-        <label><!-- Product --></label>
+        <label></label>
         <name>SBQQ__Product__c</name>
-        <relationshipLabel><!-- Configuration Attributes --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Especifique si este atributo requiere un valor.</help>
-        <label><!-- Required --></label>
+        <label></label>
         <name>SBQQ__Required__c</name>
     </fields>
     <fields>
         <help>Ingrese valores desde el campo de lista de selección correspondiente en el objeto Opción de producto que desee que se muestre en este paquete.</help>
-        <label><!-- Shown Values --></label>
+        <label></label>
         <name>SBQQ__ShownValues__c</name>
     </fields>
     <fields>
         <help>Especifique el campo en Opción de producto que albergará este valor del atributo.</help>
-        <label><!-- Target Field --></label>
+        <label></label>
         <name>SBQQ__TargetField__c</name>
         <picklistValues>
             <masterLabel>Discount (%)</masterLabel>
@@ -133,21 +133,21 @@
     <gender>Masculine</gender>
     <nameFieldLabel>Nombre de atributo</nameFieldLabel>
     <recordTypes>
-        <description><!-- Configuration Attribute associated to a product --></description>
-        <label><!-- Configuration Attribute --></label>
+        <description></description>
+        <label></label>
         <name>SBQQ__Configuration_Attribute</name>
     </recordTypes>
     <recordTypes>
-        <description><!-- Definition of an Attribute Item --></description>
-        <label><!-- Global Attribute --></label>
+        <description></description>
+        <label></label>
         <name>SBQQ__Global_Attribute</name>
     </recordTypes>
     <validationRules>
-        <errorMessage><!-- Column Order is required. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Column_Order_is_required</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Product is required. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__Product_is_required_if_not_global</name>
     </validationRules>
 </CustomObjectTranslation>

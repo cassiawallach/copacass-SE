@@ -10,71 +10,71 @@
     </caseValues>
     <fields>
         <help>El registro se archivó y ya no se encuentra disponible.</help>
-        <label><!-- Archived --></label>
+        <label></label>
         <name>trailheadapp__Archived__c</name>
     </fields>
     <fields>
         <help>Representa la fecha en la que se asigna la insignia con el propósito de realizar el seguimiento de la actividad de un usuario antes de que empiece a trabajar en ello.</help>
-        <label><!-- Assigned On Date --></label>
+        <label></label>
         <name>trailheadapp__Assigned_Date__c</name>
     </fields>
     <fields>
         <help>El espacio de tiempo que se empleó en completar desde que se asignó por primera vez se intentó por primera vez si no se asignó.</help>
-        <label><!-- Duration to Complete (Days) --></label>
+        <label></label>
         <name>trailheadapp__Assigned_to_Complete__c</name>
     </fields>
     <fields>
-        <label><!-- Badge Icon --></label>
+        <label></label>
         <name>trailheadapp__Badge_Icon__c</name>
     </fields>
     <fields>
-        <label><!-- Badge --></label>
+        <label></label>
         <name>trailheadapp__Badge__c</name>
-        <relationshipLabel><!-- User Badge --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Representa la fecha en que la insignia vence con el propósito de realizar el seguimiento del tiempo restante para que un usuario complete la insignia.</help>
-        <label><!-- Due Date --></label>
+        <label></label>
         <name>trailheadapp__Due_Date__c</name>
     </fields>
     <fields>
-        <label><!-- External ID --></label>
+        <label></label>
         <name>trailheadapp__External_ID__c</name>
     </fields>
     <fields>
-        <label><!-- Finished Date --></label>
+        <label></label>
         <name>trailheadapp__Finished_Date__c</name>
     </fields>
     <fields>
-        <label><!-- First Attempted Date --></label>
+        <label></label>
         <name>trailheadapp__First_Attempted_Date__c</name>
     </fields>
     <fields>
-        <label><!-- Last Attempted Date --></label>
+        <label></label>
         <name>trailheadapp__Last_Attempted_Date__c</name>
     </fields>
     <fields>
         <help>Tres tipos de estado, &quot;Assigned&quot;, &quot;In Progress&quot; o &quot;Completed&quot; están disponibles para representar el estado de una insignia de usuario.</help>
-        <label><!-- Status --></label>
+        <label></label>
         <name>trailheadapp__Status__c</name>
     </fields>
     <fields>
-        <label><!-- URL --></label>
+        <label></label>
         <name>trailheadapp__URL__c</name>
     </fields>
     <fields>
-        <label><!-- User --></label>
+        <label></label>
         <name>trailheadapp__User__c</name>
-        <relationshipLabel><!-- User Badges --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>Id. de Insignia de usuario</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- A user must exist. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>trailheadapp__User_Is_Required</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Not a valid status. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>trailheadapp__Validate_Status</name>
     </validationRules>
 </CustomObjectTranslation>

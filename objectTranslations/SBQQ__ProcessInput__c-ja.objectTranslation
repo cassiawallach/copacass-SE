@@ -6,11 +6,11 @@
     </caseValues>
     <fields>
         <help>このプロセス入力を有効にする場合は、チェックボックスをオンにします。</help>
-        <label><!-- Active --></label>
+        <label></label>
         <name>SBQQ__Active__c</name>
     </fields>
     <fields>
-        <label><!-- Binary Choice --></label>
+        <label></label>
         <name>SBQQ__BinaryChoice__c</name>
         <picklistValues>
             <masterLabel>No</masterLabel>
@@ -23,7 +23,7 @@
     </fields>
     <fields>
         <help>どのプロセス入力条件を満たす必要があるかを示します。</help>
-        <label><!-- Conditions Met --></label>
+        <label></label>
         <name>SBQQ__ConditionsMet__c</name>
         <picklistValues>
             <masterLabel>All</masterLabel>
@@ -36,7 +36,7 @@
     </fields>
     <fields>
         <help>この入力のデフォルト値のソースとなる見積項目。</help>
-        <label><!-- Default Field --></label>
+        <label></label>
         <name>SBQQ__DefaultField__c</name>
         <picklistValues>
             <masterLabel>Bill To Country</masterLabel>
@@ -49,12 +49,12 @@
     </fields>
     <fields>
         <help>プロセス入力を表示する順序を入力します。</help>
-        <label><!-- Display Order --></label>
+        <label></label>
         <name>SBQQ__DisplayOrder__c</name>
     </fields>
     <fields>
         <help>ユーザ入力を受け入れる項目の API 参照名を選択します。</help>
-        <label><!-- Input Field --></label>
+        <label></label>
         <name>SBQQ__InputField__c</name>
         <picklistValues>
             <masterLabel>BinaryChoice__c</masterLabel>
@@ -67,17 +67,17 @@
     </fields>
     <fields>
         <help>数値を入力してください。</help>
-        <label><!-- Integer Input --></label>
+        <label></label>
         <name>SBQQ__IntegerInput__c</name>
     </fields>
     <fields>
         <help>プロンプトでユーザに表示するテキスト。</help>
-        <label><!-- Label --></label>
+        <label></label>
         <name>SBQQ__Label__c</name>
     </fields>
     <fields>
         <help>[入力項目] エントリを [商品の項目] と比較するときに使用する演算子を選択します。</help>
-        <label><!-- Operator --></label>
+        <label></label>
         <name>SBQQ__Operator__c</name>
         <picklistValues>
             <masterLabel>contains</masterLabel>
@@ -117,13 +117,13 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Process Input Condition --></label>
+        <label></label>
         <name>SBQQ__ProcessInputCondition__c</name>
-        <relationshipLabel><!-- Process Inputs --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>この入力に一致する商品の絞り込みに使用する商品オブジェクトの項目。</help>
-        <label><!-- Product Field --></label>
+        <label></label>
         <name>SBQQ__ProductField__c</name>
         <picklistValues>
             <masterLabel>Product Code</masterLabel>
@@ -140,13 +140,13 @@
     </fields>
     <fields>
         <help>入力を所有する見積プロセス。</help>
-        <label><!-- Quote Process --></label>
+        <label></label>
         <name>SBQQ__QuoteProcess__c</name>
-        <relationshipLabel><!-- Process Inputs --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <nameFieldLabel>入力名</nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- Both Product Field and Operator must be set if either are set. --></errorMessage>
+        <errorMessage></errorMessage>
         <name>SBQQ__ProductFieldAndOperatorSet</name>
     </validationRules>
 </CustomObjectTranslation>
